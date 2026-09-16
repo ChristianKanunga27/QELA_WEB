@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qelatechnologies</title>
+    
+   <link href="./output.css" rel="stylesheet">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="h-11 w-full flex bg-yellow-400 px-44 py-2 m-0"> 
+        <h4> <i class="fa-solid fa-envelope"></i> info@qelatechnologies.co.tz</h4>
+        <h4>| <i class="fa-solid fa-clock"></i> Working hours: 8:00am - 6:00pm   </h4>
+        <h4>| <i class="fa-solid fa-phone"></i> +255 752 686 686 / +255 718 352 944 / +255 717 953 598</h4>
+
+    </div>
+
+ <nav id="navbar"
+     class="sticky top-0 z-50 bg-transparent p-4 transition-all duration-300">
+
+    <div class="flex gap-[440px] items-center">
+        <img src="./resource/logos/qela_icon.svg"
+             class="h-16 mx-16"
+             alt="QELA LOGO">
+
+        <div class="flex gap-7 text-yellow-500 text-xl">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+
+</nav>
+
+
+  
+
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 50) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("bg-gray-900", "shadow-lg");
+        } else {
+            navbar.classList.remove("bg-gray-900", "shadow-lg");
+            navbar.classList.add("bg-transparent");
+        }
+
+    });
+</script>
+    
+</body>
+</html>
+
+
+   
