@@ -1,13 +1,785 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
+
+    <title>QELA Technology | Digital solutions for agriculture</title>
+
+    <link href="./output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #10271b;
+            --lime: #dfa21f;
+            --overlay: rgba(14, 162, 58, 0.72);
+        }
+
+        body {
+            margin: 0;
+            background: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        header {
+            position: absolute;
+            inset: 0 0 auto;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .contact-bar {
+            min-height: 44px;
+            box-sizing: border-box;
+        }
+
+        .main-nav {
+            background: rgba(7, 19, 13, 0.22);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            width: min(100% - 3rem, 1280px);
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            width: auto;
+            max-width: 150px;
+        }
+
+        .nav-links a {
+            position: relative;
+            transition: color 180ms ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -0.45rem;
+            left: 0;
+            height: 2px;
+            background: var(--lime);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 180ms ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .hero {
+            min-height: 680px;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--overlay);
+            z-index: -1;
+        }
+
+        .hero-heading,
+        .brand {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-heading {
+            max-width: none;
+            font-size: clamp(2rem, 7vw, 7.2rem);
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 0.94;
+            color: white;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-heading span {
+            color: var(--lime);
+        }
+
+        .hero-content {
+            padding: 7rem 7vw 9rem;
+        }
+
+        .hero-description {
+            position: relative;
+            margin: 4rem auto 0;
+            width: min(900px, 90vw);
+            min-height: 100px;
+        }
+
+        .phrase {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            gap: 0 0.35em;
+
+            font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 500;
+            line-height: 1.6;
+            color: rgb(255, 255, 255);
+        }
+
+        .phrase span {
+            opacity: 0;
+            transform: translateY(8px);
+            animation: wordAnimation 14s infinite;
+        }
+
+        .phrase-one span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .phrase-one span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .phrase-one span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .phrase-one span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .phrase-one span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .phrase-one span:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        .phrase-one span:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        .phrase-one span:nth-child(8) {
+            animation-delay: 1.4s;
+        }
+
+        .phrase-one span:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        .phrase-one span:nth-child(10) {
+            animation-delay: 1.8s;
+        }
+
+        .phrase-one span:nth-child(11) {
+            animation-delay: 2s;
+        }
+
+        .phrase-two span:nth-child(1) {
+            animation-delay: 7s;
+        }
+
+        .phrase-two span:nth-child(2) {
+            animation-delay: 7.2s;
+        }
+
+        .phrase-two span:nth-child(3) {
+            animation-delay: 7.4s;
+        }
+
+        .phrase-two span:nth-child(4) {
+            animation-delay: 7.6s;
+        }
+
+        .phrase-two span:nth-child(5) {
+            animation-delay: 7.8s;
+        }
+
+        .phrase-two span:nth-child(6) {
+            animation-delay: 8s;
+        }
+
+        .phrase-two span:nth-child(7) {
+            animation-delay: 8.2s;
+        }
+
+        @keyframes wordAnimation {
+
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            5% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            45% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            52% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .contact-bar {
+                display: none;
+            }
+
+            .nav-inner {
+                width: calc(100% - 2rem);
+            }
+
+            .main-nav {
+                padding: 0.8rem 0;
+            }
+
+            .nav-logo {
+                max-width: 120px;
+            }
+
+            .nav-links {
+                gap: 0.85rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-content {
+                padding: 5rem 1.5rem 8rem;
+            }
+
+            .hero {
+                min-height: 640px;
+            }
+
+            .hero-heading {
+                font-size: clamp(2.3rem, 11vw, 4rem);
+            }
+
+            .hero-description {
+                width: 95vw;
+                min-height: 130px;
+                margin-top: 5rem;
+            }
+
+            .phrase {
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello Qela programmers
-  </h1>
+    <header>
+    <div class="contact-bar flex w-full items-center justify-center gap-6 bg-yellow-400 px-6 py-2 text-xs font-medium text-[#10271b] lg:text-sm">
+        <h4><i class="fa-solid fa-envelope mr-2"></i>info@qelatechnologies.co.tz</h4>
+        <h4><i class="fa-solid fa-clock mr-2"></i>Working hours: 8:00am - 6:00pm</h4>
+        <h4><i class="fa-solid fa-phone mr-2"></i>+255 752 686 686 / +255 718 352 944 / +255 717 953 598</h4>
+
+    </div>
+
+   <nav id="navbar"
+     class="main-nav p-4 transition-all duration-300">
+
+    <div class="nav-inner flex items-center justify-between gap-8">
+        <img src="./resource/logos/qela_icon.svg"
+             class="nav-logo h-16"
+             alt="QELA logo">
+
+        <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+
+   </nav>
+</header>
+
+<section class="hero w-full overflow-hidden text-white">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+    >
+        <source src="./resource/video/bg5.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content relative z-[1] flex min-h-[680px] items-center justify-center text-center">
+
+        <div>
+
+            <h1 class="hero-heading">
+                <span>QELA</span> TECHNOLOGY
+            </h1>
+
+            <div class="hero-description">
+
+                <div class="phrase phrase-one">
+                  <span>Innovative</span>
+                  <span>AgriTech and</span>
+                  <span>business</span>
+                  <span>solutions</span>
+                  <span>driving growth</span>                </div>
+
+                <div class="phrase phrase-two">
+                    <span>Transforming</span>
+                    <span>agriculture</span>
+                    <span>and</span>
+                    <span>business</span>
+                    <span>through</span>
+                    <span>innovative</span>
+                    <span>technology.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="bg-[#07130d] text-white">
+
+    <div class="border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 py-10
+                    flex flex-col lg:flex-row
+                    items-center justify-between gap-6">
+
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold">
+                    Get SmartAgri
+                    <span class="text-green-500"> Tech updates</span>
+                </h2>
+
+                <p class="text-gray-400 mt-2 text-sm">
+                    Get the latest updates about Qela Technologies(T) Limited,
+                    agritech and digital innovation.
+                </p>
+            </div>
+
+            <form class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    class="w-full sm:w-80 px-5 py-3 rounded-full
+                           bg-white text-gray-800
+                           outline-none
+                           focus:ring-2 focus:ring-green-500"
+                >
+
+                <button
+                    type="submit"
+                    class="px-7 py-3 rounded-full
+                           bg-green-600 hover:bg-green-500
+                           transition duration-300
+                           font-semibold">
+                    Join Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-14">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2
+                    lg:grid-cols-5 gap-10">
+
+            <div class="lg:col-span-1">
+
+                <img src="resource/logos/qela_icon.svg" class="mb-5 h-12 w-auto" alt="QELA logo">
+                <a href="#" class="inline-block mb-5">
+
+                    <h1 class="text-3xl font-extrabold tracking-tight">
+                        Qela
+                        <span class="text-green-500">Technologies</span>
+                    </h1>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                        (T) LIMITED
+                    </p>
+
+                </a>
+
+
+                <p class="text-gray-400 text-sm leading-6">
+                    Empowering businesses through innovative
+                    technology, digital transformation and
+                    smart agritech solutions.
+                </p>
+
+                <div class="flex gap-3 mt-6">
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full
+                              bg-white/10
+                              flex items-center justify-center
+                              hover:bg-green-600
+                              transition">
+                        f
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full
+                              bg-white/10
+                              flex items-center justify-center
+                              hover:bg-green-600
+                              transition">
+                        X
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full
+                              bg-white/10
+                              flex items-center justify-center
+                              hover:bg-green-600
+                              transition">
+                        in
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full
+                              bg-white/10
+                              flex items-center justify-center
+                              hover:bg-green-600
+                              transition">
+                        ▶
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-5">
+                    Services
+                </h3>
+
+                <ul class="space-y-3 text-sm text-gray-400">
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Web Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Software Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Mobile Applications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            UI/UX Design
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Digital Marketing
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-5">
+                    Agritech
+                </h3>
+
+                <ul class="space-y-3 text-sm text-gray-400">
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Smart Agriculture
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Farm Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Agricultural Data
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Digital Farming
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Agri Records Management
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-5">
+                    Solutions
+                </h3>
+
+                <ul class="space-y-3 text-sm text-gray-400">
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Digital Transformation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Business Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Data Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Cloud Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Custom Software
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-5">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-3 text-sm text-gray-400">
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Our Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="hover:text-green-500 transition">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 py-6">
+
+            <div class="flex flex-col md:flex-row
+                        justify-between gap-4
+                        text-sm text-gray-400">
+
+                <div>
+                    📧
+                    <span class="ml-1">
+                        info@qelatechnologies.co.tz
+                    </span>
+                </div>
+
+                <div>
+                    📞
+                    <span class="ml-1">
+                        +255 718 352 944
+</span>
+ <span class="ml-1">
+                        +255 742 073 002
+    
+                    </span>
+
+
+
+
+                </div>
+
+                <div>
+                    <img src="resource/logos/">
+                    <span class="ml-1">
+                        Kimara,Stop over<br>
+                        Dar es salaam
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bg-black/30">
+
+        <div class="max-w-7xl mx-auto px-6 py-5
+                    flex flex-col md:flex-row
+                    justify-between items-center gap-3">
+
+            <p class="text-sm text-gray-500">
+                © 2026 Qela Technologies (T) Limited.
+                All Rights Reserved.
+            </p>
+
+            <div class="flex gap-5 text-sm text-gray-500">
+
+                <a href="#"
+                   class="hover:text-green-500 transition">
+                    Privacy Policy
+                </a>
+
+                <a href="#"
+                   class="hover:text-green-500 transition">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 50) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("bg-gray-900", "shadow-lg");
+        } else {
+            navbar.classList.remove("bg-gray-900", "shadow-lg");
+            navbar.classList.add("bg-transparent");
+        }
+
+    });
+</script>
+
 </body>
 </html>
