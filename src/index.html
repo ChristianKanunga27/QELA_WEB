@@ -28,12 +28,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         font-family: 'DM Sans', sans-serif;
     }
 
-    header {
-        position: absolute;
+    /* header {
+        position: relative;
         inset: 0 0 auto;
         z-index: 10;
         width: 100%;
-    }
+    } */
 
     .contact-bar {
         min-height: 44px;
@@ -79,6 +79,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         transform: scaleX(1);
         transform-origin: left;
     }
+
+    header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+/* Ensure the navbar stays fixed at top of screen once scrolling begins */
+#navbar.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:black !important;
+
+}
 
     .hero {
         min-height: 680px;
@@ -262,13 +281,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             display: none;
         }
 
-        .nav-inner {
+        /* .nav-inner {
             width: calc(100% - 2rem);
         }
 
         .main-nav {
             padding: 0.8rem 0;
-        }
+        } */
 
         .nav-logo {
             max-width: 120px;
@@ -294,7 +313,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         .hero-description {
             width: 95vw;
             min-height: 130px;
-            margin-top: 5rem;
+            margin-top: 0%;
         }
 
         .phrase {
@@ -307,13 +326,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body class="bg-white">
 <header>
-<div class="contact-bar flex w-full items-center justify-end gap-4 bg-yellow-400 px-6 py-2 text-xs font-medium text-[#10271b] lg:text-sm">
+<div class="contact-bar flex w-full items-center justify-end gap-4 bg-black px-6 py-2 text-xs font-medium text-white lg:text-sm">
     <h4><i class="fa-solid fa-envelope "></i>info@qelatechnologies.co.tz</h4>
     <h4><i class="fa-solid fa-phone "></i>+255 752 686 686</h4>
 </div>
 
-   <nav id="navbar"
-     class="sticky top-0 z-50 bg-transparent text-black  main-nav p-4 transition-all duration-300">
+<nav id="navbar" class="w-full p-4 ">
   <div class="nav-inner flex items-center justify-between gap-8">
     <img src="./resource/image/qela_logo.png"
          class="nav-logo h-16"
@@ -322,54 +340,52 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Support</a>
+        <a href="#">Products</a>
+        <a href="#"></a>
     </div>
-   </div>
-   </nav>
+  </div>
+</nav>
 </header>
-<section class="hero relative w-full h-screen overflow-hidden text-white">
 
-    <video
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        aria-hidden="true"
-        class="absolute inset-0 h-full w-full object-cover"
-    >
-        <source src="./resource/video/bg5.mp4" type="video/mp4">
-    </video>
+<section class="hero w-full overflow-hidden text-white">
+<video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+>
+    <source src="./resource/video/bg5.mp4" type="video/mp4">
+</video>
 
-    <div class="hero-content relative z-[1] flex min-h-screen items-center justify-center text-center">
+<div class="hero-content relative z-[1] flex min-h-[680px] items-center justify-center text-center">
 
-        <div>
+    <div >
 
-            <div class="hero-description">
-                <div class="phrase phrase-one">
-                    <span>Innovative</span>
-                    <span>AgriTech and</span>
-                    <span>business</span>
-                    <span>solutions</span>
-                    <span>driving growth</span>
-                </div>
+        <div class="hero-description">
+            <div class="phrase phrase-one">
+              <span>Innovative</span>
+              <span>AgriTech and</span>
+              <span>business</span>
+              <span>solutions</span>
+              <span>driving growth</span>                </div>
 
-                <div class="phrase phrase-two">
-                    <span>Transforming</span>
-                    <span>agriculture</span>
-                    <span>and</span>
-                    <span>business</span>
-                    <span>through</span>
-                    <span>innovative</span>
-                    <span>technology.</span>
-                </div>
+            <div class="phrase phrase-two">
+                <span>Transforming</span>
+                <span>agriculture</span>
+                <span>and</span>
+                <span>business</span>
+                <span>through</span>
+                <span>innovative</span>
+                <span>technology.</span>
             </div>
 
         </div>
 
     </div>
 
+</div>
 </section>
 <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 bg-gray-50  ">
     <div class="justify-center text-center mb-12 lg:mb-20">
@@ -379,8 +395,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div class="w-16 h-1 bg-yellow-500 mx-auto mt-3 rounded-full"></div>
     </div>
 
+    <!-- Row Container: Image + Content -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
         
+        <!-- Image Column -->
         <div class="relative w-full">
             <div class="overflow-hidden rounded-2xl shadow-xl bg-gray-100">
                 <img 
@@ -391,6 +409,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </div>
         </div>
 
+        <!-- Content Column -->
         <div class="flex flex-col justify-center space-y-6">
             <h3 class="text-2xl sm:text-3xl font-bold text-black ">
                 Redefining the future of businesses through strategic ICT & Engineering.
@@ -408,207 +427,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                   ICT and engineering services designed for small, medium, and large organizations.
             </p>
 
+
+            
         </div>
 
     </div>
 
 </section>
 <section class="py-16 bg-[#f1f5f3] font-sans">
-
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div class="text-center mb-12">
-         <h2 class="mt-2 text-3xl md:text-5xl font-bold text-[#07130d] tracking-wide uppercase">
-            OUR <span class="text-yellow-500">PRODUCT</span>
-        </h2>
-        <div class="w-16 h-1 bg-yellow-500 mx-auto mt-3 rounded-full"></div>
-
-        <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-base md:text-lg">
-            Innovative digital solutions designed to transform agriculture,
-            cooperatives, agricultural value chains, and financial management.
-        </p>
-
-    </div>
-
-    <div class="shadow-2xl rounded-2xl overflow-hidden">
-
-        <div class="flex flex-col md:flex-row min-h-[400px]">
-
-            <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                    Agricoop ERP WHR
-                </h3>
-
-                <p class="text-slate-300 leading-relaxed mb-7">
-                    A comprehensive enterprise resource planning system designed
-                    to streamline cooperative operations, member management,
-                    product collection, inventory, sales, financial records,
-                    and reporting in one centralized platform.
-                </p>
-
-                <a href="#"
-                   class="text-white font-semibold underline underline-offset-4
-                           decoration-green-500 hover:text-green-500 transition">
-                    View Details →
-                </a>
-
-            </div>
-
-            <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                        flex items-center justify-center overflow-hidden">
-
-                <img src="./resource/image/agr.jpeg"
-                     alt="Agricoop ERP WHR"
-                     class="w-full h-full object-cover">
-
-            </div>
-
-        </div>  
-
-        <div class="flex flex-col md:flex-row-reverse min-h-[400px]">
-
-            <div class="w-full md:w-1/2 bg-[#0b2115] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                    Agricoop ERP TUMBAKU
-                </h3>
-
-                <p class="text-slate-300 leading-relaxed mb-7">
-                    A specialized digital management system designed for the
-                    tobacco sector, helping cooperatives and stakeholders manage
-                    farmers, tobacco production, collection, transactions,
-                    records, and operational activities efficiently.
-                </p>
-
-                <a href="#"
-                   class="text-white font-semibold underline underline-offset-4
-                           decoration-green-500 hover:text-green-500 transition">
-                    View Details →
-                </a>
-
-            </div>
-
-            <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                        flex items-center justify-center overflow-hidden">
-
-                <img src="./resource/image/agri.jpeg"
-                     alt="Agricoop ERP Tumbaku"
-                     class="w-full h-full object-cover">
-
-            </div>
-
-        </div>
-
-        <div class="flex flex-col md:flex-row min-h-[400px]">
-
-            <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-                <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                    Agricoop ERP KAHAWA
-                </h3>
-
-                <p class="text-slate-300 leading-relaxed mb-7">
-                    A digital solution designed to manage the coffee value chain,
-                    connecting farmers, cooperatives, collection centers,
-                    production activities, sales, payments, and business records
-                    through an integrated platform.
-                </p>
-
-                <a href="#"
-                   class="text-white font-semibold underline underline-offset-4
-                           decoration-green-500 hover:text-green-500 transition">
-                    View Details →
-                </a>
-
-            </div>
-
-            <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                        flex items-center justify-center overflow-hidden">
-
-                <img src="./resource/image/cloud.webp"
-                     alt="Agricoop ERP Kahawa"
-                     class="w-full h-full object-cover">
-
-            </div>
-
-        </div>
-
-        <div class="flex flex-col md:flex-row-reverse min-h-[400px]">
-
-            <div class="w-full md:w-1/2 bg-[#0b2115] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                    Agrisasa ERP
-                </h3>
-
-                <p class="text-slate-300 leading-relaxed mb-7">
-                    A modern agricultural management system that helps
-                    organizations manage farmers, agricultural activities,
-                    production, crops, resources, records, and reports while
-                    improving operational efficiency and decision-making.
-                </p>
-
-                <a href="#"
-                   class="text-white font-semibold underline underline-offset-4
-                           decoration-green-500 hover:text-green-500 transition">
-                    View Details →
-                </a>
-
-            </div>
-
-            <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                        flex items-center justify-center overflow-hidden">
-
-                <img src="./resource/image/agri.jpeg"
-                     alt="Agrisaa ERP"
-                     class="w-full h-full object-cover">
-
-            </div>
-
-        </div>
-
-        <div class="flex flex-col md:flex-row min-h-[400px]">
-
-            <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-                <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                    eSaccos
-                </h3>
-
-                <p class="text-slate-300 leading-relaxed mb-7">
-                    A secure digital SACCOS management platform for managing
-                    members, savings, loans, repayments, transactions, financial
-                    records, and reports, providing efficient and transparent
-                    financial management.
-                </p>
-
-                <a href="#"
-                   class="text-white font-semibold underline underline-offset-4
-                         decoration-green-500 hover:text-green-500 transition">
-                    View Details →
-                </a>
-
-            </div>
-
-            <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                        flex items-center justify-center overflow-hidden">
-
-                <img src="./resource/image/agri.jpeg"
-                     alt="eSaccos"
-                     class="w-full h-full object-cover">
-
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-</section>
 
 <footer class="bg-[#07130d] text-white">
 
@@ -989,18 +815,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <script>
     const navbar = document.getElementById("navbar");
+    const contactBar = document.querySelector(".contact-bar");
 
     window.addEventListener("scroll", function () {
+        // Triggers sticking right after the contact bar scrolls out of view (~44px)
+        const triggerPoint = contactBar ? contactBar.offsetHeight : 44;
 
-        if (window.scrollY > 50) {
-            navbar.classList.remove("bg-transparent");
-            navbar.classList.add("bg-gray-900", "shadow-lg");
+        if (window.scrollY > triggerPoint) {
+            navbar.classList.add("is-sticky");
         } else {
-            navbar.classList.remove("bg-gray-900", "shadow-lg");
-            navbar.classList.add("bg-transparent");
+            navbar.classList.remove("is-sticky");
         }
-
     });
 </script>
+
 </body>
 </html>
