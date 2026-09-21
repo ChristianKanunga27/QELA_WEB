@@ -1065,6 +1065,10 @@ video {
   letter-spacing: -0.025em;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-\[\#10271b\] {
   --tw-text-opacity: 1;
   color: rgb(16 39 27 / var(--tw-text-opacity, 1));
@@ -1128,6 +1132,11 @@ video {
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#07130d\] {
+  --tw-text-opacity: 1;
+  color: rgb(7 19 13 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1319,6 +1328,11 @@ video {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
