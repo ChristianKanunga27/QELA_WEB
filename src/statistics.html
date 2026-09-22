@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qela Technologies agricultural technology impact statistics.">
+    <title>Qela Technologies | Our Impact</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --qela-green: #07130d;
+            --agri-green: #6f9f3f;
+        }
+
+        body {
+            margin: 0;
+            background: var(--qela-green);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .statistics-heading,
+        .statistics-number {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .statistics-item {
+            opacity: 0;
+            transform: translateY(1.5rem);
+            transition: opacity 700ms ease, transform 700ms ease;
+        }
+
+        .statistics-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .statistics-item:nth-child(2) {
+            transition-delay: 100ms;
+        }
+
+        .statistics-item:nth-child(3) {
+            transition-delay: 200ms;
+        }
+
+        .statistics-item:nth-child(4) {
+            transition-delay: 300ms;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .statistics-item {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="relative isolate min-h-[460px] overflow-hidden py-20 text-white sm:py-24" aria-labelledby="impact-heading">
+            <div class="absolute inset-0 z-0">
+                <img
+                    src="./resource/image/agr.jpeg"
+                    alt="Cultivated agricultural fields with a digital farm management dashboard"
+                    class="h-full w-full object-cover object-center"
+                >
+            </div>
+
+            <div class="absolute inset-0 z-10 bg-[#07130d]/85"></div>
+
+            <div class="relative z-20 mx-auto flex min-h-[300px] w-full max-w-7xl flex-col justify-center px-6 lg:px-10">
+                <div class="mb-12 max-w-2xl">
+                    <p class="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#9fc96a]">Qela by the numbers</p>
+                    <h1 id="impact-heading" class="statistics-heading text-3xl font-semibold tracking-normal text-white sm:text-4xl">
+                        Technology with measurable impact.
+                    </h1>
+                    <p class="mt-4 max-w-xl text-base leading-7 text-white/70">
+                        Connecting agricultural communities to digital tools that make growth visible, scalable, and sustainable.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-statistics>
+                    <article class="statistics-item border-l border-white/20 pl-5" data-target="1" data-display="1">
+                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#9fc96a]">M+</span></p>
+                        <div class="mt-4 h-1 w-10 bg-[#6f9f3f]"></div>
+                        <h2 class="mt-4 text-lg font-semibold text-white">Farms Mapped</h2>
+                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/65">Agricultural farms mapped through digital technology.</p>
+                    </article>
+
+                    <article class="statistics-item border-l border-white/20 pl-5" data-target="20" data-display="20">
+                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#9fc96a]">K+</span></p>
+                        <div class="mt-4 h-1 w-10 bg-[#6f9f3f]"></div>
+                        <h2 class="mt-4 text-lg font-semibold text-white">Farmers Registered</h2>
+                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/65">Farmers connected to digital agricultural services.</p>
+                    </article>
+
+                    <article class="statistics-item border-l border-white/20 pl-5" data-target="5" data-display="5">
+                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span></p>
+                        <div class="mt-4 h-1 w-10 bg-[#6f9f3f]"></div>
+                        <h2 class="mt-4 text-lg font-semibold text-white">Strategic Product Listings</h2>
+                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/65">Innovative digital products supporting agriculture.</p>
+                    </article>
+
+                    <article class="statistics-item border-l border-white/20 pl-5" data-target="2500" data-display="2500">
+                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#9fc96a]">+</span></p>
+                        <div class="mt-4 h-1 w-10 bg-[#6f9f3f]"></div>
+                        <h2 class="mt-4 text-lg font-semibold text-white">Registered Unions</h2>
+                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/65">Cooperatives and agricultural organizations registered.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const statistics = document.querySelector('[data-statistics]');
+        const items = document.querySelectorAll('.statistics-item');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function animateCounter(item) {
+            const counter = item.querySelector('[data-counter]');
+            const target = Number(item.dataset.target);
+            const display = item.dataset.display || target;
+
+            if (prefersReducedMotion) {
+                counter.textContent = display;
+                return;
+            }
+
+            const startTime = performance.now();
+            const duration = 1200;
+
+            function updateCounter(currentTime) {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                counter.textContent = Math.floor(target * easedProgress).toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = display;
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+        }
+
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                items.forEach((item) => {
+                    item.classList.add('is-visible');
+                    animateCounter(item);
+                });
+                currentObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(statistics);
+    </script>
+</body>
+</html>
