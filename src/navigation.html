@@ -40,10 +40,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         box-sizing: border-box;
     }
 
+    .contact-bar h4 {
+        margin: 0;
+        white-space: nowrap;
+    }
+
     .main-nav {
-        background: rgba(7, 19, 13, 0.22);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .nav-inner {
@@ -291,7 +296,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         } 
 
         .nav-logo { 
-            max-width: 120px;
+            max-width: 140px;
         }
 
         .nav-links {
@@ -327,7 +332,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body class="bg-white">
 <header>
-<div class="contact-bar flex w-full items-center justify-end pr-48 gap-4 bg-black px-6 py-2 text-xs font-medium text-white lg:text-sm">
+<div class="contact-bar flex w-full items-center justify-end gap-4 bg-black px-36 py-2 text-xs font-medium text-white lg:text-sm">
     <h4><i class="fa-solid fa-envelope "></i>info@qelatechnologies.co.tz</h4>
     <h4><i class="fa-solid fa-phone "></i>+255 752 686 686</h4>
 </div>
@@ -335,21 +340,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <nav id="navbar" class="w-full p-4 ">
   <div class="nav-inner flex items-center justify-between gap-8">
     <img src="./resource/image/qela_logo.png"
-         class="nav-logo h-16"
+         class="nav-logo h-24"
          alt="QELA logo">
 
-    <div class="nav-links flex items-center gap-7  font-semibold text-yellow-400 md:text-lg pr-28">
+    <div class="nav-links flex items-center gap-7 font-semibold text-yellow-400 md:text-lg">
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Products</a>
-        <a href="#"></a>
+        <a href="#">Resource</a>
     </div>
   </div>
 </nav>
 </header>
 
-<section class="hero w-full overflow-hidden text-white">
-<video
+<section class="hero w-full overflow-hidden text-white-pr-1<video
     autoplay
     muted
     loop

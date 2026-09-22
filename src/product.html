@@ -3,211 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title></title>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-
+    <title>Our Products | QELA</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes reveal-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-card {
+            animation: reveal-up 0.7s ease-out both;
+        }
+
+        .product-card:nth-child(2) { animation-delay: 0.15s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .product-image {
+            transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.7s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.08) rotate(1deg);
+            filter: saturate(1.2) contrast(1.05);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .product-card { animation: none; }
+            .product-image { transition: none; }
+        }
+    </style>
 </head>
 
-<body class="bg-[#f1f5f3]">
+<body class="bg-[#f1f5f3] font-sans text-[#07130d]">
+    <section class="overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 text-center">
+                <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-yellow-600">Digital solutions for growth</p>
+                <h1 class="font-[Poppins] text-4xl font-bold uppercase tracking-wide sm:text-5xl">
+                    Our <span class="text-yellow-500">Products</span>
+                </h1>
+                <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-yellow-500"></div>
+                <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                    Practical platforms that help agricultural organizations, cooperatives, and financial communities work smarter.
+                </p>
+            </div>
 
-<section class="py-16 bg-[#f1f5f3] font-sans">
+            <div class="grid gap-5 lg:grid-cols-3">
+                <article class="product-card group overflow-hidden rounded-[1.75rem] bg-[#07130d] shadow-[0_24px_60px_rgba(7,19,13,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(7,19,13,0.18)]">
+                    <div class="relative overflow-hidden">
+                        <img src="./resource/image/agr.jpeg" alt="eSaccos platform" class="product-image h-64 w-full object-cover sm:h-72">
+                        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#07130d] to-transparent"></div>
+                        <span class="absolute left-5 top-5 z-10 text-[10px] font-bold uppercase tracking-[0.32em] text-yellow-400">01 / Finance</span>
+                    </div>
+                    <div class="p-6 text-white sm:p-7">
+                        <h2 class="mb-3 font-[Poppins] text-2xl font-bold sm:text-3xl">eSaccos</h2>
+                        <p class="leading-relaxed text-slate-300">
+                            A secure SACCOS management platform for members, savings, loans, repayments, transactions, and transparent financial reporting.
+                        </p>
+                    </div>
+                </article>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="product-card group overflow-hidden rounded-[1.75rem] bg-[#0d1f17] shadow-[0_24px_60px_rgba(7,19,13,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(7,19,13,0.18)]">
+                    <div class="relative overflow-hidden">
+                        <img src="./resource/image/agri.jpeg" alt="Agricoop platform" class="product-image h-64 w-full object-cover sm:h-72">
+                        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0d1f17] to-transparent"></div>
+                        <span class="absolute left-5 top-5 z-10 text-[10px] font-bold uppercase tracking-[0.32em] text-yellow-400">02 / Cooperatives</span>
+                    </div>
+                    <div class="p-6 text-white sm:p-7">
+                        <h2 class="mb-3 font-[Poppins] text-2xl font-bold sm:text-3xl">Agricoop</h2>
+                        <p class="leading-relaxed text-slate-300">
+                            An integrated ERP that brings cooperative members, collection, inventory, sales, financial records, and reporting into one place.
+                        </p>
+                    </div>
+                </article>
 
-        <div class="text-center mb-12">
-             <h2 class="mt-2 text-3xl md:text-5xl font-bold text-[#07130d] tracking-wide uppercase">
-                OUR <span class="text-yellow-500">PRODUCT</span>
-            </h2>
-            <div class="w-16 h-1 bg-yellow-500 mx-auto mt-3 rounded-full"></div>
-
-            <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-base md:text-lg">
-                Innovative digital solutions designed to transform agriculture,
-                cooperatives, agricultural value chains, and financial management.
-            </p>
-
+                <article class="product-card group overflow-hidden rounded-[1.75rem] bg-[#07130d] shadow-[0_24px_60px_rgba(7,19,13,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(7,19,13,0.18)]">
+                    <div class="relative overflow-hidden">
+                        <img src="./resource/image/cloud.webp" alt="Agrisasa platform" class="product-image h-64 w-full object-cover sm:h-72">
+                        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#07130d] to-transparent"></div>
+                        <span class="absolute left-5 top-5 z-10 text-[10px] font-bold uppercase tracking-[0.32em] text-yellow-400">03 / Agriculture</span>
+                    </div>
+                    <div class="p-6 text-white sm:p-7">
+                        <h2 class="mb-3 font-[Poppins] text-2xl font-bold sm:text-3xl">Agrisasa</h2>
+                        <p class="leading-relaxed text-slate-300">
+                            A modern agricultural system for managing farmers, crops, production, resources, records, and reports for better decisions.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
-
-        <div class="shadow-2xl rounded-2xl overflow-hidden">
-
-            <div class="flex flex-col md:flex-row min-h-[400px]">
-
-                <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                        Agricoop ERP WHR
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed mb-7">
-                        A comprehensive enterprise resource planning system designed
-                        to streamline cooperative operations, member management,
-                        product collection, inventory, sales, financial records,
-                        and reporting in one centralized platform.
-                    </p>
-
-                    <a href="#"
-                       class="text-white font-semibold underline underline-offset-4
-                               decoration-green-500 hover:text-green-500 transition">
-                        View Details →
-                    </a>
-
-                </div>
-
-                <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                            flex items-center justify-center overflow-hidden">
-
-                    <img src="./resource/image/agr.jpeg"
-                         alt="Agricoop ERP WHR"
-                         class="w-full h-full object-cover">
-
-                </div>
-
-            </div>  
-
-            <div class="flex flex-col md:flex-row-reverse min-h-[400px]">
-
-                <div class="w-full md:w-1/2 bg-[#0b2115] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                        Agricoop ERP TUMBAKU
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed mb-7">
-                        A specialized digital management system designed for the
-                        tobacco sector, helping cooperatives and stakeholders manage
-                        farmers, tobacco production, collection, transactions,
-                        records, and operational activities efficiently.
-                    </p>
-
-                    <a href="#"
-                       class="text-white font-semibold underline underline-offset-4
-                               decoration-green-500 hover:text-green-500 transition">
-                        View Details →
-                    </a>
-
-                </div>
-
-                <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                            flex items-center justify-center overflow-hidden">
-
-                    <img src="./resource/image/agri.jpeg"
-                         alt="Agricoop ERP Tumbaku"
-                         class="w-full h-full object-cover">
-
-                </div>
-
-            </div>
-
-            <div class="flex flex-col md:flex-row min-h-[400px]">
-
-                <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                        Agricoop ERP KAHAWA
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed mb-7">
-                        A digital solution designed to manage the coffee value chain,
-                        connecting farmers, cooperatives, collection centers,
-                        production activities, sales, payments, and business records
-                        through an integrated platform.
-                    </p>
-
-                    <a href="#"
-                       class="text-white font-semibold underline underline-offset-4
-                               decoration-green-500 hover:text-green-500 transition">
-                        View Details →
-                    </a>
-
-                </div>
-
-                <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                            flex items-center justify-center overflow-hidden">
-
-                    <img src="./resource/image/cloud.webp"
-                         alt="Agricoop ERP Kahawa"
-                         class="w-full h-full object-cover">
-
-                </div>
-
-            </div>
-
-            <div class="flex flex-col md:flex-row-reverse min-h-[400px]">
-
-                <div class="w-full md:w-1/2 bg-[#0b2115] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                        Agrisasa ERP
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed mb-7">
-                        A modern agricultural management system that helps
-                        organizations manage farmers, agricultural activities,
-                        production, crops, resources, records, and reports while
-                        improving operational efficiency and decision-making.
-                    </p>
-
-                    <a href="#"
-                       class="text-white font-semibold underline underline-offset-4
-                               decoration-green-500 hover:text-green-500 transition">
-                        View Details →
-                    </a>
-
-                </div>
-
-                <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                            flex items-center justify-center overflow-hidden">
-
-                    <img src="./resource/image/agri.jpeg"
-                         alt="Agrisaa ERP"
-                         class="w-full h-full object-cover">
-
-                </div>
-
-            </div>
-
-            <div class="flex flex-col md:flex-row min-h-[400px]">
-
-                <div class="w-full md:w-1/2 bg-[#07130d] text-white p-8 md:p-14 flex flex-col justify-center">
-
-
-                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
-                        eSaccos
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed mb-7">
-                        A secure digital SACCOS management platform for managing
-                        members, savings, loans, repayments, transactions, financial
-                        records, and reports, providing efficient and transparent
-                        financial management.
-                    </p>
-
-                    <a href="#"
-                       class="text-white font-semibold underline underline-offset-4
-                             decoration-green-500 hover:text-green-500 transition">
-                        View Details →
-                    </a>
-
-                </div>
-
-                <div class="w-full md:w-1/2 bg-[#dce7df] min-h-[300px]
-                            flex items-center justify-center overflow-hidden">
-
-                    <img src="./resource/image/agri.jpeg"
-                         alt="eSaccos"
-                         class="w-full h-full object-cover">
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-</section>
+    </section>
 </body>
 </html>
