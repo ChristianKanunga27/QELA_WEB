@@ -38,6 +38,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     .contact-bar {
         min-height: 44px;
         box-sizing: border-box;
+        background: #000;
+    }
+
+    .contact-bar h4 {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .contact-bar i {
+        color: var(--lime);
+        font-size: 0.8rem;
     }
 
     .main-nav {
@@ -100,7 +114,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 }
 
     .hero {
-        min-height: 680px;
+        min-height: 100svh;
         position: relative;
         isolation: isolate;
     }
@@ -277,10 +291,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     @media (max-width: 640px) {
 
-        .contact-bar {
-            display: none;
-        }
-
         /* .nav-inner {
             width: calc(100% - 2rem);
         }
@@ -303,7 +313,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         }
 
         .hero {
-            min-height: 640px;
+            min-height: 100svh;
         }
 
         .hero-heading {
@@ -326,7 +336,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body class="bg-white">
 <header>
-<div class="contact-bar flex w-full items-center justify-end gap-4 px-6 py-2 text-xs font-medium text-white lg:text-sm">
+<div class="contact-bar flex w-full items-center justify-end gap-5 px-5 py-2 text-xs font-medium text-white lg:gap-6 lg:px-8 lg:text-sm">
     <h4><i class="fa-solid fa-envelope "></i>info@qelatechnologies.co.tz</h4>
     <h4><i class="fa-solid fa-phone "></i>+255 752 686 686</h4>
 </div>
@@ -363,7 +373,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <source src="./resource/video/bg5.mp4" type="video/mp4">
 </video>
 
-<div class="hero-content relative z-[1] flex min-h-[680px] items-center justify-center text-center">
+<div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
 
     <div >
 
