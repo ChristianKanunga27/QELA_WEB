@@ -16,6 +16,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
     :root {
         --ink: #10271b;
         --lime: #dfa21f;
@@ -27,13 +44,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         background: var(--ink);
         font-family: 'DM Sans', sans-serif;
     }
-
-    /* header {
-        position: relative;
-        inset: 0 0 auto;
-        z-index: 10;
-        width: 100%;
-    } */
 
     .contact-bar {
         min-height: 44px;
@@ -401,6 +411,113 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </div>
 </section>
+<!-- Clients Section -->
+
+<div class="bg-blue-800 text-white">
+
+```
+<!-- Heading -->
+<div class="text-center py-10">
+    <div class="text-3xl font-bold">
+        Our <span class="text-yellow-400">Clients</span>
+    </div>
+
+    <span class="text-gray-200 text-lg">
+        Meet our happier clients
+    </span>
+</div>
+
+<!-- Client Logos -->
+<div class="grid grid-cols-5 items-center gap-36 px-10 pb-10">
+
+    <img src="./resource/logos/ewura.png"
+         alt="EWURA"
+         class="w-28 h-20 object-contain">
+
+    <img src="./resource/logos/ifs.png"
+         alt="IFS"
+         class="w-28 h-20 object-contain">
+
+    <img src="./resource/logos/ihi.jpeg"
+         alt="Ifakara"
+         class="w-28 h-20 object-contain">
+
+    <img src="./resource/logos/yala_logo.svg"
+         alt="Yara"
+         class="w-28 h-20 object-contain">
+
+    <div></div>
+
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
+</div>
+```
+
+</div>
+
+<!-- Partners Section -->
+
+<div class="bg-white">
+
+<!-- Partners Heading -->
+<div class="text-center py-10">
+    <div class="text-3xl font-bold">
+        Our <span class="text-yellow-400">Partners</span>
+    </div>
+
+    <span class="text-gray-500 text-lg">
+        It's a pleasure to have these partners
+    </span>
+</div>
+
+<!-- Partners Logos -->
+<div class="overflow-hidden w-full pb-10">
+    <div class="flex items-center gap-36 w-max animate-marquee">
+
+        <!-- First set -->
+        <img src="./resource/logos/COLEAD.png"
+             alt="COLEAD"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/farmforce (1).png"
+             alt="Farmforce"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/npk_logo.jpg"
+             alt="NPK"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/palladium.png"
+             alt="Palladium"
+             class="w-28 h-20 object-contain">
+
+
+        <!-- Duplicate set for continuous movement -->
+        <img src="./resource/logos/COLEAD.png"
+             alt="COLEAD"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/farmforce (1).png"
+             alt="Farmforce"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/npk_logo.jpg"
+             alt="NPK"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/palladium.png"
+             alt="Palladium"
+             class="w-28 h-20 object-contain">
+
+    </div>
+</div>
+
+</div>
+
 <section class="py-16 bg-[#f1f5f3] font-sans">
 
 <footer class="bg-[#07130d] text-white">
