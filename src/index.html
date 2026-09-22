@@ -6,7 +6,7 @@
     <meta name="description" content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
 <title>QELA Technology | Digital solutions for agriculture</title>
 
-<link href="./src/output.css" rel="stylesheet">
+<link href="./output.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" 
@@ -43,11 +43,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         margin: 0;
         background: var(--ink);
         font-family: 'DM Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
     }
 
     .contact-bar {
@@ -346,61 +341,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             line-height: 1.5;
         }
     }
-
-    /* Keep the existing client and partner content usable at every width. */
-    .bg-blue-800 > .grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: clamp(1rem, 5vw, 4rem);
-    }
-
-    .bg-white > .overflow-hidden > .flex {
-        gap: clamp(1.5rem, 6vw, 9rem);
-        min-width: max-content;
-    }
-
-    @media (max-width: 640px) {
-        .nav-inner {
-            width: calc(100% - 1.5rem);
-            gap: 1rem;
-        }
-
-        .main-nav {
-            padding: 0.75rem 0;
-        }
-
-        .nav-logo {
-            max-width: 105px;
-            height: auto;
-        }
-
-        .nav-links {
-            gap: 0.65rem;
-            font-size: 0.75rem;
-        }
-
-        .contact-bar {
-            justify-content: center;
-            gap: 0.75rem;
-            padding-inline: 0.75rem;
-            font-size: 0.65rem;
-        }
-
-        .bg-blue-800 > .grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.25rem;
-            padding-inline: 1.25rem;
-        }
-
-        .bg-blue-800 > .grid > img {
-            width: 100%;
-            height: 4.5rem;
-        }
-
-        .bg-white > .overflow-hidden > .flex > img {
-            width: 7rem;
-            height: 5rem;
-        }
-    }
 </style>
 </head>
 
@@ -414,7 +354,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <nav id="navbar" class="w-full p-4 "> 
   <div class="nav-inner flex items-center justify-between gap-8">
-    <img src="./src/resource/image/qela_logo.png"
+    <img src="./resource/image/qela_logo.png"
          class="nav-logo h-16"
          alt="QELA logo">
 
@@ -440,7 +380,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     preload="auto"
     aria-hidden="true"
 >
-    <source src="./src/resource/video/bg5.mp4" type="video/mp4">
+    <source src="./resource/video/bg5.mp4" type="video/mp4">
 </video>
 
 <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
@@ -475,6 +415,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <div class="bg-blue-800 text-white">
 
+```
 <!-- Heading -->
 <div class="text-center py-10">
     <div class="text-3xl font-bold">
@@ -489,25 +430,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <!-- Client Logos -->
 <div class="grid grid-cols-5 items-center gap-36 px-10 pb-10">
 
-    <img src="./src/resource/logos/ewura.png"
+    <img src="./resource/logos/ewura.png"
          alt="EWURA"
          class="w-28 h-20 object-contain">
 
-    <img src="./src/resource/logos/ifs.png"
+    <img src="./resource/logos/ifs.png"
          alt="IFS"
          class="w-28 h-20 object-contain">
 
-    <img src="./src/resource/logos/ihi.jpeg"
+    <img src="./resource/logos/ihi.jpeg"
          alt="Ifakara"
          class="w-28 h-20 object-contain">
 
-    <img src="./src/resource/logos/yala_logo.svg"
+    <img src="./resource/logos/yala_logo.svg"
          alt="Yara"
          class="w-28 h-20 object-contain">
 
     <div></div>
 
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
 </div>
+```
 
 </div>
 
@@ -531,37 +479,37 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="flex items-center gap-36 w-max animate-marquee">
 
         <!-- First set -->
-        <img src="./src/resource/logos/COLEAD.png"
+        <img src="./resource/logos/COLEAD.png"
              alt="COLEAD"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/farmforce (1).png"
+        <img src="./resource/logos/farmforce (1).png"
              alt="Farmforce"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/npk_logo.jpg"
+        <img src="./resource/logos/npk_logo.jpg"
              alt="NPK"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/palladium.png"
+        <img src="./resource/logos/palladium.png"
              alt="Palladium"
              class="w-28 h-20 object-contain">
 
 
         <!-- Duplicate set for continuous movement -->
-        <img src="./src/resource/logos/COLEAD.png"
+        <img src="./resource/logos/COLEAD.png"
              alt="COLEAD"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/farmforce (1).png"
+        <img src="./resource/logos/farmforce (1).png"
              alt="Farmforce"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/npk_logo.jpg"
+        <img src="./resource/logos/npk_logo.jpg"
              alt="NPK"
              class="w-28 h-20 object-contain">
 
-        <img src="./src/resource/logos/palladium.png"
+        <img src="./resource/logos/palladium.png"
              alt="Palladium"
              class="w-28 h-20 object-contain">
 
@@ -625,7 +573,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         <div class="lg:col-span-1">
 
-            <img src="src/resource/logos/qela_icon.svg" class="mb-5 h-12 w-auto" alt="QELA logo">
+            <img src="resource/logos/qela_icon.svg" class="mb-5 h-12 w-auto" alt="QELA logo">
             <a href="#" class="inline-block mb-5">
 
                 <h1 class="text-3xl font-extrabold tracking-tight">
@@ -906,7 +854,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </div>
 
             <div>
-                <img src="src/resource/logos/location_logo.png" alt="Location">
+                <img src="resource/logos/">
                 <span class="ml-1">
                     Kimara,Stop over<br>
                     Dar es salaam
@@ -963,7 +911,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             navbar.classList.remove("is-sticky");
         }
     });
-    
 </script>
 
 </body>
