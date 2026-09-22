@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients</title>
     <link href="./output.css" rel="stylesheet">
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+</style>
+
+
 </head>
 
 <body>
 
     <!-- Heading -->
+    <div class="bg-gray-200"> 
     <div class="text-center py-10">
         <div class="text-3xl font-bold ">
             Our <span class="text-yellow-400">Clients</span>
@@ -38,7 +61,7 @@
         <img src="./resource/logos/yala_logo.svg"
              alt="Yara"
              class="w-28 h-20 object-contain">
-        <div>gfh</div>    
+        <div></div>    
 
         <img src="" alt="">
         <img src="" alt="">
@@ -47,36 +70,62 @@
         <img src="" alt="">
 
     </div>
+   </div> 
    
-  <div class="text-center py-10">
-        <div class="text-3xl font-bold ">
-            Our <span class="text-yellow-400">Partners</span>
-        </div>
-
-        <span class="text-gray-500 text-lg ">
-            It's Preasure to have these partners
-        </span>
+<!-- Partners Heading -->
+<div class="text-center py-10 ">
+    <div class="text-3xl font-bold">
+        Our <span class="text-yellow-400">Partners</span>
     </div>
 
-    <!-- Client Logos -->
-    <div class="grid grid-cols-5 items-center  gap-36 px-10">
+    <span class="text-gray-500 text-lg">
+        It's a pleasure to have these partners
+    </span>
+</div>
 
-        <img src=""
-             alt=""
+
+<!-- Partners Logos -->
+<div class="overflow-hidden w-full">
+    <div class="flex items-center gap-36 w-max animate-marquee">
+
+        <!-- First set -->
+        <img src="./resource/logos/COLEAD.png"
+             alt="COLEAD"
              class="w-28 h-20 object-contain">
 
-        <img src=""
-             alt=""
+        <img src="./resource/logos/farmforce (1).png"
+             alt="Farmforce"
              class="w-28 h-20 object-contain">
 
-        <img src=""
-             alt=""
+        <img src="./resource/logos/npk_logo.jpg"
+             alt="NPK"
              class="w-28 h-20 object-contain">
 
-        <img src=""
-             alt=""
+        <img src="./resource/logos/palladium.png"
+             alt="Palladium"
              class="w-28 h-20 object-contain">
-        <div>gfh</div> 
+
+
+        <!-- Duplicate set for continuous movement -->
+        <img src="./resource/logos/COLEAD.png"
+             alt="COLEAD"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/farmforce (1).png"
+             alt="Farmforce"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/npk_logo.jpg"
+             alt="NPK"
+             class="w-28 h-20 object-contain">
+
+        <img src="./resource/logos/palladium.png"
+             alt="Palladium"
+             class="w-28 h-20 object-contain">
+
+    </div>
+</div>
+
 
 </body>
 </html>
