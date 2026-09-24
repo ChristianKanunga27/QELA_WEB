@@ -5,199 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients</title>
     <link href="./output.css" rel="stylesheet">
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-.animate-marquee {
-    animation: marquee 20s linear infinite;
-}
-
-</style>
-
-
+    <!-- <style>
+        .font-serif-display { font-family: 'Fraunces', serif; }
+        .font-sans-body { font-family: 'Inter', sans-serif; }
+    </style> -->
 </head>
 
-<body>
+<body class="">
 
-    <!-- Heading -->
-     
-    <div class="bg-gray-200"> 
-    <div class="text-center py-10">
-        <div class="text-3xl font-bold ">
-            Our <span class="text-yellow-400">Clients</span>
+<section class="bg-gray-400 px-8 sm:px-10 lg:px-18 py-16 lg:py-24 text-center">
+    <div class="max-w-6xl mx-auto text-center">
+
+        <!-- Heading -->
+        <div class="max-w-xl mx-auto mb-12 lg:mb-16">
+            <h2 class="text-3xl sm:text-4xl text-[#14261e]">
+                certificates <span class="text-yellow-400">and Awards</span>
+            </h2>
+            <p class="mt-4 text-[15px] sm:text-base text-[#5c6660]">
+                Every credential behind our work, on record with Tanzania's registration
+                and revenue authorities.
+            </p>
         </div>
 
-        <span class="text-gray-500 text-lg ">
-            Meet our happier clients
-        </span>
+        <!-- Gallery -->
+        <div class="!px-4 sm:!px-6">
+
+            <!-- Row 1: Business License | ICA | Hati ya Shukrani -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7 mb-5 sm:mb-7">
+
+                <!-- Business License -->
+                <figure class="flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/business license.png.jpeg"
+                             alt="Business License"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        Business License
+                    </figcaption>
+                </figure>
+
+                <!-- ICA -->
+                <figure>
+                    <div class="h-48 sm:h-64 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/ica.png.jpeg"
+                             alt="ICA"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        ICA
+                    </figcaption>
+                </figure>
+
+                <!-- Hati ya Shukrani -->
+                <figure class="flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/hati ya shukrani.png.jpeg"
+                             alt="Hati ya Shukrani"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        Hati ya Shukrani
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <!-- Row 2: Incorporate | TCDC | TRA -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7">
+
+                <figure>
+                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/incoporate.png.jpeg"
+                             alt="Incorporate"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        Certificate of Incorporation
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/tcdc.png.jpeg"
+                             alt="TCDC"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        TCDC
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/tra.png.jpeg"
+                             alt="TRA"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        TRA
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <!-- Shukrani Certificate, centered below both rows -->
+            <div class="flex justify-center mt-5 sm:mt-7">
+                <figure class="w-full max-w-xs sm:max-w-sm">
+                    <div class="h-64 sm:h-72 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                        <img src="./resource/gallery/shukrani certfc.png.jpeg"
+                             alt="Shukrani Certificate"
+                             class="w-full h-full object-contain">
+                    </div>
+                    <figcaption class="mt-3 text-center text-[13px] sm:text-sm text-[#33392f]">
+                        Shukrani Certificate
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
     </div>
-
-    <!-- Client Logos -->
-    <div class="grid grid-cols-5 items-center  gap-36 px-10">
-
-        <img src="./resource/logos/ewura.png"
-             alt="EWURA"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/ifs.png"
-             alt="IFS"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/ihi.jpeg"
-             alt="Ifakara"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/yala_logo.svg"
-             alt="Yara"
-             class="w-28 h-20 object-contain">
-        <div></div>    
-
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-
-    </div>
-   </div> 
-   
-<!-- Partners Heading -->
-<div class="text-center py-10 ">
-    <div class="text-3xl font-bold">
-        Our <span class="text-yellow-400">Partners</span>
-    </div>
-
-    <span class="text-gray-500 text-lg">
-        It's a pleasure to have these partners
-    </span>
-</div>
-
-
-<!-- Partners Logos -->
-<div class="overflow-hidden w-full">
-    <div class="flex items-center gap-36 w-max animate-marquee">
-
-        <!-- First set -->
-        <img src="./resource/logos/COLEAD.png"
-             alt="COLEAD"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/farmforce (1).png"
-             alt="Farmforce"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/npk_logo.jpg"
-             alt="NPK"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/palladium.png"
-             alt="Palladium"
-             class="w-28 h-20 object-contain">
-
-
-        <!-- Duplicate set for continuous movement -->
-        <img src="./resource/logos/COLEAD.png"
-             alt="COLEAD"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/farmforce (1).png"
-             alt="Farmforce"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/npk_logo.jpg"
-             alt="NPK"
-             class="w-28 h-20 object-contain">
-
-        <img src="./resource/logos/palladium.png"
-             alt="Palladium"
-             class="w-28 h-20 object-contain">
-
-    </div>
-</div>
-
-<div class="px-4 sm:px-6 lg:px-12 py-10">
-
-    <!-- Gallery -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-
-        <!-- Business License -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/business license.png.jpeg"
-                 alt="Business License"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Hati ya Shukrani -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/hati ya shukrani.png.jpeg"
-                 alt="Hati ya Shukrani"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- ICA -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/ica.png.jpeg"
-                 alt="ICA"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Incorporate -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/incoporate.png.jpeg"
-                 alt="Incorporate"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Shukrani Certificate -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/shukrani certfc.png.jpeg"
-                 alt="Shukrani Certificate"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- TCDC -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/tcdc.png.jpeg"
-                 alt="TCDC"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- TRA -->
-        <div class="group bg-white rounded-lg border border-gray-200
-                    overflow-hidden hover:shadow-lg transition-all duration-300">
-            <img src="./resource/gallery/tra.png.jpeg"
-                 alt="TRA"
-                 class="w-full h-48 sm:h-56 object-contain p-2
-                        group-hover:scale-105 transition-transform duration-300">
-        </div>
-
-    </div>
-</div>
-
+</section>
 
 </body>
 </html>
