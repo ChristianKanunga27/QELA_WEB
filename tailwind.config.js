@@ -6,6 +6,11 @@ module.exports = {
     ],
     theme: {
         extend: {},
+        container: {
+            center: true,
+            sm: '2rem',
+
+        },
     },
     plugins: [],
 }
