@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Qela Technologies agricultural technology impact statistics.">
-    <title>Qela Technologies | Our Impact</title>
-    <link href="./output.css" rel="stylesheet">
+
+    <meta name="description"
+          content="Qela Agritech impact statistics.">
+
+    <title>Qela Statistics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
     <style>
-        :root {
-            --qela-green: #07130d;
-            --agri-green: #6f9f3f;
-        }
 
         body {
             margin: 0;
-            background: var(--qela-green);
             font-family: 'DM Sans', sans-serif;
         }
-
-        .statistics-heading,
-        .statistics-number {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .statistics-item {
+.statistics-item {
             opacity: 0;
-            transform: translateY(1.5rem);
-            transition: opacity 700ms ease, transform 700ms ease;
+            transform: translateY(25px);
+            transition:
+                opacity 700ms ease,
+                transform 700ms ease;
         }
 
         .statistics-item.is-visible {
@@ -48,109 +53,438 @@
         .statistics-item:nth-child(4) {
             transition-delay: 300ms;
         }
+.stat-icon {
+            width: 42px;
+            height: 42px;
+            stroke: #9fc96a;
+            stroke-width: 1.6;
+            fill: none;
+        }
+ @media (max-width: 1023px) {
+
+            .statistics-item:nth-child(2),
+            .statistics-item:nth-child(4) {
+                border-right: none;
+            }
+
+        }
+
 
         @media (prefers-reduced-motion: reduce) {
+
             .statistics-item {
                 opacity: 1;
                 transform: none;
                 transition: none;
             }
+
         }
+
     </style>
+
 </head>
+
+
 <body>
-    <main>
-        <section class="relative isolate min-h-[420px] overflow-hidden py-16 text-white sm:min-h-[450px] sm:py-20" aria-label="Qela Technologies agricultural impact statistics">
-            <div class="absolute inset-0 z-0">
-                <img
-                    src="./resource/image/farmer.jpeg"
-                    alt="Farmer standing in a green agricultural field"
-                    class="h-full w-full object-cover object-center"
+    <h2>statistics</h2>
+<section
+    class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px]"
+    aria-label="Qela Agritech statistics"
+>
+ <div class="absolute inset-0">
+
+        <img
+            src="./resource/image/farmer.jpeg"
+            alt="Farmer working in an agricultural field"
+            class="h-full w-full object-cover object-center"
+        >
+
+    </div>
+<div
+        class="absolute inset-0 bg-[#174f2a]/80"
+    ></div>
+ <div
+        class="absolute inset-0 bg-[#06351f]/25"
+    ></div>
+<div
+        class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]"
+    >
+
+        <div
+            class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10"
+        >
+
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                data-statistics
+            > <article
+                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center px-6 py-8 text-center lg:border-r lg:border-white/25"
+                    data-target="500"
+                    data-display="500"
                 >
+                <div
+                        class="text-5xl font-bold tracking-tight text-white sm:text-6xl"
+                    >
+
+                        <span data-counter>0</span><span
+                            class="text-[#a7d85f]"
+                        >+</span>
+
+                    </div>
+ <div class="mt-5">
+
+                        <svg
+                            class="stat-icon"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                        >
+
+                            <!-- People -->
+                            <circle
+                                cx="24"
+                                cy="13"
+                                r="5"
+                            />
+
+                            <path
+                                d="M14 36c0-6 4-10 10-10s10 4 10 10"
+                            />
+
+                            <circle
+                                cx="10"
+                                cy="19"
+                                r="4"
+                            />
+
+                            <path
+                                d="M2 36c0-5 3-8 8-8"
+                            />
+
+                            <circle
+                                cx="38"
+                                cy="19"
+                                r="4"
+                            />
+
+                            <path
+                                d="M46 36c0-5-3-8-8-8"
+                            />
+
+                        </svg>
+
+                    </div><p
+                        class="mt-4 text-sm font-medium text-white sm:text-base"
+                    >
+                        Farmers Registered
+                    </p>
+
+                </article>
+ <article
+                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
+                    data-target="200"
+                    data-display="200"
+                >
+                    <div
+                        class="text-5xl font-bold tracking-tight text-white sm:text-6xl"
+                    >
+
+                        <span data-counter>0</span><span
+                            class="text-[#a7d85f]"
+                        >+</span>
+
+                    </div>
+
+
+                    <!-- ICON -->
+                    <div class="mt-5">
+
+                        <svg
+                            class="stat-icon"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                        >
+
+                        
+                            <path
+                                d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z"
+                            />
+
+                            <path
+                                d="M17 5v34"
+                            />
+
+                            <path
+                                d="M31 9v34"
+                            />
+
+                            
+                            <path
+                                d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z"
+                            />
+
+                            <circle
+                                cx="24"
+                                cy="22"
+                                r="2"
+                            />
+
+                        </svg>
+
+                    </div>
+                    <p
+                        class="mt-4 text-sm font-medium text-white sm:text-base"
+                    >
+                        Farms Mapped
+                    </p>
+
+                </article>
+<article
+                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
+                    data-target="3"
+                    data-display="3"
+                >
+                    <div
+                        class="text-5xl font-bold tracking-tight text-white sm:text-6xl"
+                    >
+
+                        <span data-counter>0</span>
+
+                    </div>
+                    <div class="mt-5">
+
+                        <svg
+                            class="stat-icon"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                        >
+
+                            <!-- Plant -->
+                            <path
+                                d="M24 42V22"
+                            />
+
+                            <path
+                                d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z"
+                            />
+
+                            <path
+                                d="M24 23c0-9 6-15 15-15 0 9-6 15-15 15z"
+                            />
+
+                            <path
+                                d="M17 42h14"
+                            />
+
+                        </svg>
+
+                    </div>
+                    <p
+                        class="mt-4 text-sm font-medium text-white sm:text-base"
+                    >
+                        Strategic Products
+                    </p>
+
+                </article>
+
+                <article
+                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
+                    data-target="50"
+                    data-display="50"
+                >
+
+                    <!-- NUMBER -->
+                    <div
+                        class="text-5xl font-bold tracking-tight text-white sm:text-6xl"
+                    >
+
+                        <span data-counter>0</span><span
+                            class="text-[#a7d85f]"
+                        >+</span>
+
+                    </div>
+
+
+                    <!-- ICON -->
+                    <div class="mt-5">
+
+                        <svg
+                            class="stat-icon"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                        >
+
+                            <!-- Handshake -->
+                            <path
+                                d="M4 20l8-7 8 4 8-5 16 8"
+                            />
+
+                            <path
+                                d="M4 20l7 17 9-5 7 6 5-7"
+                            />
+
+                            <path
+                                d="M44 20l-7 17-9-5"
+                            />
+
+                            <path
+                                d="M20 17l7 7"
+                            />
+
+                            <path
+                                d="M27 24l5 5"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+                    <p
+                        class="mt-4 text-sm font-medium text-white sm:text-base"
+                    >
+                        Registered Unions
+                    </p>
+
+                </article>
+
+
             </div>
 
-            <div class="absolute inset-0 z-10 bg-[#2f6b36]/75 mix-blend-multiply"></div>
+        </div>
 
-            <div class="relative z-20 mx-auto flex min-h-[300px] w-full max-w-6xl items-center px-5 sm:px-8">
-                <div class="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-statistics>
-                    <article class="statistics-item min-h-[170px] border-l-2 border-[#9fc96a]/70 pl-5" data-target="500" data-display="500">
-                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#b4d87b]">+</span></p>
-                        <div class="mt-4 h-1 w-10 bg-[#9fc96a]"></div>
-                        <h2 class="mt-4 text-lg font-semibold text-white sm:text-xl">Farmers Registered</h2>
-                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/85">Farmers connected to digital agricultural services.</p>
-                    </article>
+    </div>
 
-                    <article class="statistics-item min-h-[170px] border-l-2 border-[#9fc96a]/70 pl-5" data-target="3" data-display="3">
-                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span></p>
-                        <div class="mt-4 h-1 w-10 bg-[#9fc96a]"></div>
-                        <h2 class="mt-4 text-lg font-semibold text-white sm:text-xl">Digital Products</h2>
-                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/85">Agricoop, Agrisas, and Eamcos supporting modern agriculture.</p>
-                    </article>
+</section>
 
-                    <article class="statistics-item min-h-[170px] border-l-2 border-[#9fc96a]/70 pl-5" data-target="50" data-display="50">
-                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#b4d87b]">+</span></p>
-                        <div class="mt-4 h-1 w-10 bg-[#9fc96a]"></div>
-                        <h2 class="mt-4 text-lg font-semibold text-white sm:text-xl">Registered Unions</h2>
-                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/85">Cooperatives and agricultural organizations registered.</p>
-                    </article>
+<script>
 
-                    <article class="statistics-item min-h-[170px] border-l-2 border-[#9fc96a]/70 pl-5" data-target="200" data-display="200">
-                        <p class="statistics-number text-5xl font-semibold leading-none text-white sm:text-6xl"><span data-counter>0</span><span class="text-[#b4d87b]">+</span></p>
-                        <div class="mt-4 h-1 w-10 bg-[#9fc96a]"></div>
-                        <h2 class="mt-4 text-lg font-semibold text-white sm:text-xl">Farms Mapped</h2>
-                        <p class="mt-2 max-w-xs text-sm leading-6 text-white/85">Agricultural farms mapped through digital technology.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+    const statistics =
+        document.querySelector('[data-statistics]');
 
-    <script>
-        const statistics = document.querySelector('[data-statistics]');
-        const items = document.querySelectorAll('.statistics-item');
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const items =
+        document.querySelectorAll('.statistics-item');
 
-        function animateCounter(item) {
-            const counter = item.querySelector('[data-counter]');
-            const target = Number(item.dataset.target);
-            const display = item.dataset.display || target;
 
-            if (prefersReducedMotion) {
-                counter.textContent = display;
-                return;
-            }
+    const prefersReducedMotion =
+        window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
 
-            const startTime = performance.now();
-            const duration = 1200;
 
-            function updateCounter(currentTime) {
-                const progress = Math.min((currentTime - startTime) / duration, 1);
-                const easedProgress = 1 - Math.pow(1 - progress, 3);
-                counter.textContent = Math.floor(target * easedProgress).toLocaleString();
 
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = display;
-                }
-            }
+    function animateCounter(item) {
 
-            requestAnimationFrame(updateCounter);
+        const counter =
+            item.querySelector('[data-counter]');
+
+        const target =
+            Number(item.dataset.target);
+
+        const display =
+            item.dataset.display || target;
+
+
+        if (prefersReducedMotion) {
+
+            counter.textContent = display;
+
+            return;
+
         }
 
-        const observer = new IntersectionObserver((entries, currentObserver) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
 
-                items.forEach((item) => {
-                    item.classList.add('is-visible');
-                    animateCounter(item);
+        const startTime =
+            performance.now();
+
+        const duration = 1400;
+
+
+
+        function updateCounter(currentTime) {
+
+            const progress =
+                Math.min(
+                    (currentTime - startTime) / duration,
+                    1
+                );
+
+
+            const easedProgress =
+                1 - Math.pow(1 - progress, 3);
+
+
+            counter.textContent =
+                Math.floor(
+                    target * easedProgress
+                ).toLocaleString();
+
+
+            if (progress < 1) {
+
+                requestAnimationFrame(
+                    updateCounter
+                );
+
+            } else {
+
+                counter.textContent = display;
+
+            }
+
+        }
+
+
+        requestAnimationFrame(
+            updateCounter
+        );
+
+    }
+
+const observer =
+        new IntersectionObserver(
+
+            (entries, currentObserver) => {
+
+                entries.forEach(entry => {
+
+                    if (!entry.isIntersecting)
+                        return;
+
+
+                    items.forEach(item => {
+
+                        item.classList.add(
+                            'is-visible'
+                        );
+
+                        animateCounter(item);
+
+                    });
+
+
+                    currentObserver.unobserve(
+                        entry.target
+                    );
+
                 });
-                currentObserver.unobserve(entry.target);
-            });
-        }, { threshold: 0.25 });
 
-        observer.observe(statistics);
-    </script>
+            },
+
+            {
+                threshold: 0.25
+            }
+
+        );
+
+
+    observer.observe(statistics);
+
+</script>
+
+
 </body>
+
 </html>
+
