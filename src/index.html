@@ -10,7 +10,11 @@
     <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
     <link href="./output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
@@ -649,6 +653,58 @@
         .faq-icon {
             transition: transform 0.3s ease;
         }
+        .statistics-item {
+            opacity: 0;
+            transform: translateY(25px);
+            transition:
+                opacity 700ms ease,
+                transform 700ms ease;
+        }
+
+        .statistics-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .statistics-item:nth-child(2) {
+            transition-delay: 100ms;
+        }
+
+        .statistics-item:nth-child(3) {
+            transition-delay: 200ms;
+        }
+
+        .statistics-item:nth-child(4) {
+            transition-delay: 300ms;
+        }
+
+        .stat-icon {
+            width: 42px;
+            height: 42px;
+            stroke: #9fc96a;
+            stroke-width: 1.6;
+            fill: none;
+        }
+
+        @media (max-width: 1023px) {
+
+            .statistics-item:nth-child(2),
+            .statistics-item:nth-child(4) {
+                border-right: none;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .statistics-item {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+        }
     </style>
 </head>
 
@@ -751,7 +807,7 @@
 
             <div class="logo-tile"><img src="./resource/image/corecu.jpeg" alt="corecu"></div>
 
-            <div class="logo-tile"><img src="./resource/image/tanec.png" alt="tanecu"></div>
+            <div class="logo-tile"><img src="./resource/image/tannne.png" alt="tanecu"></div>
 
             <!-- <div class="logo-tile"><img src="./resource/image/nyanza.jpeg" alt="nyanza"></div> -->
 
@@ -1127,7 +1183,7 @@
 
                     <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                        <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+                        <span data-counter>0</span><span class="text-white">+</span>
 
                     </div>
 
@@ -1165,7 +1221,7 @@
 
                     <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                        <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+                        <span data-counter>0</span><span class="text-white">+</span>
 
                     </div>
 
@@ -1202,7 +1258,7 @@
 
                     <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                        <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+                        <span data-counter>0</span><span class="text-white">+</span>
 
                     </div>
 
@@ -1237,14 +1293,13 @@
                     <!-- NUMBER -->
                     <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                        <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+                        <span data-counter>0</span><span class="text-white">+</span>
 
                     </div>
 
 
                     <!-- ICON -->
                     <div class="mt-5">
-
                         <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
 
                             <!-- Handshake -->
