@@ -97,7 +97,7 @@
     }
 
     header {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
@@ -288,10 +288,458 @@
 </header>
   
     <section class="hero w-full overflow-hidden text-white">
-       <img src="./resource/image/farmer1.jpg" alt="" 
-       class="object-cover w-full h-[400px] py-5">
+
+         <div class="h-80 bg-[url('./resource/image/about.jpg')] 
+            bg-cover bg-center flex items-center justify-center">
+
+        <p class="font-bold text-center text-2xl text-yellow-400 z-[50]">Home/About</p>
+
 
     </section>
+
+
+
+     <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const closeBtn =
+            document.getElementById("closeBtn");
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        if (menuBtn && closeBtn && sidebar) {
+
+            function openSidebar() {
+
+                sidebar.classList.remove(
+                    "translate-x-full"
+                );
+
+                sidebar.classList.add(
+                    "translate-x-0"
+                );
+
+                document.body.classList.add(
+                    "overflow-hidden"
+                );
+
+            }
+
+            function closeSidebar() {
+
+                sidebar.classList.remove(
+                    "translate-x-0"
+                );
+
+                sidebar.classList.add(
+                    "translate-x-full"
+                );
+
+                document.body.classList.remove(
+                    "overflow-hidden"
+                );
+
+            }
+
+            menuBtn.addEventListener(
+                "click",
+                function () {
+                    openSidebar();
+                }
+            );
+
+            closeBtn.addEventListener(
+                "click",
+                function () {
+                    closeSidebar();
+                }
+            );
+
+            const sidebarLinks =
+                sidebar.querySelectorAll("a");
+
+            sidebarLinks.forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            closeSidebar();
+
+                        }
+                    );
+
+                }
+            );
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+                        closeSidebar();
+                    }
+
+                }
+            );
+
+            window.addEventListener(
+                "resize",
+                function () {
+
+                    if (window.innerWidth >= 768) {
+                        closeSidebar();
+                    }
+
+                }
+            );
+
+        }
+
+        const navbar =
+            document.getElementById("navbar");
+
+        const contactBar =
+            document.querySelector(".contact-bar");
+
+        if (navbar) {
+
+            function handleNavbarScroll() {
+
+                const triggerPoint =
+                    contactBar
+                        ? contactBar.offsetHeight
+                        : 44;
+
+                if (window.scrollY > triggerPoint) {
+
+                    navbar.classList.add(
+                        "is-sticky"
+                    );
+
+                } else {
+
+                    navbar.classList.remove(
+                        "is-sticky"
+                    );
+
+                }
+
+            }
+
+            window.addEventListener(
+                "scroll",
+                handleNavbarScroll
+            );
+
+            handleNavbarScroll();
+
+        }
+
+        const faqItems =
+            document.querySelectorAll(
+                ".faq-item"
+            );
+
+        faqItems.forEach(
+            function (item) {
+
+                const question =
+                    item.querySelector(
+                        ".faq-question"
+                    );
+
+                const answer =
+                    item.querySelector(
+                        ".faq-answer"
+                    );
+
+                const icon =
+                    item.querySelector(
+                        ".faq-icon"
+                    );
+
+                if (
+                    !question ||
+                    !answer ||
+                    !icon
+                ) {
+                    return;
+                }
+
+                question.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            item.classList.contains(
+                                "active"
+                            );
+
+                        faqItems.forEach(
+                            function (otherItem) {
+
+                                const otherAnswer =
+                                    otherItem.querySelector(
+                                        ".faq-answer"
+                                    );
+
+                                const otherIcon =
+                                    otherItem.querySelector(
+                                        ".faq-icon"
+                                    );
+
+                                otherItem.classList.remove(
+                                    "active"
+                                );
+
+                                if (otherAnswer) {
+
+                                    otherAnswer.style.maxHeight =
+                                        "0px";
+
+                                    otherAnswer.style.opacity =
+                                        "0";
+
+                                }
+
+                                if (otherIcon) {
+
+                                    otherIcon.textContent =
+                                        "+";
+
+                                }
+
+                            }
+                        );
+
+                        if (!isOpen) {
+
+                            item.classList.add(
+                                "active"
+                            );
+
+                            answer.style.maxHeight =
+                                answer.scrollHeight + "px";
+
+                            answer.style.opacity =
+                                "1";
+
+                            icon.textContent =
+                                "−";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+        const statistics =
+            document.querySelector(
+                "[data-statistics]"
+            );
+
+        const statisticsItems =
+            document.querySelectorAll(
+                ".statistics-item"
+            );
+
+        if (
+            statistics &&
+            statisticsItems.length > 0
+        ) {
+
+            const prefersReducedMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+            function animateCounter(item) {
+
+                const counter =
+                    item.querySelector(
+                        "[data-counter]"
+                    );
+
+                if (!counter) {
+                    return;
+                }
+
+                const targetAttribute =
+                    item.getAttribute(
+                        "data-target"
+                    );
+
+                const target =
+                    Number(targetAttribute);
+
+                if (!Number.isFinite(target)) {
+
+                    console.error(
+                        "Invalid statistics data-target:",
+                        targetAttribute,
+                        item
+                    );
+
+                    counter.textContent =
+                        "0";
+
+                    return;
+
+                }
+
+                const displayAttribute =
+                    item.getAttribute(
+                        "data-display"
+                    );
+
+                let displayNumber =
+                    Number(displayAttribute);
+
+                if (
+                    !Number.isFinite(
+                        displayNumber
+                    )
+                ) {
+
+                    displayNumber =
+                        target;
+
+                }
+
+                if (prefersReducedMotion) {
+
+                    counter.textContent =
+                        displayNumber.toLocaleString();
+
+                    return;
+
+                }
+
+                const startTime =
+                    performance.now();
+
+                const duration =
+                    1400;
+
+                function updateCounter(
+                    currentTime
+                ) {
+
+                    const elapsed =
+                        currentTime -
+                        startTime;
+
+                    const progress =
+                        Math.min(
+                            elapsed / duration,
+                            1
+                        );
+
+                    const easedProgress =
+                        1 -
+                        Math.pow(
+                            1 - progress,
+                            3
+                        );
+
+                    const currentValue =
+                        Math.floor(
+                            target *
+                            easedProgress
+                        );
+
+                    counter.textContent =
+                        currentValue.toLocaleString();
+
+                    if (progress < 1) {
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+                    } else {
+
+                        counter.textContent =
+                            displayNumber.toLocaleString();
+
+                    }
+
+                }
+
+                requestAnimationFrame(
+                    updateCounter
+                );
+
+            }
+
+            let statisticsAnimated =
+                false;
+
+            const statisticsObserver =
+                new IntersectionObserver(
+                    function (
+                        entries,
+                        observer
+                    ) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    !entry.isIntersecting ||
+                                    statisticsAnimated
+                                ) {
+                                    return;
+                                }
+
+                                statisticsAnimated =
+                                    true;
+
+                                statisticsItems.forEach(
+                                    function (item) {
+
+                                        item.classList.add(
+                                            "is-visible"
+                                        );
+
+                                        animateCounter(
+                                            item
+                                        );
+
+                                    }
+                                );
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+
+            statisticsObserver.observe(
+                statistics
+            );
+
+        }
+
+    });
+
+</script>
 
 
 </body>

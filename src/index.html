@@ -3,1412 +3,1101 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-    content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
+    <meta name="description"
+        content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
 
-<title>QELA Technology | Digital solutions for agriculture</title>
+    <title>QELA Technology | Digital solutions for agriculture</title>
 
-<link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
 
-<link href="./output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
+    <style>
+        @keyframes marquee {
 
-    @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
 
-        from {
-            transform: translateX(0);
+            to {
+                transform: translateX(-50%);
+            }
+
         }
 
-        to {
-            transform: translateX(-50%);
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
         }
 
-    }
-
-    .animate-marquee {
-        animation: marquee 20s linear infinite;
-    }
-
-    :root {
-        --ink: #10271b;
-        --lime: #dfa21f;
-        --overlay: rgba(14, 63, 29, 0.72);
-    }
-
-    body {
-        margin: 0;
-        background: var(--ink);
-        font-family: 'DM Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    .contact-bar {
-        min-height: 44px;
-        box-sizing: border-box;
-        background: #000;
-    }
-
-    .contact-bar h4 {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .contact-bar i {
-        color: var(--lime);
-        font-size: 0.8rem;
-    }
-
-    .main-nav {
-        background: transparent;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-    }
-
-    .nav-inner {
-        width: min(100% - 3rem, 1280px);
-        margin: 0 auto;
-    }
-
-    .nav-logo {
-        width: auto;
-        max-width: 150px;
-    }
-
-    .nav-links a {
-        position: relative;
-        transition: color 180ms ease;
-    }
-
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -0.45rem;
-        left: 0;
-        height: 2px;
-        background: var(--lime);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 180ms ease;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus-visible::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        width: 100%;
-    }
-
-    #navbar.is-sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: white !important;
-    }
-
-    .hero {
-        min-height: 100svh;
-        position: relative;
-        isolation: isolate;
-    }
-
-    .hero video {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -2;
-    }
-
-    .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: var(--overlay);
-        z-index: -1;
-    }
-
-    .hero-heading,
-    .brand {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .hero-heading {
-        max-width: none;
-        font-size: clamp(2rem, 7vw, 7.2rem);
-        font-weight: 600;
-        letter-spacing: 0;
-        line-height: 0.94;
-        color: white;
-        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .hero-heading span {
-        color: var(--lime);
-    }
-
-    .hero-content {
-        padding: 7rem 7vw 9rem;
-        margin-top: 4px;
-    }
-
-    .hero-description {
-        position: relative;
-        margin: 4rem auto 0;
-        width: min(900px, 90vw);
-        min-height: 100px;
-    }
-
-    .phrase {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 0 0.35em;
-        font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: clamp(2rem, 5vw, 4rem);
-        font-weight: 500;
-        line-height: 1.6;
-        color: rgb(255, 255, 255);
-    }
-
-    .phrase span {
-        opacity: 0;
-        transform: translateY(8px);
-        animation: wordAnimation 14s infinite;
-    }
-
-    .phrase-one span:nth-child(1) {
-        animation-delay: 0s;
-    }
-
-    .phrase-one span:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .phrase-one span:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-
-    .phrase-one span:nth-child(4) {
-        animation-delay: 0.6s;
-    }
-
-    .phrase-one span:nth-child(5) {
-        animation-delay: 0.8s;
-    }
-
-    .phrase-one span:nth-child(6) {
-        animation-delay: 1s;
-    }
-
-    .phrase-one span:nth-child(7) {
-        animation-delay: 1.2s;
-    }
-
-    .phrase-one span:nth-child(8) {
-        animation-delay: 1.4s;
-    }
-
-    .phrase-one span:nth-child(9) {
-        animation-delay: 1.6s;
-    }
-
-    .phrase-one span:nth-child(10) {
-        animation-delay: 1.8s;
-    }
-
-    .phrase-one span:nth-child(11) {
-        animation-delay: 2s;
-    }
-
-    .phrase-two span:nth-child(1) {
-        animation-delay: 7s;
-    }
-
-    .phrase-two span:nth-child(2) {
-        animation-delay: 7.2s;
-    }
-
-    .phrase-two span:nth-child(3) {
-        animation-delay: 7.4s;
-    }
-
-    .phrase-two span:nth-child(4) {
-        animation-delay: 7.6s;
-    }
-
-    .phrase-two span:nth-child(5) {
-        animation-delay: 7.8s;
-    }
-
-    .phrase-two span:nth-child(6) {
-        animation-delay: 8s;
-    }
-
-    .phrase-two span:nth-child(7) {
-        animation-delay: 8.2s;
-    }
-
-    @keyframes wordAnimation {
-
-        0% {
-            opacity: 0;
-            transform: translateY(8px);
+        :root {
+            --ink: #10271b;
+            --lime: #dfa21f;
+            --overlay: rgba(14, 63, 29, 0.72);
         }
 
-        5% {
-            opacity: 1;
-            transform: translateY(0);
+        body {
+            margin: 0;
+            background: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
         }
 
-        45% {
-            opacity: 1;
-            transform: translateY(0);
+        img {
+            max-width: 100%;
         }
 
-        52% {
-            opacity: 0;
-            transform: translateY(-8px);
+        .contact-bar {
+            min-height: 44px;
+            box-sizing: border-box;
+            background: #000;
         }
 
-        100% {
-            opacity: 0;
-            transform: translateY(-8px);
+        .contact-bar h4 {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin: 0;
+            white-space: nowrap;
         }
 
-    }
+        .contact-bar i {
+            color: var(--lime);
+            font-size: 0.8rem;
+        }
 
-    @media (max-width: 640px) {
+        .main-nav {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .nav-inner {
+            width: min(100% - 3rem, 1280px);
+            margin: 0 auto;
+        }
 
         .nav-logo {
-            max-width: 120px;
+            width: auto;
+            max-width: 150px;
         }
 
-        .nav-links {
-            gap: 0.85rem;
-            font-size: 0.85rem;
+        .nav-links a {
+            position: relative;
+            transition: color 180ms ease;
         }
 
-        .hero-content {
-            padding: 5rem 1.5rem 8rem;
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -0.45rem;
+            left: 0;
+            height: 2px;
+            background: var(--lime);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 180ms ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            width: 100%;
+        }
+
+        #navbar.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white !important;
         }
 
         .hero {
             min-height: 100svh;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--overlay);
+            z-index: -1;
+        }
+
+        .hero-heading,
+        .brand {
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero-heading {
-            font-size: clamp(2.3rem, 11vw, 4rem);
+            max-width: none;
+            font-size: clamp(2rem, 7vw, 7.2rem);
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 0.94;
+            color: white;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-heading span {
+            color: var(--lime);
+        }
+
+        .hero-content {
+            padding: 7rem 7vw 9rem;
+            margin-top: 4px;
         }
 
         .hero-description {
-            width: 95vw;
-            min-height: 130px;
-            margin-top: 0%;
+            position: relative;
+            margin: 4rem auto 0;
+            width: min(900px, 90vw);
+            min-height: 100px;
         }
 
         .phrase {
-            font-size: 2rem;
-            line-height: 1.5;
-        }
-
-    }
-
-    .bg-blue-800>.grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: clamp(1rem, 5vw, 4rem);
-    }
-
-    .bg-white>.overflow-hidden>.flex {
-        gap: clamp(1.5rem, 6vw, 9rem);
-        min-width: max-content;
-    }
-
-    @media (max-width: 640px) {
-
-        .nav-inner {
-            width: calc(100% - 1.5rem);
-            gap: 1rem;
-        }
-
-        .main-nav {
-            padding: 0.75rem 0;
-        }
-
-        .nav-logo {
-            max-width: 105px;
-            height: auto;
-        }
-
-        .nav-links {
-            gap: 0.65rem;
-        }
-
-        .contact-bar {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem;
-            padding-inline: 0.75rem;
-            font-size: 0.65rem;
+            align-content: flex-start;
+            gap: 0 0.35em;
+            font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 500;
+            line-height: 1.6;
+            color: rgb(255, 255, 255);
+        }
+
+        .phrase span {
+            opacity: 0;
+            transform: translateY(8px);
+            animation: wordAnimation 14s infinite;
+        }
+
+        .phrase-one span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .phrase-one span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .phrase-one span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .phrase-one span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .phrase-one span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .phrase-one span:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        .phrase-one span:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        .phrase-one span:nth-child(8) {
+            animation-delay: 1.4s;
+        }
+
+        .phrase-one span:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        .phrase-one span:nth-child(10) {
+            animation-delay: 1.8s;
+        }
+
+        .phrase-one span:nth-child(11) {
+            animation-delay: 2s;
+        }
+
+        .phrase-two span:nth-child(1) {
+            animation-delay: 7s;
+        }
+
+        .phrase-two span:nth-child(2) {
+            animation-delay: 7.2s;
+        }
+
+        .phrase-two span:nth-child(3) {
+            animation-delay: 7.4s;
+        }
+
+        .phrase-two span:nth-child(4) {
+            animation-delay: 7.6s;
+        }
+
+        .phrase-two span:nth-child(5) {
+            animation-delay: 7.8s;
+        }
+
+        .phrase-two span:nth-child(6) {
+            animation-delay: 8s;
+        }
+
+        .phrase-two span:nth-child(7) {
+            animation-delay: 8.2s;
+        }
+
+        @keyframes wordAnimation {
+
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            5% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            45% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            52% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+        }
+
+        @media (max-width: 640px) {
+
+            .nav-logo {
+                max-width: 120px;
+            }
+
+            .nav-links {
+                gap: 0.85rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-content {
+                padding: 5rem 1.5rem 8rem;
+            }
+
+            .hero {
+                min-height: 100svh;
+            }
+
+            .hero-heading {
+                font-size: clamp(2.3rem, 11vw, 4rem);
+            }
+
+            .hero-description {
+                width: 95vw;
+                min-height: 130px;
+                margin-top: 0%;
+            }
+
+            .phrase {
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+
         }
 
         .bg-blue-800>.grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.25rem;
-            padding-inline: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: clamp(1rem, 5vw, 4rem);
         }
 
-        .bg-blue-800>.grid>img {
-            width: 100%;
-            height: 4.5rem;
+        .bg-white>.overflow-hidden>.flex {
+            gap: clamp(1.5rem, 6vw, 9rem);
+            min-width: max-content;
         }
 
-        .bg-white>.overflow-hidden>.flex>img {
-            width: 7rem;
-            height: 5rem;
+        @media (max-width: 640px) {
+
+            .nav-inner {
+                width: calc(100% - 1.5rem);
+                gap: 1rem;
+            }
+
+            .main-nav {
+                padding: 0.75rem 0;
+            }
+
+            .nav-logo {
+                max-width: 105px;
+                height: auto;
+            }
+
+            .nav-links {
+                gap: 0.65rem;
+            }
+
+            .contact-bar {
+                justify-content: center;
+                gap: 0.75rem;
+                padding-inline: 0.75rem;
+                font-size: 0.65rem;
+            }
+
+            .bg-blue-800>.grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.25rem;
+                padding-inline: 1.25rem;
+            }
+
+            .bg-blue-800>.grid>img {
+                width: 100%;
+                height: 4.5rem;
+            }
+
+            .bg-white>.overflow-hidden>.flex>img {
+                width: 7rem;
+                height: 5rem;
+            }
+
         }
 
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        color: #10271b;
-        background: #f4f7f3;
-    }
-
-    #navbar {
-        padding: 0.85rem 0;
-        transition: *background* 180ms ease, box-shadow 180ms ease;
-    }
-
-    #navbar.is-sticky {
-        background: rgba(255, 255, 255, 0.97) !important;
-        box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
-    }
-
-    #navbar.is-sticky .nav-links a {
-        color: #10271b;
-    }
-
-    .nav-links a {
-        color: #e4ab25;
-        font-size: 1.2rem;
-        letter-spacing: 0.02em;
-    }
-
-    .hero {
-        min-height: min(860px, 100svh);
-        background: #183c28;
-    }
-
-    .hero::after {
-        background: linear-gradient(90deg, rgba(7, 28, 16, 0.78), rgba(7, 28, 16, 0.34) 65%, rgba(7, 28, 16, 0.5));
-    }
-
-    .hero-content {
-        align-items: center;
-        justify-content: center;
-        padding: 9rem max(1.5rem, 7vw) 8rem;
-        text-align: center;
-    }
-
-    .hero-content>div {
-        width: min(1000px, 100%);
-    }
-
-    .hero-description {
-        width: 100%;
-        min-height: 170px;
-        margin: 0 auto;
-    }
-
-    .phrase {
-        justify-content: center;
-        align-content: flex-start;
-        font-size: clamp(2rem, 5vw, 4.6rem);
-        line-height: 1.12;
-        text-align: center;
-        text-wrap: balance;
-    }
-
-    .phrase span {
-        flex: 0 0 100%;
-        justify-content: center;
-        white-space: nowrap;
-    }
-
-    .section-heading {
-        max-width: 680px;
-        margin: 0 auto;
-    }
-
-    .client-section,
-    .partner-section {
-        padding: clamp(3.5rem, 8vw, 6rem) max(1.25rem, 5vw);
-    }
-
-    .client-section {
-        background: #164b2d;
-    }
-
-    .partner-section {
-        background: #fff;
-    }
-
-    .logo-grid {
-        width: min(1080px, 100%);
-        margin: 2.5rem auto 0;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        align-items: center;
-        gap: clamp(1rem, 4vw, 3rem);
-    }
-
-    .logo-tile {
-        min-height: 116px;
-        display: grid;
-        place-items: center;
-        padding: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 0.75rem;
-        background: rgba(255, 255, 255, 0.96);
-    }
-
-    .logo-tile img {
-        width: 100%;
-        height: 76px;
-        object-fit: contain;
-    }
-
-    .partner-window {
-        width: min(1160px, 100%);
-        margin: 2.5rem auto 0;
-        padding: 0.75rem 0;
-        mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    }
-
-    .partner-track {
-        gap: clamp(2rem, 7vw, 6rem) !important;
-    }
-
-    .partner-track img {
-        width: clamp(7rem, 13vw, 10rem) !important;
-        height: 5rem !important;
-        flex: 0 0 auto;
-    }
-
-    .footer-contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.65rem;
-        min-width: 0;
-    }
-
-    .footer-contact-item img {
-        width: 1.25rem;
-        height: 1.25rem;
-        object-fit: contain;
-        flex: 0 0 auto;
-    }
-
-    .footer-contact-item span {
-        overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 760px) {
-
-        .contact-bar {
-            justify-content: center;
-            gap: 0.85rem;
-            padding-inline: 1rem;
-            font-size: 0.68rem;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .nav-inner {
-            width: calc(100% - 2rem);
-            flex-wrap: wrap;
-            gap: 0.65rem 1rem;
+        body {
+            color: #10271b;
+            background: #f4f7f3;
         }
 
-        .nav-logo {
-            max-width: 112px;
-            height: auto;
+        #navbar {
+            padding: 0.85rem 0;
+            transition: *background* 180ms ease, box-shadow 180ms ease;
         }
 
-        .nav-links {
-            width: 100%;
-            justify-content: space-between;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.22);
+        #navbar.is-sticky {
+            background: rgba(255, 255, 255, 0.97) !important;
+            box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
+        }
+
+        #navbar.is-sticky .nav-links a {
+            color: #10271b;
         }
 
         .nav-links a {
-            font-size: 0.76rem;
+            color: #e4ab25;
+            font-size: 1.2rem;
+            letter-spacing: 0.02em;
         }
 
-        #navbar.is-sticky .nav-links {
-            border-color: rgba(16, 39, 27, 0.12);
+        .hero {
+            min-height: min(860px, 100svh);
+            background: #183c28;
+        }
+
+        .hero::after {
+            background: linear-gradient(90deg, rgba(7, 28, 16, 0.78), rgba(7, 28, 16, 0.34) 65%, rgba(7, 28, 16, 0.5));
         }
 
         .hero-content {
             align-items: center;
-            padding: 9rem 1.5rem 5rem;
+            justify-content: center;
+            padding: 9rem max(1.5rem, 7vw) 8rem;
+            text-align: center;
+        }
+
+        .hero-content>div {
+            width: min(1000px, 100%);
         }
 
         .hero-description {
-            min-height: 190px;
+            width: 100%;
+            min-height: 170px;
+            margin: 0 auto;
         }
 
         .phrase {
-            font-size: clamp(1.15rem, 6.2vw, 3.6rem);
+            justify-content: center;
+            align-content: flex-start;
+            font-size: clamp(2rem, 5vw, 4.6rem);
+            line-height: 1.12;
+            text-align: center;
+            text-wrap: balance;
+        }
+
+        .phrase span {
+            flex: 0 0 100%;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .client-section,
+        .partner-section {
+            padding: clamp(3.5rem, 8vw, 6rem) max(1.25rem, 5vw);
+        }
+
+        .client-section {
+            background: #164b2d;
+        }
+
+        .partner-section {
+            background: #fff;
         }
 
         .logo-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.85rem;
+            width: min(1080px, 100%);
+            margin: 2.5rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            align-items: center;
+            gap: clamp(1rem, 4vw, 3rem);
         }
 
         .logo-tile {
-            min-height: 96px;
-            padding: 0.75rem;
+            min-height: 116px;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 0.75rem;
+            background: rgba(255, 255, 255, 0.96);
         }
 
         .logo-tile img {
-            height: 58px;
+            width: 100%;
+            height: 76px;
+            object-fit: contain;
         }
 
         .partner-window {
-            mask-image: none;
+            width: min(1160px, 100%);
+            margin: 2.5rem auto 0;
+            padding: 0.75rem 0;
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
         }
 
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-        *,
-        *::before,
-        *::after {
-            scroll-behavior: auto !important;
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
+        .partner-track {
+            gap: clamp(2rem, 7vw, 6rem) !important;
         }
 
-    }
-
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.35s ease,
-            opacity 0.35s ease;
-    }
-
-    .faq-item.active .faq-answer {
-        opacity: 1;
-    }
-
-    .faq-icon {
-        transition: transform 0.3s ease;
-    }
-
-    .statistics-item {
-        opacity: 0;
-        font-size: 1.5rem !important;
-        transform: translateY(25px);
-        transition:
-            opacity 700ms ease,
-            transform 700ms ease;
-    }
-
-    .statistics-item.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .statistics-item:nth-child(2) {
-        transition-delay: 100ms;
-    }
-
-    .statistics-item:nth-child(3) {
-        transition-delay: 200ms;
-    }
-
-    .statistics-item:nth-child(4) {
-        transition-delay: 300ms;
-    }
-
-    .stat-icon {
-        width: 42px;
-        height: 42px;
-        stroke: #9fc96a;
-        stroke-width: 1.6;
-        fill: none;
-    }
-
-    @media (max-width: 1023px) {
-
-        .statistics-item:nth-child(2),
-        .statistics-item:nth-child(4) {
-            border-right: none;
+        .partner-track img {
+            width: clamp(7rem, 13vw, 10rem) !important;
+            height: 5rem !important;
+            flex: 0 0 auto;
         }
 
-    }
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            min-width: 0;
+        }
 
-    @media (prefers-reduced-motion: reduce) {
+        .footer-contact-item img {
+            width: 1.25rem;
+            height: 1.25rem;
+            object-fit: contain;
+            flex: 0 0 auto;
+        }
+
+        .footer-contact-item span {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 760px) {
+
+            .contact-bar {
+                justify-content: center;
+                gap: 0.85rem;
+                padding-inline: 1rem;
+                font-size: 0.68rem;
+            }
+
+            .nav-inner {
+                width: calc(100% - 2rem);
+                flex-wrap: wrap;
+                gap: 0.65rem 1rem;
+            }
+
+            .nav-logo {
+                max-width: 112px;
+                height: auto;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 0.5rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.22);
+            }
+
+            .nav-links a {
+                font-size: 0.76rem;
+            }
+
+            #navbar.is-sticky .nav-links {
+                border-color: rgba(16, 39, 27, 0.12);
+            }
+
+            .hero-content {
+                align-items: center;
+                padding: 9rem 1.5rem 5rem;
+            }
+
+            .hero-description {
+                min-height: 190px;
+            }
+
+            .phrase {
+                font-size: clamp(1.15rem, 6.2vw, 3.6rem);
+            }
+
+            .logo-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.85rem;
+            }
+
+            .logo-tile {
+                min-height: 96px;
+                padding: 0.75rem;
+            }
+
+            .logo-tile img {
+                height: 58px;
+            }
+
+            .partner-window {
+                mask-image: none;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.35s ease,
+                opacity 0.35s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            opacity: 1;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
 
         .statistics-item {
-            opacity: 1;
-            transform: none;
-            transition: none;
+            opacity: 0;
+            font-size: 1.5rem !important;
+            transform: translateY(25px);
+            transition:
+                opacity 700ms ease,
+                transform 700ms ease;
         }
 
-    }
+        .statistics-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-</style>
+        .statistics-item:nth-child(2) {
+            transition-delay: 100ms;
+        }
+
+        .statistics-item:nth-child(3) {
+            transition-delay: 200ms;
+        }
+
+        .statistics-item:nth-child(4) {
+            transition-delay: 300ms;
+        }
+
+        .stat-icon {
+            width: 42px;
+            height: 42px;
+            stroke: #9fc96a;
+            stroke-width: 1.6;
+            fill: none;
+        }
+
+        @media (max-width: 1023px) {
+
+            .statistics-item:nth-child(2),
+            .statistics-item:nth-child(4) {
+                border-right: none;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .statistics-item {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+        }
+    </style>
 
 </head>
 
 <body class="bg-white">
 
-```
-<header>
+    ```
+    <header>
 
-    <div class="contact-bar w-full bg-black text-white">
+        <div class="contact-bar w-full bg-black text-white">
 
-        <div
-            class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+            <div
+                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
 
-            <a href="mailto:info@qelatechnologies.co.tz"
-                class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <a href="mailto:info@qelatechnologies.co.tz"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
-                <span>info@qelatechnologies.co.tz</span>
+                    <span>info@qelatechnologies.co.tz</span>
 
-            </a>
+                </a>
 
-            <a href="tel:+255752686686"
-                class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <a href="tel:+255752686686"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
-                <span>+255 718 352 944</span>
+                    <span>+255 718 352 944</span>
 
-            </a>
-
-        </div>
-
-    </div>
-
-    <nav id="navbar" class="w-full p-4">
-
-        <div class="nav-inner flex items-center justify-between gap-8">
-
-            <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
-
-            <div class="hidden md:block">
-
-                <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
-
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Products</a>
-                    <a href="#">Industry</a>
-                    <a href="#">Resource</a>
-
-                </div>
-
-            </div>
-
-            <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </button>
-
-        </div>
-
-    </nav>
-
-    <div id="sidebar"
-        class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
-
-        <div class="flex justify-end p-5">
-
-            <button id="closeBtn" class="text-white text-2xl">
-
-                <i class="fa-solid fa-xmark"></i>
-
-            </button>
-
-        </div>
-
-        <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
-
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Products</a>
-            <a href="#">Industry</a>
-            <a href="#">Resource</a>
-
-        </div>
-
-    </div>
-
-</header>
-
-<section class="hero w-full overflow-hidden text-white">
-
-    <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
-
-        <source src="./resource/video/bg5.mp4" type="video/mp4">
-
-    </video>
-
-    <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
-
-        <div>
-
-            <div class="hero-description">
-
-                <div class="phrase phrase-one">
-
-                    <span>Innovative AgriTech and</span>
-                    <span>AgriTech and business</span>
-                    <span>solutions driving growth</span>
-
-                </div>
-
-                <div class="phrase phrase-two">
-
-                    <span>Transforming agriculture</span>
-                    <span>and business through</span>
-                    <span>innovative technology.</span>
-
-                </div>
+                </a>
 
             </div>
 
         </div>
 
-    </div>
+        <nav id="navbar" class="w-full p-4">
 
-</section>
+            <div class="nav-inner flex items-center justify-between gap-8">
 
-<section class="client-section text-white">
+                <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
 
-    <div class="section-heading text-center">
+                <div class="hidden md:block">
 
-        <div class="text-3xl font-bold md:text-4xl">
+                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
 
-            Our <span class="text-yellow-400">Clients</span>
+                        <a href="#">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="#">Products</a>
+                        <a href="#">Industry</a>
+                        <a href="#">Resource</a>
 
-        </div>
+                    </div>
 
-        <span class="text-gray-200 text-lg">
+                </div>
 
-            Meet our happier clients
+                <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
 
-        </span>
-
-    </div>
-
-    <div class="logo-grid">
-
-        <div class="logo-tile"><img src="./resource/logos/runali_logo (1).jpeg" alt="runali"></div>
-
-        <div class="logo-tile"><img src="./resource/image/mamku.png" alt="mamku"></div>
-
-        <div class="logo-tile"><img src="./resource/image/corecu.jpeg" alt="corecu"></div>
-
-        <div class="logo-tile"><img src="./resource/image/tannne.png" alt="tanecu"></div>
-
-        <div class="logo-tile"><img src="./resource/image/milambo.jpeg" alt="milambo"></div>
-
-    </div>
-
-</section>
-
-<section class="partner-section">
-
-    <div class="section-heading text-center">
-
-        <div class="text-3xl font-bold md:text-4xl">
-
-            Our <span class="text-yellow-400">Partners</span>
-
-        </div>
-
-        <span class="text-gray-500 text-lg">
-
-            It's a pleasure to have these partners
-
-        </span>
-
-    </div>
-
-    <div class="partner-window overflow-hidden">
-
-        <div class="partner-track flex items-center w-max animate-marquee">
-
-            <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
-
-            <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="faq" class="bg-[#f1f5f3] px-4 py-16 sm:px-6 md:py-24">
-
-    <div class="mx-auto max-w-4xl">
-
-        <div class="mb-12 text-center md:mb-16">
-
-            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#dfa21f]">
-
-                Help desk
-
-            </p>
-
-            <h1 class="text-4xl font-semibold leading-tight text-[#07130d] sm:text-5xl">
-
-                Frequently Asked Questions
-
-            </h1>
-
-            <div class="mx-auto mt-5 h-1 w-16 rounded-full bg-[#dfa21f]"></div>
-
-        </div>
-
-        <div class="overflow-hidden rounded-2xl border shadow-sm">
-
-            <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                <button type="button" class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                    <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                        What is Qela Agritech?
-
-                    </span>
-
-                    <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                        >
-
-                    </span>
+                    <i class="fa-solid fa-bars"></i>
 
                 </button>
 
-                <div class="faq-answer">
-
-                    <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                        Qela Agritech is a digital agriculture platform that uses technology to help farmers,
-                        agribusinesses and agricultural organizations manage farm information, records and
-                        agricultural activities more efficiently.
-
-                    </p>
-
-                </div>
-
             </div>
 
-            <div class="faq-item border-b border-[#dce4df] last:border-b-0">
+        </nav>
 
-                <button type="button" class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+        <div id="sidebar"
+            class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
 
-                    <span class="text-lg md:text-xl font-medium text-[#07130d]">
+            <div class="flex justify-end p-5">
 
-                        Who can use Qela Agritech?
+                <button id="closeBtn" class="text-white text-2xl">
 
-                    </span>
-
-                    <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                        >
-
-                    </span>
+                    <i class="fa-solid fa-xmark"></i>
 
                 </button>
 
-                <div class="faq-answer">
-
-                    <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                        Qela Agritech is designed for farmers, cooperatives, agribusinesses, agricultural
-                        organizations, field officers and other stakeholders across the agricultural value chain.
-
-                    </p>
-
-                </div>
-
             </div>
 
-            <div class="faq-item border-b border-[#dce4df] last:border-b-0">
+            <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
 
-                <button type="button" class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                    <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                        What agricultural information can Qela Agritech manage?
-
-                    </span>
-
-                    <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                        >
-
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                        Qela Agritech can help manage farmer profiles, farm information, crop activities,
-                        production records, agricultural inputs, harvest information and other important farm records.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                <button type="button" class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                    <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                        What products does Qela Agritech offer?
-
-                    </span>
-
-                    <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                        >
-
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                        Qela Agritech provides digital solutions including Agricole, Agrisasa and E-SACCOS,
-                        designed to support different agricultural and financial activities within the agricultural value chain.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                <button type="button" class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                    <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                        How can Qela Agritech help improve agricultural operations?
-
-                    </span>
-
-                    <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                        >
-
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                        Qela Agritech helps organize agricultural information digitally, improve record
-                        management, provide better visibility of farm activities and support more informed
-                        decisions across the agricultural value chain.
-
-                    </p>
-
-                </div>
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Products</a>
+                <a href="#">Industry</a>
+                <a href="#">Resource</a>
 
             </div>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
+    <section class="hero w-full overflow-hidden text-white">
 
-<!-- STATISTICS SECTION -->
+        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
 
-<section class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-xl"
-    aria-label="Qela Agritech statistics">
+            <source src="./resource/video/bg5.mp4" type="video/mp4">
 
-    <div class="absolute inset-0">
+        </video>
 
-        <img src="./resource/image/statistics.jpg" alt="Farmer working in an agricultural field"
-            class="h-full w-full object-cover object-center">
-
-    </div>
-
-    <div class="absolute inset-0 bg-green-900/30"></div>
-
-    <div class="absolute inset-0 bg-green-600/55"></div>
-
-    <div class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]">
-
-        <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" data-statistics>
-
-                <article
-                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center pr-10 py-8 text-center lg:border-r lg:border-white/25"
-                    data-target="350" data-display="350k">
-
-                    <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
-
-                        <span data-counter>0</span><span class="text-white">K+</span>
-
-                    </div>
-
-                    <div class="mt-5">
-
-                        <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
-                            <circle cx="24" cy="13" r="5" />
-
-                            <path d="M14 36c0-6 4-10 10-10s10 4 10 10" />
-
-                            <circle cx="10" cy="19" r="4" />
-
-                            <path d="M2 36c0-5 3-8 8-8" />
-
-                            <circle cx="38" cy="19" r="4" />
-
-                            <path d="M46 36c0-5-3-8-8-8" />
-
-                        </svg>
-
-                    </div>
-
-                    <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                        Farmers
-
-                    </p>
-
-                </article>
-
-                <article
-                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
-                    data-target="1000" data-display="1000">
-
-                    <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
-
-                        <span data-counter>0</span><span class="text-white">+</span>
-
-                    </div>
-
-                    <div class="mt-5">
-
-                        <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
-                            <path d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z" />
-
-                            <path d="M17 5v34" />
-
-                            <path d="M31 9v34" />
-
-                            <path d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z" />
-
-                            <circle cx="24" cy="22" r="2" />
-
-                        </svg>
-
-                    </div>
-
-                    <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                        Farms
-
-                    </p>
-
-                </article>
-
-                <article
-                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
-                    data-target="10" data-display="10">
-
-                    <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
-
-                        <span data-counter>0</span><span class="text">+</span>
-
-                    </div>
-
-                    <div class="mt-5">
-
-                        <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
-                            <path d="M24 42V22" />
-
-                            <path d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z" />
-
-                            <path d="M24 23c0-9 6-15 15-15 0 9-6 15-15 15z" />
-
-                            <path d="M17 42h14" />
-
-                        </svg>
-
-                    </div>
-
-                    <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                        crops
-
-                    </p>
-
-                </article>
-
-                <article
-                    class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
-                    data-target="120" data-display="120">
-
-                    <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
-
-                        <span data-counter>0</span><span class="text">+</span>
-
-                    </div>
-
-                    <div class="mt-5">
-
-                        <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
-                            <path d="M4 20l8-7 8 4 8-5 16 8" />
-
-                            <path d="M4 20l7 17 9-5 7 6 5-7" />
-
-                            <path d="M44 20l-7 17-9-5" />
-
-                            <path d="M20 17l7 7" />
-
-                            <path d="M27 24l5 5" />
-
-                        </svg>
-
-                    </div>
-
-                    <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                        cooperatives
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer class="bg-[#07130d] text-white">
-
-    <div class="max-w-7xl mx-auto px-6 py-14">
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
 
             <div>
 
-                <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="h-12 w-auto mb-5">
+                <div class="hero-description">
 
-                <h1 class="text-2xl font-extrabold tracking-tight">
+                    <div class="phrase phrase-one">
 
-                    Qela
+                        <span>Innovative AgriTech and</span>
+                        <span>AgriTech and business</span>
+                        <span>solutions driving growth</span>
 
-                    <span class="text-green-500">Technologies</span>
+                    </div>
+
+                    <div class="phrase phrase-two">
+
+                        <span>Transforming agriculture</span>
+                        <span>and business through</span>
+                        <span>innovative technology.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="client-section text-white">
+
+        <div class="section-heading text-center">
+
+            <div class="text-3xl font-bold md:text-4xl">
+
+                Our <span class="text-yellow-400">Clients</span>
+
+            </div>
+
+            <span class="text-gray-200 text-lg">
+
+                Meet our happier clients
+
+            </span>
+
+        </div>
+
+        <div class="logo-grid">
+
+            <div class="logo-tile"><img src="./resource/logos/runali_logo (1).jpeg" alt="runali"></div>
+
+            <div class="logo-tile"><img src="./resource/image/mamku.png" alt="mamku"></div>
+
+            <div class="logo-tile"><img src="./resource/image/corecu.jpeg" alt="corecu"></div>
+
+            <div class="logo-tile"><img src="./resource/image/tannne.png" alt="tanecu"></div>
+
+            <div class="logo-tile"><img src="./resource/image/milambo.jpeg" alt="milambo"></div>
+
+        </div>
+
+    </section>
+
+    <section class="partner-section">
+
+        <div class="section-heading text-center">
+
+            <div class="text-3xl font-bold md:text-4xl">
+
+                Our <span class="text-yellow-400">Partners</span>
+
+            </div>
+
+            <span class="text-gray-500 text-lg">
+
+                It's a pleasure to have these partners
+
+            </span>
+
+        </div>
+
+        <div class="partner-window overflow-hidden">
+
+            <div class="partner-track flex items-center w-max animate-marquee">
+
+                <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
+
+                <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="faq" class="bg-[#f1f5f3] px-4 py-16 sm:px-6 md:py-24">
+
+        <div class="mx-auto max-w-4xl">
+
+            <div class="mb-12 text-center md:mb-16">
+
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#dfa21f]">
+
+                    Help desk
+
+                </p>
+
+                <h1 class="text-4xl font-semibold leading-tight text-[#07130d] sm:text-5xl">
+
+                    Frequently Asked Questions
 
                 </h1>
 
-                <p class="text-xs text-gray-500 mt-1">
-
-                    (T) LIMITED
-
-                </p>
-
-                <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
-
-                    Empowering businesses through innovative technology, digital transformation and
-                    smart agritech solutions.
-
-                </p>
-
-                <div class="flex items-center gap-3 mt-6">
-
-                    <a href="#" aria-label="Facebook"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="#" aria-label="Instagram"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                </div>
+                <div class="mx-auto mt-5 h-1 w-16 rounded-full bg-[#dfa21f]"></div>
 
             </div>
 
-            <div>
+            <div class="overflow-hidden rounded-2xl border shadow-sm">
 
-                <h3 class="text-lg font-semibold mb-5">
+                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
 
-                    Solutions
+                    <button type="button"
+                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
 
-                </h3>
+                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
 
-                <ul class="space-y-3 text-sm text-gray-400">
+                            What is Qela Agritech?
 
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Digital Transformation</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Business Management</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Data Management</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud Solutions</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Custom Software</a></li>
+                        </span>
 
-                </ul>
+                        <span class="faq-icon text-2xl font-light flex-shrink-0">
 
-            </div>
+                            >
 
-            <div>
+                        </span>
 
-                <h3 class="text-lg font-semibold mb-5">
+                    </button>
 
-                    Quick Links
+                    <div class="faq-answer">
 
-                </h3>
+                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
 
-                <ul class="space-y-3 text-sm text-gray-400">
+                            Qela Agritech is a digital agriculture platform that uses technology to help farmers,
+                            agribusinesses and agricultural organizations manage farm information, records and
+                            agricultural activities more efficiently.
 
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">About Us</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Our Products</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Industries</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Resources</a></li>
-                    <li><a href="#" class="hover:text-green-500 transition duration-300">Contact Us</a></li>
-
-                </ul>
-
-            </div>
-
-            <div>
-
-                <h3 class="text-lg font-semibold mb-5">
-
-                    Support
-
-                </h3>
-
-                <div class="space-y-5 text-sm text-gray-400">
-
-                    <div>
-
-                        
-
-                        <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
-
-                            +255 718 352 944
-
-                        </a>
-
-                        <br>
-
-                        <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
-
-                            +255 742 073 002
-
-                        </a>
+                        </p>
 
                     </div>
 
-                    <div>
+                </div>
 
-                       
+                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
 
-                        <a href="mailto:info@qelatechnologies.co.tz"
-                            class="hover:text-green-500 transition duration-300">
+                    <button type="button"
+                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
 
-                            info@qelatechnologies.co.tz
+                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
 
-                        </a>
+                            Who can use Qela Agritech?
+
+                        </span>
+
+                        <span class="faq-icon text-2xl font-light flex-shrink-0">
+
+                            >
+
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                            Qela Agritech is designed for farmers, cooperatives, agribusinesses, agricultural
+                            organizations, field officers and other stakeholders across the agricultural value chain.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                    <button type="button"
+                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                            What agricultural information can Qela Agritech manage?
+
+                        </span>
+
+                        <span class="faq-icon text-2xl font-light flex-shrink-0">
+
+                            >
+
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                            Qela Agritech can help manage farmer profiles, farm information, crop activities,
+                            production records, agricultural inputs, harvest information and other important farm
+                            records.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                    <button type="button"
+                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                            What products does Qela Agritech offer?
+
+                        </span>
+
+                        <span class="faq-icon text-2xl font-light flex-shrink-0">
+
+                            >
+
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                            Qela Agritech provides digital solutions including Agricole, Agrisasa and E-SACCOS,
+                            designed to support different agricultural and financial activities within the agricultural
+                            value chain.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                    <button type="button"
+                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                            How can Qela Agritech help improve agricultural operations?
+
+                        </span>
+
+                        <span class="faq-icon text-2xl font-light flex-shrink-0">
+
+                            >
+
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                            Qela Agritech helps organize agricultural information digitally, improve record
+                            management, provide better visibility of farm activities and support more informed
+                            decisions across the agricultural value chain.
+
+                        </p>
 
                     </div>
 
@@ -1418,480 +1107,799 @@
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="bg-black/30">
+    <!-- STATISTICS SECTION -->
 
-        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+    <section class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-xl"
+        aria-label="Qela Agritech statistics">
 
-            <p class="text-sm text-gray-500 text-center md:text-left">
+        <div class="absolute inset-0">
 
-                © 2026 Qela Technologies (T) Limited.
+            <img src="./resource/image/statistics.jpg" alt="Farmer working in an agricultural field"
+                class="h-full w-full object-cover object-center">
 
-                All Rights Reserved.
+        </div>
 
-            </p>
+        <div class="absolute inset-0 bg-green-900/30"></div>
 
-            <div class="flex gap-5 text-sm text-gray-500">
+        <div class="absolute inset-0 bg-green-600/55"></div>
 
-                <a href="#" class="hover:text-green-500 transition duration-300">
+        <div class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]">
 
-                    Privacy Policy
+            <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
 
-                </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" data-statistics>
 
-                <a href="#" class="hover:text-green-500 transition duration-300">
+                    <article
+                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center pr-10 py-8 text-center lg:border-r lg:border-white/25"
+                        data-target="350" data-display="350k">
 
-                    Terms & Conditions
+                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
 
-                </a>
+                            <span data-counter>0</span><span class="text-white">K+</span>
+
+                        </div>
+
+                        <div class="mt-5">
+
+                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+
+                                <circle cx="24" cy="13" r="5" />
+
+                                <path d="M14 36c0-6 4-10 10-10s10 4 10 10" />
+
+                                <circle cx="10" cy="19" r="4" />
+
+                                <path d="M2 36c0-5 3-8 8-8" />
+
+                                <circle cx="38" cy="19" r="4" />
+
+                                <path d="M46 36c0-5-3-8-8-8" />
+
+                            </svg>
+
+                        </div>
+
+                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+
+                            Farmers
+
+                        </p>
+
+                    </article>
+
+                    <article
+                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
+                        data-target="1000" data-display="1000">
+
+                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+
+                            <span data-counter>0</span><span class="text-white">+</span>
+
+                        </div>
+
+                        <div class="mt-5">
+
+                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+
+                                <path d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z" />
+
+                                <path d="M17 5v34" />
+
+                                <path d="M31 9v34" />
+
+                                <path d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z" />
+
+                                <circle cx="24" cy="22" r="2" />
+
+                            </svg>
+
+                        </div>
+
+                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+
+                            Farms
+
+                        </p>
+
+                    </article>
+
+                    <article
+                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
+                        data-target="10" data-display="10">
+
+                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+
+                            <span data-counter>0</span><span class="text">+</span>
+
+                        </div>
+
+                        <div class="mt-5">
+
+                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+
+                                <path d="M24 42V22" />
+
+                                <path d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z" />
+
+                                <path d="M24 23c0-9 6-15 15-15 0 9-6 15-15 15z" />
+
+                                <path d="M17 42h14" />
+
+                            </svg>
+
+                        </div>
+
+                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+
+                            crops
+
+                        </p>
+
+                    </article>
+
+                    <article
+                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
+                        data-target="120" data-display="120">
+
+                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+
+                            <span data-counter>0</span><span class="text">+</span>
+
+                        </div>
+
+                        <div class="mt-5">
+
+                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+
+                                <path d="M4 20l8-7 8 4 8-5 16 8" />
+
+                                <path d="M4 20l7 17 9-5 7 6 5-7" />
+
+                                <path d="M44 20l-7 17-9-5" />
+
+                                <path d="M20 17l7 7" />
+
+                                <path d="M27 24l5 5" />
+
+                            </svg>
+
+                        </div>
+
+                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+
+                            cooperatives
+
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</footer>
+    <footer class="bg-[#07130d] text-white">
 
-<script>
+        <div class="max-w-7xl mx-auto px-6 py-14">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <div>
+
+                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="h-12 w-auto mb-5">
+
+                    <h1 class="text-2xl font-extrabold tracking-tight">
+
+                        Qela
+
+                        <span class="text-green-500">Technologies</span>
+
+                    </h1>
+
+                    <p class="text-xs text-gray-500 mt-1">
+
+                        (T) LIMITED
+
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
+
+                        Empowering businesses through innovative technology, digital transformation and
+                        smart agritech solutions.
+
+                    </p>
+
+                    <div class="flex items-center gap-3 mt-6">
+
+                        <a href="#" aria-label="Facebook"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#" aria-label="Instagram"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+
+                        Solutions
+
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-400">
+
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Digital Transformation</a>
+                        </li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Business Management</a>
+                        </li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Data Management</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Custom Software</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+
+                        Quick Links
+
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-400">
+
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Our Products</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Industries</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Resources</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+
+                        Support
+
+                    </h3>
+
+                    <div class="space-y-5 text-sm text-gray-400">
+
+                        <div>
 
 
-document.addEventListener("DOMContentLoaded", function () {
 
-const menuBtn =
-    document.getElementById("menuBtn");
+                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
 
-const closeBtn =
-    document.getElementById("closeBtn");
+                                +255 718 352 944
 
-const sidebar =
-    document.getElementById("sidebar");
+                            </a>
 
-if (menuBtn && closeBtn && sidebar) {
+                            <br>
 
-    function openSidebar() {
+                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
 
-        sidebar.classList.remove(
-            "translate-x-full"
-        );
+                                +255 742 073 002
 
-        sidebar.classList.add(
-            "translate-x-0"
-        );
+                            </a>
 
-        document.body.classList.add(
-            "overflow-hidden"
-        );
+                        </div>
 
-    }
+                        <div>
 
-    function closeSidebar() {
 
-        sidebar.classList.remove(
-            "translate-x-0"
-        );
 
-        sidebar.classList.add(
-            "translate-x-full"
-        );
+                            <a href="mailto:info@qelatechnologies.co.tz"
+                                class="hover:text-green-500 transition duration-300">
 
-        document.body.classList.remove(
-            "overflow-hidden"
-        );
+                                info@qelatechnologies.co.tz
 
-    }
+                            </a>
 
-    menuBtn.addEventListener(
-        "click",
-        function () {
-            openSidebar();
-        }
-    );
+                        </div>
 
-    closeBtn.addEventListener(
-        "click",
-        function () {
-            closeSidebar();
-        }
-    );
+                    </div>
 
-    const sidebarLinks =
-        sidebar.querySelectorAll("a");
+                </div>
 
-    sidebarLinks.forEach(
-        function (link) {
+            </div>
 
-            link.addEventListener(
+        </div>
+
+        <div class="bg-black/30">
+
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+
+                <p class="text-sm text-gray-500 text-center md:text-left">
+
+                    © 2026 Qela Technologies (T) Limited.
+
+                    All Rights Reserved.
+
+                </p>
+
+                <div class="flex gap-5 text-sm text-gray-500">
+
+                    <a href="#" class="hover:text-green-500 transition duration-300">
+
+                        Privacy Policy
+
+                    </a>
+
+                    <a href="#" class="hover:text-green-500 transition duration-300">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const closeBtn =
+            document.getElementById("closeBtn");
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        if (menuBtn && closeBtn && sidebar) {
+
+            function openSidebar() {
+
+                sidebar.classList.remove(
+                    "translate-x-full"
+                );
+
+                sidebar.classList.add(
+                    "translate-x-0"
+                );
+
+                document.body.classList.add(
+                    "overflow-hidden"
+                );
+
+            }
+
+            function closeSidebar() {
+
+                sidebar.classList.remove(
+                    "translate-x-0"
+                );
+
+                sidebar.classList.add(
+                    "translate-x-full"
+                );
+
+                document.body.classList.remove(
+                    "overflow-hidden"
+                );
+
+            }
+
+            menuBtn.addEventListener(
+                "click",
+                function () {
+                    openSidebar();
+                }
+            );
+
+            closeBtn.addEventListener(
                 "click",
                 function () {
                     closeSidebar();
                 }
             );
 
-        }
-    );
+            const sidebarLinks =
+                sidebar.querySelectorAll("a");
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+            sidebarLinks.forEach(
+                function (link) {
 
-            if (event.key === "Escape") {
-                closeSidebar();
-            }
+                    link.addEventListener(
+                        "click",
+                        function () {
 
-        }
-    );
-
-    window.addEventListener(
-        "resize",
-        function () {
-
-            if (window.innerWidth >= 768) {
-                closeSidebar();
-            }
-
-        }
-    );
-
-}
-
-const navbar =
-    document.getElementById("navbar");
-
-const contactBar =
-    document.querySelector(".contact-bar");
-
-if (navbar) {
-
-    function handleNavbarScroll() {
-
-        const triggerPoint =
-            contactBar
-                ? contactBar.offsetHeight
-                : 44;
-
-        if (window.scrollY > triggerPoint) {
-
-            navbar.classList.add(
-                "is-sticky"
-            );
-
-        } else {
-
-            navbar.classList.remove(
-                "is-sticky"
-            );
-
-        }
-
-    }
-
-    window.addEventListener(
-        "scroll",
-        handleNavbarScroll
-    );
-
-    handleNavbarScroll();
-
-}
-
-const faqItems =
-    document.querySelectorAll(
-        ".faq-item"
-    );
-
-faqItems.forEach(
-    function (item) {
-
-        const question =
-            item.querySelector(
-                ".faq-question"
-            );
-
-        const answer =
-            item.querySelector(
-                ".faq-answer"
-            );
-
-        const icon =
-            item.querySelector(
-                ".faq-icon"
-            );
-
-        if (
-            !question ||
-            !answer ||
-            !icon
-        ) {
-            return;
-        }
-
-        question.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    item.classList.contains(
-                        "active"
-                    );
-
-                faqItems.forEach(
-                    function (otherItem) {
-
-                        const otherAnswer =
-                            otherItem.querySelector(
-                                ".faq-answer"
-                            );
-
-                        const otherIcon =
-                            otherItem.querySelector(
-                                ".faq-icon"
-                            );
-
-                        otherItem.classList.remove(
-                            "active"
-                        );
-
-                        if (otherAnswer) {
-
-                            otherAnswer.style.maxHeight =
-                                "0px";
-
-                            otherAnswer.style.opacity =
-                                "0";
+                            closeSidebar();
 
                         }
+                    );
 
-                        if (otherIcon) {
+                }
+            );
 
-                            otherIcon.textContent =
-                                "+";
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+                        closeSidebar();
+                    }
+
+                }
+            );
+
+            window.addEventListener(
+                "resize",
+                function () {
+
+                    if (window.innerWidth >= 768) {
+                        closeSidebar();
+                    }
+
+                }
+            );
+
+        }
+
+        const navbar =
+            document.getElementById("navbar");
+
+        const contactBar =
+            document.querySelector(".contact-bar");
+
+        if (navbar) {
+
+            function handleNavbarScroll() {
+
+                const triggerPoint =
+                    contactBar
+                        ? contactBar.offsetHeight
+                        : 44;
+
+                if (window.scrollY > triggerPoint) {
+
+                    navbar.classList.add(
+                        "is-sticky"
+                    );
+
+                } else {
+
+                    navbar.classList.remove(
+                        "is-sticky"
+                    );
+
+                }
+
+            }
+
+            window.addEventListener(
+                "scroll",
+                handleNavbarScroll
+            );
+
+            handleNavbarScroll();
+
+        }
+
+        const faqItems =
+            document.querySelectorAll(
+                ".faq-item"
+            );
+
+        faqItems.forEach(
+            function (item) {
+
+                const question =
+                    item.querySelector(
+                        ".faq-question"
+                    );
+
+                const answer =
+                    item.querySelector(
+                        ".faq-answer"
+                    );
+
+                const icon =
+                    item.querySelector(
+                        ".faq-icon"
+                    );
+
+                if (
+                    !question ||
+                    !answer ||
+                    !icon
+                ) {
+                    return;
+                }
+
+                question.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            item.classList.contains(
+                                "active"
+                            );
+
+                        faqItems.forEach(
+                            function (otherItem) {
+
+                                const otherAnswer =
+                                    otherItem.querySelector(
+                                        ".faq-answer"
+                                    );
+
+                                const otherIcon =
+                                    otherItem.querySelector(
+                                        ".faq-icon"
+                                    );
+
+                                otherItem.classList.remove(
+                                    "active"
+                                );
+
+                                if (otherAnswer) {
+
+                                    otherAnswer.style.maxHeight =
+                                        "0px";
+
+                                    otherAnswer.style.opacity =
+                                        "0";
+
+                                }
+
+                                if (otherIcon) {
+
+                                    otherIcon.textContent =
+                                        "+";
+
+                                }
+
+                            }
+                        );
+
+                        if (!isOpen) {
+
+                            item.classList.add(
+                                "active"
+                            );
+
+                            answer.style.maxHeight =
+                                answer.scrollHeight + "px";
+
+                            answer.style.opacity =
+                                "1";
+
+                            icon.textContent =
+                                "−";
 
                         }
 
                     }
                 );
 
-                if (!isOpen) {
-
-                    item.classList.add(
-                        "active"
-                    );
-
-                    answer.style.maxHeight =
-                        answer.scrollHeight + "px";
-
-                    answer.style.opacity =
-                        "1";
-
-                    icon.textContent =
-                        "−";
-
-                }
-
             }
         );
 
-    }
-);
-
-const statistics =
-    document.querySelector(
-        "[data-statistics]"
-    );
-
-const statisticsItems =
-    document.querySelectorAll(
-        ".statistics-item"
-    );
-
-if (
-    statistics &&
-    statisticsItems.length > 0
-) {
-
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-    function animateCounter(item) {
-
-        const counter =
-            item.querySelector(
-                "[data-counter]"
+        const statistics =
+            document.querySelector(
+                "[data-statistics]"
             );
 
-        if (!counter) {
-            return;
-        }
-
-        const targetAttribute =
-            item.getAttribute(
-                "data-target"
+        const statisticsItems =
+            document.querySelectorAll(
+                ".statistics-item"
             );
-
-        const target =
-            Number(targetAttribute);
-
-        if (!Number.isFinite(target)) {
-
-            console.error(
-                "Invalid statistics data-target:",
-                targetAttribute,
-                item
-            );
-
-            counter.textContent =
-                "0";
-
-            return;
-
-        }
-
-        const displayAttribute =
-            item.getAttribute(
-                "data-display"
-            );
-
-        let displayNumber =
-            Number(displayAttribute);
 
         if (
-            !Number.isFinite(
-                displayNumber
-            )
+            statistics &&
+            statisticsItems.length > 0
         ) {
 
-            displayNumber =
-                target;
+            const prefersReducedMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
 
-        }
+            function animateCounter(item) {
 
-        if (prefersReducedMotion) {
+                const counter =
+                    item.querySelector(
+                        "[data-counter]"
+                    );
 
-            counter.textContent =
-                displayNumber.toLocaleString();
+                if (!counter) {
+                    return;
+                }
 
-            return;
+                const targetAttribute =
+                    item.getAttribute(
+                        "data-target"
+                    );
 
-        }
+                const target =
+                    Number(targetAttribute);
 
-        const startTime =
-            performance.now();
+                if (!Number.isFinite(target)) {
 
-        const duration =
-            1400;
+                    console.error(
+                        "Invalid statistics data-target:",
+                        targetAttribute,
+                        item
+                    );
 
-        function updateCounter(
-            currentTime
-        ) {
+                    counter.textContent =
+                        "0";
 
-            const elapsed =
-                currentTime -
-                startTime;
+                    return;
 
-            const progress =
-                Math.min(
-                    elapsed / duration,
-                    1
-                );
+                }
 
-            const easedProgress =
-                1 -
-                Math.pow(
-                    1 - progress,
-                    3
-                );
+                const displayAttribute =
+                    item.getAttribute(
+                        "data-display"
+                    );
 
-            const currentValue =
-                Math.floor(
-                    target *
-                    easedProgress
-                );
+                let displayNumber =
+                    Number(displayAttribute);
 
-            counter.textContent =
-                currentValue.toLocaleString();
+                if (
+                    !Number.isFinite(
+                        displayNumber
+                    )
+                ) {
 
-            if (progress < 1) {
+                    displayNumber =
+                        target;
+
+                }
+
+                if (prefersReducedMotion) {
+
+                    counter.textContent =
+                        displayNumber.toLocaleString();
+
+                    return;
+
+                }
+
+                const startTime =
+                    performance.now();
+
+                const duration =
+                    1400;
+
+                function updateCounter(
+                    currentTime
+                ) {
+
+                    const elapsed =
+                        currentTime -
+                        startTime;
+
+                    const progress =
+                        Math.min(
+                            elapsed / duration,
+                            1
+                        );
+
+                    const easedProgress =
+                        1 -
+                        Math.pow(
+                            1 - progress,
+                            3
+                        );
+
+                    const currentValue =
+                        Math.floor(
+                            target *
+                            easedProgress
+                        );
+
+                    counter.textContent =
+                        currentValue.toLocaleString();
+
+                    if (progress < 1) {
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+                    } else {
+
+                        counter.textContent =
+                            displayNumber.toLocaleString();
+
+                    }
+
+                }
 
                 requestAnimationFrame(
                     updateCounter
                 );
 
-            } else {
-
-                counter.textContent =
-                    displayNumber.toLocaleString();
-
             }
 
-        }
+            let statisticsAnimated =
+                false;
 
-        requestAnimationFrame(
-            updateCounter
-        );
+            const statisticsObserver =
+                new IntersectionObserver(
+                    function (
+                        entries,
+                        observer
+                    ) {
 
-    }
+                        entries.forEach(
+                            function (entry) {
 
-    let statisticsAnimated =
-        false;
+                                if (
+                                    !entry.isIntersecting ||
+                                    statisticsAnimated
+                                ) {
+                                    return;
+                                }
 
-    const statisticsObserver =
-        new IntersectionObserver(
-            function (
-                entries,
-                observer
-            ) {
+                                statisticsAnimated =
+                                    true;
 
-                entries.forEach(
-                    function (entry) {
+                                statisticsItems.forEach(
+                                    function (item) {
 
-                        if (
-                            !entry.isIntersecting ||
-                            statisticsAnimated
-                        ) {
-                            return;
-                        }
+                                        item.classList.add(
+                                            "is-visible"
+                                        );
 
-                        statisticsAnimated =
-                            true;
+                                        animateCounter(
+                                            item
+                                        );
 
-                        statisticsItems.forEach(
-                            function (item) {
-
-                                item.classList.add(
-                                    "is-visible"
+                                    }
                                 );
 
-                                animateCounter(
-                                    item
+                                observer.unobserve(
+                                    entry.target
                                 );
 
                             }
                         );
 
-                        observer.unobserve(
-                            entry.target
-                        );
-
+                    },
+                    {
+                        threshold: 0.25
                     }
                 );
 
-            },
-            {
-                threshold: 0.25
-            }
-        );
+            statisticsObserver.observe(
+                statistics
+            );
 
-    statisticsObserver.observe(
-        statistics
-    );
+        }
 
-}
-
-});
+    });
 
 </script>
 </body>
