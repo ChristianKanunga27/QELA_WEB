@@ -647,6 +647,10 @@ video {
   z-index: 1;
 }
 
+.z-\[50\] {
+  z-index: 50;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -790,6 +794,10 @@ video {
 
 .h-\[260px\] {
   height: 260px;
+}
+
+.h-80 {
+  height: 20rem;
 }
 
 .min-h-\[100svh\] {
@@ -1175,6 +1183,10 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'\.\/resource\/image\/about\.jpg\'\)\] {
+  background-image: url('./resource/image/about.jpg');
+}
+
 .from-\[\#07130d\] {
   --tw-gradient-from: #07130d var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(7 19 13 / 0) var(--tw-gradient-to-position);
@@ -1189,6 +1201,14 @@ video {
 
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .object-contain {
@@ -1621,6 +1641,11 @@ video {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity, 1));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .shadow-\[0_24px_60px_rgba\(7\2c 19\2c 13\2c 0\.12\)\] {
