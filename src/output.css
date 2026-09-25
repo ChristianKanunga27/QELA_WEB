@@ -800,6 +800,10 @@ video {
   height: 20rem;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .min-h-\[100svh\] {
   min-height: 100svh;
 }
@@ -1185,6 +1189,22 @@ video {
 
 .bg-\[url\(\'\.\/resource\/image\/about\.jpg\'\)\] {
   background-image: url('./resource/image/about.jpg');
+}
+
+.bg-\[url\(\'\.\/resource\/image\/\'\)\] {
+  background-image: url('./resource/image/');
+}
+
+.bg-\[url\(\'\.\/resource\/image\/cash\'\)\] {
+  background-image: url('./resource/image/cash');
+}
+
+.bg-\[url\(\'\.\/resource\/image\/cashnut\.jpeg\'\)\] {
+  background-image: url('./resource/image/cashnut.jpeg');
+}
+
+.bg-\[url\(\'\.\/resource\/image\/cash\.jpg\'\)\] {
+  background-image: url('./resource/image/cash.jpg');
 }
 
 .from-\[\#07130d\] {
@@ -2020,6 +2040,10 @@ video {
     height: 420px;
   }
 
+  .md\:h-80 {
+    height: 20rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2115,6 +2139,10 @@ video {
 
   .lg\:h-\[460px\] {
     height: 460px;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
   }
 
   .lg\:w-auto {
