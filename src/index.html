@@ -2,38 +2,41 @@
 
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
+        <meta name="description"
+            content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
 
-    <title>QELA Technology | Digital solutions for agriculture</title>
+        <title>QELA Technology | Digital solutions for agriculture</title>
 
-    <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
-    
+        <link rel="shortcut icon" href="./resource/favico.ico"
+            type="image/x-icon">
 
-    <link href="./output.css" rel="stylesheet">
+        <link href="./output.css" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-        rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+            rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
+        <style>
         @keyframes marquee {
 
             from {
@@ -657,37 +660,47 @@
 
         .statistics-item {
             opacity: 0;
-            font-size: 1.5rem !important;
             transform: translateY(25px);
+
             transition:
                 opacity 700ms ease,
                 transform 700ms ease;
         }
+
 
         .statistics-item.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
+
         .statistics-item:nth-child(2) {
             transition-delay: 100ms;
         }
+
 
         .statistics-item:nth-child(3) {
             transition-delay: 200ms;
         }
 
+
         .statistics-item:nth-child(4) {
             transition-delay: 300ms;
         }
 
+
+        /* BIG WHITE ICONS */
+
         .stat-icon {
-            width: 42px;
-            height: 42px;
-            stroke: #9fc96a;
-            stroke-width: 1.6;
+            width: 58px;
+            height: 58px;
+
+            stroke: #ffffff;
+            stroke-width: 2.2;
+
             fill: none;
         }
+
 
         @media (max-width: 1023px) {
 
@@ -697,6 +710,7 @@
             }
 
         }
+
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -709,568 +723,365 @@
         }
     </style>
 
-</head>
+    </head>
 
-<body class="bg-white">
+    <body class="bg-white">
 
-    <header>
+        <header>
 
-        <div class="contact-bar w-full bg-black text-white">
+            <div class="contact-bar w-full bg-black text-white">
+
+                <div
+                    class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+
+                    <a href="mailto:info@qelatechnologies.co.tz"
+                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+
+                        <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+
+                        <span>info@qelatechnologies.co.tz</span>
+
+                    </a>
+
+                    <a href="tel:+255752686686"
+                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+
+                        <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+
+                        <span>+255 718 352 944</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <nav id="navbar" class="w-full p-4">
+
+                <div class="nav-inner flex items-center justify-between gap-8">
+
+                    <img src="./resource/image/qela_logo.png"
+                        class="nav-logo h-16" alt="QELA logo">
+
+                    <div class="hidden md:block">
+
+                        <div
+                            class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+
+                            <a href="#">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="#">Products</a>
+                            <a href="#">Industry</a>
+                            <a href="#">Resource</a>
+
+                        </div>
+
+                    </div>
+
+                    <button id="menuBtn"
+                        class="md:hidden text-yellow-400 text-2xl">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+            <div id="sidebar"
+                class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+
+                <div class="flex justify-end p-5">
+
+                    <button id="closeBtn" class="text-white text-2xl">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+                </div>
+
+                <div
+                    class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+
+                    <a href="#">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="#">Products</a>
+                    <a href="#">Industry</a>
+                    <a href="#">Resource</a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="hero w-full overflow-hidden text-white">
+
+            <video autoplay muted loop playsinline preload="auto"
+                aria-hidden="true">
+
+                <source src="./resource/video/bg5.mp4" type="video/mp4">
+
+            </video>
+
+            <div
+                class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
+
+                <div>
+
+                    <div class="hero-description">
+
+                        <div class="phrase phrase-one">
+
+                            <span>Innovative AgriTech and</span>
+                            <span>AgriTech and business</span>
+                            <span>solutions driving growth</span>
+
+                        </div>
+
+                        <div class="phrase phrase-two">
+
+                            <span>Transforming agriculture</span>
+                            <span>and business through</span>
+                            <span>innovative technology.</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div class="contact-bar w-full bg-white ">
 
             <div
                 class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
-
-                <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
-
-                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
-
-                    <span>info@qelatechnologies.co.tz</span>
-
-                </a>
-
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
-
-                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
-
-                    <span>+255 718 352 944</span>
-
-                </a>
-
             </div>
 
         </div>
+        <!-- STATISTICS SECTION -->
 
-        <nav id="navbar" class="w-full p-4">
+        <section
+            class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-lg"
+            aria-label="Qela Agritech statistics">
+            
 
-            <div class="nav-inner flex items-center justify-between gap-8">
+            <!-- Background -->
 
-                <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+            <div class="absolute inset-0">
 
-                <div class="hidden md:block">
-
-                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
-
-                        <a href="#">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="#">Products</a>
-                        <a href="#">Industry</a>
-                        <a href="#">Resource</a>
-
-                    </div>
-
-                </div>
-
-                <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
-
-                    <i class="fa-solid fa-bars"></i>
-
-                </button>
+                <img src="./resource/image/statistics.jpg"
+                    alt="Farmer working in an agricultural field"
+                    class="h-full w-full object-cover object-center">
 
             </div>
 
-        </nav>
+            <!-- Original overlays -->
 
-        <div id="sidebar"
-            class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+            <div class="absolute inset-0 bg-green-900/30"></div>
 
-            <div class="flex justify-end p-5">
+            <div class="absolute inset-0 bg-green-600/55"></div>
 
-                <button id="closeBtn" class="text-white text-2xl">
+            <div
+                class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]">
 
-                    <i class="fa-solid fa-xmark"></i>
+                <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
 
-                </button>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                        data-statistics>
 
-            </div>
+                        <!-- FARMERS -->
 
-            <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+                        <article
+                            class="statistics-item flex min-h-[190px] flex-col items-center justify-center px-6 py-8 text-center lg:border-r lg:border-white/25"
+                            data-target="350" data-display="350k">
 
-                <a href="#">Home</a>
-                <a href="about.html">About</a>
-                <a href="#">Products</a>
-                <a href="#">Industry</a>
-                <a href="#">Resource</a>
+                            <!-- BIG BOLD WHITE NUMBER -->
 
-            </div>
+                            <div
+                                class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
 
-        </div>
+                                <span data-counter>0</span><span
+                                    class="text-white">K+</span>
 
-    </header>
+                            </div>
 
-    <section class="hero w-full overflow-hidden text-white">
+                            <!-- BIG WHITE ICON -->
 
-        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                            <div class="mt-5">
 
-            <source src="./resource/video/bg5.mp4" type="video/mp4">
+                                <svg class="stat-icon" viewBox="0 0 48 48"
+                                    aria-hidden="true">
 
-        </video>
+                                    <circle cx="24" cy="13" r="5" />
 
-        <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
+                                    <path
+                                        d="M14 36c0-6 4-10 10-10s10 4 10 10" />
 
-            <div>
+                                    <circle cx="10" cy="19" r="4" />
 
-                <div class="hero-description">
+                                    <path d="M2 36c0-5 3-8 8-8" />
 
-                    <div class="phrase phrase-one">
+                                    <circle cx="38" cy="19" r="4" />
 
-                        <span>Innovative AgriTech and</span>
-                        <span>AgriTech and business</span>
-                        <span>solutions driving growth</span>
+                                    <path d="M46 36c0-5-3-8-8-8" />
 
-                    </div>
+                                </svg>
 
-                    <div class="phrase phrase-two">
+                            </div>
 
-                        <span>Transforming agriculture</span>
-                        <span>and business through</span>
-                        <span>innovative technology.</span>
+                            <!-- CLEAN CLASSIC LABEL -->
 
-                    </div>
+                            <p
+                                class="mt-5 text-3xl font-semibold tracking-[0.08em] text-white">
+                                Farmers
+                            </p>
 
-                </div>
+                        </article>
 
-            </div>
+                        <!-- FARMS -->
 
-        </div>
+                        <article
+                            class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
+                            data-target="1000" data-display="1000">
 
-    </section>
-    <!-- STATISTICS SECTION -->
+                            <!-- BIG BOLD WHITE NUMBER -->
 
-    <section class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-xl"
-        aria-label="Qela Agritech statistics">
+                            <div
+                                class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
 
-        <div class="absolute inset-0">
+                                <span data-counter>0</span><span
+                                    class="text-white">+</span>
 
-            <img src="./resource/image/statistics.jpg" alt="Farmer working in an agricultural field"
-                class="h-full w-full object-cover object-center">
+                            </div>
 
-        </div>
+                            <!-- BIG WHITE ICON -->
 
-        <div class="absolute inset-0 bg-green-900/30"></div>
+                            <div class="mt-5">
 
-        <div class="absolute inset-0 bg-green-600/55"></div>
+                                <svg class="stat-icon" viewBox="0 0 48 48"
+                                    aria-hidden="true">
 
-        <div class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]">
+                                    <path
+                                        d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z" />
 
-            <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
+                                    <path d="M17 5v34" />
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" data-statistics>
+                                    <path d="M31 9v34" />
 
-                    <article
-                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center pr-10 py-8 text-center lg:border-r lg:border-white/25"
-                        data-target="350" data-display="350k">
+                                    <path
+                                        d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z" />
 
-                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+                                    <circle cx="24" cy="22" r="2" />
 
-                            <span data-counter>0</span><span class="text-white">K+</span>
+                                </svg>
 
-                        </div>
+                            </div>
 
-                        <div class="mt-5">
+                            <!-- CLEAN CLASSIC LABEL -->
 
-                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <p
+                                class="mt-5 text-3xl font-semibold tracking-[0.08em] text-white">
+                                Farms in acres
+                            </p>
 
-                                <circle cx="24" cy="13" r="5" />
+                        </article>
 
-                                <path d="M14 36c0-6 4-10 10-10s10 4 10 10" />
+                        <!-- CROPS -->
 
-                                <circle cx="10" cy="19" r="4" />
+                        <article
+                            class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
+                            data-target="10" data-display="10">
 
-                                <path d="M2 36c0-5 3-8 8-8" />
+                            <!-- BIG BOLD WHITE NUMBER -->
 
-                                <circle cx="38" cy="19" r="4" />
+                            <div
+                                class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
 
-                                <path d="M46 36c0-5-3-8-8-8" />
+                                <span data-counter>0</span><span
+                                    class="text-white">+</span>
 
-                            </svg>
+                            </div>
 
-                        </div>
+                            <!-- BIG WHITE ICON -->
 
-                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+                            <div class="mt-5">
 
-                            Farmers
+                                <svg class="stat-icon" viewBox="0 0 48 48"
+                                    aria-hidden="true">
 
-                        </p>
+                                    <path d="M24 42V22" />
 
-                    </article>
+                                    <path
+                                        d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z" />
 
-                    <article
-                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
-                        data-target="1000" data-display="1000">
+                                    <path
+                                        d="M24 23c0-9 6-15 15-15 0 9-6 15-15 15z" />
 
-                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+                                    <path d="M17 42h14" />
 
-                            <span data-counter>0</span><span class="text-white">+</span>
+                                </svg>
 
-                        </div>
+                            </div>
 
-                        <div class="mt-5">
+                            <!-- CLEAN CLASSIC LABEL -->
 
-                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <p
+                                class="mt-5 text-3xl font-semibold tracking-[0.08em] text-white">
+                                Crops
+                            </p>
 
-                                <path d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z" />
+                        </article>
 
-                                <path d="M17 5v34" />
+                        <!-- COOPERATIVES -->
 
-                                <path d="M31 9v34" />
+                        <article
+                            class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
+                            data-target="120" data-display="120">
 
-                                <path d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z" />
+                            <!-- BIG BOLD WHITE NUMBER -->
 
-                                <circle cx="24" cy="22" r="2" />
+                            <div
+                                class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
 
-                            </svg>
+                                <span data-counter>0</span><span
+                                    class="text-white">+</span>
 
-                        </div>
+                            </div>
 
-                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
+                            <!-- BIG WHITE ICON -->
 
-                            Farms
+                            <div class="mt-5">
 
-                        </p>
+                                <svg class="stat-icon" viewBox="0 0 48 48"
+                                    aria-hidden="true">
 
-                    </article>
+                                    <path d="M4 20l8-7 8 4 8-5 16 8" />
 
-                    <article
-                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
-                        data-target="10" data-display="10">
+                                    <path d="M4 20l7 17 9-5 7 6 5-7" />
 
-                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
+                                    <path d="M44 20l-7 17-9-5" />
 
-                            <span data-counter>0</span><span class="text">+</span>
+                                    <path d="M20 17l7 7" />
 
-                        </div>
+                                    <path d="M27 24l5 5" />
 
-                        <div class="mt-5">
+                                </svg>
 
-                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            </div>
 
-                                <path d="M24 42V22" />
+                            <!-- CLEAN CLASSIC LABEL -->
 
-                                <path d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z" />
+                            <p
+                                class="mt-5 text-3xl font-semibold tracking-[0.08em] text-white">
+                                Cooperatives
+                            </p>
 
-                                <path d="M24 23c0-9 6-15 15-15 0 9-6 15-15 15z" />
-
-                                <path d="M17 42h14" />
-
-                            </svg>
-
-                        </div>
-
-                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                            crops
-
-                        </p>
-
-                    </article>
-
-                    <article
-                        class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
-                        data-target="120" data-display="120">
-
-                        <div class="text-7xl font-bold tracking-tight text-white sm:text-7xl">
-
-                            <span data-counter>0</span><span class="text">+</span>
-
-                        </div>
-
-                        <div class="mt-5">
-
-                            <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
-                                <path d="M4 20l8-7 8 4 8-5 16 8" />
-
-                                <path d="M4 20l7 17 9-5 7 6 5-7" />
-
-                                <path d="M44 20l-7 17-9-5" />
-
-                                <path d="M20 17l7 7" />
-
-                                <path d="M27 24l5 5" />
-
-                            </svg>
-
-                        </div>
-
-                        <p class="mt-4 text-2xl font-bold text-white sm:text-2xl">
-
-                            cooperatives
-
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="client-section text-white">
-
-        <div class="section-heading text-center">
-
-            <div class="text-3xl font-bold md:text-4xl">
-
-                Our <span class="text-yellow-400">Clients</span>
-
-            </div>
-
-            <span class="text-gray-200 text-lg">
-
-                Meet our happier clients
-
-            </span>
-
-        </div>
-
-        <div class="logo-grid">
-
-            <div class="logo-tile"><img src="./resource/logos/runali_logo (1).jpeg" alt="runali"></div>
-
-            <div class="logo-tile"><img src="./resource/image/mamku.png" alt="mamku"></div>
-
-            <div class="logo-tile"><img src="./resource/image/corecu.jpeg" alt="corecu"></div>
-
-            <div class="logo-tile"><img src="./resource/image/tannne.png" alt="tanecu"></div>
-
-            <div class="logo-tile"><img src="./resource/image/milambo.jpeg" alt="milambo"></div>
-
-        </div>
-
-    </section>
-
-    <section class="partner-section">
-
-        <div class="section-heading text-center">
-
-            <div class="text-3xl font-bold md:text-4xl">
-
-                Our <span class="text-yellow-400">Partners</span>
-
-            </div>
-
-            <span class="text-gray-500 text-lg">
-
-                It's a pleasure to have these partners
-
-            </span>
-
-        </div>
-
-        <div class="partner-window overflow-hidden">
-
-            <div class="partner-track flex items-center w-max animate-marquee">
-
-                <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/COLEAD.png" alt="COLEAD" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/farmforce (1).png" alt="Farmforce" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/npk_logo.jpg" alt="NPK" class="w-28 h-20 object-contain">
-
-                <img src="./resource/logos/palladium.png" alt="Palladium" class="w-28 h-20 object-contain">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="faq" class="bg-[#f1f5f3] px-4 py-16 sm:px-6 md:py-24">
-
-        <div class="mx-auto max-w-4xl">
-
-            <div class="mb-12 text-center md:mb-16">
-
-                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#dfa21f]">
-
-                    Help desk
-
-                </p>
-
-                <h1 class="text-4xl font-semibold leading-tight text-[#07130d] sm:text-5xl">
-
-                    Frequently Asked Questions
-
-                </h1>
-
-                <div class="mx-auto mt-5 h-1 w-16 rounded-full bg-[#dfa21f]"></div>
-
-            </div>
-
-            <div class="overflow-hidden rounded-2xl border shadow-sm">
-
-                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                    <button type="button"
-                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                            What is Qela Agritech?
-
-                        </span>
-
-                        <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                            >
-
-                        </span>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                            Qela Agritech is a digital agriculture platform that uses technology to help farmers,
-                            agribusinesses and agricultural organizations manage farm information, records and
-                            agricultural activities more efficiently.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                    <button type="button"
-                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                            Who can use Qela Agritech?
-
-                        </span>
-
-                        <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                            >
-
-                        </span>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                            Qela Agritech is designed for farmers, cooperatives, agribusinesses, agricultural
-                            organizations, field officers and other stakeholders across the agricultural value chain.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                    <button type="button"
-                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                            What agricultural information can Qela Agritech manage?
-
-                        </span>
-
-                        <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                            >
-
-                        </span>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                            Qela Agritech can help manage farmer profiles, farm information, crop activities,
-                            production records, agricultural inputs, harvest information and other important farm
-                            records.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                    <button type="button"
-                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                            What products does Qela Agritech offer?
-
-                        </span>
-
-                        <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                            >
-
-                        </span>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                            Qela Agritech provides digital solutions including Agricole, Agrisasa and E-SACCOS,
-                            designed to support different agricultural and financial activities within the agricultural
-                            value chain.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="faq-item border-b border-[#dce4df] last:border-b-0">
-
-                    <button type="button"
-                        class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
-
-                        <span class="text-lg md:text-xl font-medium text-[#07130d]">
-
-                            How can Qela Agritech help improve agricultural operations?
-
-                        </span>
-
-                        <span class="faq-icon text-2xl font-light flex-shrink-0">
-
-                            >
-
-                        </span>
-
-                    </button>
-
-                    <div class="faq-answer">
-
-                        <p class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
-
-                            Qela Agritech helps organize agricultural information digitally, improve record
-                            management, provide better visibility of farm activities and support more informed
-                            decisions across the agricultural value chain.
-
-                        </p>
+                        </article>
 
                     </div>
 
@@ -1278,145 +1089,327 @@
 
             </div>
 
+        </section>
+        <div class="contact-bar w-full bg-white ">
+
+            <div
+                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+            </div>
+
         </div>
 
-    </section>
+        <section class="client-section text-white">
 
+            <div class="section-heading text-center">
 
+                <div class="text-3xl font-bold md:text-4xl">
 
-    <footer class="bg-[#07130d] text-white">
+                    Our <span class="text-yellow-400">Clients</span>
 
-        <div class="max-w-7xl mx-auto px-6 py-14">
+                </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <span class="text-gray-200 text-lg">
 
-                <div>
+                    Meet our happier clients
 
-                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="h-12 w-auto mb-5">
+                </span>
 
-                    <h1 class="text-2xl font-extrabold tracking-tight">
+            </div>
 
-                        Qela
+            <div class="logo-grid">
 
-                        <span class="text-green-500">Technologies</span>
+                <div class="logo-tile"><img
+                        src="./resource/logos/runali_logo (1).jpeg"
+                        alt="runali"></div>
+
+                <div class="logo-tile"><img src="./resource/image/mamku.png"
+                        alt="mamku"></div>
+
+                <div class="logo-tile"><img src="./resource/image/corecu.jpeg"
+                        alt="corecu"></div>
+
+                <div class="logo-tile"><img src="./resource/image/tannne.png"
+                        alt="tanecu"></div>
+
+                <div class="logo-tile"><img src="./resource/image/milambo.jpeg"
+                        alt="milambo"></div>
+
+            </div>
+
+        </section>
+
+        <section class="partner-section">
+
+            <div class="section-heading text-center">
+
+                <div class="text-3xl font-bold md:text-4xl">
+
+                    Our <span class="text-yellow-400">Partners</span>
+
+                </div>
+
+                <span class="text-gray-500 text-lg">
+
+                    It's a pleasure to have these partners
+
+                </span>
+
+            </div>
+
+            <div class="partner-window overflow-hidden">
+
+                <div
+                    class="partner-track flex items-center w-max animate-marquee">
+
+                    <img src="./resource/logos/COLEAD.png" alt="COLEAD"
+                        class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/farmforce (1).png"
+                        alt="Farmforce" class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/npk_logo.jpg" alt="NPK"
+                        class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/palladium.png" alt="Palladium"
+                        class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/COLEAD.png" alt="COLEAD"
+                        class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/farmforce (1).png"
+                        alt="Farmforce" class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/npk_logo.jpg" alt="NPK"
+                        class="w-28 h-20 object-contain">
+
+                    <img src="./resource/logos/palladium.png" alt="Palladium"
+                        class="w-28 h-20 object-contain">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="faq" class="bg-[#f1f5f3] px-4 py-16 sm:px-6 md:py-24">
+
+            <div class="mx-auto max-w-4xl">
+
+                <div class="mb-12 text-center md:mb-16">
+
+                    <p
+                        class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#dfa21f]">
+
+                        Help desk
+
+                    </p>
+
+                    <h1
+                        class="text-4xl font-semibold leading-tight text-[#07130d] sm:text-5xl">
+
+                        Frequently Asked Questions
 
                     </h1>
 
-                    <p class="text-xs text-gray-500 mt-1">
-
-                        (T) LIMITED
-
-                    </p>
-
-                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
-
-                        Empowering businesses through innovative technology, digital transformation and
-                        smart agritech solutions.
-
-                    </p>
-
-                    <div class="flex items-center gap-3 mt-6">
-
-                        <a href="#" aria-label="Facebook"
-                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                            <i class="fa-brands fa-facebook-f"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="Instagram"
-                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-                    </div>
+                    <div
+                        class="mx-auto mt-5 h-1 w-16 rounded-full bg-[#dfa21f]"></div>
 
                 </div>
 
-                <div>
+                <div class="overflow-hidden rounded-2xl border shadow-sm">
 
-                    <h3 class="text-lg font-semibold mb-5">
+                    <div
+                        class="faq-item border-b border-[#dce4df] last:border-b-0">
 
-                        Solutions
+                        <button type="button"
+                            class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
 
-                    </h3>
+                            <span
+                                class="text-lg md:text-xl font-medium text-[#07130d]">
 
-                    <ul class="space-y-3 text-sm text-gray-400">
+                                What is Qela Agritech?
 
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Digital Transformation</a>
-                        </li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Business Management</a>
-                        </li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Data Management</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud Solutions</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Custom Software</a></li>
+                            </span>
 
-                    </ul>
+                            <span
+                                class="faq-icon text-2xl font-light flex-shrink-0">
 
-                </div>
+                                >
 
-                <div>
+                            </span>
 
-                    <h3 class="text-lg font-semibold mb-5">
+                        </button>
 
-                        Quick Links
+                        <div class="faq-answer">
 
-                    </h3>
+                            <p
+                                class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
 
-                    <ul class="space-y-3 text-sm text-gray-400">
+                                Qela Agritech is a digital agriculture platform
+                                that uses technology to help farmers,
+                                agribusinesses and agricultural organizations
+                                manage farm information, records and
+                                agricultural activities more efficiently.
 
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">About Us</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Our Products</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Industries</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Resources</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Contact Us</a></li>
-
-                    </ul>
-
-                </div>
-
-                <div>
-
-                    <h3 class="text-lg font-semibold mb-5">
-
-                        Support
-
-                    </h3>
-
-                    <div class="space-y-5 text-sm text-gray-400">
-
-                        <div>
-
-
-
-                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
-
-                                +255 718 352 944
-
-                            </a>
-
-                            <br>
-
-                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
-
-                                +255 742 073 002
-
-                            </a>
+                            </p>
 
                         </div>
 
-                        <div>
+                    </div>
 
+                    <div
+                        class="faq-item border-b border-[#dce4df] last:border-b-0">
 
+                        <button type="button"
+                            class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
 
-                            <a href="mailto:info@qelatechnologies.co.tz"
-                                class="hover:text-green-500 transition duration-300">
+                            <span
+                                class="text-lg md:text-xl font-medium text-[#07130d]">
 
-                                info@qelatechnologies.co.tz
+                                Who can use Qela Agritech?
 
-                            </a>
+                            </span>
+
+                            <span
+                                class="faq-icon text-2xl font-light flex-shrink-0">
+
+                                >
+
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p
+                                class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                                Qela Agritech is designed for farmers,
+                                cooperatives, agribusinesses, agricultural
+                                organizations, field officers and other
+                                stakeholders across the agricultural value
+                                chain.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                        <button type="button"
+                            class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                            <span
+                                class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                                What agricultural information can Qela Agritech
+                                manage?
+
+                            </span>
+
+                            <span
+                                class="faq-icon text-2xl font-light flex-shrink-0">
+
+                                >
+
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p
+                                class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                                Qela Agritech can help manage farmer profiles,
+                                farm information, crop activities,
+                                production records, agricultural inputs, harvest
+                                information and other important farm
+                                records.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                        <button type="button"
+                            class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                            <span
+                                class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                                What products does Qela Agritech offer?
+
+                            </span>
+
+                            <span
+                                class="faq-icon text-2xl font-light flex-shrink-0">
+
+                                >
+
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p
+                                class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                                Qela Agritech provides digital solutions
+                                including Agricoop, Agrisasa and E-SACCOS,
+                                designed to support different agricultural and
+                                financial activities within the agricultural
+                                value chain.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="faq-item border-b border-[#dce4df] last:border-b-0">
+
+                        <button type="button"
+                            class="faq-question w-full px-6 py-6 flex items-center justify-between text-left gap-6">
+
+                            <span
+                                class="text-lg md:text-xl font-medium text-[#07130d]">
+
+                                How can Qela Agritech help improve agricultural
+                                operations?
+
+                            </span>
+
+                            <span
+                                class="faq-icon text-2xl font-light flex-shrink-0">
+
+                                >
+
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p
+                                class="pb-6 text-slate-800 leading-relaxed max-w-3xl px-10">
+
+                                Qela Agritech helps organize agricultural
+                                information digitally, improve record
+                                management, provide better visibility of farm
+                                activities and support more informed
+                                decisions across the agricultural value chain.
+
+                            </p>
 
                         </div>
 
@@ -1426,43 +1419,211 @@
 
             </div>
 
-        </div>
+        </section>
 
-        <div class="bg-black/30">
+        <footer class="bg-[#07130d] text-white">
 
-            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="max-w-7xl mx-auto px-6 py-14">
 
-                <p class="text-sm text-gray-500 text-center md:text-left">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                    © 2026 Qela Technologies (T) Limited.
+                    <div>
 
-                    All Rights Reserved.
+                        <img src="./resource/logos/qela_icon.svg"
+                            alt="Qela Technologies Logo"
+                            class="h-12 w-auto mb-5">
 
-                </p>
+                        <h1 class="text-2xl font-extrabold tracking-tight">
 
-                <div class="flex gap-5 text-sm text-gray-500">
+                            Qela
 
-                    <a href="#" class="hover:text-green-500 transition duration-300">
+                            <span class="text-green-500">Technologies</span>
 
-                        Privacy Policy
+                        </h1>
 
-                    </a>
+                        <p class="text-xs text-gray-500 mt-1">
 
-                    <a href="#" class="hover:text-green-500 transition duration-300">
+                            (T) LIMITED
 
-                        Terms & Conditions
+                        </p>
 
-                    </a>
+                        <p
+                            class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
+
+                            Empowering businesses through innovative technology,
+                            digital transformation and
+                            smart agritech solutions.
+
+                        </p>
+
+                        <div class="flex items-center gap-3 mt-6">
+
+                            <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
+                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
+                                <i class="fa-brands fa-facebook-f"></i>
+
+                            </a>
+
+                            <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
+                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
+                                <i class="fa-brands fa-instagram"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold mb-5">
+
+                            Solutions
+
+                        </h3>
+
+                        <ul class="space-y-3 text-sm text-gray-400">
+
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Digital
+                                    Transformation</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Business
+                                    Management</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Data
+                                    Management</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Cloud
+                                    Solutions</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Custom
+                                    Software</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold mb-5">
+
+                            Quick Links
+
+                        </h3>
+
+                        <ul class="space-y-3 text-sm text-gray-400">
+
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Our
+                                    Products</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Industries</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Resources</a></li>
+                            <li><a href="#"
+                                    class="hover:text-green-500 transition duration-300">Contact
+                                    Us</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-lg font-semibold mb-5">
+
+                            Support
+
+                        </h3>
+
+                        <div class="space-y-5 text-sm text-gray-400">
+
+                            <div>
+
+                                <a href="tel:+255718352944"
+                                    class="hover:text-green-500 transition duration-300">
+
+                                    +255 718 352 944
+
+                                </a>
+
+                                <br>
+
+                                <a href="tel:+255742073002"
+                                    class="hover:text-green-500 transition duration-300">
+
+                                    +255 742 073 002
+
+                                </a>
+
+                            </div>
+
+                            <div>
+
+                                <a href="mailto:info@qelatechnologies.co.tz"
+                                    class="hover:text-green-500 transition duration-300">
+
+                                    info@qelatechnologies.co.tz
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+            <div class="bg-black/30">
 
-    </footer>
+                <div
+                    class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
 
-    <script>
+                    <p class="text-sm text-gray-500 text-center md:text-left">
+
+                        © 2026 Qela Technologies (T) Limited.
+
+                        All Rights Reserved.
+
+                    </p>
+
+                    <div class="flex gap-5 text-sm text-gray-500">
+
+                        <a href="#"
+                            class="hover:text-green-500 transition duration-300">
+
+                            Privacy Policy
+
+                        </a>
+
+                        <a href="#"
+                            class="hover:text-green-500 transition duration-300">
+
+                            Terms & Conditions
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
@@ -1903,6 +2064,6 @@
         });
 
     </script>
-</body>
+    </body>
 
 </html>

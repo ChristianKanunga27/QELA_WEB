@@ -7,10 +7,12 @@
 
     <meta name="description" content="Qela Agritech impact statistics.">
 
-    <title>qela statistics</title>
+    <title>Qela Statistics</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,38 +25,50 @@
             font-family: 'DM Sans', sans-serif;
         }
 
+
         .statistics-item {
             opacity: 0;
             transform: translateY(25px);
+
             transition:
                 opacity 700ms ease,
                 transform 700ms ease;
         }
+
 
         .statistics-item.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
+
         .statistics-item:nth-child(2) {
             transition-delay: 100ms;
         }
+
 
         .statistics-item:nth-child(3) {
             transition-delay: 200ms;
         }
 
+
         .statistics-item:nth-child(4) {
             transition-delay: 300ms;
         }
 
+
+        /* BIG WHITE ICONS */
+
         .stat-icon {
-            width: 42px;
-            height: 42px;
-            stroke: #9fc96a;
-            stroke-width: 1.6;
+            width: 58px;
+            height: 58px;
+
+            stroke: #ffffff;
+            stroke-width: 2.2;
+
             fill: none;
         }
+
 
         @media (max-width: 1023px) {
 
@@ -81,35 +95,60 @@
 
 
 <body>
+
+
     <section class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-lg"
         aria-label="Qela Agritech statistics">
+
+
+
+
         <div class="absolute inset-0">
 
-            <img src="./resource/image/farmer.jpeg" alt="Farmer working in an agricultural field"
+            <img src="./resource/image/statistics.jpg" alt="Farmer working in an agricultural field"
                 class="h-full w-full object-cover object-center">
 
         </div>
+
+
+
+
         <div class="absolute inset-0 bg-green-900/30"></div>
+
         <div class="absolute inset-0 bg-green-600/55"></div>
+
+
         <div class="relative z-10 flex min-h-[420px] items-center sm:min-h-[450px]">
+
 
             <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
 
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" data-statistics>
+
+
+
+
                     <article
                         class="statistics-item flex min-h-[190px] flex-col items-center justify-center px-6 py-8 text-center lg:border-r lg:border-white/25"
                         data-target="350000" data-display="350000">
-                        <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                            <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+
+
+
+                        <div class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+
+                            <span data-counter>0</span><span class="text-white">+</span>
 
                         </div>
+
+
+
+
                         <div class="mt-5">
 
                             <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
 
-                                <!-- People -->
                                 <circle cx="24" cy="13" r="5" />
 
                                 <path d="M14 36c0-6 4-10 10-10s10 4 10 10" />
@@ -125,33 +164,46 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 text-sm font-medium text-white sm:text-base">
+
+
+
+
+                        <p class="mt-5 text-lg font-semibold tracking-[0.08em] text-white">
                             Farmers
                         </p>
 
+
                     </article>
+
+
+
+
+
                     <article
                         class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-r lg:border-t-0"
                         data-target="1000" data-display="1000">
-                        <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                            <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+
+
+
+                        <div class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+
+                            <span data-counter>0</span><span class="text-white">+</span>
 
                         </div>
 
 
-                        <!-- ICON -->
+
+
                         <div class="mt-5">
 
                             <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-
 
                                 <path d="M5 9l12-4 14 4 12-4v34l-12 4-14-4-12 4z" />
 
                                 <path d="M17 5v34" />
 
                                 <path d="M31 9v34" />
-
 
                                 <path d="M24 15c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z" />
 
@@ -160,25 +212,41 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 text-sm font-medium text-white sm:text-base">
-                            Farms 
+
+
+
+
+                        <p class="mt-5 text-lg font-semibold tracking-[0.08em] text-white">
+                            Hectares of Farms
                         </p>
 
+
                     </article>
+
+
+
+
+
                     <article
                         class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center lg:border-r lg:border-t-0"
                         data-target="10" data-display="10">
-                        <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                            <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
-                            
+
+
+
+                        <div class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+
+                            <span data-counter>0</span><span class="text-white">+</span>
 
                         </div>
+
+
+
+
                         <div class="mt-5">
 
                             <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
 
-                                <!-- Plant -->
                                 <path d="M24 42V22" />
 
                                 <path d="M24 28c-8 0-13-5-13-13 8 0 13 5 13 13z" />
@@ -190,30 +258,41 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 text-sm font-medium text-white sm:text-base">
-                            crops
+
+
+
+
+                        <p class="mt-5 text-lg font-semibold tracking-[0.08em] text-white">
+                            Crops
                         </p>
 
+
                     </article>
+
+
+
+
 
                     <article
                         class="statistics-item flex min-h-[190px] flex-col items-center justify-center border-t border-white/25 px-6 py-8 text-center md:border-t-0"
                         data-target="120" data-display="120">
 
-                        <!-- NUMBER -->
-                        <div class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
 
-                            <span data-counter>0</span><span class="text-[#a7d85f]">+</span>
+                        <!-- BIG BOLD WHITE NUMBER -->
+
+                        <div class="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
+
+                            <span data-counter>0</span><span class="text-white">+</span>
 
                         </div>
 
 
-                        <!-- ICON -->
+                        <!-- BIG WHITE ICON -->
+
                         <div class="mt-5">
 
                             <svg class="stat-icon" viewBox="0 0 48 48" aria-hidden="true">
 
-                                <!-- Handshake -->
                                 <path d="M4 20l8-7 8 4 8-5 16 8" />
 
                                 <path d="M4 20l7 17 9-5 7 6 5-7" />
@@ -229,10 +308,12 @@
                         </div>
 
 
-                        <!-- DESCRIPTION -->
-                        <p class="mt-4 text-sm font-medium text-white sm:text-base">
-                            cooperatives
+                        <!-- CLEAN CLASSIC LABEL -->
+
+                        <p class="mt-5 text-lg font-semibold tracking-[0.08em] text-white">
+                            Cooperatives
                         </p>
+
 
                     </article>
 
@@ -245,10 +326,15 @@
 
     </section>
 
+
+
+    <!-- COUNTER ANIMATION -->
+
     <script>
 
         const statistics =
             document.querySelector('[data-statistics]');
+
 
         const items =
             document.querySelectorAll('.statistics-item');
@@ -266,8 +352,10 @@
             const counter =
                 item.querySelector('[data-counter]');
 
+
             const target =
                 Number(item.dataset.target);
+
 
             const display =
                 item.dataset.display || target;
@@ -285,8 +373,8 @@
             const startTime =
                 performance.now();
 
-            const duration = 1400;
 
+            const duration = 1400;
 
 
             function updateCounter(currentTime) {
@@ -328,6 +416,8 @@
             );
 
         }
+
+
 
         const observer =
             new IntersectionObserver(
