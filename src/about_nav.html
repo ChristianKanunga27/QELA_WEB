@@ -90,13 +90,46 @@
             width: 100%;
         }
 
+        /* nav sits absolutely over the hero image by default (transparent),
+           then flips to a fixed white bar once the user scrolls past it */
+        #navbar {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            z-index: 30;
+            background: transparent;
+            transition: background 200ms ease;
+        }
         #navbar.is-sticky {
             position: fixed;
-            top: 0; left: 0; right: 0;
             background: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        /* swap link colors for readability once the bar goes white */
+        #navbar.is-sticky .nav-links,
+        #navbar.is-sticky .nav-links a,
+        #navbar.is-sticky #menuBtn {
+            color: #14532d;
         }
 
-        /* nice styling for the collage tiles */
+        /* open bracket frame: solid left/top/bottom, open right side with
+           just two short corner ticks — matches the reference exactly */
+        .frame-bracket {
+            border-left: 4px solid #facc15;
+            border-top: 4px solid #facc15;
+            border-bottom: 4px solid #facc15;
+        }
+        .frame-bracket::before,
+        .frame-bracket::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 4px;
+            height: 26px;
+            background: #facc15;
+        }
+        .frame-bracket::before { top: 0; }
+        .frame-bracket::after { bottom: 0; }
+
         .tile {
             border-radius: 1rem;
             box-shadow: 0 20px 40px -18px rgba(16, 39, 27, 0.45);
@@ -154,24 +187,6 @@
         </div>
     </div>
 
-    <nav id="navbar" class="w-full p-4">
-        <div class="nav-inner flex items-center justify-between gap-8">
-            <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
-            <div class="hidden md:block">
-                <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Products</a>
-                    <a href="#">Industry</a>
-                    <a href="#">Resource</a>
-                </div>
-            </div>
-            <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
     <div id="sidebar" class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
         <div class="flex justify-end p-5">
             <button id="closeBtn" class="text-white text-2xl">
@@ -187,66 +202,211 @@
         </div>
     </div>
 
-    <!-- HERO -->
-    <div class="relative min-h-[180px] md:min-h-[220px] lg:min-h-[380px] overflow-hidden">
+    <!-- HERO OUTER (no overflow-hidden here, so the stat card can hang below the image edge) -->
+    <div class="relative"  style="background-image: url('/src/resource/image/abtpic1.jpg');
+     background-size: cover; background-position:
+     center; background-repeat: no-repeat; ">
 
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-             style="background-image: url('./resource/image/agri.jpeg');"></div>
+    <!-- HERO INNER (this is what actually clips the zoomed background image) -->
+    <div class="relative min-h-[280px] md:min-h-[380px] lg:min-h-[420px] overflow-hidden">
 
-        <div class="absolute inset-0 bg-green-900/70"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"></div>
+             <!-- style="background-image: url('./resource/image/agri.jpeg');"> -->
 
-        <div class="relative z-10 flex min-h-[280px] md:min-h-[420px] items-center justify-center px-6">
-            <div class="max-w-3xl text-center">
-                <p class="mb-3 text-lg italic text-yellow-400">A little about who we are</p>
-                <h1 class="text-4xl font-bold text-white md:text-6xl">About <span class="text-yellow-400">Us</span></h1>
-                <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-200 md:text-lg">
-                    Rooms built around how people actually live — considered, unhurried, and made to be used.
-                </p>
+        <div class="absolute inset-0 bg-green-900/60"></div>
+
+        <!-- nav floats in front of the hero image -->
+        <nav id="navbar" class="w-full p-4">
+            <div class="nav-inner flex items-center justify-between gap-8">
+                <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                <div class="hidden md:block">
+                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Products</a>
+                        <a href="#">Industry</a>
+                        <a href="#">Resource</a>
+                    </div>
+                </div>
+                <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="relative z-10 flex min-h-[280px] md:min-h-[380px] lg:min-h-[420px] items-center px-6 md:px-32">
+            <div class="max-w-lg ml-16 bg-cover">
+                <h1 class="text-4xl font-bold text-white md:text-5xl leading-tight ml-16">
+                    About <span class="text-yellow-400">Us</span>
+                </h1>
+
             </div>
         </div>
+    </div>
+
+    <!-- open bracket frame: spans from the headline down to the stat card, sits behind both -->
+    <div class="frame-bracket hidden md:block absolute left-6 md:left-32 top-16 md:top-20 bottom-2 w-40 z-0 h-56 mt-10 ml-16"></div>
+  
+
     </div>
 
 </header>
 
 <!-- ===== STORY SECTION ===== -->
-<main class="max-w-5xl mx-auto px-6 py-20 bg-paper">
+<main class="bg-paper">
+<div class="max-w-5xl mx-auto px-6 pt-28 pb-20 md:pt-32">
     <div class="grid md:grid-cols-2 gap-12 items-center">
 
         <!-- Image collage -->
         <div class="relative h-72 md:h-80">
-
-            <!-- main photo tile -->
             <div class="tile absolute top-0 left-0 w-3/4 h-3/4"
                  style="background-image: url('./resource/image/agri.jpeg');"></div>
 
-            <!-- accent tile: same photo, tinted, so it reads as a second frame not a duplicate -->
-            <div class="tile tile-overlay absolute bottom-0 right-0 w-1/2 h-1/2 "
+            <div class="tile tile-overlay absolute bottom-0 right-0 w-1/2 h-1/2"
                  style="background-image: url('./resource/image/about.jpg');"></div>
-
         </div>
 
         <!-- Copy -->
         <div>
             <p class="font-serif italic text-clay mb-2">How it started</p>
             <h2 class="font-serif font-semibold text-3xl mb-5 text-ink">
-                Working since 2017, one room at a time
+                Working since 2017, one client at a time
             </h2>
             <p class="text-gray-600 leading-relaxed mb-4">
-                We started as a two-person cabinet shop with more sawdust than furniture.
-                Three decades on, the tools have changed, but the instinct hasn't:
-                build things that earn their place in a home.
+                QELA Technologies started as a small team solving one client's problem.
+                Today we support businesses across the region with the same approach:
+                understand the need first, then build the right solution for it.
             </p>
             <p class="font-serif italic text-lg text-ink my-6">
-                Good design isn't decoration — it's a room that finally makes sense.
+                Good service isn't a menu of features — it's the right fix for your problem.
             </p>
             <p class="text-gray-600 leading-relaxed mb-6">
-                Today our studio works across residential and light commercial projects,
-                pairing custom joinery with sourced pieces from makers we trust.
+                We work across technology, advisory, and field support, pairing
+                practical experience with tools that are actually built for the
+                conditions our clients operate in.
             </p>
         </div>
 
     </div>
+</div>
 </main>
+
+<!-- ===== WHAT WE DO ===== -->
+<section class="bg-white py-20">
+    <div class="max-w-5xl mx-auto px-6">
+
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="font-serif italic text-clay mb-2">What we do</p>
+            <h2 class="font-serif font-semibold text-3xl text-ink">Services built around your business</h2>
+            <p class="text-gray-600 mt-4">
+                A short list of what we're best at — happy to talk through anything not listed here.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="w-12 h-12 rounded-lg bg-green-900 text-yellow-400 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3 class="font-semibold text-lg text-ink mb-2">Technology Solutions</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Software and systems designed around how your team actually works day to day.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="w-12 h-12 rounded-lg bg-green-900 text-yellow-400 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="font-semibold text-lg text-ink mb-2">Advisory &amp; Consulting</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Straightforward guidance on process, tools, and planning — no jargon, no upsell.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div class="w-12 h-12 rounded-lg bg-green-900 text-yellow-400 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3 class="font-semibold text-lg text-ink mb-2">Field Support</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    On-the-ground support when you need someone physically there, not just on a call.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US / STATS ===== -->
+<section class="bg-green-900 py-16">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="grid sm:grid-cols-3 gap-8 text-center">
+
+            <div>
+                <p class="text-4xl font-bold text-yellow-400">8+</p>
+                <p class="text-gray-200 text-sm mt-1">Years in operation</p>
+            </div>
+
+            <div>
+                <p class="text-4xl font-bold text-yellow-400">120+</p>
+                <p class="text-gray-200 text-sm mt-1">Projects delivered</p>
+            </div>
+
+            <div>
+                <p class="text-4xl font-bold text-yellow-400">98%</p>
+                <p class="text-gray-200 text-sm mt-1">Client retention</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CALL TO ACTION ===== -->
+<section class="bg-paper py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif font-semibold text-3xl text-ink mb-4">
+            Let's talk about what you need
+        </h2>
+        <p class="text-gray-600 mb-8">
+            Tell us about your project and we'll get back to you with next steps — no pressure, no long forms.
+        </p>
+        <a href="mailto:info@qelatechnologies.co.tz"
+           class="inline-block bg-green-900 text-yellow-400 font-semibold px-8 py-3 rounded-lg hover:bg-green-800 transition">
+            Get in touch
+        </a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-black text-gray-300 py-12">
+    <div class="max-w-5xl mx-auto px-6 grid sm:grid-cols-3 gap-8">
+
+        <div>
+            <img src="./resource/image/qela_logo.png" class="h-12 mb-3" alt="QELA logo">
+            <p class="text-sm text-gray-400">Practical technology and advisory services for the industries we serve.</p>
+        </div>
+
+        <div>
+            <h4 class="text-yellow-400 font-semibold mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">About</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-yellow-400 font-semibold mb-3">Contact</h4>
+            <p class="text-sm text-gray-400 mb-2">info@qelatechnologies.co.tz</p>
+            <p class="text-sm text-gray-400">+255 718 352 944</p>
+        </div>
+
+    </div>
+    <p class="text-center text-xs text-gray-500 mt-10">© 2026 QELA Technologies. All rights reserved.</p>
+</footer>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
