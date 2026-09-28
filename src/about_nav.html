@@ -255,6 +255,7 @@
                     <div class="bg-gray-50 rounded-[1.5rem]
                                 p-8 md:p-10">
 
+<<<<<<< HEAD
                         <p class="text-sm font-semibold
                                   uppercase tracking-[0.15em]
                                   text-gray-500 mb-5">
@@ -313,6 +314,97 @@
 
     </section>
 
+=======
+        </div>
+    </div>
+
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-black text-gray-300 py-12">
+    <div class="max-w-5xl mx-auto px-6 grid sm:grid-cols-3 gap-8">
+
+        <div>
+            <img src="./resource/image/qela_logo.png" class="h-12 mb-3" alt="QELA logo">
+            <p class="text-sm text-gray-400">Practical technology and advisory services for the industries we serve.</p>
+        </div>
+
+        <div>
+            <h4 class="text-yellow-400 font-semibold mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">About</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-yellow-400 font-semibold mb-3">Contact</h4>
+            <p class="text-sm text-gray-400 mb-2">info@qelatechnologies.co.tz</p>
+            <p class="text-sm text-gray-400">+255 718 352 944</p>
+        </div>
+
+    </div>
+    <p class="text-center text-xs text-gray-500 mt-10">© 2026 QELA Technologies. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuBtn = document.getElementById("menuBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        if (menuBtn && closeBtn && sidebar) {
+
+            function openSidebar() {
+                sidebar.classList.remove("translate-x-full");
+                sidebar.classList.add("translate-x-0");
+                document.body.classList.add("overflow-hidden");
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove("translate-x-0");
+                sidebar.classList.add("translate-x-full");
+                document.body.classList.remove("overflow-hidden");
+            }
+
+            menuBtn.addEventListener("click", openSidebar);
+            closeBtn.addEventListener("click", closeSidebar);
+
+            sidebar.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", closeSidebar);
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") closeSidebar();
+            });
+
+            window.addEventListener("resize", function () {
+                if (window.innerWidth >= 768) closeSidebar();
+            });
+        }
+
+        const navbar = document.getElementById("navbar");
+        const contactBar = document.querySelector(".contact-bar");
+
+        if (navbar) {
+            function handleNavbarScroll() {
+                const triggerPoint = contactBar ? contactBar.offsetHeight : 44;
+                if (window.scrollY > triggerPoint) {
+                    navbar.classList.add("is-sticky");
+                } else {
+                    navbar.classList.remove("is-sticky");
+                }
+            }
+            window.addEventListener("scroll", handleNavbarScroll);
+            handleNavbarScroll();
+        }
+
+    });
+</script>
+>>>>>>> 4997d4d3c7141e94e469c0285711c071a254de61
 
 </body>
 
