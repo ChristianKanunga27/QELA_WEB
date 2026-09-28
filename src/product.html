@@ -1,751 +1,556 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description"
-            content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>QELA Technology | Digital solutions for agriculture</title>
+    <meta name="description"
+        content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
 
-        <link rel="shortcut icon" href="./resource/favico.ico"
-            type="image/x-icon">
+    <title>QELA Technology | Digital solutions for agriculture</title>
 
-        <link href="./output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./output.css" rel="stylesheet">
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-            rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-        <style>
-    :root {
-        --ink: #10271b;
-        --lime: #dfa21f;
-        --overlay: rgba(14, 63, 29, 0.72);
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    * {
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        margin: 0;
-        background: var(--ink);
-        font-family: 'DM Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    .contact-bar {
-        min-height: 44px;
-        box-sizing: border-box;
-        background: #000;
-    }
-
-    .contact-bar h4 {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .contact-bar i {
-        color: var(--lime);
-        font-size: 0.8rem;
-    }
-
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        width: 100%;
-    }
-
-    .main-nav {
-        background: transparent;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-    }
-
-    #navbar {
-        padding: 0.85rem 0;
-        transition: background 180ms ease, box-shadow 180ms ease;
-    }
-
-    #navbar.is-sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.97) !important;
-        box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
-    }
-
-    .nav-inner {
-        width: min(100% - 3rem, 1280px);
-        margin: 0 auto;
-    }
-
-    .nav-logo {
-        width: auto;
-        max-width: 150px;
-    }
-
-    .nav-links a {
-        position: relative;
-        color: #e4ab25;
-        font-size: 1.2rem;
-        letter-spacing: 0.02em;
-        transition: color 180ms ease;
-    }
-
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -0.45rem;
-        left: 0;
-        height: 2px;
-        background: var(--lime);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 180ms ease;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus-visible::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-
-    #navbar.is-sticky .nav-links a {
-        color: #10271b;
-    }
-
-    .hero {
-        min-height: min(860px, 100svh);
-        position: relative;
-        isolation: isolate;
-        background: #183c28;
-    }
-
-    .hero video {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -2;
-    }
-
-    .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            90deg,
-            rgba(7, 28, 16, 0.78),
-            rgba(7, 28, 16, 0.34) 65%,
-            rgba(7, 28, 16, 0.5)
-        );
-        z-index: -1;
-    }
-
-    .hero-content {
-        align-items: center;
-        justify-content: center;
-        padding: 9rem max(1.5rem, 7vw) 8rem;
-        text-align: center;
-    }
-
-    .hero-content > div {
-        width: min(1000px, 100%);
-    }
-
-    .hero-description {
-        position: relative;
-        width: 100%;
-        min-height: 170px;
-        margin: 0 auto;
-    }
-
-    .phrase {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 0 0.35em;
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(2rem, 5vw, 4.6rem);
-        font-weight: 500;
-        line-height: 1.12;
-        color: #fff;
-        text-align: center;
-        text-wrap: balance;
-    }
-
-    .phrase span {
-        flex: 0 0 100%;
-        justify-content: center;
-        white-space: nowrap;
-        opacity: 0;
-        transform: translateY(8px);
-        animation: wordAnimation 14s infinite;
-    }
-
-    .phrase-one span:nth-child(1) {
-        animation-delay: 0s;
-    }
-
-    .phrase-one span:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .phrase-one span:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-
-    .phrase-two span:nth-child(1) {
-        animation-delay: 7s;
-    }
-
-    .phrase-two span:nth-child(2) {
-        animation-delay: 7.2s;
-    }
-
-    .phrase-two span:nth-child(3) {
-        animation-delay: 7.4s;
-    }
-
-    @keyframes wordAnimation {
-        0% {
-            opacity: 0;
-            transform: translateY(8px);
+    <style>
+        :root {
+            --ink: #10271b;
+            --lime: #dfa21f;
+            --overlay: rgba(14, 63, 29, 0.72);
         }
 
-        5% {
-            opacity: 1;
-            transform: translateY(0);
+        * {
+            box-sizing: border-box;
         }
 
-        45% {
-            opacity: 1;
-            transform: translateY(0);
+        html {
+            scroll-behavior: smooth;
         }
 
-        52% {
-            opacity: 0;
-            transform: translateY(-8px);
+        body {
+            margin: 0;
+            background: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
         }
 
-        100% {
-            opacity: 0;
-            transform: translateY(-8px);
+        img {
+            max-width: 100%;
         }
-    }
 
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-            scroll-behavior: auto !important;
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-        }
-    }
-
-    @media (max-width: 760px) {
         .contact-bar {
-            justify-content: center;
-            gap: 0.85rem;
-            padding-inline: 1rem;
-            font-size: 0.68rem;
+            min-height: 44px;
+            box-sizing: border-box;
+            background: #000;
+        }
+
+        .contact-bar h4 {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .contact-bar i {
+            color: var(--lime);
+            font-size: 0.8rem;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            width: 100%;
+        }
+
+        .main-nav {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        #navbar {
+            padding: 0.85rem 0;
+            transition: background 180ms ease, box-shadow 180ms ease;
+        }
+
+        #navbar.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97) !important;
+            box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
         }
 
         .nav-inner {
-            width: calc(100% - 2rem);
-            flex-wrap: wrap;
-            gap: 0.65rem 1rem;
+            width: min(100% - 3rem, 1280px);
+            margin: 0 auto;
         }
 
         .nav-logo {
-            max-width: 112px;
-            height: auto;
-        }
-
-        .nav-links {
-            width: 100%;
-            justify-content: space-between;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            width: auto;
+            max-width: 150px;
         }
 
         .nav-links a {
-            font-size: 0.76rem;
+            position: relative;
+            color: #e4ab25;
+            font-size: 1.2rem;
+            letter-spacing: 0.02em;
+            transition: color 180ms ease;
         }
 
-        #navbar.is-sticky .nav-links {
-            border-color: rgba(16, 39, 27, 0.12);
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -0.45rem;
+            left: 0;
+            height: 2px;
+            background: var(--lime);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 180ms ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        #navbar.is-sticky .nav-links a {
+            color: #10271b;
+        }
+
+        .hero {
+            min-height: min(860px, 100svh);
+            position: relative;
+            isolation: isolate;
+            background: #183c28;
+        }
+
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    rgba(7, 28, 16, 0.78),
+                    rgba(7, 28, 16, 0.34) 65%,
+                    rgba(7, 28, 16, 0.5));
+            z-index: -1;
         }
 
         .hero-content {
             align-items: center;
-            padding: 9rem 1.5rem 5rem;
+            justify-content: center;
+            padding: 9rem max(1.5rem, 7vw) 8rem;
+            text-align: center;
+        }
+
+        .hero-content>div {
+            width: min(1000px, 100%);
         }
 
         .hero-description {
-            min-height: 190px;
+            position: relative;
+            width: 100%;
+            min-height: 170px;
+            margin: 0 auto;
         }
 
         .phrase {
-            font-size: clamp(1.15rem, 6.2vw, 3.6rem);
-            line-height: 1.25;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            gap: 0 0.35em;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 4.6rem);
+            font-weight: 500;
+            line-height: 1.12;
+            color: #fff;
+            text-align: center;
+            text-wrap: balance;
         }
 
         .phrase span {
-            white-space: normal;
-        }
-    }
-
-    @media (max-width: 640px) {
-        .nav-inner {
-            width: calc(100% - 1.5rem);
-            gap: 1rem;
-        }
-
-        .main-nav {
-            padding: 0.75rem 0;
-        }
-
-        .nav-logo {
-            max-width: 105px;
-        }
-
-        .contact-bar {
+            flex: 0 0 100%;
             justify-content: center;
-            gap: 0.75rem;
-            padding-inline: 0.75rem;
-            font-size: 0.65rem;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            animation: wordAnimation 14s infinite;
         }
 
-        .hero {
-            min-height: 100svh;
+        .phrase-one span:nth-child(1) {
+            animation-delay: 0s;
         }
 
-        .hero-content {
-            padding: 5rem 1.5rem 8rem;
+        .phrase-one span:nth-child(2) {
+            animation-delay: 0.2s;
         }
 
-        .hero-description {
-            width: 95vw;
-            min-height: 130px;
-            margin-top: 0;
+        .phrase-one span:nth-child(3) {
+            animation-delay: 0.4s;
         }
 
-        .phrase {
-            font-size: 2rem;
-            line-height: 1.5;
+        .phrase-two span:nth-child(1) {
+            animation-delay: 7s;
         }
-    }
-</style>
-    </head>
 
-    <body class="bg-white">
+        .phrase-two span:nth-child(2) {
+            animation-delay: 7.2s;
+        }
 
-        <!-- HEADER -->
-        <header>
+        .phrase-two span:nth-child(3) {
+            animation-delay: 7.4s;
+        }
 
-            <!-- CONTACT BAR -->
-            <div class="contact-bar w-full bg-black text-white">
+        @keyframes wordAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
 
-                <div
-                    class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+            5% {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-                    <a href="mailto:info@qelatechnologies.co.tz"
-                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+            45% {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-                        <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+            52% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
 
-                        <span>info@qelatechnologies.co.tz</span>
+            100% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
 
-                    </a>
+        @media (prefers-reduced-motion: reduce) {
 
-                    <a href="tel:+255752686686"
-                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
 
-                        <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+        @media (max-width: 760px) {
+            .contact-bar {
+                justify-content: center;
+                gap: 0.85rem;
+                padding-inline: 1rem;
+                font-size: 0.68rem;
+            }
 
-                        <span>+255 718 352 944</span>
+            .nav-inner {
+                width: calc(100% - 2rem);
+                flex-wrap: wrap;
+                gap: 0.65rem 1rem;
+            }
 
-                    </a>
+            .nav-logo {
+                max-width: 112px;
+                height: auto;
+            }
 
-                </div>
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 0.5rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.22);
+            }
 
-            </div>
+            .nav-links a {
+                font-size: 0.76rem;
+            }
 
-            <!-- NAVIGATION -->
-            <nav id="navbar" class="main-nav w-full p-4">
+            #navbar.is-sticky .nav-links {
+                border-color: rgba(16, 39, 27, 0.12);
+            }
 
-                <div class="nav-inner flex items-center justify-between gap-8">
+            .hero-content {
+                align-items: center;
+                padding: 9rem 1.5rem 5rem;
+            }
 
-                    <img src="./resource/image/qela_logo.png"
-                        class="nav-logo h-16" alt="QELA logo">
+            .hero-description {
+                min-height: 190px;
+            }
 
-                    <!-- DESKTOP MENU -->
-                    <div class="hidden md:block">
+            .phrase {
+                font-size: clamp(1.15rem, 6.2vw, 3.6rem);
+                line-height: 1.25;
+            }
 
-                        <div
-                            class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+            .phrase span {
+                white-space: normal;
+            }
+        }
 
-                            <a href="#">Home</a>
-                            <a href="about.html">About</a>
-                            <a href="#">Products</a>
-                            <a href="#">Industry</a>
-                            <a href="#">Resource</a>
+        @media (max-width: 640px) {
+            .nav-inner {
+                width: calc(100% - 1.5rem);
+                gap: 1rem;
+            }
 
-                        </div>
+            .main-nav {
+                padding: 0.75rem 0;
+            }
 
-                    </div>
+            .nav-logo {
+                max-width: 105px;
+            }
 
-                    <!-- MOBILE MENU BUTTON -->
-                    <button id="menuBtn"
-                        class="md:hidden text-yellow-400 text-2xl"
-                        type="button"
-                        aria-label="Open navigation menu">
+            .contact-bar {
+                justify-content: center;
+                gap: 0.75rem;
+                padding-inline: 0.75rem;
+                font-size: 0.65rem;
+            }
 
-                        <i class="fa-solid fa-bars"></i>
+            .hero {
+                min-height: 100svh;
+            }
 
-                    </button>
+            .hero-content {
+                padding: 5rem 1.5rem 8rem;
+            }
 
-                </div>
+            .hero-description {
+                width: 95vw;
+                min-height: 130px;
+                margin-top: 0;
+            }
 
-            </nav>
+            .phrase {
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
 
-            <!-- MOBILE SIDEBAR -->
-            <div id="sidebar"
-                class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+<body class="bg-white">
 
-                <div class="flex justify-end p-5">
+    <!-- HEADER -->
+    <header>
 
-                    <button id="closeBtn"
-                        class="text-white text-2xl"
-                        type="button"
-                        aria-label="Close navigation menu">
-
-                        <i class="fa-solid fa-xmark"></i>
-
-                    </button>
-
-                </div>
-
-                <div
-                    class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
-
-                    <a href="home.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="product.html">Products</a>
-                    <a href="industry.html">Industry</a>
-                    <a href="resource.html">Resource</a>
-
-                </div>
-
-            </div>
-
-        </header>
-
-        <!-- HERO VIDEO + TYPING WORDS -->
-        <section class="hero w-full overflow-hidden text-white">
-
-            <video autoplay muted loop playsinline preload="auto"
-                aria-hidden="true">
-
-                <source src="./resource/video/bg5.mp4" type="video/mp4">
-
-            </video>
+        <!-- CONTACT BAR -->
+        <div class="contact-bar w-full bg-black text-white">
 
             <div
-                class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
+                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
 
+                <a href="mailto:info@qelatechnologies.co.tz"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+
+                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+
+                    <span>info@qelatechnologies.co.tz</span>
+
+                </a>
+
+                <a href="tel:+255752686686"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+
+                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+
+                    <span>+255 718 352 944</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav id="navbar" class="main-nav w-full p-4">
+
+            <div class="nav-inner flex items-center justify-between gap-8">
+                <a href="./index.html">
+                    <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <div class="hidden md:block">
+
+                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="product.html">Products</a>
+                        <a href="industry.html">Industry</a>
+                        <a href="resource.html">Resource</a>
+
+                    </div>
+
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl" type="button"
+                    aria-label="Open navigation menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- MOBILE SIDEBAR -->
+        <div id="sidebar"
+            class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+
+            <div class="flex justify-end p-5">
+
+                <button id="closeBtn" class="text-white text-2xl" type="button" aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="industry.html">Industry</a>
+                <a href="resource.html">Resource</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO VIDEO + TYPING WORDS -->
+    <section class="hero w-full overflow-hidden text-white">
+
+        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+
+            <source src="./resource/video/bg5.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
+
+            <div>
+
+                <div class="hero-description">
+
+                    <div class="phrase phrase-one">
+
+                        <span>This page is currently</span>
+                        <span>under maintenance</span>
+                        <span>to serve you better.</span>
+
+                    </div>
+
+                    <div class="phrase phrase-two">
+
+                        <span>We’re improving our digital</span>
+                        <span>experience and will be</span>
+                        <span>back online shortly.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#07130d] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-14">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- COMPANY -->
                 <div>
 
-                    <div class="hero-description">
+                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="h-12 w-auto mb-5">
 
-                        <div class="phrase phrase-one">
+                    <h1 class="text-2xl font-extrabold tracking-tight">
 
-                            <span>This page is currently</span>
-                            <span>under maintenance</span>
-                            <span>to serve you better.</span>
+                        Qela
+                        <span class="text-green-500">Technologies</span>
 
-                        </div>
+                    </h1>
 
-                        <div class="phrase phrase-two">
+                    <p class="text-xs text-gray-500 mt-1">
 
-                            <span>We’re improving our digital</span>
-                            <span>experience and will be</span>
-                            <span>back online shortly.</span>
-
-                        </div>
-
-                    </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="bg-[#07130d] text-white">
-
-            <div class="max-w-7xl mx-auto px-6 py-14">
-
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-                    <!-- COMPANY -->
-                    <div>
-
-                        <img src="./resource/logos/qela_icon.svg"
-                            alt="Qela Technologies Logo"
-                            class="h-12 w-auto mb-5">
-
-                        <h1 class="text-2xl font-extrabold tracking-tight">
-
-                            Qela
-                            <span class="text-green-500">Technologies</span>
-
-                        </h1>
-
-                        <p class="text-xs text-gray-500 mt-1">
-
-                            (T) LIMITED
-
-                        </p>
-
-                        <p
-                            class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
-
-                            Empowering businesses through innovative technology,
-                            digital transformation and
-                            smart agritech solutions.
-
-                        </p>
-
-                        <div class="flex items-center gap-3 mt-6">
-
-                            <a
-                                href="https://www.facebook.com/profile.php?id=100063736423326"
-                                aria-label="Facebook"
-                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                                <i class="fa-brands fa-facebook-f"></i>
-
-                            </a>
-
-                            <a href="https://www.instagram.com/qelatech/"
-                                aria-label="Instagram"
-                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                                <i class="fa-brands fa-instagram"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SOLUTIONS -->
-                    <div>
-
-                        <h3 class="text-lg font-semibold mb-5">
-                            Solutions
-                        </h3>
-
-                        <ul class="space-y-3 text-sm text-gray-400">
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Digital Transformation
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Business Management
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Data Management
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Cloud Solutions
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Custom Software
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <!-- QUICK LINKS -->
-                    <div>
-
-                        <h3 class="text-lg font-semibold mb-5">
-                            Quick Links
-                        </h3>
-
-                        <ul class="space-y-3 text-sm text-gray-400">
-
-                            <li>
-                                <a href="about.html"
-                                    class="hover:text-green-500 transition duration-300">
-                                    About Us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Our Products
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Industries
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Resources
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="hover:text-green-500 transition duration-300">
-                                    Contact Us
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <!-- SUPPORT -->
-                    <div>
-
-                        <h3 class="text-lg font-semibold mb-5">
-                            Support
-                        </h3>
-
-                        <div class="space-y-5 text-sm text-gray-400">
-
-                            <div>
-
-                                <a href="tel:+255718352944"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    +255 718 352 944
-
-                                </a>
-
-                                <br>
-
-                                <a href="tel:+255742073002"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    +255 742 073 002
-
-                                </a>
-
-                            </div>
-
-                            <div>
-
-                                <a href="mailto:info@qelatechnologies.co.tz"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    info@qelatechnologies.co.tz
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- COPYRIGHT -->
-            <div class="bg-black/30">
-
-                <div
-                    class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
-
-                    <p class="text-sm text-gray-500 text-center md:text-left">
-
-                        © 2026 Qela Technologies (T) Limited.
-                        All Rights Reserved.
+                        (T) LIMITED
 
                     </p>
 
-                    <div class="flex gap-5 text-sm text-gray-500">
+                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
 
-                        <a href="#"
-                            class="hover:text-green-500 transition duration-300">
+                        Empowering businesses through innovative technology,
+                        digital transformation and
+                        smart agritech solutions.
 
-                            Privacy Policy
+                    </p>
+
+                    <div class="flex items-center gap-3 mt-6">
+
+                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
+                            <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-                        <a href="#"
-                            class="hover:text-green-500 transition duration-300">
+                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
 
-                            Terms & Conditions
+                            <i class="fa-brands fa-instagram"></i>
 
                         </a>
 
@@ -753,129 +558,291 @@
 
                 </div>
 
+                <!-- SOLUTIONS -->
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+                        Solutions
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Digital Transformation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Business Management
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Data Management
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Cloud Solutions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Custom Software
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a href="about.html" class="hover:text-green-500 transition duration-300">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Our Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Industries
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Resources
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-green-500 transition duration-300">
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- SUPPORT -->
+                <div>
+
+                    <h3 class="text-lg font-semibold mb-5">
+                        Support
+                    </h3>
+
+                    <div class="space-y-5 text-sm text-gray-400">
+
+                        <div>
+
+                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
+
+                                +255 718 352 944
+
+                            </a>
+
+                            <br>
+
+                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
+
+                                +255 742 073 002
+
+                            </a>
+
+                        </div>
+
+                        <div>
+
+                            <a href="mailto:info@qelatechnologies.co.tz"
+                                class="hover:text-green-500 transition duration-300">
+
+                                info@qelatechnologies.co.tz
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-        </footer>
+        </div>
 
-        <!-- HEADER FUNCTIONALITY -->
-        <script>
+        <!-- COPYRIGHT -->
+        <div class="bg-black/30">
 
-    document.addEventListener("DOMContentLoaded", function () {
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
 
-        const menuBtn = document.getElementById("menuBtn");
-        const closeBtn = document.getElementById("closeBtn");
-        const sidebar = document.getElementById("sidebar");
+                <p class="text-sm text-gray-500 text-center md:text-left">
 
-        /*
-         * MOBILE SIDEBAR
-         */
-        if (menuBtn && closeBtn && sidebar) {
+                    © 2026 Qela Technologies (T) Limited.
+                    All Rights Reserved.
 
-            function openSidebar() {
+                </p>
 
-                sidebar.classList.remove("translate-x-full");
-                sidebar.classList.add("translate-x-0");
+                <div class="flex gap-5 text-sm text-gray-500">
 
-                document.body.classList.add("overflow-hidden");
+                    <a href="#" class="hover:text-green-500 transition duration-300">
 
-            }
+                        Privacy Policy
 
-            function closeSidebar() {
+                    </a>
 
-                sidebar.classList.remove("translate-x-0");
-                sidebar.classList.add("translate-x-full");
+                    <a href="#" class="hover:text-green-500 transition duration-300">
 
-                document.body.classList.remove("overflow-hidden");
+                        Terms & Conditions
 
-            }
+                    </a>
 
-            menuBtn.addEventListener("click", function () {
+                </div>
 
-                openSidebar();
+            </div>
 
-            });
+        </div>
 
-            closeBtn.addEventListener("click", function () {
+    </footer>
 
-                closeSidebar();
+    <!-- HEADER FUNCTIONALITY -->
+    <script>
 
-            });
+        document.addEventListener("DOMContentLoaded", function () {
 
-            const sidebarLinks = sidebar.querySelectorAll("a");
+            const menuBtn = document.getElementById("menuBtn");
+            const closeBtn = document.getElementById("closeBtn");
+            const sidebar = document.getElementById("sidebar");
 
-            sidebarLinks.forEach(function (link) {
+            /*
+             * MOBILE SIDEBAR
+             */
+            if (menuBtn && closeBtn && sidebar) {
 
-                link.addEventListener("click", function () {
+                function openSidebar() {
+
+                    sidebar.classList.remove("translate-x-full");
+                    sidebar.classList.add("translate-x-0");
+
+                    document.body.classList.add("overflow-hidden");
+
+                }
+
+                function closeSidebar() {
+
+                    sidebar.classList.remove("translate-x-0");
+                    sidebar.classList.add("translate-x-full");
+
+                    document.body.classList.remove("overflow-hidden");
+
+                }
+
+                menuBtn.addEventListener("click", function () {
+
+                    openSidebar();
+
+                });
+
+                closeBtn.addEventListener("click", function () {
 
                     closeSidebar();
 
                 });
 
-            });
+                const sidebarLinks = sidebar.querySelectorAll("a");
 
-            document.addEventListener("keydown", function (event) {
+                sidebarLinks.forEach(function (link) {
 
-                if (event.key === "Escape") {
+                    link.addEventListener("click", function () {
 
-                    closeSidebar();
+                        closeSidebar();
 
-                }
+                    });
 
-            });
+                });
 
-            window.addEventListener("resize", function () {
+                document.addEventListener("keydown", function (event) {
 
-                if (window.innerWidth >= 768) {
+                    if (event.key === "Escape") {
 
-                    closeSidebar();
+                        closeSidebar();
 
-                }
+                    }
 
-            });
+                });
 
-        }
+                window.addEventListener("resize", function () {
 
+                    if (window.innerWidth >= 768) {
 
-        /*
-         * STICKY NAVBAR
-         */
-        const navbar = document.getElementById("navbar");
-        const contactBar = document.querySelector(".contact-bar");
+                        closeSidebar();
 
-        if (navbar) {
+                    }
 
-            function handleNavbarScroll() {
-
-                const triggerPoint =
-                    contactBar
-                        ? contactBar.offsetHeight
-                        : 44;
-
-                if (window.scrollY > triggerPoint) {
-
-                    navbar.classList.add("is-sticky");
-
-                } else {
-
-                    navbar.classList.remove("is-sticky");
-
-                }
+                });
 
             }
 
-            window.addEventListener(
-                "scroll",
-                handleNavbarScroll
-            );
 
-            handleNavbarScroll();
+            /*
+             * STICKY NAVBAR
+             */
+            const navbar = document.getElementById("navbar");
+            const contactBar = document.querySelector(".contact-bar");
 
-        }
+            if (navbar) {
 
-    });
+                function handleNavbarScroll() {
 
-</script>
+                    const triggerPoint =
+                        contactBar
+                            ? contactBar.offsetHeight
+                            : 44;
 
-    </body>
+                    if (window.scrollY > triggerPoint) {
+
+                        navbar.classList.add("is-sticky");
+
+                    } else {
+
+                        navbar.classList.remove("is-sticky");
+
+                    }
+
+                }
+
+                window.addEventListener(
+                    "scroll",
+                    handleNavbarScroll
+                );
+
+                handleNavbarScroll();
+
+            }
+
+        });
+
+    </script>
+
+</body>
 
 </html>
