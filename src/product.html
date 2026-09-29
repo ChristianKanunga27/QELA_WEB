@@ -44,6 +44,19 @@
             height: auto;
         }
 
+        .product-section {
+            padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 1.5rem);
+        }
+
+        .product-row {
+            column-gap: clamp(2rem, 5vw, 5rem);
+            row-gap: clamp(2rem, 4vw, 3rem);
+        }
+
+        .product-row:not(:last-child) {
+            margin-bottom: clamp(4rem, 7vw, 6rem);
+        }
+
         /* =========================================
        PICTURE BORDER (grey)
     ========================================= */
@@ -731,22 +744,15 @@
          OUR PRODUCTS
     ====================================================== -->
 
-    <section class="py-24 px-6">
+    <section class="product-section">
 
         <div class="max-w-7xl mx-auto">
-
-            <!-- SECTION TITLE -->
-
-            <div class="text-center mb-16">
-
-
-            </div>
 
             <!-- =================================================
                  AGRICOOP
             ================================================== -->
 
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+            <div class="product-row grid lg:grid-cols-2 items-center">
 
                 <!-- IMAGE -->
 
@@ -893,7 +899,7 @@
                  E-AMCOS
             ================================================== -->
 
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+            <div class="product-row grid lg:grid-cols-2 items-center">
 
                 <!-- CONTENT -->
 
@@ -1039,7 +1045,7 @@
                  AGRISASA
             ================================================== -->
 
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="product-row grid lg:grid-cols-2 items-center">
 
                 <!-- IMAGE -->
 
