@@ -1,289 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>QELA Technology | Digital solutions for agriculture</title>
+    <title>QELA Technologies — About Us</title>
 
-        <link rel="shortcut icon" href="./resource/favico.ico"
-            type="image/x-icon">
+    <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
 
-        <link href="./output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1c2430',
+                        clay: '#a8683f',
+                        claylight: '#c98a5c',
+                        ivory: '#f6f2ea',
+                        paper: '#fbf9f5'
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-            rel="stylesheet">
-
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
     <style>
-    :root {
-        --ink: #10271b;
-        --lime: #dfa21f;
-        --overlay: linear-gradient(90deg, rgba(7, 28, 16, 0.84), rgba(7, 28, 16, 0.52) 58%, rgba(7, 28, 16, 0.18));
-    }
+        /* ==============================
+           GLOBAL
+        ============================== */
 
-    body {
-        margin: 0;
-        background: var(--ink);
-        font-family: 'DM Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    .contact-bar {
-        min-height: 44px;
-        box-sizing: border-box;
-        background: #000;
-    }
-
-    .contact-bar h4 {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .contact-bar i {
-        color: var(--lime);
-        font-size: 0.8rem;
-    }
-
-    .main-nav {
-        background: transparent;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-    }
-
-    .nav-inner {
-        width: min(100% - 3rem, 1280px);
-        margin: 0 auto;
-    }
-
-    .nav-logo {
-        width: auto;
-        max-width: 150px;
-    }
-
-    .nav-links a {
-        position: relative;
-        transition: color 180ms ease;
-    }
-
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -0.45rem;
-        left: 0;
-        height: 2px;
-        background: var(--lime);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 180ms ease;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus-visible::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-
-    header {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        width: 100%;
-    }
-
-    #navbar.is-sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: white !important;
-        box-shadow: 0 8px 24px rgba(16, 39, 27, 0.1);
-    }
-
-    .hero > div {
-        position: relative;
-        isolation: isolate;
-    }
-
-    .hero > div::before {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        background: var(--overlay);
-        content: "";
-    }
-
-    .hero > div > * {
-        position: relative;
-        z-index: 1;
-    }
-
-    @media (max-width: 760px) {
-
-        .contact-bar {
-            justify-content: center;
-            gap: 0.85rem;
-            padding-inline: 1rem;
-            font-size: 0.68rem;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1,h2,h3,h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .image-zoom {
+            transition: transform 0.8s ease;
+        }
+
+        .image-wrapper:hover .image-zoom {
+            transform: scale(1.04);
+        }
+
+
+        /* ==============================
+           CONTACT BAR
+        ============================== */
+
+        .contact-bar {
+            min-height: 44px;
+            box-sizing: border-box;
+            background: #000;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
         .nav-inner {
-            width: calc(100% - 2rem);
-            flex-wrap: wrap;
-            gap: 0.65rem 1rem;
+            width: min(100% - 3rem, 1280px);
+            margin: 0 auto;
         }
 
         .nav-logo {
-            max-width: 112px;
-            height: auto;
-        }
-
-        .nav-links {
-            width: 100%;
-            justify-content: space-between;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            width: auto;
+            max-width: 150px;
         }
 
         .nav-links a {
-            font-size: 0.76rem;
+            position: relative;
+            transition: color 180ms ease;
         }
 
-        #navbar.is-sticky .nav-links {
-            border-color: rgba(16, 39, 27, 0.12);
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -0.45rem;
+            left: 0;
+            height: 2px;
+            background: #dfa21f;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 180ms ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        header {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            width: 100%;
+        }
+
+        #navbar {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            right: 0;
+            z-index: 30;
+            background: transparent;
+            transition:
+                background 200ms ease,
+                box-shadow 200ms ease;
+        }
+
+        #navbar.is-sticky {
+            position: fixed;
+            top: 0;
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        #navbar.is-sticky .nav-links,
+        #navbar.is-sticky .nav-links a,
+        #navbar.is-sticky #menuBtn {
+            color: #14532d;
+        }
+
+
+        /* ==============================
+           FULL SCREEN HERO
+        ============================== */
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            image-rendering: auto;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.58) 0%,
+                    rgba(0, 0, 0, 0.30) 50%,
+                    rgba(0, 0, 0, 0.42) 100%
+                );
         }
 
         .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
             align-items: center;
-            padding: 9rem 1.5rem 5rem;
+            justify-content: center;
+            padding: 0 1.5rem;
         }
 
-        .hero-description {
-            min-height: 190px;
-        }
-
-        .hero {
-            min-height: min(860px, 100svh);
-            background: #183c28;
-        }
-
-        .hero::after {
-            background: linear-gradient(90deg, rgba(7, 28, 16, 0.78), rgba(7, 28, 16, 0.34) 65%, rgba(7, 28, 16, 0.5));
+        .hero-title {
+            text-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.35),
+                0 2px 5px rgba(0, 0, 0, 0.25);
         }
 
 
-        .hero-content>div {
-            width: min(1000px, 100%);
+        /* ==============================
+           MOBILE SIDEBAR
+        ============================== */
+
+        #sidebar {
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
         }
 
-        .phrase {
-            font-size: clamp(1.15rem, 6.2vw, 3.6rem);
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 1024px) {
+
+            .nav-inner {
+                width: calc(100% - 2.5rem);
+            }
+
+            .hero-section {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                min-height: 100vh;
+            }
         }
 
-        .logo-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.85rem;
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 760px) {
+
+            .contact-bar {
+                justify-content: center;
+                gap: 0.85rem;
+                padding-inline: 1rem;
+                font-size: 0.68rem;
+            }
+
+            .nav-inner {
+                width: calc(100% - 2rem);
+                flex-wrap: wrap;
+                gap: 0.65rem 1rem;
+            }
+
+            .nav-logo {
+                max-width: 112px;
+                height: auto;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 0.5rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.22);
+            }
+
+            .nav-links a {
+                font-size: 0.76rem;
+            }
+
+            #navbar.is-sticky .nav-links {
+                border-color: rgba(16, 39, 27, 0.12);
+            }
+
+            .hero-section {
+                height: 100svh;
+                min-height: 600px;
+            }
+
+            .hero-content {
+                height: 100%;
+                min-height: 100svh;
+                padding: 0 1.5rem;
+            }
+
+            .hero-image {
+                object-position: center center;
+            }
         }
 
-        .logo-tile {
-            min-height: 96px;
-            padding: 0.75rem;
+
+        /* ==============================
+           SMALL MOBILE
+        ============================== */
+
+        @media (max-width: 640px) {
+
+            .nav-inner {
+                width: calc(100% - 1.5rem);
+            }
+
+            .hero-section {
+                height: 100svh;
+                min-height: 560px;
+            }
+
+            .hero-content {
+                min-height: 100svh;
+                padding: 0 1.25rem;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .hero-image {
+                object-position: center center;
+            }
         }
 
-        .logo-tile img {
-            height: 58px;
+
+        /* ==============================
+           VERY SMALL MOBILE
+        ============================== */
+
+        @media (max-width: 480px) {
+
+            .contact-bar {
+                font-size: 0.63rem;
+                gap: 0.55rem;
+                padding-inline: 0.6rem;
+            }
+
+            .nav-logo {
+                max-width: 105px;
+            }
+
+            .hero-section {
+                height: 100svh;
+                min-height: 520px;
+            }
+
+            .hero-content {
+                min-height: 100svh;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
         }
+    </style>
+</head>
 
-        .partner-window {
-            mask-image: none;
-        }
 
-    }
-</style>
+<body>
 
-    <body>
-        <header>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-            <div class="contact-bar w-full bg-black text-white">
+    <header>
 
-                <div
-                    class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+        <!-- CONTACT BAR -->
 
-                    <a href="mailto:info@qelatechnologies.co.tz"
-                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+        <div class="contact-bar w-full bg-black text-white">
 
-                        <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+            <div
+                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-2 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm">
 
-                        <span>info@qelatechnologies.co.tz</span>
+                <a
+                    href="mailto:info@qelatechnologies.co.tz"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                    </a>
+                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
-                    <a href="tel:+255718352944"
-                        class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                    <span>
+                        info@qelatechnologies.co.tz
+                    </span>
 
-                        <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+                </a>
 
-                        <span>+255 718 352 944</span>
+                <a
+                    href="tel:+255752686686"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                    </a>
+                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
-                </div>
+                    <span>
+                        +255 718 352 944
+                    </span>
+
+                </a>
 
             </div>
 
-            <nav id="navbar" class="w-full p-4">
+        </div>
 
-                <div class="nav-inner flex items-center justify-between gap-8">
+
+        <!-- =================================================
+             MOBILE SIDEBAR
+        ================================================== -->
+
+        <div
+            id="sidebar"
+            class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-gray-900 transition-transform duration-300 md:hidden">
+
+            <div class="flex justify-end p-5">
+
+                <button
+                    id="closeBtn"
+                    class="text-2xl text-white"
+                    type="button"
+                    aria-label="Close menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <div
+                class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="product.html">
+                    Products
+                </a>
+
+                <a href="industry.html">
+                    Industry
+                </a>
+
+                <a href="resource.html">
+                    Resource
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FULL SCREEN HERO
+        ================================================== -->
+
+        <div class="hero-section">
+
+            <!-- ABOUT IMAGE -->
+
+            <img
+                src="./resource/image/about2.jpg"
+                alt="Farmers working with crops"
+                class="hero-image"
+                loading="eager"
+                decoding="async">
+
+
+            <!-- IMAGE OVERLAY -->
+
+            <div class="hero-overlay"></div>
+
+
+            <!-- =================================================
+                 NAVIGATION
+            ================================================== -->
+
+            <nav
+                id="navbar"
+                class="w-full p-4">
+
+                <div
+                    class="nav-inner flex items-center justify-between gap-8">
+
+                    <!-- LOGO -->
 
                     <a href="./index.html">
-                        <img src="./resource/image/qela_logo.png"
+
+                        <img
+                            src="./resource/image/qela_logo.png"
                             class="nav-logo h-16"
                             alt="QELA logo">
+
                     </a>
+
+
+                    <!-- DESKTOP NAVIGATION -->
+
                     <div class="hidden md:block">
 
                         <div
-                            class="nav-links flex items-center gap-7 text-base font-semibold text-black md:text-lg">
+                            class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
 
-                            <a href="index.html">Home</a>
-                            <a href="about.html" aria-current="page">About</a>
-                            <a href="product.html">Products</a>
-                            <a href="industry.html">Industry</a>
-                            <a href="resource.html">Resource</a>
+                            <a href="index.html">
+                                Home
+                            </a>
+
+                            <a href="about.html">
+                                About
+                            </a>
+
+                            <a href="product.html">
+                                Products
+                            </a>
+
+                            <a href="industry.html">
+                                Industry
+                            </a>
+
+                            <a href="resource.html">
+                                Resource
+                            </a>
 
                         </div>
 
                     </div>
 
-                    <button id="menuBtn"
-                        class="md:hidden text-yellow-400 text-2xl">
+
+                    <!-- MOBILE MENU BUTTON -->
+
+                    <button
+                        id="menuBtn"
+                        class="text-2xl text-yellow-400 md:hidden"
+                        type="button"
+                        aria-label="Open navigation menu">
 
                         <i class="fa-solid fa-bars"></i>
 
@@ -293,393 +548,335 @@
 
             </nav>
 
-            <div id="sidebar"
-                class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
 
-                <div class="flex justify-end p-5">
+            <!-- =================================================
+                 HERO TITLE
+            ================================================== -->
 
-                    <button id="closeBtn" class="text-white text-2xl">
+            <div class="hero-content">
 
-                        <i class="fa-solid fa-xmark"></i>
+                <div class="text-center">
 
-                    </button>
+                    <h1
+                        class="hero-title text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
 
-                </div>
+                        About
 
-                <div
-                    class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+                        <span class="text-yellow-400">
+                            Us
+                        </span>
 
-                    <a href="index.html">Home</a>
-                    <a href="about.html" aria-current="page">About</a>
-                    <a href="product.html">Products</a>
-                    <a href="industry.html">Industry</a>
-                    <a href="resource.html">Resource</a>
-
-                </div>
-
-            </div>
-
-        </header>
-
-        <section class="hero w-full overflow-hidden text-white">
-            <div
-                class="h-[500px] sm:h-[550px] md:h-[600px] lg:h-[650px] bg-[url('./resource/image/about2.jpg')] bg-cover bg-center bg-no-repeat flex items-center">
-
-                <div class="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16">
-                    <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#f0bb48]">Home <span class="mx-2 text-white/50">/</span> About us</p>
-                    <h1 class="max-w-4xl text-left text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
-                        Technology that moves <span class="text-[#f0bb48]">people forward.</span>
                     </h1>
-                    <p class="mt-6 max-w-2xl text-left text-base leading-7 text-white/85 sm:text-lg">
-                        Practical digital and engineering solutions for a more connected, capable future.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ABOUT US -->
-        <section class="bg-[#f7f5f1]">
-
-            <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-12 sm:py-14 md:py-16 lg:py-20">
-
-                <div class="mb-8 sm:mb-10 lg:mb-12 text-center lg:text-left">
-                    <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#8b6410]">Who we are</p>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-[#10271b]">
-                        We build technology that helps people and businesses move forward.
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-center">
-
-                    <div class="relative overflow-hidden rounded-[28px] border border-[#e7e1d3] bg-[#ebe9e2] shadow-[0_25px_70px_rgba(16,39,27,0.10)]">
-                        <img src="./resource/image/aboutpic1.png"
-                            alt="Qela Technologies team"
-                            class="w-full h-[320px] sm:h-[420px] lg:h-[520px] object-cover transform transition duration-700 hover:scale-105">
-
-                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10271b] via-[#10271b]/90 to-transparent p-5 sm:p-7 text-white">
-                            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#f0bb48]">
-                                Rooted in Tanzania
-                            </p>
-                            <p class="mt-2 text-sm sm:text-base text-white/80 max-w-xs">
-                                Building practical digital solutions for a connected future.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="w-full">
-                        <div class="rounded-[28px] border border-[#e7e1d3] bg-white p-6 sm:p-8 shadow-[0_18px_50px_rgba(15,23,42,0.05)]">
-                            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#10271b] leading-snug mb-5">
-                                QELA Technologies is where ideas, data, and real-world needs come together.
-                            </h3>
-
-                            <div class="space-y-4 text-gray-600 text-sm sm:text-base md:text-lg leading-7 sm:leading-8">
-                                <p>
-                                    We are a Tanzanian technology company helping organizations solve real challenges through smart digital systems, data-driven thinking, and practical innovation.
-                                </p>
-                                <p>
-                                    Our team works closely with clients to understand their operations, uncover opportunities, and design solutions that reduce complexity and improve performance.
-                                </p>
-                                <p>
-                                    From agriculture and business operations to digital transformation, we create value by making work simpler, smarter, and more connected.
-                                </p>
-                            </div>
-
-                            <div class="mt-8 grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-2xl bg-[#f9f7f2] border border-[#ead9a3] p-4">
-                                    <p class="text-lg font-bold text-[#10271b]">People-first</p>
-                                    <p class="mt-1 text-xs text-gray-600">Built around real users</p>
-                                </div>
-                                <div class="rounded-2xl bg-[#f4f7f3] border border-[#cfe0d5] p-4">
-                                    <p class="text-lg font-bold text-[#10271b]">Practical</p>
-                                    <p class="mt-1 text-xs text-gray-600">Made for everyday work</p>
-                                </div>
-                                <div class="rounded-2xl bg-[#fffaf0] border border-[#f1dca7] p-4">
-                                    <p class="text-lg font-bold text-[#10271b]">Future-ready</p>
-                                    <p class="mt-1 text-xs text-gray-600">Built for growth</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- MISSION & VISION -->
-        <section class="bg-white">
+    </header>
 
-            <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-14 lg:py-16">
 
-                <div class="mb-9 text-center sm:mb-12">
-                    <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8b6410]">Our direction</p>
-                    <h2 class="text-3xl font-semibold leading-tight text-[#10271b] sm:text-4xl">Purpose that moves us forward.</h2>
-                </div>
+    <!-- =====================================================
+         ABOUT US
+    ====================================================== -->
+    <section class="py-20 sm:py-24 lg:py-32">
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-                    <!-- Mission -->
-                    <div
-                        class="group bg-[#f5f6f2] border border-gray-200 rounded-sm border-t-4 border-t-[#dfa21f]
-                        px-5 py-7 sm:px-7 sm:py-8 md:px-8 md:py-9 lg:px-10 lg:py-10
-                        shadow-sm hover:shadow-md transition-all duration-300
-                        flex flex-col items-start text-left">
 
-                        <span class="flex h-12 w-12 items-center justify-center bg-[#e6eadf] text-[#315a35]"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
 
-                        <h2
-                            class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                            Our <span class="text-yellow-500">Mission</span>
-                        </h2>
 
-                        <div
-                            class="w-10 sm:w-12 h-1 bg-yellow-500 rounded-full mb-5 sm:mb-6"></div>
+            <div class="grid lg:grid-cols-12 gap-8 mb-14 lg:mb-20">
 
-                        <p
-                            class="w-full max-w-md text-gray-600 text-sm sm:text-base md:text-lg leading-7 sm:leading-8">
+                <div class="lg:col-span-4">
 
-                            Our mission is to empower agriculture through smart
-                            digital solutions that improve productivity, market
-                            access, financial inclusion, and sustainable growth
-                            for farmers and agribusinesses.
+                    <div class="flex items-center gap-3">
 
-                        </p>
+                        <span class="w-10 h-[2px] bg-[#dfa21f]"></span>
 
-                    </div>
+                        <span class="text-sm font-semibold uppercase
+                                     tracking-[0.2em] text-[#055f30]">
 
-                    <!-- Vision -->
-                    <div
-                        class="group bg-[#10271b] border border-[#10271b] rounded-sm border-t-4 border-t-[#dfa21f]
-                        px-5 py-7 sm:px-7 sm:py-8 md:px-8 md:py-9 lg:px-10 lg:py-10
-                        shadow-sm hover:shadow-md transition-all duration-300
-                        flex flex-col items-start text-left">
+                            Who We Are
 
-                        <span class="flex h-12 w-12 items-center justify-center bg-white/10 text-[#f0bb48]"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
-
-                        <h2
-                            class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
-                            Our <span class="text-[#f0bb48]">Vision</span>
-                        </h2>
-
-                        <div
-                            class="w-10 sm:w-12 h-1 bg-[#dfa21f] rounded-full mb-5 sm:mb-6"></div>
-
-                        <p
-                            class="w-full max-w-md text-white/75 text-sm sm:text-base md:text-lg leading-7 sm:leading-8">
-
-                            Our vision is to build a connected and sustainable
-                            agricultural ecosystem where technology creates
-                            greater opportunities for farmers, businesses,
-                            and communities across Africa.
-
-                        </p>
+                        </span>
 
                     </div>
 
                 </div>
+
+
+
 
             </div>
 
-        </section>
 
-        <footer class="bg-[#07130d] text-white">
 
-            <div class="max-w-7xl mx-auto px-6 py-14">
 
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                    <div>
+            <div class="grid lg:grid-cols-12
+                        gap-10 lg:gap-16
+                        items-center">
 
-                        <img src="./resource/logos/qela_icon.svg"
-                            alt="Qela Technologies Logo"
-                            class="h-12 w-auto mb-5">
 
-                        <h1 class="text-2xl font-extrabold tracking-tight">
+                <!-- IMAGE -->
 
-                            Qela
+                <div class="lg:col-span-7">
 
-                            <span class="text-green-500">Technologies</span>
+                    <div class="image-wrapper relative
+                                overflow-hidden
+                                rounded-[2rem]
+                                bg-[#e9ede8]
+                                h-[480px]
+                                sm:h-[580px]
+                                lg:h-[700px]">
 
-                        </h1>
+                        <img src="./resource/image/aboutpic1.png" alt="QELA Technologies digital data management" class="image-zoom absolute inset-0
+                                   w-full h-full
+                                   object-cover">
 
-                        <p class="text-xs text-gray-500 mt-1">
 
-                            (T) LIMITED
 
-                        </p>
 
-                        <p
-                            class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
-
-                            Empowering businesses through innovative technology,
-                            digital transformation and
-                            smart agritech solutions.
-
-                        </p>
-
-                        <div class="flex items-center gap-3 mt-6">
-
-                            <a href="#" aria-label="Facebook"
-                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                                <i class="fa-brands fa-facebook-f"></i>
-
-                            </a>
-
-                            <a href="#" aria-label="Instagram"
-                                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
-
-                                <i class="fa-brands fa-instagram"></i>
-
-                            </a>
-
+                        <div class="absolute inset-0
+                                    bg-gradient-to-t
+                                    from-[#07130d]/70
+                                    via-transparent
+                                    to-transparent">
                         </div>
 
-                    </div>
 
-                    <div>
 
-                        <h3 class="text-lg font-semibold mb-5">
 
-                            Solutions
-
-                        </h3>
-
-                        <ul class="space-y-3 text-sm text-gray-400">
-
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Digital
-                                    Transformation</a>
-                            </li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Business
-                                    Management</a>
-                            </li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Data
-                                    Management</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Cloud
-                                    Solutions</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Custom
-                                    Software</a></li>
-
-                        </ul>
-
-                    </div>
-
-                    <div>
-
-                        <h3 class="text-lg font-semibold mb-5">
-
-                            Quick Links
-
-                        </h3>
-
-                        <ul class="space-y-3 text-sm text-gray-400">
-
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">About
-                                    Us</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Our
-                                    Products</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Industries</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Resources</a></li>
-                            <li><a href="#"
-                                    class="hover:text-green-500 transition duration-300">Contact
-                                    Us</a></li>
-
-                        </ul>
-
-                    </div>
-
-                    <div>
-
-                        <h3 class="text-lg font-semibold mb-5">
-
-                            Support
-
-                        </h3>
-
-                        <div class="space-y-5 text-sm text-gray-400">
-
-                            <div>
-
-                                <a href="tel:+255718352944"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    +255 718 352 944
-
-                                </a>
-
-                                <br>
-
-                                <a href="tel:+255742073002"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    +255 742 073 002
-
-                                </a>
-
-                            </div>
-
-                            <div>
-
-                                <a href="mailto:info@qelatechnologies.co.tz"
-                                    class="hover:text-green-500 transition duration-300">
-
-                                    info@qelatechnologies.co.tz
-
-                                </a>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
-            <div class="bg-black/30">
 
-                <div
-                    class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
 
-                    <p class="text-sm text-gray-500 text-center md:text-left">
 
-                        © 2026 Qela Technologies (T) Limited.
+                <div class="lg:col-span-5">
 
-                        All Rights Reserved.
+
+                    <p class=" mt-7 text-lg
+                              leading-[1.8]
+                              text-gray-600">
+
+                        <span class="text-sm font-semibold uppercase
+                                     tracking-[0.2em] text-[#dfa21f]">QELA Technologies (T) Ltd </span> is a Tanzanian
+                        technology company creating practical digital
+                        solutions for agriculture, businesses and
+                        organizations. We use technology to simplify
+                        everyday challenges, improve access to
+                        information and help people work more
+                        effectively.
 
                     </p>
 
-                    <div class="flex gap-5 text-sm text-gray-500">
 
-                        <a href="#"
-                            class="hover:text-green-500 transition duration-300">
+                    <p class="mt-6 text-base sm:text-lg
+                              leading-[1.8]
+                              text-gray-500">
 
-                            Privacy Policy
+                        Our work brings together digital systems,
+                        data management, web and mobile applications,
+                        and innovative technology to create solutions
+                        that are relevant to the people and organizations
+                        we serve. We focus on understanding the problem
+                        first, then building technology that is simple,
+                        reliable and useful.
 
-                        </a>
+                    </p>
 
-                        <a href="#"
-                            class="hover:text-green-500 transition duration-300">
 
-                            Terms & Conditions
+                    <p class="mt-6 text-base sm:text-lg
+                              leading-[1.8]
+                              text-gray-500">
 
-                        </a>
+                        From managing information and business
+                        operations to supporting agriculture and
+                        digital transformation, our goal is to turn
+                        technology into something people can actually
+                        use, understand and benefit from.
+
+                    </p>
+
+
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+
+        <div
+            class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+
+
+            <!-- =================================================
+                 WHAT WE DO
+            ================================================== -->
+
+            <div class="mt-0">
+
+                <div
+                    class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+
+
+                    <!-- LEFT TITLE -->
+
+                    <div class="lg:col-span-4">
+
+                        <p
+                            class="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
+
+                            What We Do
+
+                        </p>
+
+                        <h2
+                            class="text-3xl font-semibold leading-tight md:text-4xl">
+
+                            Digital solutions
+                            built to create value.
+
+                        </h2>
+
+                    </div>
+
+
+                    <!-- RIGHT CONTENT -->
+
+                    <div class="lg:col-span-8">
+
+
+                        <!-- ITEM 01 -->
+
+                        <div
+                            class="border-t border-gray-200 py-7 md:py-8">
+
+                            <div class="flex gap-5 md:gap-6">
+
+                                <span
+                                    class="text-sm font-semibold text-gray-400">
+
+                                    01
+
+                                </span>
+
+                                <div>
+
+                                    <h3
+                                        class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                        Agriculture Technology
+
+                                    </h3>
+
+                                    <p
+                                        class="max-w-2xl text-gray-500 leading-relaxed">
+
+                                        Digital solutions that help
+                                        connect agricultural data,
+                                        operations, farmers, and
+                                        value chains.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ITEM 02 -->
+
+                        <div
+                            class="border-t border-gray-200 py-7 md:py-8">
+
+                            <div class="flex gap-5 md:gap-6">
+
+                                <span
+                                    class="text-sm font-semibold text-gray-400">
+
+                                    02
+
+                                </span>
+
+                                <div>
+
+                                    <h3
+                                        class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                        Business Solutions
+
+                                    </h3>
+
+                                    <p
+                                        class="max-w-2xl text-gray-500 leading-relaxed">
+
+                                        Smart digital systems that
+                                        help organizations manage
+                                        information, improve
+                                        operations, and work more
+                                        efficiently.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ITEM 03 -->
+
+                        <div
+                            class="border-b border-t border-gray-200 py-7 md:py-8">
+
+                            <div class="flex gap-5 md:gap-6">
+
+                                <span
+                                    class="text-sm font-semibold text-gray-400">
+
+                                    03
+
+                                </span>
+
+                                <div>
+
+                                    <h3
+                                        class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                        Digital Innovation
+
+                                    </h3>
+
+                                    <p
+                                        class="max-w-2xl text-gray-500 leading-relaxed">
+
+                                        Modern technology built to
+                                        solve challenges, improve
+                                        experiences, and create
+                                        opportunities for growth.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -687,81 +884,425 @@
 
             </div>
 
-        </footer>
-        <script>
+
+            <!-- =================================================
+                 MISSION / VISION
+            ================================================== -->
+
+            <div class="mt-20 md:mt-24 lg:mt-28">
+
+                <div class="grid gap-6 md:grid-cols-2">
+
+
+                    <!-- MISSION -->
+
+                    <div
+                        class="rounded-[1.5rem] bg-gray-50 p-7 sm:p-8 md:p-10">
+
+                        <p
+                            class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
+
+                            Our Mission
+
+                        </p>
+
+                        <h3
+                            class="text-2xl font-semibold leading-tight md:text-3xl">
+
+                            To create practical technology
+                            that improves how people and
+                            organizations work.
+
+                        </h3>
+
+                    </div>
+
+
+                    <!-- VISION -->
+
+                    <div
+                        class="rounded-[1.5rem] bg-green-800 p-7 text-white sm:p-8 md:p-10">
+
+                        <p
+                            class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-green-200">
+
+                            Our Vision
+
+                        </p>
+
+                        <h3
+                            class="text-2xl font-semibold leading-tight md:text-3xl">
+
+                            To become a trusted technology
+                            partner driving digital
+                            transformation across Africa.
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="bg-[#07130d] text-white">
+
+        <div
+            class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
+
+            <div
+                class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+
+
+                <!-- COMPANY -->
+
+                <div>
+
+                    <img
+                        src="./resource/logos/qela_icon.svg"
+                        alt="Qela Technologies Logo"
+                        class="mb-5 h-12 w-auto">
+
+                    <h1
+                        class="text-2xl font-extrabold tracking-tight">
+
+                        Qela
+
+                        <span class="text-green-500">
+                            Technologies
+                        </span>
+
+                    </h1>
+
+                    <p class="mt-1 text-xs text-gray-500">
+                        (T) LIMITED
+                    </p>
+
+                    <p
+                        class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+
+                        Empowering businesses through innovative
+                        technology, digital transformation and
+                        smart agritech solutions.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-3">
+
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100063736423326"
+                            aria-label="Facebook"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/qelatech/"
+                            aria-label="Instagram"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOLUTIONS -->
+
+                <div>
+
+                    <h3 class="mb-5 text-lg font-semibold">
+                        Solutions
+                    </h3>
+
+                    <ul
+                        class="space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Digital Transformation
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Business Management
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Data Management
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Cloud Solutions
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Custom Software
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h3 class="mb-5 text-lg font-semibold">
+                        Quick Links
+                    </h3>
+
+                    <ul
+                        class="space-y-3 text-sm text-gray-400">
+
+                        <li>
+                            <a
+                                href="about.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                About Us
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="product.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Our Products
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="industry.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Industries
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="resource.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Resources
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Contact Us
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SUPPORT -->
+
+                <div>
+
+                    <h3 class="mb-5 text-lg font-semibold">
+                        Support
+                    </h3>
+
+                    <div
+                        class="space-y-5 text-sm text-gray-400">
+
+                        <div>
+
+                            <a
+                                href="tel:+255718352944"
+                                class="transition duration-300 hover:text-green-500">
+
+                                +255 718 352 944
+
+                            </a>
+
+                            <br>
+
+                            <a
+                                href="tel:+255742073002"
+                                class="transition duration-300 hover:text-green-500">
+
+                                +255 742 073 002
+
+                            </a>
+
+                        </div>
+
+                        <div>
+
+                            <a
+                                href="mailto:info@qelatechnologies.co.tz"
+                                class="transition duration-300 hover:text-green-500">
+
+                                info@qelatechnologies.co.tz
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="bg-black/30">
+
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 sm:px-8 lg:flex-row lg:px-10">
+
+                <p
+                    class="text-center text-sm text-gray-500 lg:text-left">
+
+                    © 2026 Qela Technologies (T) Limited.
+                    All Rights Reserved.
+
+                </p>
+
+                <div
+                    class="flex gap-5 text-sm text-gray-500">
+
+                    <a
+                        href="#"
+                        class="transition duration-300 hover:text-green-500">
+
+                        Privacy Policy
+
+                    </a>
+
+                    <a
+                        href="#"
+                        class="transition duration-300 hover:text-green-500">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            const menuBtn =
-                document.getElementById("menuBtn");
+            /* =========================================
+               MOBILE SIDEBAR
+            ========================================= */
 
-            const closeBtn =
-                document.getElementById("closeBtn");
-
-            const sidebar =
-                document.getElementById("sidebar");
+            const menuBtn = document.getElementById("menuBtn");
+            const closeBtn = document.getElementById("closeBtn");
+            const sidebar = document.getElementById("sidebar");
 
             if (menuBtn && closeBtn && sidebar) {
 
                 function openSidebar() {
 
-                    sidebar.classList.remove(
-                        "translate-x-full"
-                    );
+                    sidebar.classList.remove("translate-x-full");
+                    sidebar.classList.add("translate-x-0");
 
-                    sidebar.classList.add(
-                        "translate-x-0"
-                    );
-
-                    document.body.classList.add(
-                        "overflow-hidden"
-                    );
+                    document.body.classList.add("overflow-hidden");
 
                 }
 
                 function closeSidebar() {
 
-                    sidebar.classList.remove(
-                        "translate-x-0"
-                    );
+                    sidebar.classList.remove("translate-x-0");
+                    sidebar.classList.add("translate-x-full");
 
-                    sidebar.classList.add(
-                        "translate-x-full"
-                    );
-
-                    document.body.classList.remove(
-                        "overflow-hidden"
-                    );
+                    document.body.classList.remove("overflow-hidden");
 
                 }
 
                 menuBtn.addEventListener(
                     "click",
-                    function () {
-                        openSidebar();
-                    }
+                    openSidebar
                 );
 
                 closeBtn.addEventListener(
                     "click",
-                    function () {
-                        closeSidebar();
-                    }
+                    closeSidebar
                 );
 
-                const sidebarLinks =
-                    sidebar.querySelectorAll("a");
-
-                sidebarLinks.forEach(
+                sidebar.querySelectorAll("a").forEach(
                     function (link) {
 
                         link.addEventListener(
                             "click",
-                            function () {
-
-                                closeSidebar();
-
-                            }
+                            closeSidebar
                         );
 
                     }
@@ -790,6 +1331,11 @@
                 );
 
             }
+
+
+            /* =========================================
+               STICKY NAVIGATION
+            ========================================= */
 
             const navbar =
                 document.getElementById("navbar");
@@ -824,311 +1370,18 @@
 
                 window.addEventListener(
                     "scroll",
-                    handleNavbarScroll
+                    handleNavbarScroll,
+                    { passive: true }
                 );
 
                 handleNavbarScroll();
 
             }
 
-            const faqItems =
-                document.querySelectorAll(
-                    ".faq-item"
-                );
-
-            faqItems.forEach(
-                function (item) {
-
-                    const question =
-                        item.querySelector(
-                            ".faq-question"
-                        );
-
-                    const answer =
-                        item.querySelector(
-                            ".faq-answer"
-                        );
-
-                    const icon =
-                        item.querySelector(
-                            ".faq-icon"
-                        );
-
-                    if (
-                        !question ||
-                        !answer ||
-                        !icon
-                    ) {
-                        return;
-                    }
-
-                    question.addEventListener(
-                        "click",
-                        function () {
-
-                            const isOpen =
-                                item.classList.contains(
-                                    "active"
-                                );
-
-                            faqItems.forEach(
-                                function (otherItem) {
-
-                                    const otherAnswer =
-                                        otherItem.querySelector(
-                                            ".faq-answer"
-                                        );
-
-                                    const otherIcon =
-                                        otherItem.querySelector(
-                                            ".faq-icon"
-                                        );
-
-                                    otherItem.classList.remove(
-                                        "active"
-                                    );
-
-                                    if (otherAnswer) {
-
-                                        otherAnswer.style.maxHeight =
-                                            "0px";
-
-                                        otherAnswer.style.opacity =
-                                            "0";
-
-                                    }
-
-                                    if (otherIcon) {
-
-                                        otherIcon.textContent =
-                                            "+";
-
-                                    }
-
-                                }
-                            );
-
-                            if (!isOpen) {
-
-                                item.classList.add(
-                                    "active"
-                                );
-
-                                answer.style.maxHeight =
-                                    answer.scrollHeight + "px";
-
-                                answer.style.opacity =
-                                    "1";
-
-                                icon.textContent =
-                                    "−";
-
-                            }
-
-                        }
-                    );
-
-                }
-            );
-
-            const statistics =
-                document.querySelector(
-                    "[data-statistics]"
-                );
-
-            const statisticsItems =
-                document.querySelectorAll(
-                    ".statistics-item"
-                );
-
-            if (
-                statistics &&
-                statisticsItems.length > 0
-            ) {
-
-                const prefersReducedMotion =
-                    window.matchMedia(
-                        "(prefers-reduced-motion: reduce)"
-                    ).matches;
-
-                function animateCounter(item) {
-
-                    const counter =
-                        item.querySelector(
-                            "[data-counter]"
-                        );
-
-                    if (!counter) {
-                        return;
-                    }
-
-                    const targetAttribute =
-                        item.getAttribute(
-                            "data-target"
-                        );
-
-                    const target =
-                        Number(targetAttribute);
-
-                    if (!Number.isFinite(target)) {
-
-                        console.error(
-                            "Invalid statistics data-target:",
-                            targetAttribute,
-                            item
-                        );
-
-                        counter.textContent =
-                            "0";
-
-                        return;
-
-                    }
-
-                    const displayAttribute =
-                        item.getAttribute(
-                            "data-display"
-                        );
-
-                    let displayNumber =
-                        Number(displayAttribute);
-
-                    if (
-                        !Number.isFinite(
-                            displayNumber
-                        )
-                    ) {
-
-                        displayNumber =
-                            target;
-
-                    }
-
-                    if (prefersReducedMotion) {
-
-                        counter.textContent =
-                            displayNumber.toLocaleString();
-
-                        return;
-
-                    }
-
-                    const startTime =
-                        performance.now();
-
-                    const duration =
-                        1400;
-
-                    function updateCounter(
-                        currentTime
-                    ) {
-
-                        const elapsed =
-                            currentTime -
-                            startTime;
-
-                        const progress =
-                            Math.min(
-                                elapsed / duration,
-                                1
-                            );
-
-                        const easedProgress =
-                            1 -
-                            Math.pow(
-                                1 - progress,
-                                3
-                            );
-
-                        const currentValue =
-                            Math.floor(
-                                target *
-                                easedProgress
-                            );
-
-                        counter.textContent =
-                            currentValue.toLocaleString();
-
-                        if (progress < 1) {
-
-                            requestAnimationFrame(
-                                updateCounter
-                            );
-
-                        } else {
-
-                            counter.textContent =
-                                displayNumber.toLocaleString();
-
-                        }
-
-                    }
-
-                    requestAnimationFrame(
-                        updateCounter
-                    );
-
-                }
-
-                let statisticsAnimated =
-                    false;
-
-                const statisticsObserver =
-                    new IntersectionObserver(
-                        function (
-                            entries,
-                            observer
-                        ) {
-
-                            entries.forEach(
-                                function (entry) {
-
-                                    if (
-                                        !entry.isIntersecting ||
-                                        statisticsAnimated
-                                    ) {
-                                        return;
-                                    }
-
-                                    statisticsAnimated =
-                                        true;
-
-                                    statisticsItems.forEach(
-                                        function (item) {
-
-                                            item.classList.add(
-                                                "is-visible"
-                                            );
-
-                                            animateCounter(
-                                                item
-                                            );
-
-                                        }
-                                    );
-
-                                    observer.unobserve(
-                                        entry.target
-                                    );
-
-                                }
-                            );
-
-                        },
-                        {
-                            threshold: 0.25
-                        }
-                    );
-
-                statisticsObserver.observe(
-                    statistics
-                );
-
-            }
-
         });
 
     </script>
-    </body>
+
+</body>
 
 </html>
