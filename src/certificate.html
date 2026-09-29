@@ -3,120 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Clients</title>
+    <title>Compliance &amp; Licensing</title>
     <link href="./output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
- <style>
-  .f{font-family:'Sora',sans-serif}
-  .marquee{display:flex;width:max-content;animation:m 28s linear infinite}
-  @keyframes m{to{transform:translateX(-50%)}}
-
- </style>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body{font-family:'Inter',sans-serif}
+        .f{font-family:'Sora',sans-serif}
+    </style>
 </head>
 
-<body class="">
+<body class="bg-[#fafbf9]">
 
-    <!-- MARQUEE -->
-<section class="bg-green-700 py-4 overflow-hidden text-[#0f2a17] f font-semibold text-sm">
-  <div class="marquee gap-12">
-    <div class="flex gap-12 pr-12 shrink-0"><span>✦ Business License</span><span>✦ TRA Registered</span><span>✦ TCDC Certified</span><span>✦ ICA Member</span><span>✦ Certificate of Incorporation</span><span>✦ Award of Appreciation</span></div>
-    <div class="flex gap-12 pr-12 shrink-0"><span>✦ Business License</span><span>✦ TRA Registered</span><span>✦ TCDC Certified</span><span>✦ ICA Member</span><span>✦ Certificate of Incorporation</span><span>✦ Award of Appreciation</span></div>
-  </div>
-</section>
+<section class="max-w-6xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
 
-<section class="bg-gray-400 px-8 sm:px-10 lg:px-18 py-16 lg:py-24 text-center">
-    <div class="max-w-6xl mx-auto text-center">
+    <!-- Heading -->
+    <div class="max-w-2xl mx-auto text-center mb-14">
+        <p class="f font-semibold text-3xl mb-3">Certificates <span class="text-yellow-400"> & awards </span></p>
+        <h2 class="f text-3xl sm:text-4xl font-bold text-[#12261a]"></h2>
+        <p class="mt-4 text-gray-600">
+            We operate under full regulatory oversight of Tanzania's registration and revenue authorities.
+        </p>
+    </div>
 
-        <!-- Heading -->
-        <div class="max-w-xl mx-auto mb-12 lg:mb-16">
-            <h2 class="text-3xl sm:text-4xl text-[#14261e]">
-                certificates <span class="text-yellow-400">and Awards</span>
-            </h2>
-            <p class="mt-4 text-[15px] sm:text-base text-[#5c6660]">
-                Every credential behind our work, on record with Tanzania's registration
-                and revenue authorities.
-            </p>
+    <!-- Certificate grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg
+         transition-shadow overflow-hidden">
+            <img src="./resource/gallery/business license.png.jpeg" alt="Business License" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">BUSINESS REGISTRATION</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">Business License</h3>
+                <p class="text-sm text-gray-600 mt-1">Registered and authorised to operate under Tanzanian law.</p>
+            </div>
         </div>
 
-        <!-- Gallery -->
-        <div class="!px-4 sm:!px-6">
-
-            <!-- Row 1: Business License | ICA | Hati ya Shukrani -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7 mb-5 sm:mb-7">
-
-                <!-- Business License -->
-                <figure class="flex flex-col">
-                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/business license.png.jpeg"
-                             alt="Business License"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
-                <!-- ICA -->
-                <figure>
-                    <div class="h-36 sm:h-48 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/ica.png.jpeg"
-                             alt="ICA"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
-                <!-- Hati ya Shukrani -->
-                <figure class="flex flex-col">
-                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/hati ya shukrani.png.jpeg"
-                             alt="Hati ya Shukrani"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg
+         transition-shadow overflow-hidden">
+            <img src="./resource/gallery/incoporate.png.jpeg" alt="Certificate of Incorporation" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">BRELA</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">Certificate of Incorporation</h3>
+                <p class="text-sm text-gray-600 mt-1">Registered as a limited company under Tanzanian law.</p>
             </div>
-
-            <!-- Row 2: Incorporate | TCDC | TRA -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7">
-
-                <figure>
-                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/incoporate.png.jpeg"
-                             alt="Incorporate"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
-                <figure>
-                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/tcdc.png.jpeg"
-                             alt="TCDC"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
-                <figure>
-                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/tra.png.jpeg"
-                             alt="TRA"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-
-            </div>
-
-            <!-- Shukrani Certificate, centered below both rows -->
-            <div class="flex justify-center mt-5 sm:mt-7">
-                <figure class="w-full max-w-xs sm:max-w-sm">
-                    <div class="h-40 sm:h-48 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
-                        <img src="./resource/gallery/shukrani certfc.png.jpeg"
-                             alt="Shukrani Certificate"
-                             class="w-full h-full object-contain">
-                    </div>
-                </figure>
-            </div>
-
         </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg 
+        transition-shadow overflow-hidden">
+            <img src="./resource/gallery/tra.png.jpeg" alt="TRA Certificate" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">TRA</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">Tax Registration</h3>
+                <p class="text-sm text-gray-600 mt-1">Tax identification issued by the Tanzania Revenue Authority.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg
+         transition-shadow overflow-hidden">
+            <img src="./resource/gallery/tcdc.png.jpeg" alt="TCDC Certificate" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">TCDC</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">TCDC Certification</h3>
+                <p class="text-sm text-gray-600 mt-1">Recognised by the Tanzania Cooperative Development Commission.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg
+         transition-shadow overflow-hidden">
+            <img src="./resource/gallery/ica.png.jpeg" alt="ICA Certificate" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">ICA</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">ICA Membership</h3>
+                <p class="text-sm text-gray-600 mt-1">Registered member in good standing.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg 
+        transition-shadow overflow-hidden">
+            <img src="./resource/gallery/hati ya shukrani.png.jpeg" alt="Hati ya Shukrani" 
+            class="w-full h-48 object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">RECOGNITION</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">Hati ya Shukrani</h3>
+                <p class="text-sm text-gray-600 mt-1">Certificate of appreciation for outstanding service.</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg 
+        transition-shadow overflow-hidden sm:col-span-2 lg:col-span-1 sm:max-w-sm sm:mx-auto lg:max-w-none">
+            <img src="./resource/gallery/shukrani certfc.png.jpeg" alt="Shukrani Certificate" class="w-full h-48
+             object-contain bg-[#f4f5f3] p-4">
+            <div class="p-5">
+                <p class="text-xs font-semibold text-[#2f7d3a] mb-1">RECOGNITION</p>
+                <h3 class="f font-bold text-lg text-[#12261a]">Shukrani Certificate</h3>
+                <p class="text-sm text-gray-600 mt-1">Formal recognition of appreciation from a partner organisation.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
