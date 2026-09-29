@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>QELA Technologies — About Us</title>
@@ -12,70 +15,110 @@
     <link href="./output.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
+
         tailwind.config = {
+
             theme: {
+
                 extend: {
+
                     colors: {
+
                         ink: '#1c2430',
+
                         clay: '#a8683f',
+
                         claylight: '#c98a5c',
+
                         ivory: '#f6f2ea',
+
                         paper: '#fbf9f5'
+
                     },
+
                     fontFamily: {
+
                         serif: ['Fraunces', 'serif'],
+
                         sans: ['DM Sans', 'sans-serif']
+
                     }
+
                 }
+
             }
+
         }
+
     </script>
 
     <style>
+
         /* ==============================
            GLOBAL
         ============================== */
 
         html {
+
             scroll-behavior: smooth;
+
         }
 
         body {
+
             margin: 0;
+
             font-family: 'DM Sans', sans-serif;
+
             overflow-x: hidden;
+
         }
 
         h1,
+
         h2,
+
         h3,
+
         h4 {
+
             font-family: 'Poppins', sans-serif;
+
         }
 
         img {
+
             max-width: 100%;
+
             display: block;
+
         }
 
         .image-zoom {
+
             transition: transform 0.8s ease;
+
         }
 
         .image-wrapper:hover .image-zoom {
+
             transform: scale(1.04);
+
         }
+
 
 
         /* ==============================
@@ -83,10 +126,15 @@
         ============================== */
 
         .contact-bar {
+
             min-height: 44px;
+
             box-sizing: border-box;
+
             background: #000;
+
         }
+
 
 
         /* ==============================
@@ -94,123 +142,210 @@
         ============================== */
 
         .nav-inner {
+
             width: min(100% - 3rem, 1280px);
+
             margin: 0 auto;
+
         }
 
         .nav-logo {
+
             width: auto;
+
             max-width: 150px;
+
         }
 
         .nav-links a {
+
             position: relative;
+
             transition: color 180ms ease;
+
         }
 
         .nav-links a::after {
+
             content: "";
+
             position: absolute;
+
             right: 0;
+
             bottom: -0.45rem;
+
             left: 0;
+
             height: 2px;
+
             background: #dfa21f;
+
             transform: scaleX(0);
+
             transform-origin: right;
+
             transition: transform 180ms ease;
+
         }
 
         .nav-links a:hover::after,
+
         .nav-links a:focus-visible::after {
+
             transform: scaleX(1);
+
             transform-origin: left;
+
         }
 
         header {
+
             position: relative;
+
             top: 0;
+
             left: 0;
+
             right: 0;
+
             z-index: 50;
+
             width: 100%;
+
         }
 
         #navbar {
+
             position: absolute;
+
             top: 44px;
+
             left: 0;
+
             right: 0;
+
             z-index: 30;
+
             background: transparent;
+
             transition:
+
                 background 200ms ease,
+
                 box-shadow 200ms ease;
+
         }
 
         #navbar.is-sticky {
+
             position: fixed;
+
             top: 0;
+
             background: white !important;
+
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
         }
 
         #navbar.is-sticky .nav-links,
+
         #navbar.is-sticky .nav-links a,
+
         #navbar.is-sticky #menuBtn {
+
             color: #14532d;
+
         }
+
 
 
         /* ==============================
-           FULL SCREEN HERO
+           HERO IMAGE SECTION
+           
+           ONLY THIS SECTION HAS BEEN
+           CHANGED TO A SHORT BANNER
         ============================== */
 
         .hero-section {
+
             position: relative;
+
             width: 100%;
-            height: 100vh;
-            min-height: 600px;
+
+            height: 420px;
+
             overflow: hidden;
+
         }
 
         .hero-image {
+
             position: absolute;
+
             inset: 0;
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             object-position: center center;
+
             image-rendering: auto;
+
         }
 
         .hero-overlay {
+
             position: absolute;
+
             inset: 0;
+
             z-index: 1;
+
             background:
+
                 linear-gradient(90deg,
+
                     rgba(0, 0, 0, 0.58) 0%,
+
                     rgba(0, 0, 0, 0.30) 50%,
+
                     rgba(0, 0, 0, 0.42) 100%);
+
         }
 
         .hero-content {
+
             position: relative;
+
             z-index: 10;
+
             height: 100%;
-            min-height: 100vh;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             padding: 0 1.5rem;
+
         }
 
         .hero-title {
+
             text-shadow:
+
                 0 3px 15px rgba(0, 0, 0, 0.35),
+
                 0 2px 5px rgba(0, 0, 0, 0.25);
+
         }
+
 
 
         /* ==============================
@@ -218,8 +353,11 @@
         ============================== */
 
         #sidebar {
+
             box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
+
         }
+
 
 
         /* ==============================
@@ -229,17 +367,25 @@
         @media (max-width: 1024px) {
 
             .nav-inner {
+
                 width: calc(100% - 2.5rem);
+
             }
 
             .hero-section {
-                min-height: 600px;
+
+                height: 390px;
+
             }
 
             .hero-content {
-                min-height: 100vh;
+
+                height: 100%;
+
             }
+
         }
+
 
 
         /* ==============================
@@ -249,54 +395,85 @@
         @media (max-width: 760px) {
 
             .contact-bar {
+
                 justify-content: center;
+
                 gap: 0.85rem;
+
                 padding-inline: 1rem;
+
                 font-size: 0.68rem;
+
             }
 
             .nav-inner {
+
                 width: calc(100% - 2rem);
+
                 flex-wrap: wrap;
+
                 gap: 0.65rem 1rem;
+
             }
 
             .nav-logo {
+
                 max-width: 112px;
+
                 height: auto;
+
             }
 
             .nav-links {
+
                 width: 100%;
+
                 justify-content: space-between;
+
                 gap: 0.5rem;
+
                 padding-top: 0.5rem;
+
                 border-top: 1px solid rgba(255, 255, 255, 0.22);
+
             }
 
             .nav-links a {
+
                 font-size: 0.76rem;
+
             }
 
             #navbar.is-sticky .nav-links {
+
                 border-color: rgba(16, 39, 27, 0.12);
+
             }
 
+            /* SHORT MOBILE BANNER */
+
             .hero-section {
-                height: 100svh;
-                min-height: 600px;
+
+                height: 330px;
+
             }
 
             .hero-content {
+
                 height: 100%;
-                min-height: 100svh;
+
                 padding: 0 1.5rem;
+
             }
 
             .hero-image {
+
                 object-position: center center;
+
             }
+
         }
+
 
 
         /* ==============================
@@ -306,27 +483,39 @@
         @media (max-width: 640px) {
 
             .nav-inner {
+
                 width: calc(100% - 1.5rem);
+
             }
 
             .hero-section {
-                height: 100svh;
-                min-height: 560px;
+
+                height: 300px;
+
             }
 
             .hero-content {
-                min-height: 100svh;
+
+                height: 100%;
+
                 padding: 0 1.25rem;
+
             }
 
             .hero-title {
+
                 font-size: 2.25rem;
+
             }
 
             .hero-image {
+
                 object-position: center center;
+
             }
+
         }
+
 
 
         /* ==============================
@@ -336,30 +525,45 @@
         @media (max-width: 480px) {
 
             .contact-bar {
+
                 font-size: 0.63rem;
+
                 gap: 0.55rem;
+
                 padding-inline: 0.6rem;
+
             }
 
             .nav-logo {
+
                 max-width: 105px;
+
             }
 
             .hero-section {
-                height: 100svh;
-                min-height: 520px;
+
+                height: 280px;
+
             }
 
             .hero-content {
-                min-height: 100svh;
+
+                height: 100%;
+
             }
 
             .hero-title {
+
                 font-size: 2rem;
+
             }
+
         }
+
     </style>
+
 </head>
+
 
 
 <body>
@@ -383,7 +587,9 @@
                     <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
                     <span>
+
                         info@qelatechnologies.co.tz
+
                     </span>
 
                 </a>
@@ -394,7 +600,9 @@
                     <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
                     <span>
+
                         +255 718 352 944
+
                     </span>
 
                 </a>
@@ -402,6 +610,7 @@
             </div>
 
         </div>
+
 
 
         <!-- =================================================
@@ -424,23 +633,33 @@
             <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
 
                 <a href="index.html">
+
                     Home
+
                 </a>
 
                 <a href="about.html">
+
                     About
+
                 </a>
 
                 <a href="product.html">
+
                     Products
+
                 </a>
 
                 <a href="industry.html">
+
                     Industry
+
                 </a>
 
                 <a href="resource.html">
+
                     Resource
+
                 </a>
 
             </div>
@@ -448,21 +667,27 @@
         </div>
 
 
+
         <!-- =================================================
-             FULL SCREEN HERO
+             HERO IMAGE SECTION
         ================================================== -->
 
         <div class="hero-section">
 
             <!-- ABOUT IMAGE -->
 
-            <img src="./resource/image/about11.png" alt="Farmers working with crops" class="hero-image" loading="eager"
+            <img src="./resource/image/about11.png"
+                alt="Farmers working with crops"
+                class="hero-image"
+                loading="eager"
                 decoding="async">
+
 
 
             <!-- IMAGE OVERLAY -->
 
             <div class="hero-overlay"></div>
+
 
 
             <!-- =================================================
@@ -477,9 +702,12 @@
 
                     <a href="./index.html">
 
-                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                        <img src="./resource/image/qela_logo.png"
+                            class="nav-logo h-16"
+                            alt="QELA logo">
 
                     </a>
+
 
 
                     <!-- DESKTOP NAVIGATION -->
@@ -490,23 +718,33 @@
                             class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
 
                             <a href="index.html">
+
                                 Home
+
                             </a>
 
                             <a href="about.html">
+
                                 About
+
                             </a>
 
                             <a href="product.html">
+
                                 Products
+
                             </a>
 
                             <a href="industry.html">
+
                                 Industry
+
                             </a>
 
                             <a href="resource.html">
+
                                 Resource
+
                             </a>
 
                         </div>
@@ -514,9 +752,12 @@
                     </div>
 
 
+
                     <!-- MOBILE MENU BUTTON -->
 
-                    <button id="menuBtn" class="text-2xl text-yellow-400 md:hidden" type="button"
+                    <button id="menuBtn"
+                        class="text-2xl text-yellow-400 md:hidden"
+                        type="button"
                         aria-label="Open navigation menu">
 
                         <i class="fa-solid fa-bars"></i>
@@ -528,9 +769,8 @@
             </nav>
 
 
-            <!-- =================================================
-                 HERO TITLE
-            ================================================== -->
+
+            <!-- HERO TITLE -->
 
             <div class="hero-content">
 
@@ -541,7 +781,9 @@
                         About
 
                         <span class="text-yellow-400">
+
                             Us
+
                         </span>
 
                     </h1>
@@ -555,12 +797,17 @@
     </header>
 
 
+
     <!-- =====================================================
          ABOUT US
     ====================================================== -->
+
     <section class="py-12 sm:py-16 lg:py-20">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+
+
 
 
 
@@ -570,6 +817,8 @@
                 <div class="lg:col-span-4">
 
                     <div class="flex items-center gap-3">
+
+
 
 
 
@@ -587,7 +836,14 @@
 
 
 
+
+
+
             </div>
+
+
+
+
 
 
 
@@ -598,6 +854,7 @@
             items-start">
 
                 <!-- IMAGE -->
+
                 <div class="lg:col-span-7">
 
                     <div class="image-wrapper relative
@@ -608,7 +865,9 @@
                     sm:h-[580px]
                     lg:h-[700px]">
 
-                        <img src="./resource/image/aboutpic1.png" alt="QELA Technologies digital data management" class="image-zoom absolute inset-0
+                        <img src="./resource/image/aboutpic1.png"
+                            alt="QELA Technologies digital data management"
+                            class="image-zoom absolute inset-0
                         w-full h-full
                         object-cover">
 
@@ -617,6 +876,7 @@
                         from-[#07130d]/70
                         via-transparent
                         to-transparent">
+
                         </div>
 
                     </div>
@@ -624,6 +884,7 @@
                 </div>
 
                 <!-- TEXT -->
+
                 <div class="lg:col-span-5">
 
                     <p class="text-lg
@@ -632,12 +893,19 @@
 
                         <span class="text-sm font-semibold uppercase
                          tracking-[0.2em] text-[#dfa21f]">
+
                             QELA Technologies (T) Ltd
+
                         </span>
+
                         is a Tanzanian technology company creating practical
+
                         digital solutions for agriculture, businesses and
+
                         organizations. We use technology to simplify
+
                         everyday challenges, improve access to information
+
                         and help people work more effectively.
 
                     </p>
@@ -647,11 +915,17 @@
                   text-gray-500">
 
                         Our work brings together digital systems,
+
                         data management, web and mobile applications,
+
                         and innovative technology to create solutions
+
                         that are relevant to the people and organizations
+
                         we serve. We focus on understanding the problem
+
                         first, then building technology that is simple,
+
                         reliable and useful.
 
                     </p>
@@ -661,9 +935,13 @@
                   text-gray-500">
 
                         From managing information and business
+
                         operations to supporting agriculture and
+
                         digital transformation, our goal is to turn
+
                         technology into something people can actually
+
                         use, understand and benefit from.
 
                     </p>
@@ -676,10 +954,10 @@
 
     </section>
 
+
     <section class="bg-white py-8 sm:py-12 lg:py-16">
 
         <div class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-
 
             <!-- =================================================
                  WHAT WE DO
@@ -688,7 +966,6 @@
             <div class="mt-0">
 
                 <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
-
 
                     <!-- LEFT TITLE -->
 
@@ -703,6 +980,7 @@
                         <h2 class="text-3xl font-semibold leading-tight md:text-4xl">
 
                             Digital solutions
+
                             built to create value.
 
                         </h2>
@@ -710,17 +988,16 @@
                     </div>
 
 
+
                     <!-- RIGHT CONTENT -->
 
                     <div class="lg:col-span-8">
-
 
                         <!-- ITEM 01 -->
 
                         <div class="border-t border-gray-200 py-5 md:py-6">
 
                             <div class="flex gap-5 md:gap-6">
-
 
                                 <div>
 
@@ -733,8 +1010,11 @@
                                     <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Digital solutions that help
+
                                         connect agricultural data,
+
                                         operations, farmers, and
+
                                         value chains.
 
                                     </p>
@@ -746,13 +1026,12 @@
                         </div>
 
 
+
                         <!-- ITEM 02 -->
 
                         <div class="border-t border-gray-200 py-7 md:py-8">
 
                             <div class="flex gap-5 md:gap-6">
-
-
 
                                 <div>
 
@@ -765,9 +1044,13 @@
                                     <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Smart digital systems that
+
                                         help organizations manage
+
                                         information, improve
+
                                         operations, and work more
+
                                         efficiently.
 
                                     </p>
@@ -779,13 +1062,12 @@
                         </div>
 
 
+
                         <!-- ITEM 03 -->
 
                         <div class="border-b border-t border-gray-200 py-7 md:py-8">
 
                             <div class="flex gap-5 md:gap-6">
-
-
 
                                 <div>
 
@@ -798,8 +1080,11 @@
                                     <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Modern technology built to
+
                                         solve challenges, improve
+
                                         experiences, and create
+
                                         opportunities for growth.
 
                                     </p>
@@ -817,6 +1102,7 @@
             </div>
 
 
+
             <!-- =================================================
                  MISSION / VISION
             ================================================== -->
@@ -824,7 +1110,6 @@
             <div class="mt-12 md:mt-16 lg:mt-20">
 
                 <div class="grid gap-6 md:grid-cols-2">
-
 
                     <!-- MISSION -->
 
@@ -839,12 +1124,15 @@
                         <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
 
                             To create practical technology
+
                             that improves how people and
+
                             organizations work.
 
                         </h3>
 
                     </div>
+
 
 
                     <!-- VISION -->
@@ -860,7 +1148,9 @@
                         <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
 
                             To become a trusted technology
+
                             partner driving digital
+
                             transformation across Africa.
 
                         </h3>
@@ -877,6 +1167,8 @@
 
 
 
+
+
     <!-- =====================================================
          FOOTER
     ====================================================== -->
@@ -887,46 +1179,58 @@
 
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
 
-
                 <!-- COMPANY -->
 
                 <div>
 
                     <a href="./index.html">
-                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+
+                        <img src="./resource/image/qela_logo.png"
+                            class="nav-logo h-16"
+                            alt="QELA logo">
+
                     </a>
+
                     <h1 class="text-2xl font-extrabold tracking-tight">
 
                         Qela
 
                         <span class="text-green-500">
+
                             Technologies
+
                         </span>
 
                     </h1>
 
                     <p class="mt-1 text-xs text-gray-500">
+
                         (T) LIMITED
+
                     </p>
 
                     <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
 
                         Empowering businesses through innovative
+
                         technology, digital transformation and
+
                         smart agritech solutions.
 
                     </p>
 
                     <div class="mt-6 flex items-center gap-3">
 
-                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
+                        <a href="https://www.facebook.com/profile.php?id=100063736423326"
+                            aria-label="Facebook"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
+                        <a href="https://www.instagram.com/qelatech/"
+                            aria-label="Instagram"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-instagram"></i>
@@ -938,59 +1242,73 @@
                 </div>
 
 
+
                 <!-- SOLUTIONS -->
 
                 <div>
 
                     <h3 class="mb-5 text-lg font-semibold">
+
                         Solutions
+
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Digital Transformation
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Business Management
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Data Management
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Cloud Solutions
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Custom Software
 
                             </a>
+
                         </li>
 
                     </ul>
 
                 </div>
+
 
 
                 <!-- QUICK LINKS -->
@@ -998,49 +1316,61 @@
                 <div>
 
                     <h3 class="mb-5 text-lg font-semibold">
+
                         Quick Links
+
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
+
                             <a href="about.html" class="transition duration-300 hover:text-green-500">
 
                                 About Us
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="product.html" class="transition duration-300 hover:text-green-500">
 
                                 Our Products
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="industry.html" class="transition duration-300 hover:text-green-500">
 
                                 Industries
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="resource.html" class="transition duration-300 hover:text-green-500">
 
                                 Resources
 
                             </a>
+
                         </li>
 
                         <li>
+
                             <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Contact Us
 
                             </a>
+
                         </li>
 
                     </ul>
@@ -1048,19 +1378,23 @@
                 </div>
 
 
+
                 <!-- SUPPORT -->
 
                 <div>
 
                     <h3 class="mb-5 text-lg font-semibold">
+
                         Support
+
                     </h3>
 
                     <div class="space-y-5 text-sm text-gray-400">
 
                         <div>
 
-                            <a href="tel:+255718352944" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255718352944"
+                                class="transition duration-300 hover:text-green-500">
 
                                 +255 718 352 944
 
@@ -1068,7 +1402,8 @@
 
                             <br>
 
-                            <a href="tel:+255742073002" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255742073002"
+                                class="transition duration-300 hover:text-green-500">
 
                                 +255 742 073 002
 
@@ -1096,6 +1431,7 @@
         </div>
 
 
+
         <!-- COPYRIGHT -->
 
         <div class="bg-black/30">
@@ -1106,6 +1442,7 @@
                 <p class="text-center text-sm text-gray-500 lg:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
+
                     All Rights Reserved.
 
                 </p>
@@ -1133,6 +1470,7 @@
     </footer>
 
 
+
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
@@ -1146,7 +1484,9 @@
             ========================================= */
 
             const menuBtn = document.getElementById("menuBtn");
+
             const closeBtn = document.getElementById("closeBtn");
+
             const sidebar = document.getElementById("sidebar");
 
             if (menuBtn && closeBtn && sidebar) {
@@ -1154,6 +1494,7 @@
                 function openSidebar() {
 
                     sidebar.classList.remove("translate-x-full");
+
                     sidebar.classList.add("translate-x-0");
 
                     document.body.classList.add("overflow-hidden");
@@ -1163,6 +1504,7 @@
                 function closeSidebar() {
 
                     sidebar.classList.remove("translate-x-0");
+
                     sidebar.classList.add("translate-x-full");
 
                     document.body.classList.remove("overflow-hidden");
@@ -1170,49 +1512,71 @@
                 }
 
                 menuBtn.addEventListener(
+
                     "click",
+
                     openSidebar
+
                 );
 
                 closeBtn.addEventListener(
+
                     "click",
+
                     closeSidebar
+
                 );
 
                 sidebar.querySelectorAll("a").forEach(
+
                     function (link) {
 
                         link.addEventListener(
+
                             "click",
+
                             closeSidebar
+
                         );
 
                     }
+
                 );
 
                 document.addEventListener(
+
                     "keydown",
+
                     function (event) {
 
                         if (event.key === "Escape") {
+
                             closeSidebar();
+
                         }
 
                     }
+
                 );
 
                 window.addEventListener(
+
                     "resize",
+
                     function () {
 
                         if (window.innerWidth >= 768) {
+
                             closeSidebar();
+
                         }
 
                     }
+
                 );
 
             }
+
 
 
             /* =========================================
@@ -1220,9 +1584,11 @@
             ========================================= */
 
             const navbar =
+
                 document.getElementById("navbar");
 
             const contactBar =
+
                 document.querySelector(".contact-bar");
 
             if (navbar) {
@@ -1230,20 +1596,27 @@
                 function handleNavbarScroll() {
 
                     const triggerPoint =
+
                         contactBar
+
                             ? contactBar.offsetHeight
+
                             : 44;
 
                     if (window.scrollY > triggerPoint) {
 
                         navbar.classList.add(
+
                             "is-sticky"
+
                         );
 
                     } else {
 
                         navbar.classList.remove(
+
                             "is-sticky"
+
                         );
 
                     }
@@ -1251,9 +1624,13 @@
                 }
 
                 window.addEventListener(
+
                     "scroll",
+
                     handleNavbarScroll,
+
                     { passive: true }
+
                 );
 
                 handleNavbarScroll();
