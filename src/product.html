@@ -1,33 +1,21 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
-
     <title>QELA Technology | Digital solutions for agriculture</title>
-
     <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
-
     <link href="./output.css" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <style>
         :root {
@@ -36,16 +24,13 @@
             --overlay: rgba(14, 63, 29, 0.72);
         }
 
-
         * {
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             margin: 0;
@@ -54,12 +39,18 @@
             overflow-x: hidden;
         }
 
-
         img {
             max-width: 100%;
             height: auto;
         }
 
+        /* =========================================
+       PICTURE BORDER (grey)
+    ========================================= */
+
+        .pic-border {
+            border: 2px solid #9ca3af;
+        }
 
         /* =========================================
        CONTACT BAR
@@ -71,7 +62,6 @@
             background: #000;
         }
 
-
         .contact-bar h4 {
             display: inline-flex;
             align-items: center;
@@ -80,12 +70,10 @@
             white-space: nowrap;
         }
 
-
         .contact-bar i {
             color: var(--lime);
             font-size: 0.8rem;
         }
-
 
         /* =========================================
        HEADER
@@ -100,7 +88,6 @@
             width: 100%;
         }
 
-
         /* =========================================
        NAVIGATION
     ========================================= */
@@ -111,12 +98,10 @@
             -webkit-backdrop-filter: none;
         }
 
-
         #navbar {
             padding: 0.85rem 0;
             transition: background 180ms ease, box-shadow 180ms ease;
         }
-
 
         #navbar.is-sticky {
             position: fixed;
@@ -127,18 +112,15 @@
             box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
         }
 
-
         .nav-inner {
             width: min(100% - 3rem, 1280px);
             margin: 0 auto;
         }
 
-
         .nav-logo {
             width: auto;
             max-width: 150px;
         }
-
 
         .nav-links a {
             position: relative;
@@ -147,7 +129,6 @@
             letter-spacing: 0.02em;
             transition: color 180ms ease;
         }
-
 
         .nav-links a::after {
             content: "";
@@ -162,18 +143,15 @@
             transition: transform 180ms ease;
         }
 
-
         .nav-links a:hover::after,
         .nav-links a:focus-visible::after {
             transform: scaleX(1);
             transform-origin: left;
         }
 
-
         #navbar.is-sticky .nav-links a {
             color: #10271b;
         }
-
 
         /* =========================================
        MOBILE SIDEBAR
@@ -183,42 +161,40 @@
             width: min(18rem, 85vw);
         }
 
-
         /* =========================================
-       HERO
+       HERO  (short banner frame, same as About page)
     ========================================= */
 
         .hero {
-            min-height: min(860px, 100svh);
+            height: 420px;
             position: relative;
             isolation: isolate;
             background: #183c28;
         }
 
-
-        .hero video {
+        /* FIX: hero background image now fills the hero (same as the video),
+           so the "OUR PRODUCTS" text appears on top of it */
+        .hero video,
+        .hero > img {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center center;
             z-index: -2;
         }
-
 
         .hero::after {
             content: "";
             position: absolute;
             inset: 0;
-
             background: linear-gradient(90deg,
                     rgba(7, 28, 16, 0.78),
                     rgba(7, 28, 16, 0.34) 65%,
                     rgba(7, 28, 16, 0.5));
-
             z-index: -1;
         }
-
 
         /* =========================================
        HERO CONTENT
@@ -227,19 +203,21 @@
         .hero-content {
             align-items: center;
             justify-content: center;
-
-            min-height: 100svh;
-
-            padding: 8rem clamp(1.25rem, 5vw, 5rem) 6rem;
-
+            height: 100%;
+            padding: 6rem clamp(1.25rem, 5vw, 5rem) 1.5rem;
             text-align: center;
         }
 
+        /* the page has a second .hero-content nested inside the first,
+           so the inner one must not repeat the height and padding */
+        .hero-content .hero-content {
+            height: auto;
+            padding: 0;
+        }
 
         .hero-content>div {
             width: min(1000px, 100%);
         }
-
 
         .hero-description {
             position: relative;
@@ -248,79 +226,55 @@
             margin: 0 auto;
         }
 
-
         .phrase {
             position: absolute;
             inset: 0;
-
             display: flex;
             flex-wrap: wrap;
-
             justify-content: center;
             align-content: flex-start;
-
             gap: 0 0.35em;
-
             font-family: 'Poppins', sans-serif;
-
             font-size: clamp(2rem, 5vw, 4.6rem);
-
             font-weight: 500;
-
             line-height: 1.12;
-
             color: #fff;
-
             text-align: center;
-
             text-wrap: balance;
         }
 
-
         .phrase span {
             flex: 0 0 100%;
-
             justify-content: center;
-
             white-space: nowrap;
-
             opacity: 0;
-
             transform: translateY(8px);
-
             animation: wordAnimation 14s infinite;
         }
-
 
         .phrase-one span:nth-child(1) {
             animation-delay: 0s;
         }
 
-
         .phrase-one span:nth-child(2) {
             animation-delay: 0.2s;
         }
-
 
         .phrase-one span:nth-child(3) {
             animation-delay: 0.4s;
         }
 
-
         .phrase-two span:nth-child(1) {
             animation-delay: 7s;
         }
-
 
         .phrase-two span:nth-child(2) {
             animation-delay: 7.2s;
         }
 
-
         .phrase-two span:nth-child(3) {
             animation-delay: 7.4s;
         }
-
 
         @keyframes wordAnimation {
 
@@ -351,7 +305,6 @@
 
         }
 
-
         /* =========================================
        ACCESSIBILITY
     ========================================= */
@@ -361,16 +314,12 @@
             *,
             *::before,
             *::after {
-
                 scroll-behavior: auto !important;
-
                 animation-duration: 0.01ms !important;
-
                 animation-iteration-count: 1 !important;
             }
 
         }
-
 
         /* =========================================
        TABLETS
@@ -382,34 +331,32 @@
                 width: calc(100% - 2.5rem);
             }
 
-
             .nav-logo {
                 max-width: 135px;
             }
-
 
             .nav-links {
                 gap: 1.5rem;
             }
 
-
             .nav-links a {
                 font-size: 1.05rem;
             }
 
+            .hero {
+                height: 390px;
+            }
 
             .hero-content {
                 padding-left: 2.5rem;
                 padding-right: 2.5rem;
             }
 
-
             .phrase {
                 font-size: clamp(2rem, 6vw, 4rem);
             }
 
         }
-
 
         /* =========================================
        MOBILE
@@ -421,30 +368,21 @@
 
             .contact-bar>div {
                 min-height: 44px;
-
                 justify-content: center;
-
                 gap: 0.8rem;
-
                 padding: 0.55rem 0.75rem;
-
                 font-size: 0.68rem;
-
                 line-height: 1.2;
-
                 flex-wrap: wrap;
             }
-
 
             .contact-bar a {
                 gap: 0.4rem;
             }
 
-
             .contact-bar i {
                 font-size: 0.7rem;
             }
-
 
             /* NAV */
 
@@ -452,91 +390,67 @@
                 padding: 0.7rem 0;
             }
 
-
             .nav-inner {
                 width: calc(100% - 1.5rem);
-
                 min-height: 54px;
-
                 gap: 1rem;
             }
-
 
             .nav-logo {
                 max-width: 108px;
             }
 
-
             #menuBtn {
                 font-size: 1.4rem;
-
                 padding: 0.35rem;
-
                 line-height: 1;
             }
-
 
             /* SIDEBAR */
 
             #sidebar .flex.flex-col {
                 gap: 1.25rem;
-
                 padding: 1rem 1.5rem 2rem;
             }
-
 
             #sidebar .flex.justify-end {
                 padding: 1rem 1.25rem;
             }
 
-
             /* HERO */
 
             .hero {
-                min-height: 100svh;
+                height: 330px;
             }
-
 
             .hero-content {
-                min-height: 100svh;
-
-                padding: 7.5rem 1.25rem 5rem;
+                height: 100%;
+                padding: 6rem 1.25rem 1.5rem;
             }
-
 
             .hero-content>div {
                 width: 100%;
             }
 
-
             .hero-description {
                 width: 100%;
-
                 min-height: 145px;
             }
 
-
             .phrase {
                 width: 100%;
-
                 padding: 0 0.25rem;
-
                 font-size: clamp(1.65rem, 7.5vw, 2.8rem);
-
                 line-height: 1.3;
             }
 
-
             .phrase span {
                 white-space: normal;
-
                 width: 100%;
-
                 max-width: 100%;
             }
 
         }
-
 
         /* =========================================
        SMALL PHONES
@@ -545,60 +459,50 @@
         @media (max-width: 480px) {
 
             .contact-bar>div {
-
                 gap: 0.55rem;
-
                 padding-inline: 0.5rem;
-
                 font-size: 0.62rem;
             }
-
 
             .contact-bar a {
                 gap: 0.3rem;
             }
 
-
             #navbar {
                 padding: 0.6rem 0;
             }
 
-
             .nav-inner {
                 width: calc(100% - 1rem);
-
                 min-height: 50px;
             }
-
 
             .nav-logo {
                 max-width: 95px;
             }
 
-
             #menuBtn {
                 font-size: 1.3rem;
             }
 
-
-            .hero-content {
-                padding: 6.5rem 1rem 4rem;
+            .hero {
+                height: 280px;
             }
 
+            .hero-content {
+                padding: 5.5rem 1rem 1rem;
+            }
 
             .hero-description {
                 min-height: 135px;
             }
 
-
             .phrase {
                 font-size: clamp(1.45rem, 7.2vw, 2.1rem);
-
                 line-height: 1.35;
             }
 
         }
-
 
         /* =========================================
        VERY SMALL PHONES
@@ -607,28 +511,22 @@
         @media (max-width: 360px) {
 
             .contact-bar>div {
-
                 font-size: 0.58rem;
-
                 gap: 0.4rem;
             }
-
 
             .nav-inner {
                 width: calc(100% - 0.75rem);
             }
 
-
             .nav-logo {
                 max-width: 88px;
             }
-
 
             .hero-content {
                 padding-left: 0.75rem;
                 padding-right: 0.75rem;
             }
-
 
             .phrase {
                 font-size: 1.35rem;
@@ -636,7 +534,6 @@
             }
 
         }
-
 
         /* =========================================
        LARGE DESKTOP
@@ -648,12 +545,10 @@
                 width: min(100% - 5rem, 1280px);
             }
 
-
             .hero-content {
                 padding-left: 5rem;
                 padding-right: 5rem;
             }
-
 
             .phrase {
                 font-size: clamp(3rem, 4.5vw, 4.8rem);
@@ -669,7 +564,6 @@
     <!-- HEADER -->
 
     <header>
-
 
         <!-- CONTACT BAR -->
 
@@ -689,7 +583,6 @@
 
                 </a>
 
-
                 <a href="tel:+255752686686"
                     class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
@@ -705,7 +598,6 @@
 
         </div>
 
-
         <!-- NAVIGATION -->
 
         <nav id="navbar" class="main-nav w-full">
@@ -717,7 +609,6 @@
                     <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
 
                 </a>
-
 
                 <!-- DESKTOP MENU -->
 
@@ -749,7 +640,6 @@
 
                 </div>
 
-
                 <!-- MOBILE MENU BUTTON -->
 
                 <button id="menuBtn" class="md:hidden text-yellow-400" type="button" aria-label="Open navigation menu">
@@ -761,7 +651,6 @@
             </div>
 
         </nav>
-
 
         <!-- MOBILE SIDEBAR -->
 
@@ -777,7 +666,6 @@
                 </button>
 
             </div>
-
 
             <div class="flex flex-col text-lg font-semibold text-yellow-400">
 
@@ -807,27 +695,21 @@
 
     </header>
 
-
-    <!-- HERO VIDEO + TYPING WORDS -->
+    <!-- HERO VIDEO + TYPING5 WORDS -->
 
     <section class="hero w-full overflow-hidden text-white">
 
-        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
-
-            <source src="./resource/video/product.mp4" type="video/mp4">
-
-        </video>
-
+        <img src="./resource/image/about11.png" alt="Products">
 
         <div class="hero-content relative z-[1] flex items-center justify-center text-center">
 
-                        <div class="hero-content">
+            <div class="hero-content">
 
                 <div class="text-center">
 
                     <h1 class="hero-title text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
 
-                        OUR 
+                        OUR
 
                         <span class="text-yellow-400">
 
@@ -853,18 +735,12 @@
 
         <div class="max-w-7xl mx-auto">
 
-
             <!-- SECTION TITLE -->
 
             <div class="text-center mb-16">
 
-                <h2 class="text-green-700 font-semibold uppercase tracking-[0.2em] text-sm">
-                    Our Products
-                </h2>
 
             </div>
-
-
 
             <!-- =================================================
                  AGRICOOP
@@ -872,18 +748,16 @@
 
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
 
-
                 <!-- IMAGE -->
 
-                <div>
+                <div class="ring-gray-500">
 
                     <!-- REPLACE IMAGE HERE -->
 
-                    <img src="resource/images/agricoop.jpg" alt="AgriCoop agricultural cooperative management platform"
-                        class="w-full h-[380px] md:h-[450px] object-cover rounded-3xl">
+                    <img src="resource/image/agricoop.jpeg" alt="AgriCoop agricultural cooperative management platform"
+                        class="pic-border w-full h-[380px] md:h-[450px] object-cover rounded-1xl ">
 
                 </div>
-
 
                 <!-- CONTENT -->
 
@@ -893,11 +767,9 @@
                         AgriCoop
                     </h2>
 
-
                     <p class="mt-3 text-green-700 font-semibold">
                         Cooperative Management Platform
                     </p>
-
 
                     <p class="mt-6 text-gray-600 leading-8">
                         AgriCoop is a digital solution designed to simplify
@@ -907,11 +779,9 @@
                         operational records.
                     </p>
 
-
                     <!-- FEATURES -->
 
                     <div class="grid sm:grid-cols-2 gap-5 mt-8">
-
 
                         <!-- Member Management -->
 
@@ -938,7 +808,6 @@
 
                         </div>
 
-
                         <!-- Farmer Records -->
 
                         <div class="flex items-start gap-3">
@@ -964,7 +833,6 @@
 
                         </div>
 
-
                         <!-- Reports -->
 
                         <div class="flex items-start gap-3">
@@ -989,7 +857,6 @@
                             </div>
 
                         </div>
-
 
                         <!-- Operations -->
 
@@ -1022,14 +889,11 @@
 
             </div>
 
-
-
             <!-- =================================================
                  E-AMCOS
             ================================================== -->
 
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
-
 
                 <!-- CONTENT -->
 
@@ -1039,11 +903,9 @@
                         e-AMCOS
                     </h2>
 
-
                     <p class="mt-3 text-green-700 font-semibold">
                         Digital AMCOS Management
                     </p>
-
 
                     <p class="mt-6 text-gray-600 leading-8">
                         e-AMCOS provides a digital environment for managing
@@ -1052,11 +914,9 @@
                         records, produce collection, payments and reporting.
                     </p>
 
-
                     <!-- FEATURES -->
 
                     <div class="grid sm:grid-cols-2 gap-5 mt-8">
-
 
                         <!-- Farmer Registration -->
 
@@ -1083,7 +943,6 @@
 
                         </div>
 
-
                         <!-- Produce Management -->
 
                         <div class="flex items-start gap-3">
@@ -1109,7 +968,6 @@
 
                         </div>
 
-
                         <!-- Payment Records -->
 
                         <div class="flex items-start gap-3">
@@ -1134,7 +992,6 @@
                             </div>
 
                         </div>
-
 
                         <!-- Digital Reports -->
 
@@ -1165,21 +1022,18 @@
 
                 </div>
 
-
                 <!-- IMAGE -->
 
                 <div class="lg:order-2">
 
                     <!-- REPLACE IMAGE HERE -->
 
-                    <img src="resource/images/e-amcos.jpg" alt="e-AMCOS digital agricultural cooperative management"
-                        class="w-full h-[380px] md:h-[450px] object-cover rounded-3xl">
+                    <img src="resource/image/amcos.jpeg" alt="e-AMCOS digital agricultural cooperative management"
+                        class="pic-border w-full h-[380px] md:h-[450px] object-cover rounded-1xl">
 
                 </div>
 
             </div>
-
-
 
             <!-- =================================================
                  AGRISASA
@@ -1187,18 +1041,16 @@
 
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-
                 <!-- IMAGE -->
 
                 <div>
 
                     <!-- REPLACE IMAGE HERE -->
 
-                    <img src="resource/images/agrisasa.jpg" alt="AgriSasa agricultural marketplace"
-                        class="w-full h-[380px] md:h-[450px] object-cover rounded-3xl">
+                    <img src="resource/image/agrisas.jpeg" alt="AgriSasa agricultural marketplace"
+                        class="pic-border w-full h-[380px] md:h-[450px] object-cover rounded-1xl ">
 
                 </div>
-
 
                 <!-- CONTENT -->
 
@@ -1208,11 +1060,9 @@
                         AgriSasa
                     </h2>
 
-
                     <p class="mt-3 text-green-700 font-semibold">
                         Agricultural Digital Marketplace
                     </p>
-
 
                     <p class="mt-6 text-gray-600 leading-8">
                         AgriSasa connects farmers, cooperatives, buyers and
@@ -1221,11 +1071,9 @@
                         connect with buyers and access agricultural markets.
                     </p>
 
-
                     <!-- FEATURES -->
 
                     <div class="grid sm:grid-cols-2 gap-5 mt-8">
-
 
                         <!-- Product Listing -->
 
@@ -1252,7 +1100,6 @@
 
                         </div>
 
-
                         <!-- Buyer Connection -->
 
                         <div class="flex items-start gap-3">
@@ -1278,7 +1125,6 @@
 
                         </div>
 
-
                         <!-- Market Discovery -->
 
                         <div class="flex items-start gap-3">
@@ -1303,7 +1149,6 @@
                             </div>
 
                         </div>
-
 
                         <!-- Digital Connections -->
 
@@ -1336,7 +1181,6 @@
 
             </div>
 
-
         </div>
 
     </section>
@@ -1345,18 +1189,15 @@
 
     <footer class="bg-[#07130d] text-white">
 
-
         <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
 
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
-
 
                 <!-- COMPANY -->
 
                 <div>
 
                     <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="mb-5 h-12 w-auto">
-
 
                     <h1 class="text-2xl font-extrabold tracking-tight">
 
@@ -1368,11 +1209,9 @@
 
                     </h1>
 
-
                     <p class="mt-1 text-xs text-gray-500">
                         (T) LIMITED
                     </p>
-
 
                     <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
 
@@ -1382,7 +1221,6 @@
 
                     </p>
 
-
                     <div class="mt-6 flex items-center gap-3">
 
                         <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
@@ -1391,7 +1229,6 @@
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
-
 
                         <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
@@ -1404,7 +1241,6 @@
 
                 </div>
 
-
                 <!-- SOLUTIONS -->
 
                 <div>
@@ -1412,7 +1248,6 @@
                     <h3 class="mb-5 text-lg font-semibold">
                         Solutions
                     </h3>
-
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
@@ -1450,7 +1285,6 @@
 
                 </div>
 
-
                 <!-- QUICK LINKS -->
 
                 <div>
@@ -1458,7 +1292,6 @@
                     <h3 class="mb-5 text-lg font-semibold">
                         Quick Links
                     </h3>
-
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
@@ -1496,7 +1329,6 @@
 
                 </div>
 
-
                 <!-- SUPPORT -->
 
                 <div>
@@ -1504,7 +1336,6 @@
                     <h3 class="mb-5 text-lg font-semibold">
                         Support
                     </h3>
-
 
                     <div class="space-y-5 text-sm text-gray-400">
 
@@ -1526,7 +1357,6 @@
 
                         </div>
 
-
                         <div>
 
                             <a href="mailto:info@qelatechnologies.co.tz"
@@ -1546,8 +1376,6 @@
 
         </div>
 
-
-
         <!-- COPYRIGHT -->
 
         <div class="bg-black/30">
@@ -1563,7 +1391,6 @@
 
                 </p>
 
-
                 <div class="flex gap-5 text-sm text-gray-500">
 
                     <a href="#" class="transition duration-300 hover:text-green-500">
@@ -1571,7 +1398,6 @@
                         Privacy Policy
 
                     </a>
-
 
                     <a href="#" class="transition duration-300 hover:text-green-500">
 
@@ -1587,113 +1413,72 @@
 
     </footer>
 
-
     <!-- HEADER FUNCTIONALITY -->
 
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-
             /* =========================================
                MOBILE SIDEBAR
             ========================================= */
 
             const menuBtn = document.getElementById("menuBtn");
-
             const closeBtn = document.getElementById("closeBtn");
-
             const sidebar = document.getElementById("sidebar");
-
 
             if (menuBtn && closeBtn && sidebar) {
 
-
                 function openSidebar() {
-
                     sidebar.classList.remove("translate-x-full");
-
                     sidebar.classList.add("translate-x-0");
-
                     document.body.classList.add("overflow-hidden");
-
                 }
-
 
                 function closeSidebar() {
-
                     sidebar.classList.remove("translate-x-0");
-
                     sidebar.classList.add("translate-x-full");
-
                     document.body.classList.remove("overflow-hidden");
-
                 }
 
-
                 menuBtn.addEventListener("click", function () {
-
                     openSidebar();
-
                 });
-
 
                 closeBtn.addEventListener("click", function () {
-
                     closeSidebar();
-
                 });
-
 
                 const sidebarLinks = sidebar.querySelectorAll("a");
 
-
                 sidebarLinks.forEach(function (link) {
-
                     link.addEventListener("click", function () {
-
                         closeSidebar();
-
                     });
-
                 });
-
 
                 document.addEventListener("keydown", function (event) {
-
                     if (event.key === "Escape") {
-
                         closeSidebar();
-
                     }
-
                 });
 
-
                 window.addEventListener("resize", function () {
-
                     if (window.innerWidth >= 768) {
-
                         closeSidebar();
-
                     }
-
                 });
 
             }
-
 
             /* =========================================
                STICKY NAVBAR
             ========================================= */
 
             const navbar = document.getElementById("navbar");
-
             const contactBar = document.querySelector(".contact-bar");
 
-
             if (navbar) {
-
 
                 function handleNavbarScroll() {
 
@@ -1702,25 +1487,18 @@
                             ? contactBar.offsetHeight
                             : 44;
 
-
                     if (window.scrollY > triggerPoint) {
-
                         navbar.classList.add("is-sticky");
-
                     } else {
-
                         navbar.classList.remove("is-sticky");
-
                     }
 
                 }
-
 
                 window.addEventListener(
                     "scroll",
                     handleNavbarScroll
                 );
-
 
                 handleNavbarScroll();
 
