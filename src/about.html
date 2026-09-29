@@ -18,9 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -59,7 +57,10 @@
             overflow-x: hidden;
         }
 
-        h1,h2,h3,h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -67,6 +68,7 @@
             max-width: 100%;
             display: block;
         }
+
         .image-zoom {
             transition: transform 0.8s ease;
         }
@@ -187,12 +189,10 @@
             inset: 0;
             z-index: 1;
             background:
-                linear-gradient(
-                    90deg,
+                linear-gradient(90deg,
                     rgba(0, 0, 0, 0.58) 0%,
                     rgba(0, 0, 0, 0.30) 50%,
-                    rgba(0, 0, 0, 0.42) 100%
-                );
+                    rgba(0, 0, 0, 0.42) 100%);
         }
 
         .hero-content {
@@ -377,8 +377,7 @@
             <div
                 class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-2 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm">
 
-                <a
-                    href="mailto:info@qelatechnologies.co.tz"
+                <a href="mailto:info@qelatechnologies.co.tz"
                     class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
                     <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
@@ -389,8 +388,7 @@
 
                 </a>
 
-                <a
-                    href="tel:+255752686686"
+                <a href="tel:+255752686686"
                     class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
                     <i class="fa-solid fa-phone text-[#dfa21f]"></i>
@@ -410,17 +408,12 @@
              MOBILE SIDEBAR
         ================================================== -->
 
-        <div
-            id="sidebar"
+        <div id="sidebar"
             class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-gray-900 transition-transform duration-300 md:hidden">
 
             <div class="flex justify-end p-5">
 
-                <button
-                    id="closeBtn"
-                    class="text-2xl text-white"
-                    type="button"
-                    aria-label="Close menu">
+                <button id="closeBtn" class="text-2xl text-white" type="button" aria-label="Close menu">
 
                     <i class="fa-solid fa-xmark"></i>
 
@@ -428,8 +421,7 @@
 
             </div>
 
-            <div
-                class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
+            <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
 
                 <a href="index.html">
                     Home
@@ -464,11 +456,7 @@
 
             <!-- ABOUT IMAGE -->
 
-            <img
-                src="./resource/image/about2.jpg"
-                alt="Farmers working with crops"
-                class="hero-image"
-                loading="eager"
+            <img src="./resource/image/about11.png" alt="Farmers working with crops" class="hero-image" loading="eager"
                 decoding="async">
 
 
@@ -481,21 +469,15 @@
                  NAVIGATION
             ================================================== -->
 
-            <nav
-                id="navbar"
-                class="w-full p-4">
+            <nav id="navbar" class="w-full p-4">
 
-                <div
-                    class="nav-inner flex items-center justify-between gap-8">
+                <div class="nav-inner flex items-center justify-between gap-8">
 
                     <!-- LOGO -->
 
                     <a href="./index.html">
 
-                        <img
-                            src="./resource/image/qela_logo.png"
-                            class="nav-logo h-16"
-                            alt="QELA logo">
+                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
 
                     </a>
 
@@ -534,10 +516,7 @@
 
                     <!-- MOBILE MENU BUTTON -->
 
-                    <button
-                        id="menuBtn"
-                        class="text-2xl text-yellow-400 md:hidden"
-                        type="button"
+                    <button id="menuBtn" class="text-2xl text-yellow-400 md:hidden" type="button"
                         aria-label="Open navigation menu">
 
                         <i class="fa-solid fa-bars"></i>
@@ -557,8 +536,7 @@
 
                 <div class="text-center">
 
-                    <h1
-                        class="hero-title text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+                    <h1 class="hero-title text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
 
                         About
 
@@ -593,7 +571,7 @@
 
                     <div class="flex items-center gap-3">
 
-                    
+
 
                         <span class="text-sm font-semibold uppercase
                                      tracking-[0.2em] text-[#055f30]">
@@ -616,70 +594,57 @@
 
 
             <div class="grid lg:grid-cols-12
-                        gap-10 lg:gap-16
-                        items-center">
-
+            gap-10 lg:gap-16
+            items-start">
 
                 <!-- IMAGE -->
-
                 <div class="lg:col-span-7">
 
                     <div class="image-wrapper relative
-                                overflow-hidden
-                                rounded-[2rem]
-                                bg-[#e9ede8]
-                                h-[480px]
-                                sm:h-[580px]
-                                lg:h-[700px]">
+                    overflow-hidden
+                    rounded-[2rem]
+                    bg-[#e9ede8]
+                    h-[480px]
+                    sm:h-[580px]
+                    lg:h-[700px]">
 
                         <img src="./resource/image/aboutpic1.png" alt="QELA Technologies digital data management" class="image-zoom absolute inset-0
-                                   w-full h-full
-                                   object-cover">
-
-
-
+                        w-full h-full
+                        object-cover">
 
                         <div class="absolute inset-0
-                                    bg-gradient-to-t
-                                    from-[#07130d]/70
-                                    via-transparent
-                                    to-transparent">
+                        bg-gradient-to-t
+                        from-[#07130d]/70
+                        via-transparent
+                        to-transparent">
                         </div>
-
-
-
-
 
                     </div>
 
                 </div>
 
-
-
-
-
+                <!-- TEXT -->
                 <div class="lg:col-span-5">
 
-
-                    <p class=" mt-7 text-lg
-                              leading-[1.8]
-                              text-gray-600">
+                    <p class="text-lg
+                  leading-[1.8]
+                  text-gray-600">
 
                         <span class="text-sm font-semibold uppercase
-                                     tracking-[0.2em] text-[#dfa21f]">QELA Technologies (T) Ltd </span> is a Tanzanian
-                        technology company creating practical digital
-                        solutions for agriculture, businesses and
+                         tracking-[0.2em] text-[#dfa21f]">
+                            QELA Technologies (T) Ltd
+                        </span>
+                        is a Tanzanian technology company creating practical
+                        digital solutions for agriculture, businesses and
                         organizations. We use technology to simplify
-                        everyday challenges, improve access to
-                        information and help people work more
-                        effectively.
+                        everyday challenges, improve access to information
+                        and help people work more effectively.
 
                     </p>
 
-
                     <p class="mt-6 text-base sm:text-lg
-                              leading-[1.8]
-                              text-gray-500">
+                  leading-[1.8]
+                  text-gray-500">
 
                         Our work brings together digital systems,
                         data management, web and mobile applications,
@@ -691,10 +656,9 @@
 
                     </p>
 
-
                     <p class="mt-6 text-base sm:text-lg
-                              leading-[1.8]
-                              text-gray-500">
+                  leading-[1.8]
+                  text-gray-500">
 
                         From managing information and business
                         operations to supporting agriculture and
@@ -703,9 +667,6 @@
                         use, understand and benefit from.
 
                     </p>
-
-
-                   
 
                 </div>
 
@@ -717,8 +678,7 @@
 
     <section class="bg-white py-16 sm:py-20 lg:py-24">
 
-        <div
-            class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
 
 
             <!-- =================================================
@@ -727,23 +687,20 @@
 
             <div class="mt-0">
 
-                <div
-                    class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+                <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
 
 
                     <!-- LEFT TITLE -->
 
                     <div class="lg:col-span-4">
 
-                        <p
-                            class="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
+                        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
 
                             What We Do
 
                         </p>
 
-                        <h2
-                            class="text-3xl font-semibold leading-tight md:text-4xl">
+                        <h2 class="text-3xl font-semibold leading-tight md:text-4xl">
 
                             Digital solutions
                             built to create value.
@@ -760,23 +717,20 @@
 
                         <!-- ITEM 01 -->
 
-                        <div
-                            class="border-t border-gray-200 py-7 md:py-8">
+                        <div class="border-t border-gray-200 py-7 md:py-8">
 
                             <div class="flex gap-5 md:gap-6">
 
 
                                 <div>
 
-                                    <h3
-                                        class="mb-3 text-xl font-semibold md:text-2xl">
+                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
 
                                         Agriculture Technology
 
                                     </h3>
 
-                                    <p
-                                        class="max-w-2xl text-gray-500 leading-relaxed">
+                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Digital solutions that help
                                         connect agricultural data,
@@ -794,24 +748,21 @@
 
                         <!-- ITEM 02 -->
 
-                        <div
-                            class="border-t border-gray-200 py-7 md:py-8">
+                        <div class="border-t border-gray-200 py-7 md:py-8">
 
                             <div class="flex gap-5 md:gap-6">
 
-                              
+
 
                                 <div>
 
-                                    <h3
-                                        class="mb-3 text-xl font-semibold md:text-2xl">
+                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
 
                                         Business Solutions
 
                                     </h3>
 
-                                    <p
-                                        class="max-w-2xl text-gray-500 leading-relaxed">
+                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Smart digital systems that
                                         help organizations manage
@@ -830,24 +781,21 @@
 
                         <!-- ITEM 03 -->
 
-                        <div
-                            class="border-b border-t border-gray-200 py-7 md:py-8">
+                        <div class="border-b border-t border-gray-200 py-7 md:py-8">
 
                             <div class="flex gap-5 md:gap-6">
 
-                              
+
 
                                 <div>
 
-                                    <h3
-                                        class="mb-3 text-xl font-semibold md:text-2xl">
+                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
 
                                         Digital Innovation
 
                                     </h3>
 
-                                    <p
-                                        class="max-w-2xl text-gray-500 leading-relaxed">
+                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
 
                                         Modern technology built to
                                         solve challenges, improve
@@ -880,18 +828,15 @@
 
                     <!-- MISSION -->
 
-                    <div
-                        class="rounded-[1.5rem] bg-gray-50 p-7 sm:p-8 md:p-10">
+                    <div class="rounded-[1.5rem] bg-gray-50 p-7 sm:p-8 md:p-10">
 
-                        <p
-                            class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
+                        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
 
                             Our Mission
 
                         </p>
 
-                        <h3
-                            class="text-2xl font-semibold leading-tight md:text-3xl">
+                        <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
 
                             To create practical technology
                             that improves how people and
@@ -904,18 +849,15 @@
 
                     <!-- VISION -->
 
-                    <div
-                        class="rounded-[1.5rem] bg-green-800 p-7 text-white sm:p-8 md:p-10">
+                    <div class="rounded-[1.5rem] bg-green-800 p-7 text-white sm:p-8 md:p-10">
 
-                        <p
-                            class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-green-200">
+                        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-green-200">
 
                             Our Vision
 
                         </p>
 
-                        <h3
-                            class="text-2xl font-semibold leading-tight md:text-3xl">
+                        <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
 
                             To become a trusted technology
                             partner driving digital
@@ -932,7 +874,7 @@
         </div>
 
     </section>
-    
+
 
 
     <!-- =====================================================
@@ -941,24 +883,18 @@
 
     <footer class="bg-[#07130d] text-white">
 
-        <div
-            class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
+        <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
 
-            <div
-                class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
 
 
                 <!-- COMPANY -->
 
                 <div>
 
-                    <img
-                        src="./resource/logos/qela_icon.svg"
-                        alt="Qela Technologies Logo"
-                        class="mb-5 h-12 w-auto">
+                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="mb-5 h-12 w-auto">
 
-                    <h1
-                        class="text-2xl font-extrabold tracking-tight">
+                    <h1 class="text-2xl font-extrabold tracking-tight">
 
                         Qela
 
@@ -972,8 +908,7 @@
                         (T) LIMITED
                     </p>
 
-                    <p
-                        class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+                    <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
 
                         Empowering businesses through innovative
                         technology, digital transformation and
@@ -983,18 +918,14 @@
 
                     <div class="mt-6 flex items-center gap-3">
 
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100063736423326"
-                            aria-label="Facebook"
+                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-                        <a
-                            href="https://www.instagram.com/qelatech/"
-                            aria-label="Instagram"
+                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-instagram"></i>
@@ -1014,13 +945,10 @@
                         Solutions
                     </h3>
 
-                    <ul
-                        class="space-y-3 text-sm text-gray-400">
+                    <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Digital Transformation
 
@@ -1028,9 +956,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Business Management
 
@@ -1038,9 +964,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Data Management
 
@@ -1048,9 +972,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Cloud Solutions
 
@@ -1058,9 +980,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Custom Software
 
@@ -1080,13 +1000,10 @@
                         Quick Links
                     </h3>
 
-                    <ul
-                        class="space-y-3 text-sm text-gray-400">
+                    <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
-                            <a
-                                href="about.html"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="about.html" class="transition duration-300 hover:text-green-500">
 
                                 About Us
 
@@ -1094,9 +1011,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="product.html"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="product.html" class="transition duration-300 hover:text-green-500">
 
                                 Our Products
 
@@ -1104,9 +1019,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="industry.html"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="industry.html" class="transition duration-300 hover:text-green-500">
 
                                 Industries
 
@@ -1114,9 +1027,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="resource.html"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="resource.html" class="transition duration-300 hover:text-green-500">
 
                                 Resources
 
@@ -1124,9 +1035,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="#"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="#" class="transition duration-300 hover:text-green-500">
 
                                 Contact Us
 
@@ -1146,14 +1055,11 @@
                         Support
                     </h3>
 
-                    <div
-                        class="space-y-5 text-sm text-gray-400">
+                    <div class="space-y-5 text-sm text-gray-400">
 
                         <div>
 
-                            <a
-                                href="tel:+255718352944"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255718352944" class="transition duration-300 hover:text-green-500">
 
                                 +255 718 352 944
 
@@ -1161,9 +1067,7 @@
 
                             <br>
 
-                            <a
-                                href="tel:+255742073002"
-                                class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255742073002" class="transition duration-300 hover:text-green-500">
 
                                 +255 742 073 002
 
@@ -1173,8 +1077,7 @@
 
                         <div>
 
-                            <a
-                                href="mailto:info@qelatechnologies.co.tz"
+                            <a href="mailto:info@qelatechnologies.co.tz"
                                 class="transition duration-300 hover:text-green-500">
 
                                 info@qelatechnologies.co.tz
@@ -1199,28 +1102,22 @@
             <div
                 class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 sm:px-8 lg:flex-row lg:px-10">
 
-                <p
-                    class="text-center text-sm text-gray-500 lg:text-left">
+                <p class="text-center text-sm text-gray-500 lg:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
                     All Rights Reserved.
 
                 </p>
 
-                <div
-                    class="flex gap-5 text-sm text-gray-500">
+                <div class="flex gap-5 text-sm text-gray-500">
 
-                    <a
-                        href="#"
-                        class="transition duration-300 hover:text-green-500">
+                    <a href="#" class="transition duration-300 hover:text-green-500">
 
                         Privacy Policy
 
                     </a>
 
-                    <a
-                        href="#"
-                        class="transition duration-300 hover:text-green-500">
+                    <a href="#" class="transition duration-300 hover:text-green-500">
 
                         Terms & Conditions
 
