@@ -985,6 +985,18 @@ video {
   height: 7rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
 .min-h-\[100svh\] {
   min-height: 100svh;
 }
