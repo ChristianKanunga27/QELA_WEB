@@ -9,13 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- <style>
-        .font-serif-display { font-family: 'Fraunces', serif; }
-        .font-sans-body { font-family: 'Inter', sans-serif; }
-    </style> -->
+ <style>
+  .f{font-family:'Sora',sans-serif}
+  .marquee{display:flex;width:max-content;animation:m 28s linear infinite}
+  @keyframes m{to{transform:translateX(-50%)}}
+
+ </style>
 </head>
 
 <body class="">
+
+    <!-- MARQUEE -->
+<section class="bg-[#a3e635] py-4 overflow-hidden text-[#0f2a17] f font-semibold text-sm">
+  <div class="marquee gap-12">
+    <div class="flex gap-12 pr-12 shrink-0"><span>✦ Business License</span><span>✦ TRA Registered</span><span>✦ TCDC Certified</span><span>✦ ICA Member</span><span>✦ Certificate of Incorporation</span><span>✦ Award of Appreciation</span></div>
+    <div class="flex gap-12 pr-12 shrink-0"><span>✦ Business License</span><span>✦ TRA Registered</span><span>✦ TCDC Certified</span><span>✦ ICA Member</span><span>✦ Certificate of Incorporation</span><span>✦ Award of Appreciation</span></div>
+  </div>
+</section>
 
 <section class="bg-gray-400 px-8 sm:px-10 lg:px-18 py-16 lg:py-24 text-center">
     <div class="max-w-6xl mx-auto text-center">
@@ -39,32 +49,29 @@
 
                 <!-- Business License -->
                 <figure class="flex flex-col">
-                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/business license.png.jpeg"
                              alt="Business License"
                              class="w-full h-full object-contain">
                     </div>
-                  
                 </figure>
 
                 <!-- ICA -->
                 <figure>
-                    <div class="h-48 sm:h-64 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-36 sm:h-48 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/ica.png.jpeg"
                              alt="ICA"
                              class="w-full h-full object-contain">
                     </div>
-                   
                 </figure>
 
                 <!-- Hati ya Shukrani -->
                 <figure class="flex flex-col">
-                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/hati ya shukrani.png.jpeg"
                              alt="Hati ya Shukrani"
                              class="w-full h-full object-contain">
                     </div>
-                  
                 </figure>
 
             </div>
@@ -73,30 +80,27 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7">
 
                 <figure>
-                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/incoporate.png.jpeg"
                              alt="Incorporate"
                              class="w-full h-full object-contain">
                     </div>
-                  
                 </figure>
 
                 <figure>
-                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/tcdc.png.jpeg"
                              alt="TCDC"
                              class="w-full h-full object-contain">
                     </div>
-                    
                 </figure>
 
                 <figure>
-                    <div class="aspect-[3/4] overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-52 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/tra.png.jpeg"
                              alt="TRA"
                              class="w-full h-full object-contain">
                     </div>
-                    
                 </figure>
 
             </div>
@@ -104,12 +108,11 @@
             <!-- Shukrani Certificate, centered below both rows -->
             <div class="flex justify-center mt-5 sm:mt-7">
                 <figure class="w-full max-w-xs sm:max-w-sm">
-                    <div class="h-64 sm:h-72 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
+                    <div class="h-40 sm:h-48 overflow-hidden bg-[#f4f5f3] border border-[#e2e5e1] p-2">
                         <img src="./resource/gallery/shukrani certfc.png.jpeg"
                              alt="Shukrani Certificate"
                              class="w-full h-full object-contain">
                     </div>
-                    
                 </figure>
             </div>
 
