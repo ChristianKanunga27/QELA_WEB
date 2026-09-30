@@ -35,7 +35,7 @@
         body {
             margin: 0;
             background: var(--ink);
-            font-family: 'DM Sans', sans-serif;
+            /* font-family: 'DM Sans', sans-serif; */
             overflow-x: hidden;
         }
 
@@ -188,7 +188,7 @@
         /* FIX: hero background image now fills the hero (same as the video),
            so the "OUR PRODUCTS" text appears on top of it */
         .hero video,
-        .hero > img {
+        .hero>img {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -247,7 +247,7 @@
             justify-content: center;
             align-content: flex-start;
             gap: 0 0.35em;
-            font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
             font-size: clamp(2rem, 5vw, 4.6rem);
             font-weight: 500;
             line-height: 1.12;
@@ -740,19 +740,32 @@
 
     </section>
 
+
     <!-- =====================================================
          OUR PRODUCTS
     ====================================================== -->
 
     <section class="product-section">
 
+
         <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-8 mb-8 lg:mb-12">
+                <div class="lg:col-span-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-semibold uppercase
+                                     tracking-[0.2em] text-[#055f30]">
+                            Products
+                        </span>
+                    </div>
+                </div>
+            </div>
 
             <!-- =================================================
                  AGRICOOP
             ================================================== -->
 
             <div class="product-row grid lg:grid-cols-2 items-center">
+
 
                 <!-- IMAGE -->
 
