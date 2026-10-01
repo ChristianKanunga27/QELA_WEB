@@ -1,698 +1,67 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
+        content="Explore Qela Technologies resources, insights, case studies, reports and digital agriculture knowledge.">
 
-    <title>QELA Technology | Digital solutions for agriculture</title>
+    <title>Qela Technologies | Resources</title>
 
-    <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="./output.css" rel="stylesheet">
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-    <style>
-        :root {
-            --ink: #10271b;
-            --lime: #dfa21f;
-            --overlay: rgba(14, 63, 29, 0.72);
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-            margin: 0;
-            background: var(--ink);
-            font-family: 'DM Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-
-        /* =========================================
-       CONTACT BAR
-    ========================================= */
-
-        .contact-bar {
-            min-height: 44px;
-            box-sizing: border-box;
-            background: #000;
-        }
-
-
-        .contact-bar h4 {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            margin: 0;
-            white-space: nowrap;
-        }
-
-
-        .contact-bar i {
-            color: var(--lime);
-            font-size: 0.8rem;
-        }
-
-
-        /* =========================================
-       HEADER
-    ========================================= */
-
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            width: 100%;
-        }
-
-
-        /* =========================================
-       NAVIGATION
-    ========================================= */
-
-        .main-nav {
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-        }
-
-
-        #navbar {
-            padding: 0.85rem 0;
-            transition: background 180ms ease, box-shadow 180ms ease;
-        }
-
-
-        #navbar.is-sticky {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.97) !important;
-            box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
-        }
-
-
-        .nav-inner {
-            width: min(100% - 3rem, 1280px);
-            margin: 0 auto;
-        }
-
-
-        .nav-logo {
-            width: auto;
-            max-width: 150px;
-        }
-
-
-        .nav-links a {
-            position: relative;
-            color: #e4ab25;
-            font-size: 1.2rem;
-            letter-spacing: 0.02em;
-            transition: color 180ms ease;
-        }
-
-
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: -0.45rem;
-            left: 0;
-            height: 2px;
-            background: var(--lime);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 180ms ease;
-        }
-
-
-        .nav-links a:hover::after,
-        .nav-links a:focus-visible::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-
-        #navbar.is-sticky .nav-links a {
-            color: #10271b;
-        }
-
-
-        /* =========================================
-       MOBILE SIDEBAR
-    ========================================= */
-
-        #sidebar {
-            width: min(18rem, 85vw);
-        }
-
-
-        /* =========================================
-       HERO
-    ========================================= */
-
-        .hero {
-            min-height: min(860px, 100svh);
-            position: relative;
-            isolation: isolate;
-            background: #183c28;
-        }
-
-
-        .hero video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background: linear-gradient(90deg,
-                    rgba(7, 28, 16, 0.78),
-                    rgba(7, 28, 16, 0.34) 65%,
-                    rgba(7, 28, 16, 0.5));
-
-            z-index: -1;
-        }
-
-
-        /* =========================================
-       HERO CONTENT
-    ========================================= */
-
-        .hero-content {
-            align-items: center;
-            justify-content: center;
-
-            min-height: 100svh;
-
-            padding: 8rem clamp(1.25rem, 5vw, 5rem) 6rem;
-
-            text-align: center;
-        }
-
-
-        .hero-content>div {
-            width: min(1000px, 100%);
-        }
-
-
-        .hero-description {
-            position: relative;
-            width: 100%;
-            min-height: 180px;
-            margin: 0 auto;
-        }
-
-
-        .phrase {
-            position: absolute;
-            inset: 0;
-
-            display: flex;
-            flex-wrap: wrap;
-
-            justify-content: center;
-            align-content: flex-start;
-
-            gap: 0 0.35em;
-
-            font-family: 'Poppins', sans-serif;
-
-            font-size: clamp(2rem, 5vw, 4.6rem);
-
-            font-weight: 500;
-
-            line-height: 1.12;
-
-            color: #fff;
-
-            text-align: center;
-
-            text-wrap: balance;
-        }
-
-
-        .phrase span {
-            flex: 0 0 100%;
-
-            justify-content: center;
-
-            white-space: nowrap;
-
-            opacity: 0;
-
-            transform: translateY(8px);
-
-            animation: wordAnimation 14s infinite;
-        }
-
-
-        .phrase-one span:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-
-        .phrase-one span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-
-        .phrase-one span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-
-        .phrase-two span:nth-child(1) {
-            animation-delay: 7s;
-        }
-
-
-        .phrase-two span:nth-child(2) {
-            animation-delay: 7.2s;
-        }
-
-
-        .phrase-two span:nth-child(3) {
-            animation-delay: 7.4s;
-        }
-
-
-        @keyframes wordAnimation {
-
-            0% {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-
-            5% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            45% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            52% {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-
-        }
-
-
-        /* =========================================
-       ACCESSIBILITY
-    ========================================= */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-            *::before,
-            *::after {
-
-                scroll-behavior: auto !important;
-
-                animation-duration: 0.01ms !important;
-
-                animation-iteration-count: 1 !important;
-            }
-
-        }
-
-
-        /* =========================================
-       TABLETS
-    ========================================= */
-
-        @media (max-width: 1024px) {
-
-            .nav-inner {
-                width: calc(100% - 2.5rem);
-            }
-
-
-            .nav-logo {
-                max-width: 135px;
-            }
-
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-
-            .nav-links a {
-                font-size: 1.05rem;
-            }
-
-
-            .hero-content {
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
-            }
-
-
-            .phrase {
-                font-size: clamp(2rem, 6vw, 4rem);
-            }
-
-        }
-
-
-        /* =========================================
-       MOBILE
-    ========================================= */
-
-        @media (max-width: 767px) {
-
-            /* CONTACT BAR */
-
-            .contact-bar>div {
-                min-height: 44px;
-
-                justify-content: center;
-
-                gap: 0.8rem;
-
-                padding: 0.55rem 0.75rem;
-
-                font-size: 0.68rem;
-
-                line-height: 1.2;
-
-                flex-wrap: wrap;
-            }
-
-
-            .contact-bar a {
-                gap: 0.4rem;
-            }
-
-
-            .contact-bar i {
-                font-size: 0.7rem;
-            }
-
-
-            /* NAV */
-
-            #navbar {
-                padding: 0.7rem 0;
-            }
-
-
-            .nav-inner {
-                width: calc(100% - 1.5rem);
-
-                min-height: 54px;
-
-                gap: 1rem;
-            }
-
-
-            .nav-logo {
-                max-width: 108px;
-            }
-
-
-            #menuBtn {
-                font-size: 1.4rem;
-
-                padding: 0.35rem;
-
-                line-height: 1;
-            }
-
-
-            /* SIDEBAR */
-
-            #sidebar .flex.flex-col {
-                gap: 1.25rem;
-
-                padding: 1rem 1.5rem 2rem;
-            }
-
-
-            #sidebar .flex.justify-end {
-                padding: 1rem 1.25rem;
-            }
-
-
-            /* HERO */
-
-            .hero {
-                min-height: 100svh;
-            }
-
-
-            .hero-content {
-                min-height: 100svh;
-
-                padding: 7.5rem 1.25rem 5rem;
-            }
-
-
-            .hero-content>div {
-                width: 100%;
-            }
-
-
-            .hero-description {
-                width: 100%;
-
-                min-height: 145px;
-            }
-
-
-            .phrase {
-                width: 100%;
-
-                padding: 0 0.25rem;
-
-                font-size: clamp(1.65rem, 7.5vw, 2.8rem);
-
-                line-height: 1.3;
-            }
-
-
-            .phrase span {
-                white-space: normal;
-
-                width: 100%;
-
-                max-width: 100%;
-            }
-
-        }
-
-
-        /* =========================================
-       SMALL PHONES
-    ========================================= */
-
-        @media (max-width: 480px) {
-
-            .contact-bar>div {
-
-                gap: 0.55rem;
-
-                padding-inline: 0.5rem;
-
-                font-size: 0.62rem;
-            }
-
-
-            .contact-bar a {
-                gap: 0.3rem;
-            }
-
-
-            #navbar {
-                padding: 0.6rem 0;
-            }
-
-
-            .nav-inner {
-                width: calc(100% - 1rem);
-
-                min-height: 50px;
-            }
-
-
-            .nav-logo {
-                max-width: 95px;
-            }
-
-
-            #menuBtn {
-                font-size: 1.3rem;
-            }
-
-
-            .hero-content {
-                padding: 6.5rem 1rem 4rem;
-            }
-
-
-            .hero-description {
-                min-height: 135px;
-            }
-
-
-            .phrase {
-                font-size: clamp(1.45rem, 7.2vw, 2.1rem);
-
-                line-height: 1.35;
-            }
-
-        }
-
-
-        /* =========================================
-       VERY SMALL PHONES
-    ========================================= */
-
-        @media (max-width: 360px) {
-
-            .contact-bar>div {
-
-                font-size: 0.58rem;
-
-                gap: 0.4rem;
-            }
-
-
-            .nav-inner {
-                width: calc(100% - 0.75rem);
-            }
-
-
-            .nav-logo {
-                max-width: 88px;
-            }
-
-
-            .hero-content {
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
-            }
-
-
-            .phrase {
-                font-size: 1.35rem;
-                line-height: 1.35;
-            }
-
-        }
-
-
-        /* =========================================
-       LARGE DESKTOP
-    ========================================= */
-
-        @media (min-width: 1440px) {
-
-            .nav-inner {
-                width: min(100% - 5rem, 1280px);
-            }
-
-
-            .hero-content {
-                padding-left: 5rem;
-                padding-right: 5rem;
-            }
-
-
-            .phrase {
-                font-size: clamp(3rem, 4.5vw, 4.8rem);
-            }
-
-        }
-    </style>
-
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-white">
 
-    <!-- HEADER -->
+<body class="bg-[#f5f7f5] text-[#07130d]">
+    
+     <header class="relative left-0 right-0 top-0 z-50 w-full">
 
-    <header>
 
+        <!-- ================= CONTACT BAR ================= -->
 
-        <!-- CONTACT BAR -->
-
-        <div class="contact-bar w-full bg-black text-white">
+        <div class="min-h-[40px] box-border w-full bg-black text-white">
 
             <div
-                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+                class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-[0.55rem] px-[0.6rem] text-[0.63rem] sm:gap-[0.85rem] sm:px-4 sm:text-xs md:gap-5 md:px-5 lg:gap-7 lg:px-8 lg:text-sm xl:px-10">
 
-                <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <!-- EMAIL -->
 
-                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+                <a
+                    href="mailto:info@qelatechnologies.co.tz"
+                    class="flex min-w-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
 
-                    <span>
+                    <i class="fa-solid fa-envelope shrink-0 text-[#dfa21f]"></i>
+
+                    <span class="truncate">
                         info@qelatechnologies.co.tz
                     </span>
 
                 </a>
 
 
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <!-- PHONE -->
 
-                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+                <a
+                    href="tel:+255752686686"
+                    class="flex shrink-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
+
+                    <i class="fa-solid fa-phone shrink-0 text-[#dfa21f]"></i>
 
                     <span>
                         +255 718 352 944
@@ -705,159 +74,540 @@
         </div>
 
 
-        <!-- NAVIGATION -->
 
-        <nav id="navbar" class="main-nav w-full">
+        <!-- ================= HERO ================= -->
 
-            <div class="nav-inner flex items-center justify-between gap-8">
-
-                <a href="./index.html">
-
-                    <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
-
-                </a>
+        <div
+            class="relative h-[280px] w-full overflow-hidden sm:h-[300px] md:h-[330px] lg:h-[390px] xl:h-[420px]">
 
 
-                <!-- DESKTOP MENU -->
+            <!-- HERO IMAGE -->
 
-                <div class="hidden md:block">
+            <img
+                src="./resource/gallery/leseimg2.avif"
+                alt="Farmers working with crops"
+                loading="eager"
+                decoding="async"
+                class="absolute inset-0 h-full w-full object-cover object-center">
 
-                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
 
-                        <a href="index.html">
-                            Home
-                        </a>
+            <!-- HERO OVERLAY -->
 
-                        <a href="about.html">
-                            About
-                        </a>
+            <div
+                class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.30)_50%,rgba(0,0,0,0.42)_100%)]">
+            </div>
 
-                        <a href="product.html">
-                            Products
-                        </a>
 
-                        <a href="industry.html">
-                            Industry
-                        </a>
 
-                        <a href="resource.html">
-                            Resources
-                        </a>
+            <!-- ================= MOBILE SIDEBAR ================= -->
 
-                    </div>
+            <div
+                id="sidebar"
+                class="fixed right-0 top-0 z-[60] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
+
+
+                <!-- CLOSE BUTTON -->
+
+                <div class="flex h-16 shrink-0 items-center justify-end px-5">
+
+                    <button
+                        id="closeBtn"
+                        type="button"
+                        aria-label="Close menu"
+                        class="flex h-11 w-11 items-center justify-center text-2xl text-white">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
 
                 </div>
 
 
-                <!-- MOBILE MENU BUTTON -->
+                <!-- MOBILE LINKS -->
 
-                <button id="menuBtn" class="md:hidden text-yellow-400" type="button" aria-label="Open navigation menu">
+                <div
+                    class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
 
-                    <i class="fa-solid fa-bars"></i>
+                    <a href="index.html">
+                        Home
+                    </a>
 
-                </button>
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="product.html">
+                        Products
+                    </a>
+
+                    <a href="industry.html">
+                        Industry
+                    </a>
+
+                    <a href="resource.html">
+                        Resources
+                    </a>
+
+                </div>
 
             </div>
 
-        </nav>
 
 
-        <!-- MOBILE SIDEBAR -->
+            <!-- ================= NAVIGATION ================= -->
 
-        <div id="sidebar"
-            class="fixed top-0 right-0 z-50 h-full bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+            <nav
+                id="navbar"
+                class="absolute left-0 top-0 z-30 w-full px-4 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
 
-            <div class="flex justify-end">
 
-                <button id="closeBtn" class="text-white text-2xl" type="button" aria-label="Close navigation menu">
+                <div
+                    class="mx-auto flex w-full max-w-7xl items-center justify-between">
 
-                    <i class="fa-solid fa-xmark"></i>
 
-                </button>
+                    <!-- LOGO -->
 
+                    <a
+                        href="./index.html"
+                        class="flex shrink-0 items-center">
+
+                        <img
+                            src="./resource/image/qela_logo.png"
+                            alt="QELA logo"
+                            class="h-10 w-auto max-w-[105px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
+
+                    </a>
+
+
+
+                    <!-- ================= DESKTOP NAVIGATION ================= -->
+
+                    <div class="hidden md:flex">
+
+                        <div
+                            class="flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
+
+
+                            <!-- HOME -->
+
+                            <a
+                                href="index.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
+                                Home
+
+                            </a>
+
+
+                            <!-- ABOUT -->
+
+                            <a
+                                href="about.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
+                                About
+
+                            </a>
+
+
+                            <!-- PRODUCTS -->
+
+                            <a
+                                href="product.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
+                                Products
+
+                            </a>
+
+
+                            <!-- INDUSTRY -->
+
+                            <a
+                                href="industry.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
+                                Industry
+
+                            </a>
+
+
+                            <!-- RESOURCES -->
+
+                            <a
+                                href="resource.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
+                                Resources
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MOBILE MENU BUTTON ================= -->
+
+                    <button
+                        id="menuBtn"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- ================= HERO TITLE ================= -->
+
+            <div
+                class="relative z-10 flex h-full items-center justify-center px-5 sm:px-6">
+
+                <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+
+            <div class="max-w-3xl">
+
+
+
+                <!-- Label -->
+                <h1 class="text-white text-5xl md:text-6xl lg:text-7xl
+                    font-semibold leading-[1.08] ml-60">
+
+                    Ideas that
+                    <span class="text-yellow-400">
+                        grow
+                    </span>
+                    agriculture.
+
+                </h1>
             </div>
 
-
-            <div class="flex flex-col text-lg font-semibold text-yellow-400">
-
-                <a href="home.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="product.html">
-                    Products
-                </a>
-
-                <a href="industry.html">
-                    Industry
-                </a>
-
-                <a href="resource.html">
-                    Resources
-                </a>
+                <div class="flex flex-wrap gap-4 mt-9">
+            
+        </div>
 
             </div>
 
         </div>
 
     </header>
+    <!-- ================= CATEGORIES ================= -->
+
+    <section id="resources" class="bg-white py-10">
+
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
 
-    <!-- HERO VIDEO + TYPING WORDS -->
+            <!-- Section Introduction -->
 
-    <section class="hero w-full overflow-hidden text-white">
+            <div class="mx-auto mb-12 max-w-2xl text-center">
 
-        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+              
 
-            <source src="./resource/video/bg5.mp4" type="video/mp4">
+                <p class="mt-4 text-gray-600">
 
-        </video>
+                    Practical knowledge and ideas for a
+                    more connected agricultural future.
+
+                </p>
+
+            </div>
 
 
-        <div class="hero-content relative z-[1] flex items-center justify-center text-center">
 
-            <div>
+            <!-- ================= FILTER ================= -->
 
-                <div class="hero-description">
+            <div class="mb-12 flex flex-wrap justify-center gap-3">
 
-                    <div class="phrase phrase-one">
+                <button
+                    class="rounded-full border border-gray-200 bg-[#07130d] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5">
 
-                        <span>
-                            This page is currently
-                        </span>
+                    All Resources
 
-                        <span>
-                            under maintenance
-                        </span>
+                </button>
 
-                        <span>
-                            to serve you better.
-                        </span>
+
+                <button
+                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+
+                </button>
+
+
+                <button
+                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+
+                    Research
+
+                </button>
+
+
+                <button
+                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+
+                    Blog
+
+                </button>
+
+
+                <button
+                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+
+                    News
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= RESOURCE GRID ================= -->
+
+            <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+
+                <!-- ================= CARD 1 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <img
+                            src="./resource/gallery/resource1.jpg"
+                            alt="Agriculture technology"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
 
-                    <div class="phrase phrase-two">
+                    <div class="p-6">
 
-                        <span>
-                            We’re improving our digital
-                        </span>
+                        <h3 class="text-xl font-semibold leading-snug">
 
-                        <span>
-                            experience and will be
-                        </span>
+                            How digital technology is
+                            changing modern agriculture
 
-                        <span>
-                            back online shortly.
-                        </span>
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            Explore the role of digital tools
+                            in improving agricultural operations
+                            and decision-making.
+
+                        </p>
 
                     </div>
 
-                </div>
+                </article>
+
+
+
+                <!-- ================= CARD 2 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <img
+                            src="./resource/gallery/resource2.jpg"
+                            alt="Farmers using technology"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                    </div>
+
+
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold leading-snug">
+
+                            Digitising farmer and
+                            cooperative records
+
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            See how digital records can improve
+                            visibility, coordination and access
+                            to reliable farmer information.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= CARD 3 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <img
+                            src="./resource/gallery/resource3.jpg"
+                            alt="Smart farming"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                    </div>
+
+
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold leading-snug">
+
+                            A practical guide to
+                            smart farming
+
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            Understand the technologies helping
+                            organisations build more efficient
+                            and connected agricultural systems.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= CARD 4 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <img
+                            src="./resource/gallery/resource4.avif"
+                            alt="Agricultural data"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                    </div>
+
+
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold leading-snug">
+
+                            Why agricultural data matters
+
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            Reliable data gives agricultural
+                            organisations better visibility
+                            across their operations.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= CARD 5 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <img
+                            src="./resource/gallery/resource5.jpg"
+                            alt="Seed production"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                    </div>
+
+
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold leading-snug">
+
+                            Digital tools for modern
+                            seed production
+
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            Discover how technology can support
+                            better visibility across seed
+                            production operations.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= CARD 6 ================= -->
+
+                <article
+                    class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
+
+                    <div class="relative h-56 overflow-hidden">
+
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="auto"
+                            aria-hidden="true"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                            <source
+                                src="./resource/video/bg5.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold leading-snug">
+
+                            Technology and the future
+                            of African agriculture
+
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+
+                            Watch our latest discussion on
+                            technology, data and opportunities
+                            in African agriculture.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
 
             </div>
 
@@ -866,42 +616,94 @@
     </section>
 
 
-    <!-- FOOTER -->
 
-    <footer class="bg-[#07130d] text-white">
+    <!-- ================= INTRO ================= -->
+
+    <section class="bg-white py-20">
+
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div class="grid items-end gap-12 lg:grid-cols-2">
 
 
-        <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
+                <!-- Left -->
 
-            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+                <div>
+
+                    <span
+                        class="text-sm font-semibold uppercase tracking-[0.18em] text-green-600">
+
+                        Knowledge for agriculture
+
+                    </span>
 
 
-                <!-- COMPANY -->
+                    <h2
+                        class="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
+
+                        Stay informed.
+                        <br>
+
+                        <span class="text-yellow-400">
+                            Stay ahead.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <!-- Right -->
+
+                <div>
+
+                    <p
+                        class="max-w-xl text-lg leading-relaxed text-gray-600">
+
+                        Agriculture is changing rapidly.
+                        Our resource centre brings together
+                        practical ideas, digital agriculture
+                        insights and real-world experiences
+                        to help organisations make smarter
+                        decisions.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+        <footer class="bg-[#07130d] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-14">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
                 <div>
 
                     <a href="./index.html">
                         <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
                     </a>
-
-
                     <h1 class="text-2xl font-extrabold tracking-tight">
 
                         Qela
 
-                        <span class="text-green-500">
-                            Technologies
-                        </span>
+                        <span class="text-green-500">Technologies</span>
 
                     </h1>
 
+                    <p class="text-xs text-gray-500 mt-1">
 
-                    <p class="mt-1 text-xs text-gray-500">
                         (T) LIMITED
+
                     </p>
 
-
-                    <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
 
                         Empowering businesses through innovative technology,
                         digital transformation and
@@ -909,19 +711,17 @@
 
                     </p>
 
-
-                    <div class="mt-6 flex items-center gap-3">
+                    <div class="flex items-center gap-3 mt-6">
 
                         <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
-                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
 
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-
                         <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
-                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
 
                             <i class="fa-brands fa-instagram"></i>
 
@@ -931,56 +731,34 @@
 
                 </div>
 
-
-                <!-- SOLUTIONS -->
-
                 <div>
 
-                    <h3 class="mb-5 text-lg font-semibold">
-                        Solutions
-                    </h3>
+                    <h3 class="text-lg font-semibold mb-5">
 
+                        Solutions
+
+                    </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
-                        <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
-                                Digital Transformation
-                            </a>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Digital
+                                Transformation</a>
                         </li>
-
-                        <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
-                                Business Management
-                            </a>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Business
+                                Management</a>
                         </li>
-
-                        <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
-                                Data Management
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
-                                Cloud Solutions
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
-                                Custom Software
-                            </a>
-                        </li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Data
+                                Management</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud
+                                Solutions</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Custom
+                                Software</a></li>
 
                     </ul>
 
                 </div>
 
-
-                <!-- QUICK LINKS -->
-
-               <div>
+                <div>
 
                     <h3 class="text-lg font-semibold mb-5">
 
@@ -1004,21 +782,19 @@
 
                 </div>
 
-
-                <!-- SUPPORT -->
-
                 <div>
 
-                    <h3 class="mb-5 text-lg font-semibold">
-                        Support
-                    </h3>
+                    <h3 class="text-lg font-semibold mb-5">
 
+                        Support
+
+                    </h3>
 
                     <div class="space-y-5 text-sm text-gray-400">
 
                         <div>
 
-                            <a href="tel:+255718352944" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
 
                                 +255 718 352 944
 
@@ -1026,7 +802,7 @@
 
                             <br>
 
-                            <a href="tel:+255742073002" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
 
                                 +255 742 073 002
 
@@ -1034,11 +810,10 @@
 
                         </div>
 
-
                         <div>
 
                             <a href="mailto:info@qelatechnologies.co.tz"
-                                class="transition duration-300 hover:text-green-500">
+                                class="hover:text-green-500 transition duration-300">
 
                                 info@qelatechnologies.co.tz
 
@@ -1054,15 +829,11 @@
 
         </div>
 
-
-        <!-- COPYRIGHT -->
-
         <div class="bg-black/30">
 
-            <div
-                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 sm:px-8 lg:flex-row lg:px-10">
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
 
-                <p class="text-center text-sm text-gray-500 lg:text-left">
+                <p class="text-sm text-gray-500 text-center md:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
 
@@ -1070,17 +841,15 @@
 
                 </p>
 
-
                 <div class="flex gap-5 text-sm text-gray-500">
 
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+                    <a href="#" class="hover:text-green-500 transition duration-300">
 
                         Privacy Policy
 
                     </a>
 
-
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+                    <a href="#" class="hover:text-green-500 transition duration-300">
 
                         Terms & Conditions
 
@@ -1093,24 +862,25 @@
         </div>
 
     </footer>
+    <!-- ================= JAVASCRIPT ================= -->
 
-
-    <!-- HEADER FUNCTIONALITY -->
-
-    <script>
+  <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
 
-            /* =========================================
+            /* ==========================================
                MOBILE SIDEBAR
-            ========================================= */
+            ========================================== */
 
-            const menuBtn = document.getElementById("menuBtn");
+            const menuBtn =
+                document.getElementById("menuBtn");
 
-            const closeBtn = document.getElementById("closeBtn");
+            const closeBtn =
+                document.getElementById("closeBtn");
 
-            const sidebar = document.getElementById("sidebar");
+            const sidebar =
+                document.getElementById("sidebar");
 
 
             if (menuBtn && closeBtn && sidebar) {
@@ -1118,85 +888,104 @@
 
                 function openSidebar() {
 
-                    sidebar.classList.remove("translate-x-full");
+                    sidebar.classList.remove(
+                        "translate-x-full"
+                    );
 
-                    sidebar.classList.add("translate-x-0");
+                    sidebar.classList.add(
+                        "translate-x-0"
+                    );
 
-                    document.body.classList.add("overflow-hidden");
+                    document.body.classList.add(
+                        "overflow-hidden"
+                    );
 
                 }
 
 
                 function closeSidebar() {
 
-                    sidebar.classList.remove("translate-x-0");
+                    sidebar.classList.remove(
+                        "translate-x-0"
+                    );
 
-                    sidebar.classList.add("translate-x-full");
+                    sidebar.classList.add(
+                        "translate-x-full"
+                    );
 
-                    document.body.classList.remove("overflow-hidden");
+                    document.body.classList.remove(
+                        "overflow-hidden"
+                    );
 
                 }
 
 
-                menuBtn.addEventListener("click", function () {
-
-                    openSidebar();
-
-                });
-
-
-                closeBtn.addEventListener("click", function () {
-
-                    closeSidebar();
-
-                });
+                menuBtn.addEventListener(
+                    "click",
+                    openSidebar
+                );
 
 
-                const sidebarLinks = sidebar.querySelectorAll("a");
+                closeBtn.addEventListener(
+                    "click",
+                    closeSidebar
+                );
 
 
-                sidebarLinks.forEach(function (link) {
+                sidebar
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
 
-                    link.addEventListener("click", function () {
-
-                        closeSidebar();
+                        link.addEventListener(
+                            "click",
+                            closeSidebar
+                        );
 
                     });
 
-                });
 
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
 
-                document.addEventListener("keydown", function (event) {
+                        if (event.key === "Escape") {
 
-                    if (event.key === "Escape") {
+                            closeSidebar();
 
-                        closeSidebar();
-
-                    }
-
-                });
-
-
-                window.addEventListener("resize", function () {
-
-                    if (window.innerWidth >= 768) {
-
-                        closeSidebar();
+                        }
 
                     }
+                );
 
-                });
+
+                window.addEventListener(
+                    "resize",
+                    function () {
+
+                        if (window.innerWidth >= 768) {
+
+                            closeSidebar();
+
+                        }
+
+                    }
+                );
 
             }
 
 
-            /* =========================================
-               STICKY NAVBAR
-            ========================================= */
 
-            const navbar = document.getElementById("navbar");
+            /* ==========================================
+               STICKY NAVIGATION
+            ========================================== */
 
-            const contactBar = document.querySelector(".contact-bar");
+            const navbar =
+                document.getElementById("navbar");
+
+            const contactBar =
+                document.querySelector(
+                    "header > div:first-child"
+                );
 
 
             if (navbar) {
@@ -1204,19 +993,119 @@
 
                 function handleNavbarScroll() {
 
+
                     const triggerPoint =
                         contactBar
                             ? contactBar.offsetHeight
-                            : 44;
+                            : 40;
 
 
                     if (window.scrollY > triggerPoint) {
 
-                        navbar.classList.add("is-sticky");
+
+                        navbar.classList.remove(
+                            "absolute"
+                        );
+
+
+                        navbar.classList.add(
+                            "fixed",
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                        );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div.flex.items-center > a, div.flex.items-center > div > a"
+                            );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
+                            .forEach(function (link) {
+
+                                link.classList.remove(
+                                    "text-yellow-400"
+                                );
+
+                                link.classList.add(
+                                    "text-green-800"
+                                );
+
+                            });
+
+
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
+                            );
+
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-yellow-400"
+                            );
+
+                            menuButton.classList.add(
+                                "text-green-800"
+                            );
+
+                        }
+
 
                     } else {
 
-                        navbar.classList.remove("is-sticky");
+
+                        navbar.classList.remove(
+                            "fixed",
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                        );
+
+
+                        navbar.classList.add(
+                            "absolute"
+                        );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
+                            .forEach(function (link) {
+
+                                link.classList.remove(
+                                    "text-green-800"
+                                );
+
+                                link.classList.add(
+                                    "text-yellow-400"
+                                );
+
+                            });
+
+
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
+                            );
+
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-green-800"
+                            );
+
+                            menuButton.classList.add(
+                                "text-yellow-400"
+                            );
+
+                        }
 
                     }
 
@@ -1225,7 +1114,10 @@
 
                 window.addEventListener(
                     "scroll",
-                    handleNavbarScroll
+                    handleNavbarScroll,
+                    {
+                        passive: true
+                    }
                 );
 
 

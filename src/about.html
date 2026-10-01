@@ -1,466 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>QELA Technology | Digital solutions for agriculture</title>
+
     <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
+
     <link href="./output.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        ink: '#1c2430',
-                        clay: '#a8683f',
-                        claylight: '#c98a5c',
-                        ivory: '#f6f2ea',
-                        paper: '#fbf9f5'
-                    },
-                    fontFamily: {
-                        serif: ['Fraunces', 'serif'],
-                        sans: ['DM Sans', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
 
-    <style>
-        /* ==============================
-           GLOBAL
-        ============================== */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'DM Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .image-zoom {
-            transition: transform 0.8s ease;
-        }
-
-        .image-wrapper:hover .image-zoom {
-            transform: scale(1.04);
-        }
-
-        /* ==============================
-           CONTACT BAR
-        ============================== */
-        .contact-bar {
-            min-height: 40px;
-            box-sizing: border-box;
-            background: #000;
-        }
-
-        /* ==============================
-           NAVIGATION
-        ============================== */
-        .nav-inner {
-            width: min(100% - 3rem, 1280px);
-            margin: 0 auto;
-        }
-
-        .nav-logo {
-            width: auto;
-            max-width: 150px;
-        }
-
-        .nav-links a {
-            position: relative;
-            transition: color 180ms ease;
-        }
-
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: -0.45rem;
-            left: 0;
-            height: 2px;
-            background: #dfa21f;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 180ms ease;
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a:focus-visible::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        header {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            width: 100%;
-        }
-
-        /* FIX: navbar is already placed below the contact bar (it sits inside
-           the hero section, which starts under the contact bar), so top must be 0.
-           The old value of 44px added an extra empty gap above logo and links. */
-        #navbar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 30;
-            background: transparent;
-            transition:
-                background 200ms ease,
-                box-shadow 200ms ease;
-        }
-
-        #navbar.is-sticky {
-            position: fixed;
-            top: 0;
-            background: white !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-        }
-
-        #navbar.is-sticky .nav-links,
-        #navbar.is-sticky .nav-links a,
-        #navbar.is-sticky #menuBtn {
-            color: #14532d;
-        }
-
-        /* ==============================
-           HERO IMAGE SECTION
-        ============================== */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 420px;
-            overflow: hidden;
-        }
-
-        .hero-image {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-            image-rendering: auto;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            background:
-                linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.58) 0%,
-                    rgba(0, 0, 0, 0.30) 50%,
-                    rgba(0, 0, 0, 0.42) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 1.5rem;
-        }
-
-        .hero-title {
-            text-shadow:
-                0 3px 15px rgba(0, 0, 0, 0.35),
-                0 2px 5px rgba(0, 0, 0, 0.25);
-        }
-
-        /* ==============================
-           MOBILE SIDEBAR
-        ============================== */
-        #sidebar {
-            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
-        }
-
-        /* ==============================
-           TABLET
-        ============================== */
-        @media (max-width: 1024px) {
-            .nav-inner {
-                width: calc(100% - 2.5rem);
-            }
-
-            .hero-section {
-                height: 390px;
-            }
-
-            .hero-content {
-                height: 100%;
-            }
-        }
-
-        /* ==============================
-           MOBILE
-        ============================== */
-        @media (max-width: 760px) {
-            .contact-bar {
-                justify-content: center;
-                gap: 0.85rem;
-                padding-inline: 1rem;
-                font-size: 0.68rem;
-            }
-
-            .nav-inner {
-                width: calc(100% - 2rem);
-                flex-wrap: wrap;
-                gap: 0.65rem 1rem;
-            }
-
-            .nav-logo {
-                max-width: 112px;
-                height: auto;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: space-between;
-                gap: 0.5rem;
-                padding-top: 0.5rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.22);
-            }
-
-            .nav-links a {
-                font-size: 0.76rem;
-            }
-
-            #navbar.is-sticky .nav-links {
-                border-color: rgba(16, 39, 27, 0.12);
-            }
-
-            .hero-section {
-                height: 330px;
-            }
-
-            .hero-content {
-                height: 100%;
-                padding: 0 1.5rem;
-            }
-
-            .hero-image {
-                object-position: center center;
-            }
-        }
-
-        /* ==============================
-           SMALL MOBILE
-        ============================== */
-        @media (max-width: 640px) {
-            .nav-inner {
-                width: calc(100% - 1.5rem);
-            }
-
-            .hero-section {
-                height: 300px;
-            }
-
-            .hero-content {
-                height: 100%;
-                padding: 0 1.25rem;
-            }
-
-            .hero-title {
-                font-size: 2.25rem;
-            }
-
-            .hero-image {
-                object-position: center center;
-            }
-        }
-
-        /* ==============================
-           VERY SMALL MOBILE
-        ============================== */
-        @media (max-width: 480px) {
-            .contact-bar {
-                font-size: 0.63rem;
-                gap: 0.55rem;
-                padding-inline: 0.6rem;
-            }
-
-            .nav-logo {
-                max-width: 105px;
-            }
-
-            .hero-section {
-                height: 280px;
-            }
-
-            .hero-content {
-                height: 100%;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
-<body>
+
+<body class="m-0 overflow-x-hidden bg-white font-['DM_Sans',sans-serif] text-[#1c2430]">
+
 
     <!-- =====================================================
          HEADER
     ====================================================== -->
-    <header>
 
-        <!-- CONTACT BAR -->
-        <div class="contact-bar w-full bg-black text-white">
+    <header class="relative left-0 right-0 top-0 z-50 w-full">
+
+
+        <!-- ================= CONTACT BAR ================= -->
+
+        <div class="min-h-[40px] box-border w-full bg-black text-white">
+
             <div
-                class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-3 px-4 py-0 sm:gap-5 sm:px-2 lg:gap-7 lg:px-8 xl:px-10">
+                class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-[0.55rem] px-[0.6rem] text-[0.63rem] sm:gap-[0.85rem] sm:px-4 sm:text-xs md:gap-5 md:px-5 lg:gap-7 lg:px-8 lg:text-sm xl:px-10">
 
                 <!-- EMAIL -->
-                <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex min-w-0 items-center gap-2 whitespace-nowrap text-[11px] font-medium transition hover:text-[#dfa21f] sm:text-xs lg:text-sm">
+
+                <a
+                    href="mailto:info@qelatechnologies.co.tz"
+                    class="flex min-w-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
+
                     <i class="fa-solid fa-envelope shrink-0 text-[#dfa21f]"></i>
+
                     <span class="truncate">
                         info@qelatechnologies.co.tz
                     </span>
+
                 </a>
 
+
                 <!-- PHONE -->
-                <a href="tel:+255752686686"
-                    class="flex shrink-0 items-center gap-2 whitespace-nowrap text-[11px] font-medium transition hover:text-[#dfa21f] sm:text-xs lg:text-sm">
+
+                <a
+                    href="tel:+255752686686"
+                    class="flex shrink-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
+
                     <i class="fa-solid fa-phone shrink-0 text-[#dfa21f]"></i>
+
                     <span>
                         +255 718 352 944
                     </span>
+
                 </a>
 
-            </div>
-        </div>
-
-        <!-- MOBILE SIDEBAR -->
-        <!-- FIX: close-button row reduced from h-20 to h-16, and link block
-             padding/gap tightened so links start closer to the top. -->
-        <div id="sidebar"
-            class="fixed right-0 top-0 z-50 flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 transition-transform duration-300 md:hidden">
-
-            <!-- CLOSE BUTTON -->
-            <div class="flex h-16 shrink-0 items-center justify-end px-5">
-                <button id="closeBtn" class="flex h-11 w-11 items-center justify-center text-2xl text-white"
-                    type="button" aria-label="Close menu">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <!-- MOBILE LINKS -->
-            <div class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="about.html">
-                    About
-                </a>
-                <a href="product.html">
-                    Products
-                </a>
-                <a href="industry.html">
-                    Industry
-                </a>
-                <a href="resource.html">
-                    Resources
-                </a>
             </div>
 
         </div>
 
-        <!-- HERO IMAGE SECTION -->
-        <div class="hero-section">
 
-            <img src="./resource/image/qela2.png" alt="Farmers working with crops" class="hero-image" loading="eager"
-                decoding="async">
 
-            <div class="hero-overlay"></div>
+        <!-- ================= HERO ================= -->
 
-            <!-- NAVIGATION -->
-            <!-- FIX: vertical padding reduced on mobile (py-2), logo slightly smaller on mobile -->
-            <nav id="navbar"
-                class="absolute left-0 top-0 z-20 w-full px-4 py-2 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
+        <div
+            class="relative h-[280px] w-full overflow-hidden sm:h-[300px] md:h-[330px] lg:h-[390px] xl:h-[420px]">
 
-                <div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 
-                    <!-- LOGO -->
-                    <a href="./index.html" class="flex shrink-0 items-center">
-                        <img src="./resource/image/qela_logo.png"
-                            class="nav-logo h-10 w-auto object-contain sm:h-14 lg:h-16" alt="QELA logo">
+            <!-- HERO IMAGE -->
+
+            <img
+                src="./resource/image/qela2.png"
+                alt="Farmers working with crops"
+                loading="eager"
+                decoding="async"
+                class="absolute inset-0 h-full w-full object-cover object-center">
+
+
+            <!-- HERO OVERLAY -->
+
+            <div
+                class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.30)_50%,rgba(0,0,0,0.42)_100%)]">
+            </div>
+
+
+
+            <!-- ================= MOBILE SIDEBAR ================= -->
+
+            <div
+                id="sidebar"
+                class="fixed right-0 top-0 z-[60] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
+
+
+                <!-- CLOSE BUTTON -->
+
+                <div class="flex h-16 shrink-0 items-center justify-end px-5">
+
+                    <button
+                        id="closeBtn"
+                        type="button"
+                        aria-label="Close menu"
+                        class="flex h-11 w-11 items-center justify-center text-2xl text-white">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- MOBILE LINKS -->
+
+                <div
+                    class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
+
+                    <a href="index.html">
+                        Home
                     </a>
 
-                    <!-- DESKTOP NAVIGATION -->
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="product.html">
+                        Products
+                    </a>
+
+                    <a href="industry.html">
+                        Industry
+                    </a>
+
+                    <a href="resource.html">
+                        Resources
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <nav
+                id="navbar"
+                class="absolute left-0 top-0 z-30 w-full px-4 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
+
+
+                <div
+                    class="mx-auto flex w-full max-w-7xl items-center justify-between">
+
+
+                    <!-- LOGO -->
+
+                    <a
+                        href="./index.html"
+                        class="flex shrink-0 items-center">
+
+                        <img
+                            src="./resource/image/qela_logo.png"
+                            alt="QELA logo"
+                            class="h-10 w-auto max-w-[105px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
+
+                    </a>
+
+
+
+                    <!-- ================= DESKTOP NAVIGATION ================= -->
+
                     <div class="hidden md:flex">
+
                         <div
-                            class="nav-links flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
-                            <a href="index.html">
+                            class="flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
+
+
+                            <!-- HOME -->
+
+                            <a
+                                href="index.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
                                 Home
+
                             </a>
-                            <a href="about.html">
+
+
+                            <!-- ABOUT -->
+
+                            <a
+                                href="about.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
                                 About
+
                             </a>
-                            <a href="product.html">
+
+
+                            <!-- PRODUCTS -->
+
+                            <a
+                                href="product.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
                                 Products
+
                             </a>
-                            <a href="industry.html">
+
+
+                            <!-- INDUSTRY -->
+
+                            <a
+                                href="industry.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
                                 Industry
+
                             </a>
-                            <a href="resource.html">
+
+
+                            <!-- RESOURCES -->
+
+                            <a
+                                href="resource.html"
+                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+
                                 Resources
+
                             </a>
+
                         </div>
+
                     </div>
 
-                    <!-- MOBILE MENU BUTTON -->
-                    <button id="menuBtn"
-                        class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden"
-                        type="button" aria-label="Open navigation menu">
+
+
+                    <!-- ================= MOBILE MENU BUTTON ================= -->
+
+                    <button
+                        id="menuBtn"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden">
+
                         <i class="fa-solid fa-bars"></i>
+
                     </button>
 
                 </div>
 
             </nav>
 
-            <!-- HERO TITLE -->
-            <div class="hero-content">
+
+
+            <!-- ================= HERO TITLE ================= -->
+
+            <div
+                class="relative z-10 flex h-full items-center justify-center px-5 sm:px-6">
+
                 <div class="px-4 text-center sm:px-6">
-                    <h1 class="hero-title text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+
+                    <h1
+                        class="font-['Poppins',sans-serif] text-[2rem] font-bold leading-tight text-white [text-shadow:0_3px_15px_rgba(0,0,0,0.35),0_2px_5px_rgba(0,0,0,0.25)] sm:text-4xl md:text-5xl lg:text-6xl">
+
                         About
+
                         <span class="text-yellow-400">
                             Us
                         </span>
+
                     </h1>
+
                 </div>
+
             </div>
 
         </div>
@@ -468,73 +303,97 @@
     </header>
 
 
+
     <!-- =====================================================
          ABOUT US
     ====================================================== -->
+
     <section class="py-12 sm:py-16 lg:py-20">
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
 
-            <div class="grid lg:grid-cols-12 gap-8 mb-8 lg:mb-12">
+
+            <!-- SECTION LABEL -->
+
+            <div
+                class="mb-8 grid gap-8 lg:mb-12 lg:grid-cols-12">
+
                 <div class="lg:col-span-4">
+
                     <div class="flex items-center gap-3">
-                        <span class="text-sm font-semibold uppercase
-                                     tracking-[0.2em] text-[#055f30]">
+
+                        <span
+                            class="font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-[0.2em] text-[#055f30]">
+
                             Who We Are
+
                         </span>
+
                     </div>
+
                 </div>
+
             </div>
 
-            <div class="grid lg:grid-cols-12
-            gap-10 lg:gap-16
-            items-start">
+
+
+            <!-- CONTENT -->
+
+            <div
+                class="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+
 
                 <!-- IMAGE -->
+
                 <div class="lg:col-span-7">
-                    <div class="image-wrapper relative
-                    overflow-hidden
-                    rounded-[2rem]
-                    bg-[#e9ede8]
-                    h-[480px]
-                    sm:h-[580px]
-                    lg:h-[700px]">
 
-                        <img src="./resource/gallery/1st about.avif" alt="QELA Technologies digital data management"
-                            class="image-zoom absolute inset-0
-                        w-full h-full
-                        object-cover">
+                    <div
+                        class="group relative h-[480px] overflow-hidden rounded-[2rem] bg-[#e9ede8] sm:h-[580px] lg:h-[700px]">
 
-                        <div class="absolute inset-0
-                        bg-gradient-to-t
-                        from-[#07130d]/70
-                        via-transparent
-                        to-transparent">
+                        <img
+                            src="./resource/gallery/1st about.avif"
+                            alt="QELA Technologies digital data management"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]">
+
+
+                        <!-- IMAGE OVERLAY -->
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[#07130d]/70 via-transparent to-transparent">
                         </div>
 
                     </div>
+
                 </div>
 
+
+
                 <!-- TEXT -->
+
                 <div class="lg:col-span-5">
 
-                    <p class="text-lg
-                  leading-[1.8]
-                  text-gray-600">
-                        <span class="text-sm font-semibold uppercase
-                         tracking-[0.2em] text-[#dfa21f]">
+                    <p
+                        class="text-lg leading-[1.8] text-gray-600">
+
+                        <span
+                            class="font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-[0.2em] text-[#dfa21f]">
+
                             QELA Technologies (T) Ltd
+
                         </span>
+
                         is a Tanzanian technology company creating practical
                         digital solutions for agriculture, businesses and
                         organizations. We use technology to simplify
                         everyday challenges, improve access to information
                         and help people work more effectively.
+
                     </p>
 
-                    <p class="mt-6 text-base sm:text-lg
-                  leading-[1.8]
-                  text-gray-500">
+
+                    <p
+                        class="mt-6 text-base leading-[1.8] text-gray-500 sm:text-lg">
+
                         Our work brings together digital systems,
                         data management, web and mobile applications,
                         and innovative technology to create solutions
@@ -542,16 +401,19 @@
                         we serve. We focus on understanding the problem
                         first, then building technology that is simple,
                         reliable and useful.
+
                     </p>
 
-                    <p class="mt-6 text-base sm:text-lg
-                  leading-[1.8]
-                  text-gray-500">
+
+                    <p
+                        class="mt-6 text-base leading-[1.8] text-gray-500 sm:text-lg">
+
                         From managing information and business
                         operations to supporting agriculture and
                         digital transformation, our goal is to turn
                         technology into something people can actually
                         use, understand and benefit from.
+
                     </p>
 
                 </div>
@@ -563,79 +425,156 @@
     </section>
 
 
+
+    <!-- =====================================================
+         WHAT WE DO / MISSION / VISION
+    ====================================================== -->
+
     <section class="bg-white py-8 sm:py-12 lg:py-16">
 
-        <div class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div
+            class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
 
-            <!-- WHAT WE DO -->
+
+            <!-- ================= WHAT WE DO ================= -->
+
             <div class="mt-0">
 
-                <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+                <div
+                    class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+
 
                     <!-- LEFT TITLE -->
+
                     <div class="lg:col-span-4">
-                        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
+
+                        <p
+                            class="mb-4 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
+
                             What We Do
+
                         </p>
-                        <h2 class="text-3xl font-semibold leading-tight md:text-4xl">
+
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-3xl font-semibold leading-tight md:text-4xl">
+
                             Digital solutions
                             built to create value.
+
                         </h2>
+
                     </div>
 
+
+
                     <!-- RIGHT CONTENT -->
+
                     <div class="lg:col-span-8">
 
+
                         <!-- ITEM 01 -->
-                        <div class="border-t border-gray-200 py-5 md:py-6">
+
+                        <div
+                            class="border-t border-gray-200 py-5 md:py-6">
+
                             <div class="flex gap-5 md:gap-6">
+
                                 <div>
-                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                    <h3
+                                        class="mb-3 font-['Poppins',sans-serif] text-xl font-semibold md:text-2xl">
+
                                         Agriculture Technology
+
                                     </h3>
-                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
+
+
+                                    <p
+                                        class="max-w-2xl leading-relaxed text-gray-500">
+
                                         Digital solutions that help
                                         connect agricultural data,
                                         operations, farmers, and
                                         value chains.
+
                                     </p>
+
                                 </div>
+
                             </div>
+
                         </div>
 
+
+
                         <!-- ITEM 02 -->
-                        <div class="border-t border-gray-200 py-7 md:py-8">
+
+                        <div
+                            class="border-t border-gray-200 py-7 md:py-8">
+
                             <div class="flex gap-5 md:gap-6">
+
                                 <div>
-                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                    <h3
+                                        class="mb-3 font-['Poppins',sans-serif] text-xl font-semibold md:text-2xl">
+
                                         Business Solutions
+
                                     </h3>
-                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
+
+
+                                    <p
+                                        class="max-w-2xl leading-relaxed text-gray-500">
+
                                         Smart digital systems that
                                         help organizations manage
                                         information, improve
                                         operations, and work more
                                         efficiently.
+
                                     </p>
+
                                 </div>
+
                             </div>
+
                         </div>
 
+
+
                         <!-- ITEM 03 -->
-                        <div class="border-b border-t border-gray-200 py-7 md:py-8">
+
+                        <div
+                            class="border-b border-t border-gray-200 py-7 md:py-8">
+
                             <div class="flex gap-5 md:gap-6">
+
                                 <div>
-                                    <h3 class="mb-3 text-xl font-semibold md:text-2xl">
+
+                                    <h3
+                                        class="mb-3 font-['Poppins',sans-serif] text-xl font-semibold md:text-2xl">
+
                                         Digital Innovation
+
                                     </h3>
-                                    <p class="max-w-2xl text-gray-500 leading-relaxed">
+
+
+                                    <p
+                                        class="max-w-2xl leading-relaxed text-gray-500">
+
                                         Modern technology built to
                                         solve challenges, improve
                                         experiences, and create
                                         opportunities for growth.
+
                                     </p>
+
                                 </div>
+
                             </div>
+
                         </div>
 
                     </div>
@@ -644,33 +583,63 @@
 
             </div>
 
-            <!-- MISSION / VISION -->
+
+
+            <!-- ================= MISSION / VISION ================= -->
+
             <div class="mt-12 md:mt-16 lg:mt-20">
 
                 <div class="grid gap-6 md:grid-cols-2">
 
+
                     <!-- MISSION -->
-                    <div class="rounded-[1.5rem] bg-gray-50 p-7 sm:p-8 md:p-10">
-                        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
+
+                    <div
+                        class="rounded-[1.5rem] bg-gray-50 p-7 sm:p-8 md:p-10">
+
+                        <p
+                            class="mb-5 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-[0.15em] text-[#055f30]">
+
                             Our Mission
+
                         </p>
-                        <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
+
+
+                        <h3
+                            class="font-['Poppins',sans-serif] text-2xl font-semibold leading-tight md:text-3xl">
+
                             To create practical technology
                             that improves how people and
                             organizations work.
+
                         </h3>
+
                     </div>
 
+
+
                     <!-- VISION -->
-                    <div class="rounded-[1.5rem] bg-green-800 p-7 text-white sm:p-8 md:p-10">
-                        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-green-200">
+
+                    <div
+                        class="rounded-[1.5rem] bg-green-800 p-7 text-white sm:p-8 md:p-10">
+
+                        <p
+                            class="mb-5 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-[0.15em] text-green-200">
+
                             Our Vision
+
                         </p>
-                        <h3 class="text-2xl font-semibold leading-tight md:text-3xl">
+
+
+                        <h3
+                            class="font-['Poppins',sans-serif] text-2xl font-semibold leading-tight md:text-3xl">
+
                             To become a trusted technology
                             partner driving digital
                             transformation across Africa.
+
                         </h3>
+
                     </div>
 
                 </div>
@@ -681,300 +650,801 @@
 
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
 
-        <!-- Heading -->
-        <div class="max-w-2xl mx-auto text-center mb-14">
-            <p class="f font-semibold text-3xl mb-3">Certificates <span class="text-yellow-500"> & awards </span></p>
-            <h2 class="f text-3xl sm:text-4xl font-bold text-[#12261a]"></h2>
-            <p class="mt-4 text-gray-600">
-                We operate under full regulatory oversight of Tanzania's registration and revenue authorities.
+
+    <!-- =====================================================
+         CERTIFICATES AND AWARDS
+    ====================================================== -->
+
+    <section
+        class="mx-auto max-w-6xl px-6 py-20 lg:px-10 lg:py-28">
+
+
+        <!-- HEADING -->
+
+        <div
+            class="mx-auto mb-14 max-w-2xl text-center">
+
+            <p
+                class="font-['Poppins',sans-serif] text-3xl font-semibold">
+
+                Certificates
+
+                <span class="text-yellow-500">
+                    & awards
+                </span>
+
             </p>
+
+
+            <h2
+                class="font-['Poppins',sans-serif] text-3xl font-bold text-[#12261a] sm:text-4xl">
+            </h2>
+
+
+            <p class="mt-4 text-gray-600">
+
+                We operate under full regulatory oversight
+                of Tanzania's registration and revenue authorities.
+
+            </p>
+
         </div>
 
 
-        <!-- Certificate and Award Grid -->
-        <div class="grid grid-cols-2 gap-6 mt-10">
 
-            <!-- Award -->
-            <div class="bg-white rounded-2xl border shadow-sm hover:shadow-lg
-                transition-shadow overflow-hidden">
-                <img src="./resource/gallery/awardimage.jpeg" alt="Award"
-                    class="w-full h-64 sm:h-80 object-contain bg-[#f4f5f3] p-4">
+        <!-- CERTIFICATE GRID -->
+
+        <div
+            class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+
+
+            <!-- AWARD -->
+
+            <div
+                class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
+
+                <img
+                    src="./resource/gallery/awardimage.jpeg"
+                    alt="Award"
+                    class="h-64 w-full bg-[#f4f5f3] object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] sm:h-80">
 
                 <div class="p-5">
-                    <p class="text-xs font-semibold text-[#2f7d3a] mb-1">
+
+                    <p
+                        class="mb-1 text-xs font-semibold text-[#2f7d3a]">
+
                         BEST ICT SERVICE PROVIDER
+
                     </p>
+
                 </div>
+
             </div>
 
 
-            <!-- Business License -->
-            <div class="bg-white rounded-2xl border shadow-sm hover:shadow-lg
-                transition-shadow overflow-hidden">
-                <img src="./resource/gallery/business license.png.jpeg" alt="Business License"
-                    class="w-full h-64 sm:h-80 object-contain bg-[#f4f5f3] p-4">
+
+            <!-- BUSINESS LICENSE -->
+
+            <div
+                class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
+
+                <img
+                    src="./resource/gallery/business license.png.jpeg"
+                    alt="Business License"
+                    class="h-64 w-full bg-[#f4f5f3] object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] sm:h-80">
 
                 <div class="p-5">
-                    <p class="text-xs font-semibold text-[#2f7d3a] mb-1">
+
+                    <p
+                        class="mb-1 text-xs font-semibold text-[#2f7d3a]">
+
                         BUSINESS REGISTRATION
+
                     </p>
 
-
                 </div>
+
             </div>
 
 
-            <!-- Hati ya Shukrani -->
-            <div class="bg-white rounded-2xl border shadow-sm hover:shadow-lg
-                transition-shadow overflow-hidden">
-                <img src="./resource/gallery/hati ya shukrani.png.jpeg" alt="Hati ya Shukrani"
-                    class="w-full h-64 sm:h-80 object-contain bg-[#f4f5f3] p-4">
+
+            <!-- HATI YA SHUKRANI -->
+
+            <div
+                class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
+
+                <img
+                    src="./resource/gallery/hati ya shukrani.png.jpeg"
+                    alt="Hati ya Shukrani"
+                    class="h-64 w-full bg-[#f4f5f3] object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] sm:h-80">
 
                 <div class="p-5">
-                    <p class="text-xs font-semibold text-[#2f7d3a] mb-1">
+
+                    <p
+                        class="mb-1 text-xs font-semibold text-[#2f7d3a]">
+
                         RECOGNITION
+
                     </p>
 
                 </div>
+
             </div>
 
-            <!-- Shukrani Certificate -->
-            <div class="bg-white rounded-2xl border shadow-sm hover:shadow-lg
-                transition-shadow overflow-hidden">
-                <img src="./resource/gallery/shukrani certfc.png.jpeg" alt="Shukrani Certificate"
-                    class="w-full h-64 sm:h-80 object-contain bg-[#f4f5f3] p-4">
+
+
+            <!-- SHUKRANI CERTIFICATE -->
+
+            <div
+                class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
+
+                <img
+                    src="./resource/gallery/shukrani certfc.png.jpeg"
+                    alt="Shukrani Certificate"
+                    class="h-64 w-full bg-[#f4f5f3] object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02] sm:h-80">
 
                 <div class="p-5">
-                    <p class="text-xs font-semibold text-[#2f7d3a] mb-1">
+
+                    <p
+                        class="mb-1 text-xs font-semibold text-[#2f7d3a]">
+
                         RECOGNITION
+
                     </p>
 
                 </div>
+
             </div>
 
         </div>
+
     </section>
+
 
 
     <!-- =====================================================
          FOOTER
     ====================================================== -->
+
     <footer class="bg-[#07130d] text-white">
 
-        <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
+        <div
+            class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
 
-            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+            <div
+                class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
 
-                <!-- COMPANY -->
+
+                <!-- ================= COMPANY ================= -->
+
                 <div>
+
                     <a href="./index.html">
-                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+
+                        <img
+                            src="./resource/image/qela_logo.png"
+                            class="h-16 w-auto object-contain"
+                            alt="QELA logo">
+
                     </a>
-                    <h1 class="text-2xl font-extrabold tracking-tight">
+
+
+                    <h1
+                        class="font-['Poppins',sans-serif] text-2xl font-extrabold tracking-tight">
+
                         Qela
+
                         <span class="text-green-500">
                             Technologies
                         </span>
+
                     </h1>
+
+
                     <p class="mt-1 text-xs text-gray-500">
+
                         (T) LIMITED
+
                     </p>
-                    <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+
+
+                    <p
+                        class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+
                         Empowering businesses through innovative
                         technology, digital transformation and
                         smart agritech solutions.
+
                     </p>
+
+
+
+                    <!-- SOCIAL MEDIA -->
+
                     <div class="mt-6 flex items-center gap-3">
-                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
+
+
+                        <!-- FACEBOOK -->
+
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100063736423326"
+                            aria-label="Facebook"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+
                             <i class="fa-brands fa-facebook-f"></i>
+
                         </a>
-                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
+
+
+                        <!-- INSTAGRAM -->
+
+                        <a
+                            href="https://www.instagram.com/qelatech/"
+                            aria-label="Instagram"
                             class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+
                             <i class="fa-brands fa-instagram"></i>
+
                         </a>
+
                     </div>
+
                 </div>
 
-                <!-- SOLUTIONS -->
+
+
+                <!-- ================= SOLUTIONS ================= -->
+
                 <div>
-                    <h3 class="mb-5 text-lg font-semibold">
+
+                    <h3
+                        class="mb-5 font-['Poppins',sans-serif] text-lg font-semibold">
+
                         Solutions
+
                     </h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
+
+
+                    <ul
+                        class="space-y-3 text-sm text-gray-400">
+
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
                                 Digital Transformation
+
                             </a>
+
                         </li>
+
+
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
                                 Business Management
+
                             </a>
+
                         </li>
+
+
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
                                 Data Management
+
                             </a>
+
                         </li>
+
+
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
                                 Cloud Solutions
+
                             </a>
+
                         </li>
+
+
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+
+                            <a
+                                href="#"
+                                class="transition duration-300 hover:text-green-500">
+
                                 Custom Software
+
                             </a>
+
                         </li>
+
                     </ul>
+
                 </div>
 
-                <!-- QUICK LINKS -->
-                 <div>
 
-                    <h3 class="text-lg font-semibold mb-5">
+
+                <!-- ================= QUICK LINKS ================= -->
+
+                <div>
+
+                    <h3
+                        class="mb-5 font-['Poppins',sans-serif] text-lg font-semibold">
 
                         Quick Links
 
                     </h3>
 
-                    <ul class="space-y-3 text-sm text-gray-400">
 
-                         <li><a href="./index.html" class="hover:text-green-500 transition duration-300">Home
-                                </a></li>
-                        <li><a href="./about.html" class="hover:text-green-500 transition duration-300">About
-                                </a></li>
-                        <li><a href="./product.html" class="hover:text-green-500 transition duration-300">
-                                Products</a></li>
-                        <li><a href="./industry.html" class="hover:text-green-500 transition duration-300">Industry</a></li>
-                        <li><a href="./resource.html" class="hover:text-green-500 transition duration-300">Resources</a></li>
-                        
+                    <ul
+                        class="space-y-3 text-sm text-gray-400">
+
+
+                        <li>
+
+                            <a
+                                href="./index.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="./about.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="./product.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Products
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="./industry.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Industry
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="./resource.html"
+                                class="transition duration-300 hover:text-green-500">
+
+                                Resources
+
+                            </a>
+
+                        </li>
 
                     </ul>
 
                 </div>
 
-                <!-- SUPPORT -->
+
+
+                <!-- ================= SUPPORT ================= -->
+
                 <div>
-                    <h3 class="mb-5 text-lg font-semibold">
+
+                    <h3
+                        class="mb-5 font-['Poppins',sans-serif] text-lg font-semibold">
+
                         Support
+
                     </h3>
-                    <div class="space-y-5 text-sm text-gray-400">
+
+
+                    <div
+                        class="space-y-5 text-sm text-gray-400">
+
+
+                        <!-- PHONE -->
+
                         <div>
-                            <a href="tel:+255718352944" class="transition duration-300 hover:text-green-500">
-                                +255 718 352 944
-                            </a>
-                            <br>
-                            <a href="tel:+255742073002" class="transition duration-300 hover:text-green-500">
-                                +255 742 073 002
-                            </a>
-                        </div>
-                        <div>
-                            <a href="mailto:info@qelatechnologies.co.tz"
+
+                            <a
+                                href="tel:+255718352944"
                                 class="transition duration-300 hover:text-green-500">
-                                info@qelatechnologies.co.tz
+
+                                +255 718 352 944
+
                             </a>
+
+                            <br>
+
+                            <a
+                                href="tel:+255742073002"
+                                class="transition duration-300 hover:text-green-500">
+
+                                +255 742 073 002
+
+                            </a>
+
                         </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div>
+
+                            <a
+                                href="mailto:info@qelatechnologies.co.tz"
+                                class="transition duration-300 hover:text-green-500">
+
+                                info@qelatechnologies.co.tz
+
+                            </a>
+
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <!-- COPYRIGHT -->
+
+
+        <!-- ================= COPYRIGHT ================= -->
+
         <div class="bg-black/30">
+
             <div
                 class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 sm:px-8 lg:flex-row lg:px-10">
-                <p class="text-center text-sm text-gray-500 lg:text-left">
+
+
+                <p
+                    class="text-center text-sm text-gray-500 lg:text-left">
+
                     © 2026 Qela Technologies (T) Limited.
                     All Rights Reserved.
+
                 </p>
-                <div class="flex gap-5 text-sm text-gray-500">
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+
+
+                <div
+                    class="flex gap-5 text-sm text-gray-500">
+
+                    <a
+                        href="#"
+                        class="transition duration-300 hover:text-green-500">
+
                         Privacy Policy
+
                     </a>
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+
+
+                    <a
+                        href="#"
+                        class="transition duration-300 hover:text-green-500">
+
                         Terms & Conditions
+
                     </a>
+
                 </div>
+
             </div>
+
         </div>
 
     </footer>
 
 
+
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
+
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* MOBILE SIDEBAR */
-            const menuBtn = document.getElementById("menuBtn");
-            const closeBtn = document.getElementById("closeBtn");
-            const sidebar = document.getElementById("sidebar");
+
+            /* ==========================================
+               MOBILE SIDEBAR
+            ========================================== */
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const closeBtn =
+                document.getElementById("closeBtn");
+
+            const sidebar =
+                document.getElementById("sidebar");
+
 
             if (menuBtn && closeBtn && sidebar) {
 
+
                 function openSidebar() {
-                    sidebar.classList.remove("translate-x-full");
-                    sidebar.classList.add("translate-x-0");
-                    document.body.classList.add("overflow-hidden");
+
+                    sidebar.classList.remove(
+                        "translate-x-full"
+                    );
+
+                    sidebar.classList.add(
+                        "translate-x-0"
+                    );
+
+                    document.body.classList.add(
+                        "overflow-hidden"
+                    );
+
                 }
+
 
                 function closeSidebar() {
-                    sidebar.classList.remove("translate-x-0");
-                    sidebar.classList.add("translate-x-full");
-                    document.body.classList.remove("overflow-hidden");
+
+                    sidebar.classList.remove(
+                        "translate-x-0"
+                    );
+
+                    sidebar.classList.add(
+                        "translate-x-full"
+                    );
+
+                    document.body.classList.remove(
+                        "overflow-hidden"
+                    );
+
                 }
 
-                menuBtn.addEventListener("click", openSidebar);
-                closeBtn.addEventListener("click", closeSidebar);
 
-                sidebar.querySelectorAll("a").forEach(function (link) {
-                    link.addEventListener("click", closeSidebar);
-                });
+                menuBtn.addEventListener(
+                    "click",
+                    openSidebar
+                );
 
-                document.addEventListener("keydown", function (event) {
-                    if (event.key === "Escape") {
-                        closeSidebar();
+
+                closeBtn.addEventListener(
+                    "click",
+                    closeSidebar
+                );
+
+
+                sidebar
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            closeSidebar
+                        );
+
+                    });
+
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (event.key === "Escape") {
+
+                            closeSidebar();
+
+                        }
+
                     }
-                });
+                );
 
-                window.addEventListener("resize", function () {
-                    if (window.innerWidth >= 768) {
-                        closeSidebar();
+
+                window.addEventListener(
+                    "resize",
+                    function () {
+
+                        if (window.innerWidth >= 768) {
+
+                            closeSidebar();
+
+                        }
+
                     }
-                });
+                );
 
             }
 
-            /* STICKY NAVIGATION */
-            const navbar = document.getElementById("navbar");
-            const contactBar = document.querySelector(".contact-bar");
+
+
+            /* ==========================================
+               STICKY NAVIGATION
+            ========================================== */
+
+            const navbar =
+                document.getElementById("navbar");
+
+            const contactBar =
+                document.querySelector(
+                    "header > div:first-child"
+                );
+
 
             if (navbar) {
 
+
                 function handleNavbarScroll() {
-                    const triggerPoint = contactBar ? contactBar.offsetHeight : 40;
+
+
+                    const triggerPoint =
+                        contactBar
+                            ? contactBar.offsetHeight
+                            : 40;
+
 
                     if (window.scrollY > triggerPoint) {
-                        navbar.classList.add("is-sticky");
+
+
+                        navbar.classList.remove(
+                            "absolute"
+                        );
+
+
+                        navbar.classList.add(
+                            "fixed",
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                        );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div.flex.items-center > a, div.flex.items-center > div > a"
+                            );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
+                            .forEach(function (link) {
+
+                                link.classList.remove(
+                                    "text-yellow-400"
+                                );
+
+                                link.classList.add(
+                                    "text-green-800"
+                                );
+
+                            });
+
+
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
+                            );
+
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-yellow-400"
+                            );
+
+                            menuButton.classList.add(
+                                "text-green-800"
+                            );
+
+                        }
+
+
                     } else {
-                        navbar.classList.remove("is-sticky");
+
+
+                        navbar.classList.remove(
+                            "fixed",
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                        );
+
+
+                        navbar.classList.add(
+                            "absolute"
+                        );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
+                            .forEach(function (link) {
+
+                                link.classList.remove(
+                                    "text-green-800"
+                                );
+
+                                link.classList.add(
+                                    "text-yellow-400"
+                                );
+
+                            });
+
+
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
+                            );
+
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-green-800"
+                            );
+
+                            menuButton.classList.add(
+                                "text-yellow-400"
+                            );
+
+                        }
+
                     }
+
                 }
 
-                window.addEventListener("scroll", handleNavbarScroll, { passive: true });
+
+                window.addEventListener(
+                    "scroll",
+                    handleNavbarScroll,
+                    {
+                        passive: true
+                    }
+                );
+
+
                 handleNavbarScroll();
 
             }
 
         });
+
     </script>
 
 </body>
