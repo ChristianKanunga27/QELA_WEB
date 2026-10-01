@@ -1,5 +1,8 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
+.visible {
+  visibility: visible;
+}
 .absolute {
   position: absolute;
 }
@@ -36,6 +39,9 @@
 .block {
   display: block;
 }
+.contents {
+  display: contents;
+}
 .flex {
   display: flex;
 }
@@ -50,6 +56,9 @@
 }
 .inline-flex {
   display: inline-flex;
+}
+.table {
+  display: table;
 }
 .aspect-\[4\/5\] {
   aspect-ratio: 4/5;
@@ -108,14 +117,23 @@
 .max-w-\[85vw\] {
   max-width: 85vw;
 }
+.flex-shrink {
+  flex-shrink: 1;
+}
 .flex-shrink-0 {
   flex-shrink: 0;
 }
 .shrink-0 {
   flex-shrink: 0;
 }
+.flex-grow {
+  flex-grow: 1;
+}
 .grow {
   flex-grow: 1;
+}
+.border-collapse {
+  border-collapse: collapse;
 }
 .-translate-x-1\/2 {
   --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
@@ -345,6 +363,13 @@
 .uppercase {
   text-transform: uppercase;
 }
+.underline {
+  text-decoration-line: underline;
+}
+.outline {
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+}
 .backdrop-filter {
   -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -513,6 +538,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -656,6 +686,7 @@
       --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
