@@ -20,8 +20,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -29,22 +31,22 @@
 
 
 <body class="bg-[#f5f7f5] text-[#07130d]">
-    
-     <header class="relative left-0 right-0 top-0 z-50 w-full">
 
+    <!-- ================= HEADER ================= -->
+
+    <header class="relative left-0 right-0 top-0 z-50 w-full">
 
         <!-- ================= CONTACT BAR ================= -->
 
-        <div class="min-h-[40px] box-border w-full bg-black text-white">
+        <div class="min-h-[40px] w-full bg-black text-white">
 
             <div
-                class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-[0.55rem] px-[0.6rem] text-[0.63rem] sm:gap-[0.85rem] sm:px-4 sm:text-xs md:gap-5 md:px-5 lg:gap-7 lg:px-8 lg:text-sm xl:px-10">
+                class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-2 overflow-hidden px-3 text-[0.58rem] sm:gap-3 sm:px-4 sm:text-xs md:gap-5 md:px-5 md:text-sm lg:gap-7 lg:px-8 xl:px-10">
 
                 <!-- EMAIL -->
 
-                <a
-                    href="mailto:info@qelatechnologies.co.tz"
-                    class="flex min-w-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
+                <a href="mailto:info@qelatechnologies.co.tz"
+                    class="flex min-w-0 max-w-[58%] items-center gap-1.5 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f] sm:gap-2">
 
                     <i class="fa-solid fa-envelope shrink-0 text-[#dfa21f]"></i>
 
@@ -57,9 +59,8 @@
 
                 <!-- PHONE -->
 
-                <a
-                    href="tel:+255752686686"
-                    class="flex shrink-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
+                <a href="tel:+255752686686"
+                    class="flex shrink-0 items-center gap-1.5 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f] sm:gap-2">
 
                     <i class="fa-solid fa-phone shrink-0 text-[#dfa21f]"></i>
 
@@ -74,17 +75,14 @@
         </div>
 
 
-
         <!-- ================= HERO ================= -->
 
         <div
             class="relative h-[280px] w-full overflow-hidden sm:h-[300px] md:h-[330px] lg:h-[390px] xl:h-[420px]">
 
-
             <!-- HERO IMAGE -->
 
-            <img
-                src="./resource/gallery/leseimg2.avif"
+            <img src="./resource/gallery/leseimg2.avif"
                 alt="Farmers working with crops"
                 loading="eager"
                 decoding="async"
@@ -98,20 +96,16 @@
             </div>
 
 
-
             <!-- ================= MOBILE SIDEBAR ================= -->
 
-            <div
-                id="sidebar"
+            <div id="sidebar"
                 class="fixed right-0 top-0 z-[60] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
-
 
                 <!-- CLOSE BUTTON -->
 
                 <div class="flex h-16 shrink-0 items-center justify-end px-5">
 
-                    <button
-                        id="closeBtn"
+                    <button id="closeBtn"
                         type="button"
                         aria-label="Close menu"
                         class="flex h-11 w-11 items-center justify-center text-2xl text-white">
@@ -126,7 +120,7 @@
                 <!-- MOBILE LINKS -->
 
                 <div
-                    class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
+                    class="flex flex-col gap-5 overflow-y-auto px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
 
                     <a href="index.html">
                         Home
@@ -153,31 +147,24 @@
             </div>
 
 
-
             <!-- ================= NAVIGATION ================= -->
 
-            <nav
-                id="navbar"
-                class="absolute left-0 top-0 z-30 w-full px-4 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
-
+            <nav id="navbar"
+                class="absolute left-0 top-0 z-30 w-full px-3 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
 
                 <div
-                    class="mx-auto flex w-full max-w-7xl items-center justify-between">
-
+                    class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4">
 
                     <!-- LOGO -->
 
-                    <a
-                        href="./index.html"
-                        class="flex shrink-0 items-center">
+                    <a href="./index.html"
+                        class="flex min-w-0 shrink-0 items-center">
 
-                        <img
-                            src="./resource/image/qela_logo.png"
+                        <img src="./resource/image/qela_logo.png"
                             alt="QELA logo"
-                            class="h-10 w-auto max-w-[105px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
+                            class="h-9 w-auto max-w-[95px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
 
                     </a>
-
 
 
                     <!-- ================= DESKTOP NAVIGATION ================= -->
@@ -185,61 +172,45 @@
                     <div class="hidden md:flex">
 
                         <div
-                            class="flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
-
+                            class="flex items-center gap-4 text-sm font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
 
                             <!-- HOME -->
 
-                            <a
-                                href="index.html"
-                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
-
+                            <a href="index.html"
+                                class="relative whitespace-nowrap transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                                 Home
-
                             </a>
 
 
                             <!-- ABOUT -->
 
-                            <a
-                                href="about.html"
-                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
-
+                            <a href="about.html"
+                                class="relative whitespace-nowrap transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                                 About
-
                             </a>
 
 
                             <!-- PRODUCTS -->
 
-                            <a
-                                href="product.html"
-                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
-
+                            <a href="product.html"
+                                class="relative whitespace-nowrap transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                                 Products
-
                             </a>
 
 
                             <!-- INDUSTRY -->
 
-                            <a
-                                href="industry.html"
-                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
-
+                            <a href="industry.html"
+                                class="relative whitespace-nowrap transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                                 Industry
-
                             </a>
 
 
                             <!-- RESOURCES -->
 
-                            <a
-                                href="resource.html"
-                                class="relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
-
+                            <a href="resource.html"
+                                class="relative whitespace-nowrap transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                                 Resources
-
                             </a>
 
                         </div>
@@ -247,11 +218,9 @@
                     </div>
 
 
-
                     <!-- ================= MOBILE MENU BUTTON ================= -->
 
-                    <button
-                        id="menuBtn"
+                    <button id="menuBtn"
                         type="button"
                         aria-label="Open navigation menu"
                         class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden">
@@ -265,54 +234,54 @@
             </nav>
 
 
-
             <!-- ================= HERO TITLE ================= -->
 
             <div
-                class="relative z-10 flex h-full items-center justify-center px-5 sm:px-6">
+                class="relative z-10 flex h-full items-center justify-center px-4 sm:px-6">
 
-                <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                <div
+                    class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <div class="max-w-3xl">
+                    <div class="max-w-3xl">
 
+                        <h1
+                            class="ml-0 max-w-[95%] text-4xl font-semibold leading-[1.08] text-white sm:max-w-2xl sm:text-5xl md:ml-16 md:text-6xl lg:ml-60 lg:text-7xl">
 
+                            Ideas that
+                            <span class="text-yellow-400">
+                                grow
+                            </span>
+                            agriculture.
 
-                <!-- Label -->
-                <h1 class="text-white text-5xl md:text-6xl lg:text-7xl
-                    font-semibold leading-[1.08] ml-60">
+                        </h1>
 
-                    Ideas that
-                    <span class="text-yellow-400">
-                        grow
-                    </span>
-                    agriculture.
+                    </div>
 
-                </h1>
-            </div>
+                    <div class="mt-9 flex flex-wrap gap-4">
+                    </div>
 
-                <div class="flex flex-wrap gap-4 mt-9">
-            
-        </div>
+                </div>
 
             </div>
 
         </div>
 
     </header>
+
+
     <!-- ================= CATEGORIES ================= -->
 
-    <section id="resources" class="bg-white py-10">
+    <section id="resources"
+        class="bg-white py-10 sm:py-12 md:py-14">
 
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
             <!-- Section Introduction -->
 
-            <div class="mx-auto mb-12 max-w-2xl text-center">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
 
-              
-
-                <p class="mt-4 text-gray-600">
+                <p
+                    class="mt-4 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 md:text-lg">
 
                     Practical knowledge and ideas for a
                     more connected agricultural future.
@@ -322,13 +291,13 @@
             </div>
 
 
-
             <!-- ================= FILTER ================= -->
 
-            <div class="mb-12 flex flex-wrap justify-center gap-3">
+            <div
+                class="mb-10 flex flex-wrap justify-center gap-2.5 sm:mb-12 sm:gap-3">
 
                 <button
-                    class="rounded-full border border-gray-200 bg-[#07130d] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5">
+                    class="rounded-full border border-gray-200 bg-[#07130d] px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-sm">
 
                     All Resources
 
@@ -336,13 +305,13 @@
 
 
                 <button
-                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+                    class="rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white sm:px-5 sm:py-2.5 sm:text-sm">
 
                 </button>
 
 
                 <button
-                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+                    class="rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white sm:px-5 sm:py-2.5 sm:text-sm">
 
                     Research
 
@@ -350,7 +319,7 @@
 
 
                 <button
-                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+                    class="rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white sm:px-5 sm:py-2.5 sm:text-sm">
 
                     Blog
 
@@ -358,7 +327,7 @@
 
 
                 <button
-                    class="rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white">
+                    class="rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#07130d] hover:text-white sm:px-5 sm:py-2.5 sm:text-sm">
 
                     News
 
@@ -367,10 +336,9 @@
             </div>
 
 
-
             <!-- ================= RESOURCE GRID ================= -->
 
-            <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid grid-cols-1 gap-6 sm:gap-7 md:grid-cols-2 lg:grid-cols-3">
 
 
                 <!-- ================= CARD 1 ================= -->
@@ -378,26 +346,27 @@
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <img
-                            src="./resource/gallery/resource1.jpg"
+                        <img src="./resource/gallery/resource1.jpg"
                             alt="Agriculture technology"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             How digital technology is
                             changing modern agriculture
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             Explore the role of digital tools
                             in improving agricultural operations
@@ -410,32 +379,32 @@
                 </article>
 
 
-
                 <!-- ================= CARD 2 ================= -->
 
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <img
-                            src="./resource/gallery/resource2.jpg"
+                        <img src="./resource/gallery/resource2.jpg"
                             alt="Farmers using technology"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             Digitising farmer and
                             cooperative records
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             See how digital records can improve
                             visibility, coordination and access
@@ -448,32 +417,32 @@
                 </article>
 
 
-
                 <!-- ================= CARD 3 ================= -->
 
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <img
-                            src="./resource/gallery/resource3.jpg"
+                        <img src="./resource/gallery/resource3.jpg"
                             alt="Smart farming"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             A practical guide to
                             smart farming
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             Understand the technologies helping
                             organisations build more efficient
@@ -486,31 +455,31 @@
                 </article>
 
 
-
                 <!-- ================= CARD 4 ================= -->
 
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <img
-                            src="./resource/gallery/resource4.avif"
+                        <img src="./resource/gallery/resource4.avif"
                             alt="Agricultural data"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             Why agricultural data matters
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             Reliable data gives agricultural
                             organisations better visibility
@@ -523,32 +492,32 @@
                 </article>
 
 
-
                 <!-- ================= CARD 5 ================= -->
 
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <img
-                            src="./resource/gallery/resource5.jpg"
+                        <img src="./resource/gallery/resource5.jpg"
                             alt="Seed production"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             Digital tools for modern
                             seed production
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             Discover how technology can support
                             better visibility across seed
@@ -561,20 +530,15 @@
                 </article>
 
 
-
                 <!-- ================= CARD 6 ================= -->
 
                 <article
                     class="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5">
 
-                    <div class="relative h-56 overflow-hidden">
+                    <div
+                        class="relative h-48 overflow-hidden sm:h-56">
 
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            preload="auto"
+                        <video autoplay muted loop playsinline preload="auto"
                             aria-hidden="true"
                             class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
@@ -586,17 +550,18 @@
 
                     </div>
 
+                    <div class="p-5 sm:p-6">
 
-                    <div class="p-6">
-
-                        <h3 class="text-xl font-semibold leading-snug">
+                        <h3
+                            class="text-lg font-semibold leading-snug sm:text-xl">
 
                             Technology and the future
                             of African agriculture
 
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                        <p
+                            class="mt-3 text-sm leading-relaxed text-gray-600">
 
                             Watch our latest discussion on
                             technology, data and opportunities
@@ -608,7 +573,6 @@
 
                 </article>
 
-
             </div>
 
         </div>
@@ -616,22 +580,21 @@
     </section>
 
 
-
     <!-- ================= INTRO ================= -->
 
-    <section class="bg-white py-20">
+    <section class="bg-white py-14 sm:py-16 md:py-20">
 
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <div class="grid items-end gap-12 lg:grid-cols-2">
-
+            <div
+                class="grid items-end gap-10 sm:gap-12 lg:grid-cols-2">
 
                 <!-- Left -->
 
                 <div>
 
                     <span
-                        class="text-sm font-semibold uppercase tracking-[0.18em] text-green-600">
+                        class="text-xs font-semibold uppercase tracking-[0.18em] text-green-600 sm:text-sm">
 
                         Knowledge for agriculture
 
@@ -639,7 +602,7 @@
 
 
                     <h2
-                        class="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
+                        class="mt-4 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
 
                         Stay informed.
                         <br>
@@ -653,13 +616,12 @@
                 </div>
 
 
-
                 <!-- Right -->
 
                 <div>
 
                     <p
-                        class="max-w-xl text-lg leading-relaxed text-gray-600">
+                        class="max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
 
                         Agriculture is changing rapidly.
                         Our resource centre brings together
@@ -672,38 +634,48 @@
 
                 </div>
 
-
             </div>
 
         </div>
 
     </section>
-        <footer class="bg-[#07130d] text-white">
 
-        <div class="max-w-7xl mx-auto px-6 py-14">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-[#07130d] text-white">
+
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+
+            <div
+                class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- COMPANY -->
 
                 <div>
 
                     <a href="./index.html">
-                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                        <img src="./resource/image/qela_logo.png"
+                            class="nav-logo h-14 sm:h-16"
+                            alt="QELA logo">
                     </a>
-                    <h1 class="text-2xl font-extrabold tracking-tight">
+
+                    <h1 class="mt-2 text-2xl font-extrabold tracking-tight">
 
                         Qela
 
-                        <span class="text-green-500">Technologies</span>
+                        <span class="text-green-500">
+                            Technologies
+                        </span>
 
                     </h1>
 
-                    <p class="text-xs text-gray-500 mt-1">
-
+                    <p class="mt-1 text-xs text-gray-500">
                         (T) LIMITED
-
                     </p>
 
-                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
+                    <p
+                        class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
 
                         Empowering businesses through innovative technology,
                         digital transformation and
@@ -711,17 +683,19 @@
 
                     </p>
 
-                    <div class="flex items-center gap-3 mt-6">
+                    <div class="mt-6 flex items-center gap-3">
 
-                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
-                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+                        <a href="https://www.facebook.com/profile.php?id=100063736423326"
+                            aria-label="Facebook"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
-                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+                        <a href="https://www.instagram.com/qelatech/"
+                            aria-label="Instagram"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-instagram"></i>
 
@@ -731,81 +705,129 @@
 
                 </div>
 
+
+                <!-- SOLUTIONS -->
+
                 <div>
 
-                    <h3 class="text-lg font-semibold mb-5">
-
+                    <h3 class="mb-5 text-lg font-semibold">
                         Solutions
-
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Digital
-                                Transformation</a>
+                        <li>
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
+                                Digital Transformation
+                            </a>
                         </li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Business
-                                Management</a>
+
+                        <li>
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
+                                Business Management
+                            </a>
                         </li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Data
-                                Management</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud
-                                Solutions</a></li>
-                        <li><a href="#" class="hover:text-green-500 transition duration-300">Custom
-                                Software</a></li>
+
+                        <li>
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
+                                Data Management
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
+                                Cloud Solutions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
+                                Custom Software
+                            </a>
+                        </li>
 
                     </ul>
 
                 </div>
 
+
+                <!-- QUICK LINKS -->
+
                 <div>
 
-                    <h3 class="text-lg font-semibold mb-5">
-
+                    <h3 class="mb-5 text-lg font-semibold">
                         Quick Links
-
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
-                         <li><a href="./index.html" class="hover:text-green-500 transition duration-300">Home
-                                </a></li>
-                        <li><a href="./about.html" class="hover:text-green-500 transition duration-300">About
-                                </a></li>
-                        <li><a href="./product.html" class="hover:text-green-500 transition duration-300">
-                                Products</a></li>
-                        <li><a href="./industry.html" class="hover:text-green-500 transition duration-300">Industry</a></li>
-                        <li><a href="./resource.html" class="hover:text-green-500 transition duration-300">Resources</a></li>
-                        
+                        <li>
+                            <a href="./index.html"
+                                class="transition duration-300 hover:text-green-500">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./about.html"
+                                class="transition duration-300 hover:text-green-500">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./product.html"
+                                class="transition duration-300 hover:text-green-500">
+                                Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./industry.html"
+                                class="transition duration-300 hover:text-green-500">
+                                Industry
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./resource.html"
+                                class="transition duration-300 hover:text-green-500">
+                                Resources
+                            </a>
+                        </li>
 
                     </ul>
 
                 </div>
 
+
+                <!-- SUPPORT -->
+
                 <div>
 
-                    <h3 class="text-lg font-semibold mb-5">
-
+                    <h3 class="mb-5 text-lg font-semibold">
                         Support
-
                     </h3>
 
                     <div class="space-y-5 text-sm text-gray-400">
 
                         <div>
 
-                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
-
+                            <a href="tel:+255718352944"
+                                class="transition duration-300 hover:text-green-500">
                                 +255 718 352 944
-
                             </a>
 
                             <br>
 
-                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
-
+                            <a href="tel:+255742073002"
+                                class="transition duration-300 hover:text-green-500">
                                 +255 742 073 002
-
                             </a>
 
                         </div>
@@ -813,7 +835,7 @@
                         <div>
 
                             <a href="mailto:info@qelatechnologies.co.tz"
-                                class="hover:text-green-500 transition duration-300">
+                                class="break-words transition duration-300 hover:text-green-500">
 
                                 info@qelatechnologies.co.tz
 
@@ -829,27 +851,34 @@
 
         </div>
 
+
+        <!-- COPYRIGHT -->
+
         <div class="bg-black/30">
 
-            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-5 sm:px-6 md:flex-row lg:px-8">
 
-                <p class="text-sm text-gray-500 text-center md:text-left">
+                <p
+                    class="text-center text-xs text-gray-500 sm:text-sm md:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
-
                     All Rights Reserved.
 
                 </p>
 
-                <div class="flex gap-5 text-sm text-gray-500">
+                <div
+                    class="flex flex-wrap justify-center gap-4 text-xs text-gray-500 sm:gap-5 sm:text-sm">
 
-                    <a href="#" class="hover:text-green-500 transition duration-300">
+                    <a href="#"
+                        class="transition duration-300 hover:text-green-500">
 
                         Privacy Policy
 
                     </a>
 
-                    <a href="#" class="hover:text-green-500 transition duration-300">
+                    <a href="#"
+                        class="transition duration-300 hover:text-green-500">
 
                         Terms & Conditions
 
@@ -862,12 +891,13 @@
         </div>
 
     </footer>
+
+
     <!-- ================= JAVASCRIPT ================= -->
 
-  <script>
+    <script>
 
         document.addEventListener("DOMContentLoaded", function () {
-
 
             /* ==========================================
                MOBILE SIDEBAR
@@ -884,7 +914,6 @@
 
 
             if (menuBtn && closeBtn && sidebar) {
-
 
                 function openSidebar() {
 
@@ -949,9 +978,7 @@
                     function (event) {
 
                         if (event.key === "Escape") {
-
                             closeSidebar();
-
                         }
 
                     }
@@ -963,16 +990,13 @@
                     function () {
 
                         if (window.innerWidth >= 768) {
-
                             closeSidebar();
-
                         }
 
                     }
                 );
 
             }
-
 
 
             /* ==========================================
@@ -990,9 +1014,7 @@
 
             if (navbar) {
 
-
                 function handleNavbarScroll() {
-
 
                     const triggerPoint =
                         contactBar
@@ -1002,23 +1024,15 @@
 
                     if (window.scrollY > triggerPoint) {
 
-
                         navbar.classList.remove(
                             "absolute"
                         );
-
 
                         navbar.classList.add(
                             "fixed",
                             "bg-white",
                             "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
                         );
-
-
-                        navbar
-                            .querySelectorAll(
-                                "div.flex.items-center > a, div.flex.items-center > div > a"
-                            );
 
 
                         navbar
@@ -1056,16 +1070,13 @@
 
                         }
 
-
                     } else {
-
 
                         navbar.classList.remove(
                             "fixed",
                             "bg-white",
                             "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
                         );
-
 
                         navbar.classList.add(
                             "absolute"
