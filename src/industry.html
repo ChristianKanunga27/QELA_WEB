@@ -302,6 +302,46 @@
             object-position: center center;
         }
 
+        .hero-banner {
+            position: relative;
+            height: 280px;
+            width: 100%;
+            overflow: hidden;
+            background: #183c28;
+        }
+
+        .hero-banner img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(7, 28, 16, 0.78), rgba(7, 28, 16, 0.38) 55%, rgba(7, 28, 16, 0.5));
+            z-index: 1;
+        }
+
+        .hero-banner-content {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 1.25rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-banner-content > div {
+            width: min(1100px, 100%);
+        }
+
         /* =========================================================
            INDUSTRY CARDS
         ========================================================== */
@@ -409,8 +449,12 @@
                 position: absolute;
             }
 
-            .hero-section {
-                min-height: 220px;
+            .hero-banner {
+                height: 240px;
+            }
+
+            .hero-banner-content {
+                padding: 5.5rem 1rem 1rem;
             }
 
             .nav-inner {
@@ -806,33 +850,18 @@
          HERO
     ========================================================== -->
 
-    <section
-        class="hero-section relative flex min-h-[220px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[320px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
-
-
-        <!-- HERO IMAGE -->
+    <section class="hero-banner text-white">
 
         <img src="./resource/image/industrial.jpg"
             alt="Industries served by QELA Technology"
-            class="hero-image absolute inset-0 h-full w-full object-cover">
+            loading="eager"
+            decoding="async">
 
+        <div class="hero-banner-content">
 
-        <!-- HERO OVERLAY -->
+            <div>
 
-        <div
-            class="absolute inset-0 bg-gradient-to-r from-[rgba(7,28,16,0.82)] via-[rgba(7,28,16,0.42)] to-[rgba(7,28,16,0.55)]">
-        </div>
-
-
-        <!-- HERO CONTENT -->
-
-        <div
-            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-4 pb-6 pt-16 text-center sm:px-8 sm:pt-28 md:px-12 md:pt-32 lg:px-16 lg:pt-36 xl:px-20 xl:pt-40 2xl:px-24">
-
-            <div class="w-full max-w-[1100px]">
-
-                <h1
-                    class="font-['Poppins',sans-serif] text-[1.6rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                <h1 class="font-['Poppins',sans-serif] text-[1.6rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
 
                     Industries
 
