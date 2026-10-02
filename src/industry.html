@@ -24,25 +24,35 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
+
 <body class="m-0 overflow-x-hidden bg-white font-['DM_Sans',sans-serif]">
 
-    <!-- HEADER -->
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
     <header class="absolute left-0 right-0 top-0 z-50 w-full">
 
-        <!-- CONTACT BAR -->
-        <div class="min-h-[44px] w-full bg-black text-white">
+
+        <!-- =====================================================
+             CONTACT BAR
+        ====================================================== -->
+
+        <div class="w-full bg-black text-white">
 
             <div
-                class="mx-auto flex min-h-[44px] w-full max-w-7xl flex-wrap items-center justify-center gap-2 px-2 py-2 text-[0.62rem] font-medium sm:justify-end sm:gap-3 sm:px-4 sm:text-xs lg:gap-4 lg:px-6 lg:text-sm">
+                class="mx-auto flex min-h-[42px] w-full max-w-[1600px] flex-wrap items-center justify-center gap-x-3 gap-y-1 px-3 py-2 text-[10px] font-medium sm:gap-x-5 sm:px-5 sm:text-xs md:justify-end lg:px-8 lg:text-sm xl:px-10">
 
                 <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-1 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
+                    class="flex items-center gap-1.5 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
 
-                    <i class="fa-solid fa-envelope text-[0.7rem] text-[#dfa21f] sm:text-xs"></i>
+                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
                     <span>
                         info@qelatechnologies.co.tz
@@ -50,10 +60,11 @@
 
                 </a>
 
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-1 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
 
-                    <i class="fa-solid fa-phone text-[0.7rem] text-[#dfa21f] sm:text-xs"></i>
+                <a href="tel:+255752686686"
+                    class="flex items-center gap-1.5 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
+
+                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
                     <span>
                         +255 718 352 944
@@ -66,49 +77,59 @@
         </div>
 
 
-        <!-- NAVIGATION -->
-        <nav id="navbar" class="w-full py-2.5 transition-[background,box-shadow] duration-200 md:py-3.5">
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
+
+        <nav id="navbar"
+            class="w-full py-2.5 transition-[background,box-shadow] duration-300 sm:py-3 md:py-3.5 lg:py-4">
 
             <div
-                class="mx-auto flex w-[calc(100%-1rem)] min-h-[50px] items-center justify-between gap-4 sm:w-[calc(100%-1.5rem)] sm:min-h-[54px] md:w-[calc(100%-2.5rem)] md:gap-8 lg:w-[min(calc(100%-3rem),1280px)] xl:w-[min(calc(100%-5rem),1280px)]">
+                class="mx-auto flex min-h-[48px] w-[calc(100%-1.5rem)] max-w-[1600px] items-center justify-between gap-3 sm:w-[calc(100%-2.5rem)] sm:min-h-[52px] md:w-[calc(100%-4rem)] lg:w-[calc(100%-6rem)] xl:w-[calc(100%-8rem)] 2xl:w-[calc(100%-10rem)]">
 
                 <!-- LOGO -->
-                <a href="./index.html">
+
+                <a href="./index.html"
+                    class="flex shrink-0 items-center">
 
                     <img src="./resource/image/qela_logo.png"
-                        class="h-auto w-auto max-w-[95px] sm:max-w-[108px] md:max-w-[135px] lg:max-w-[150px]"
+                        class="h-auto w-auto max-w-[82px] sm:max-w-[105px] md:max-w-[125px] lg:max-w-[145px] xl:max-w-[155px]"
                         alt="QELA logo">
 
                 </a>
 
 
-                <!-- DESKTOP MENU -->
+                <!-- =================================================
+                     DESKTOP MENU
+                ================================================== -->
+
                 <div class="hidden md:block">
 
-                    <div class="flex items-center gap-6 text-base font-semibold lg:gap-7 lg:text-lg">
+                    <div
+                        class="flex items-center gap-5 text-sm font-semibold md:gap-5 md:text-[15px] lg:gap-7 lg:text-base xl:gap-9 xl:text-lg">
 
                         <a href="index.html"
-                            class="relative text-[#e4ab25] transition-colors duration-200 after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                             Home
                         </a>
 
                         <a href="about.html"
-                            class="relative text-[#e4ab25] transition-colors duration-200 after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                             About
                         </a>
 
                         <a href="product.html"
-                            class="relative text-[#e4ab25] transition-colors duration-200 after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                             Products
                         </a>
 
                         <a href="industry.html"
-                            class="relative text-[#e4ab25] transition-colors duration-200 after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                             Industry
                         </a>
 
                         <a href="resource.html"
-                            class="relative text-[#e4ab25] transition-colors duration-200 after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
                             Resources
                         </a>
 
@@ -117,9 +138,14 @@
                 </div>
 
 
-                <!-- MOBILE MENU BUTTON -->
-                <button id="menuBtn" class="p-1 text-[1.3rem] text-yellow-400 transition md:hidden sm:text-[1.4rem]"
-                    type="button" aria-label="Open navigation menu">
+                <!-- =================================================
+                     MOBILE MENU BUTTON
+                ================================================== -->
+
+                <button id="menuBtn"
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-lg text-yellow-400 transition duration-200 hover:bg-white/10 sm:h-11 sm:w-11 sm:text-xl md:hidden"
+                    type="button"
+                    aria-label="Open navigation menu">
 
                     <i class="fa-solid fa-bars"></i>
 
@@ -130,14 +156,21 @@
         </nav>
 
 
-        <!-- MOBILE SIDEBAR -->
+        <!-- =====================================================
+             MOBILE SIDEBAR
+        ====================================================== -->
+
         <div id="sidebar"
-            class="fixed right-0 top-0 z-50 h-full w-[min(18rem,85vw)] translate-x-full bg-gray-900 transition-transform duration-300 md:hidden">
+            class="fixed right-0 top-0 z-[60] h-dvh w-[min(20rem,88vw)] translate-x-full overflow-y-auto bg-gray-900 shadow-2xl transition-transform duration-300 md:hidden">
+
 
             <!-- CLOSE BUTTON -->
-            <div class="flex justify-end px-5 py-4">
 
-                <button id="closeBtn" class="text-2xl text-white transition hover:text-yellow-400" type="button"
+            <div class="flex justify-end px-4 py-4 sm:px-6 sm:py-5">
+
+                <button id="closeBtn"
+                    class="flex h-10 w-10 items-center justify-center rounded-md text-2xl text-white transition hover:bg-white/10 hover:text-yellow-400"
+                    type="button"
                     aria-label="Close navigation menu">
 
                     <i class="fa-solid fa-xmark"></i>
@@ -147,26 +180,43 @@
             </div>
 
 
-            <!-- MOBILE LINKS -->
-            <div class="flex flex-col gap-5 px-6 pb-8 pt-4 text-lg font-semibold text-yellow-400">
+            <!-- MOBILE LOGO -->
 
-                <a href="home.html" class="transition duration-200 hover:text-white">
+            <div class="border-b border-white/10 px-6 pb-6">
+
+                <img src="./resource/image/qela_logo.png"
+                    alt="QELA logo"
+                    class="max-w-[120px]">
+
+            </div>
+
+
+            <!-- MOBILE LINKS -->
+
+            <div class="flex flex-col px-6 py-7 text-base font-semibold text-yellow-400 sm:gap-1 sm:text-lg">
+
+                <a href="home.html"
+                    class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Home
                 </a>
 
-                <a href="about.html" class="transition duration-200 hover:text-white">
+                <a href="about.html"
+                    class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     About
                 </a>
 
-                <a href="product.html" class="transition duration-200 hover:text-white">
+                <a href="product.html"
+                    class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Products
                 </a>
 
-                <a href="industry.html" class="transition duration-200 hover:text-white">
+                <a href="industry.html"
+                    class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Industry
                 </a>
 
-                <a href="resource.html" class="transition duration-200 hover:text-white">
+                <a href="resource.html"
+                    class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Resources
                 </a>
 
@@ -177,28 +227,38 @@
     </header>
 
 
-    <!-- HERO -->
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
     <section
-        class="relative h-[280px] w-full overflow-hidden bg-[#183c28] text-white sm:h-[330px] md:h-[390px] lg:h-[420px]">
+        class="relative flex min-h-[260px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[310px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
+
 
         <!-- HERO IMAGE -->
-        <img src="./resource/image/industrial.jpg" alt="Products"
+
+        <img src="./resource/image/industrial.jpg"
+            alt="Products"
             class="absolute inset-0 h-full w-full object-cover object-center">
 
+
         <!-- HERO OVERLAY -->
+
         <div
-            class="absolute inset-0 bg-gradient-to-r from-[rgba(7,28,16,0.78)] via-[rgba(7,28,16,0.34)] to-[rgba(7,28,16,0.50)]">
+            class="absolute inset-0 bg-gradient-to-r from-[rgba(7,28,16,0.82)] via-[rgba(7,28,16,0.42)] to-[rgba(7,28,16,0.55)]">
         </div>
 
 
         <!-- HERO CONTENT -->
-        <div
-            class="relative z-[1] flex h-full items-center justify-center px-3 pb-4 pt-[5.5rem] text-center sm:px-5 sm:pt-24 md:px-10 md:pt-24 lg:px-20">
 
-            <div class="w-full max-w-[1000px]">
+        <div
+            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-5 pb-4 pt-[5.5rem] text-center sm:px-8 sm:pt-24 md:px-12 md:pt-28 lg:px-16 xl:px-20 2xl:px-24">
+
+            <div class="w-full max-w-[1100px]">
 
                 <h1
-                    class="font-['Poppins',sans-serif] text-[1.35rem] font-bold leading-[1.35] text-white sm:text-[1.65rem] md:text-5xl lg:text-6xl">
+                    class="font-['Poppins',sans-serif] text-[1.6rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
 
                     Industries
 
@@ -213,111 +273,265 @@
         </div>
 
     </section>
-    <!-- ===================================================== INDUSTRIES WE SERVE ====================================================== -->
-    <section class="py-16 sm:py-20 lg:py-24">
-        <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-            <!-- ================================================= SIMPLE HEADER ================================================== -->
 
-            <!-- ================================================= INDUSTRIES GRID ================================================== -->
-            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-12 lg:gap-7">
-                <!-- ============================================= GENERAL FARMING ============================================== -->
+
+
+    <!-- =========================================================
+         INDUSTRIES
+    ========================================================== -->
+
+    <section class="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
+
+
+        <div
+            class="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+
+
+            <!-- =================================================
+                 INDUSTRIES GRID
+            ================================================== -->
+
+            <div
+                class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-12 lg:gap-7 xl:gap-8">
+
+
+                <!-- =================================================
+                     GENERAL FARMING
+                ================================================== -->
+
                 <article
-                    class="overflow-hidden rounded-[18px] bg-white transition duration-400 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] sm:hover:-translate-y-[5px] lg:col-span-7 max-sm:hover:translate-y-0">
-                    <!-- IMAGE -->
-                    <div class="h-[260px] w-full overflow-hidden bg-[#e5ebe7] sm:h-[300px] lg:h-[340px]"> <img
-                            src="./resource/gallery/genfarm.avif" alt="General Farming" loading="lazy" decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
-                    </div> <!-- CONTENT -->
-                    <div class="p-6 sm:p-7 lg:p-8">
-                        <h2 class="font-['Poppins',sans-serif] text-xl font-semibold text-[#07130d] sm:text-2xl">
-                            General Farming </h2>
-                        <p class="mt-3 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base"> Digital tools that help
-                            farmers manage production, farm activities, crop information and everyday agricultural
-                            operations. </p>
-                    </div>
-                </article>
-                <!-- ============================================= AGRICULTURAL COOPERATIVES ============================================== -->
-                <article
-                    class="overflow-hidden rounded-[18px] bg-white transition duration-400 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] sm:hover:-translate-y-[5px] lg:col-span-5 max-sm:hover:translate-y-0">
-                    <!-- IMAGE -->
-                    <div class="h-[260px] w-full overflow-hidden bg-[#e5ebe7] sm:h-[300px] lg:h-[340px]"> <img
-                            src="./resource/gallery/coop.jpg" alt="Agricultural Cooperatives" loading="lazy"
+                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-7">
+
+                    <div
+                        class="aspect-[16/9] w-full overflow-hidden bg-[#e5ebe7] lg:aspect-[1.8/1]">
+
+                        <img src="./resource/gallery/genfarm.avif"
+                            alt="General Farming"
+                            loading="lazy"
                             decoding="async"
                             class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
-                    </div> <!-- CONTENT -->
-                    <div class="p-6 sm:p-7 lg:p-8">
-                        <h2 class="font-['Poppins',sans-serif] text-xl font-semibold text-[#07130d] sm:text-2xl">
-                            Agricultural Cooperatives </h2>
-                        <p class="mt-3 text-sm leading-7 text-gray-600 sm:text-base"> Digital solutions for managing
-                            members, farm records, production data, collections and cooperative activities. </p>
+
                     </div>
-                </article>
-                <!-- ============================================= SEED PRODUCERS ============================================== -->
-                <article
-                    class="overflow-hidden rounded-[18px] bg-white transition duration-400 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] sm:hover:-translate-y-[5px] lg:col-span-4 max-sm:hover:translate-y-0">
-                    <!-- IMAGE -->
-                    <div class="h-[240px] w-full overflow-hidden bg-[#e5ebe7] sm:h-[260px] lg:h-[280px]"> <img
-                            src="./resource/gallery/see.jpg" alt="Seed Producers" loading="lazy" decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
-                    </div> <!-- CONTENT -->
-                    <div class="p-6 sm:p-7">
-                        <h2 class="font-['Poppins',sans-serif] text-xl font-semibold text-[#07130d] sm:text-2xl"> Seed
-                            Producers </h2>
-                        <p class="mt-3 text-sm leading-7 text-gray-600 sm:text-base"> Digital tools for seed production,
-                            farmer records, distribution, traceability and product information. </p>
+
+
+                    <div class="p-5 sm:p-6 md:p-7 lg:p-8">
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
+
+                            General Farming
+
+                        </h2>
+
+                        <p
+                            class="mt-3 max-w-3xl text-sm leading-6 text-gray-600 sm:text-[15px] sm:leading-7 md:text-base">
+
+                            Digital tools that help farmers manage production, farm activities, crop information and everyday agricultural operations.
+
+                        </p>
+
                     </div>
+
                 </article>
-                <!-- ============================================= FERTILIZER MANUFACTURERS ============================================== -->
+
+
+
+                <!-- =================================================
+                     AGRICULTURAL COOPERATIVES
+                ================================================== -->
+
                 <article
-                    class="overflow-hidden rounded-[18px] bg-white transition duration-400 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] sm:hover:-translate-y-[5px] lg:col-span-4 max-sm:hover:translate-y-0">
-                    <!-- IMAGE -->
-                    <div class="h-[240px] w-full overflow-hidden bg-[#e5ebe7] sm:h-[260px] lg:h-[280px]"> <img
-                            src="./resource/gallery/fertilizer.jpg" alt="Fertilizer Manufacturers" loading="lazy"
+                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-5">
+
+                    <div
+                        class="aspect-[16/9] w-full overflow-hidden bg-[#e5ebe7] lg:aspect-[1.8/1]">
+
+                        <img src="./resource/gallery/coop.jpg"
+                            alt="Agricultural Cooperatives"
+                            loading="lazy"
                             decoding="async"
                             class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
-                    </div> <!-- CONTENT -->
-                    <div class="p-6 sm:p-7">
-                        <h2 class="font-['Poppins',sans-serif] text-xl font-semibold text-[#07130d] sm:text-2xl">
-                            Fertilizer Manufacturers </h2>
-                        <p class="mt-3 text-sm leading-7 text-gray-600 sm:text-base"> Digital solutions for product
-                            information, distribution, market visibility and agricultural service delivery. </p>
+
                     </div>
+
+
+                    <div class="p-5 sm:p-6 md:p-7 lg:p-8">
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
+
+                            Agricultural Cooperatives
+
+                        </h2>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-600 sm:text-[15px] sm:leading-7 md:text-base">
+
+                            Digital solutions for managing members, farm records, production data, collections and cooperative activities.
+
+                        </p>
+
+                    </div>
+
                 </article>
-                <!-- ============================================= AGRICULTURAL RESEARCH ============================================== -->
+
+
+
+                <!-- =================================================
+                     SEED PRODUCERS
+                ================================================== -->
+
                 <article
-                    class="overflow-hidden rounded-[18px] bg-white transition duration-400 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] sm:hover:-translate-y-[5px] lg:col-span-4 max-sm:hover:translate-y-0">
-                    <!-- IMAGE -->
-                    <div class="h-[240px] w-full overflow-hidden bg-[#e5ebe7] sm:h-[260px] lg:h-[280px]"> <img
-                            src="./resource/gallery/research.jpg" alt="Agricultural Research" loading="lazy"
+                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+
+                    <div
+                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+
+                        <img src="./resource/gallery/see.jpg"
+                            alt="Seed Producers"
+                            loading="lazy"
                             decoding="async"
                             class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
-                    </div> <!-- CONTENT -->
-                    <div class="p-6 sm:p-7">
-                        <h2 class="font-['Poppins',sans-serif] text-xl font-semibold text-[#07130d] sm:text-2xl">
-                            Agricultural Research </h2>
-                        <p class="mt-3 text-sm leading-7 text-gray-600 sm:text-base"> Platforms for organizing research
-                            data, records, reporting and agricultural knowledge. </p>
+
                     </div>
+
+
+                    <div class="p-5 sm:p-6 md:p-7">
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
+
+                            Seed Producers
+
+                        </h2>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-600 sm:text-[15px] sm:leading-7 md:text-base">
+
+                            Digital tools for seed production, farmer records, distribution, traceability and product information.
+
+                        </p>
+
+                    </div>
+
                 </article>
+
+
+
+                <!-- =================================================
+                     FERTILIZER MANUFACTURERS
+                ================================================== -->
+
+                <article
+                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+
+                    <div
+                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+
+                        <img src="./resource/gallery/fertilizer.jpg"
+                            alt="Fertilizer Manufacturers"
+                            loading="lazy"
+                            decoding="async"
+                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+
+                    </div>
+
+
+                    <div class="p-5 sm:p-6 md:p-7">
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
+
+                            Fertilizer Manufacturers
+
+                        </h2>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-600 sm:text-[15px] sm:leading-7 md:text-base">
+
+                            Digital solutions for product information, distribution, market visibility and agricultural service delivery.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     AGRICULTURAL RESEARCH
+                ================================================== -->
+
+                <article
+                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+
+                    <div
+                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+
+                        <img src="./resource/gallery/research.jpg"
+                            alt="Agricultural Research"
+                            loading="lazy"
+                            decoding="async"
+                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+
+                    </div>
+
+
+                    <div class="p-5 sm:p-6 md:p-7">
+
+                        <h2
+                            class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
+
+                            Agricultural Research
+
+                        </h2>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-600 sm:text-[15px] sm:leading-7 md:text-base">
+
+                            Platforms for organizing research data, records, reporting and agricultural knowledge.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
             </div>
+
         </div>
+
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
     <footer class="bg-[#07130d] text-white">
 
-        <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14 lg:px-10">
 
-            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <div
+            class="mx-auto w-full max-w-[1600px] px-5 py-12 sm:px-7 sm:py-14 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
 
 
-                <!-- COMPANY -->
-                <div>
+            <div
+                class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-10 xl:gap-16">
 
-                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="mb-5 h-12 w-auto">
 
-                    <h1 class="text-2xl font-extrabold tracking-tight">
+                <!-- =================================================
+                     COMPANY
+                ================================================== -->
+
+                <div class="sm:col-span-2 lg:col-span-1">
+
+                    <img src="./resource/logos/qela_icon.svg"
+                        alt="Qela Technologies Logo"
+                        class="mb-5 h-11 w-auto sm:h-12">
+
+                    <h1 class="text-xl font-extrabold tracking-tight sm:text-2xl">
 
                         Qela
 
@@ -331,7 +545,8 @@
                         (T) LIMITED
                     </p>
 
-                    <p class="mt-5 max-w-xs text-sm leading-6 text-gray-400">
+                    <p
+                        class="mt-5 max-w-sm text-sm leading-6 text-gray-400">
 
                         Empowering businesses through innovative technology,
                         digital transformation and smart agritech solutions.
@@ -340,17 +555,20 @@
 
 
                     <!-- SOCIAL MEDIA -->
+
                     <div class="mt-6 flex items-center gap-3">
 
-                        <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
-                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+                        <a href="https://www.facebook.com/profile.php?id=100063736423326"
+                            aria-label="Facebook"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-facebook-f"></i>
 
                         </a>
 
-                        <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
-                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition duration-300 hover:bg-green-600 hover:text-white">
+                        <a href="https://www.instagram.com/qelatech/"
+                            aria-label="Instagram"
+                            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm transition duration-300 hover:bg-green-600 hover:text-white">
 
                             <i class="fa-brands fa-instagram"></i>
 
@@ -361,41 +579,50 @@
                 </div>
 
 
-                <!-- SOLUTIONS -->
+
+                <!-- =================================================
+                     SOLUTIONS
+                ================================================== -->
+
                 <div>
 
-                    <h3 class="mb-5 text-lg font-semibold">
+                    <h3 class="mb-5 text-base font-semibold sm:text-lg">
                         Solutions
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
                                 Digital Transformation
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
                                 Business Management
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
                                 Data Management
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
                                 Cloud Solutions
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="transition duration-300 hover:text-green-500">
+                            <a href="#"
+                                class="transition duration-300 hover:text-green-500">
                                 Custom Software
                             </a>
                         </li>
@@ -405,41 +632,50 @@
                 </div>
 
 
-                <!-- QUICK LINKS -->
+
+                <!-- =================================================
+                     QUICK LINKS
+                ================================================== -->
+
                 <div>
 
-                    <h3 class="mb-5 text-lg font-semibold">
+                    <h3 class="mb-5 text-base font-semibold sm:text-lg">
                         Quick Links
                     </h3>
 
                     <ul class="space-y-3 text-sm text-gray-400">
 
                         <li>
-                            <a href="./index.html" class="transition duration-300 hover:text-green-500">
+                            <a href="./index.html"
+                                class="transition duration-300 hover:text-green-500">
                                 Home
                             </a>
                         </li>
 
                         <li>
-                            <a href="./about.html" class="transition duration-300 hover:text-green-500">
+                            <a href="./about.html"
+                                class="transition duration-300 hover:text-green-500">
                                 About
                             </a>
                         </li>
 
                         <li>
-                            <a href="./product.html" class="transition duration-300 hover:text-green-500">
+                            <a href="./product.html"
+                                class="transition duration-300 hover:text-green-500">
                                 Products
                             </a>
                         </li>
 
                         <li>
-                            <a href="./industry.html" class="transition duration-300 hover:text-green-500">
+                            <a href="./industry.html"
+                                class="transition duration-300 hover:text-green-500">
                                 Industry
                             </a>
                         </li>
 
                         <li>
-                            <a href="./resource.html" class="transition duration-300 hover:text-green-500">
+                            <a href="./resource.html"
+                                class="transition duration-300 hover:text-green-500">
                                 Resources
                             </a>
                         </li>
@@ -449,24 +685,28 @@
                 </div>
 
 
-                <!-- SUPPORT -->
+
+                <!-- =================================================
+                     SUPPORT
+                ================================================== -->
+
                 <div>
 
-                    <h3 class="mb-5 text-lg font-semibold">
+                    <h3 class="mb-5 text-base font-semibold sm:text-lg">
                         Support
                     </h3>
 
                     <div class="space-y-5 text-sm text-gray-400">
 
-                        <div>
+                        <div class="space-y-1">
 
-                            <a href="tel:+255718352944" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255718352944"
+                                class="block transition duration-300 hover:text-green-500">
                                 +255 718 352 944
                             </a>
 
-                            <br>
-
-                            <a href="tel:+255742073002" class="transition duration-300 hover:text-green-500">
+                            <a href="tel:+255742073002"
+                                class="block transition duration-300 hover:text-green-500">
                                 +255 742 073 002
                             </a>
 
@@ -475,8 +715,10 @@
                         <div>
 
                             <a href="mailto:info@qelatechnologies.co.tz"
-                                class="transition duration-300 hover:text-green-500">
+                                class="break-all transition duration-300 hover:text-green-500">
+
                                 info@qelatechnologies.co.tz
+
                             </a>
 
                         </div>
@@ -490,26 +732,34 @@
         </div>
 
 
-      
+
+        <!-- =========================================================
+             COPYRIGHT
+        ========================================================== -->
+
         <div class="bg-black/30">
 
             <div
-                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 sm:px-8 lg:flex-row lg:px-10">
+                class="mx-auto flex w-full max-w-[1600px] flex-col items-center justify-between gap-4 px-5 py-5 sm:px-7 md:px-10 lg:flex-row lg:px-12 xl:px-16 2xl:px-20">
 
-                <p class="text-center text-sm text-gray-500 lg:text-left">
+                <p class="text-center text-xs leading-5 text-gray-500 sm:text-sm lg:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
                     All Rights Reserved.
 
                 </p>
 
-                <div class="flex gap-5 text-sm text-gray-500">
 
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+                <div
+                    class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-gray-500 sm:text-sm">
+
+                    <a href="#"
+                        class="transition duration-300 hover:text-green-500">
                         Privacy Policy
                     </a>
 
-                    <a href="#" class="transition duration-300 hover:text-green-500">
+                    <a href="#"
+                        class="transition duration-300 hover:text-green-500">
                         Terms & Conditions
                     </a>
 
@@ -522,12 +772,19 @@
     </footer>
 
 
-    <!-- HEADER FUNCTIONALITY -->
+
+    <!-- =========================================================
+         HEADER FUNCTIONALITY
+    ========================================================== -->
+
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* MOBILE SIDEBAR */
+
+            /* =====================================================
+               MOBILE SIDEBAR
+            ====================================================== */
 
             const menuBtn = document.getElementById("menuBtn");
 
@@ -537,6 +794,7 @@
 
 
             if (menuBtn && closeBtn && sidebar) {
+
 
                 function openSidebar() {
 
@@ -574,7 +832,8 @@
                 });
 
 
-                const sidebarLinks = sidebar.querySelectorAll("a");
+                const sidebarLinks =
+                    sidebar.querySelectorAll("a");
 
 
                 sidebarLinks.forEach(function (link) {
@@ -612,16 +871,23 @@
             }
 
 
-            /* STICKY NAVBAR */
 
-            const navbar = document.getElementById("navbar");
+            /* =====================================================
+               STICKY NAVBAR
+            ====================================================== */
 
-            const contactBar = document.querySelector("header > div");
+            const navbar =
+                document.getElementById("navbar");
+
+            const contactBar =
+                document.querySelector("header > div");
 
 
             if (navbar) {
 
+
                 function handleNavbarScroll() {
+
 
                     const triggerPoint =
                         contactBar
@@ -630,6 +896,7 @@
 
 
                     if (window.scrollY > triggerPoint) {
+
 
                         navbar.classList.add(
                             "fixed",
@@ -640,8 +907,10 @@
                             "shadow-[0_8px_24px_rgba(16,39,27,0.12)]"
                         );
 
+
                         const navLinks =
                             navbar.querySelectorAll("a");
+
 
                         navLinks.forEach(function (link) {
 
@@ -659,7 +928,9 @@
 
                         });
 
+
                     } else {
+
 
                         navbar.classList.remove(
                             "fixed",
@@ -670,8 +941,10 @@
                             "shadow-[0_8px_24px_rgba(16,39,27,0.12)]"
                         );
 
+
                         const navLinks =
                             navbar.querySelectorAll("a");
+
 
                         navLinks.forEach(function (link) {
 
@@ -699,6 +972,7 @@
                     handleNavbarScroll
                 );
 
+
                 handleNavbarScroll();
 
             }
@@ -710,3 +984,4 @@
 </body>
 
 </html>
+
