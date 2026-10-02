@@ -114,7 +114,13 @@
         }
 
         #navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 30;
             background: transparent !important;
+            padding: 0.5rem 0;
         }
 
         #navbar {
@@ -227,47 +233,39 @@
             position: fixed;
             top: 0;
             right: 0;
-            bottom: 0;
             z-index: 60;
-
-            width: min(18rem, 82vw);
-            max-width: 320px;
-
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            max-width: 85vw;
             height: 100dvh;
-
             overflow-y: auto;
             overflow-x: hidden;
-
             background: #07130d;
-
-            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
-
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
             transform: translateX(100%);
             transition: transform 300ms ease;
-
             visibility: hidden;
         }
 
         #sidebar nav {
             display: flex;
             flex-direction: column;
-            gap: 0.2rem;
-            padding: 1.2rem 1rem 1.5rem;
+            gap: 1.25rem;
+            padding: 0 1.75rem 1.25rem;
+            color: #e4ab25;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         #sidebar nav a {
             display: block;
-            padding: 0.8rem 1rem;
-            border-radius: 0.5rem;
             color: #e4ab25;
-            font-size: 1.05rem;
-            font-weight: 600;
-            transition: background 180ms ease, color 180ms ease;
+            transition: color 180ms ease;
         }
 
         #sidebar nav a:hover,
         #sidebar nav a:focus-visible {
-            background: rgba(255, 255, 255, 0.08);
             color: #ffffff;
         }
 
@@ -308,8 +306,8 @@
 
         .hero-banner {
             position: relative;
-            height: 280px;
             width: 100%;
+            height: 280px;
             overflow: hidden;
             background: #183c28;
         }
@@ -344,6 +342,12 @@
 
         .hero-banner-content > div {
             width: min(1100px, 100%);
+        }
+
+        .hero-banner h1 {
+            font-size: clamp(1.8rem, 5vw, 4.2rem);
+            line-height: 1.1;
+            letter-spacing: 0;
         }
 
         /* =========================================================
@@ -459,6 +463,11 @@
 
             .hero-banner-content {
                 padding: 5.5rem 1rem 1rem;
+            }
+
+            .hero-banner h1 {
+                font-size: clamp(1.5rem, 7vw, 2.7rem);
+                line-height: 1.2;
             }
 
             .nav-inner {
@@ -716,7 +725,7 @@
         <nav id="navbar"
             class="main-nav w-full">
 
-            <div class="nav-inner flex items-center justify-between gap-8">
+            <div class="nav-inner mx-auto flex w-full max-w-7xl items-center justify-between gap-8 px-4 sm:px-6 lg:px-8 xl:px-10">
 
 
                 <!-- LOGO -->
@@ -770,7 +779,7 @@
                 ================================================== -->
 
                 <button id="menuBtn"
-                    class="md:hidden text-yellow-400"
+                    class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden"
                     type="button"
                     aria-label="Open navigation menu"
                     aria-controls="sidebar"
@@ -790,16 +799,17 @@
         ====================================================== -->
 
         <div id="sidebar"
-            class="fixed right-0 top-0 z-[60] h-dvh translate-x-full overflow-y-auto bg-[#07130d] shadow-2xl transition-transform duration-300 md:hidden">
+            class="fixed right-0 top-0 z-[60] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
 
 
             <!-- CLOSE BUTTON -->
 
-            <div class="flex justify-end px-5 py-5">
+            <div class="flex h-16 shrink-0 items-center justify-end px-5">
 
                 <button id="closeBtn"
                     type="button"
-                    aria-label="Close navigation menu">
+                    aria-label="Close navigation menu"
+                    class="flex h-11 w-11 items-center justify-center text-2xl text-white">
 
                     <i class="fa-solid fa-xmark"></i>
 
@@ -821,7 +831,7 @@
 
             <!-- MOBILE LINKS -->
 
-            <nav>
+            <div class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
 
                 <a href="./index.html">
                     Home
@@ -843,7 +853,7 @@
                     Resources
                 </a>
 
-            </nav>
+            </div>
 
         </div>
 
