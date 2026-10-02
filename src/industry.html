@@ -25,6 +25,9 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 </head>
 
@@ -767,9 +770,9 @@
         document.addEventListener("DOMContentLoaded", function () {
 
 
-            /* =====================================================
+            /* ==========================================
                MOBILE SIDEBAR
-            ====================================================== */
+            ========================================== */
 
             const menuBtn =
                 document.getElementById("menuBtn");
@@ -787,22 +790,15 @@
                 function openSidebar() {
 
                     sidebar.classList.remove(
-                        "translate-x-full",
-                        "invisible"
+                        "translate-x-full"
                     );
 
                     sidebar.classList.add(
-                        "translate-x-0",
-                        "visible"
+                        "translate-x-0"
                     );
 
                     document.body.classList.add(
                         "overflow-hidden"
-                    );
-
-                    menuBtn.setAttribute(
-                        "aria-expanded",
-                        "true"
                     );
 
                 }
@@ -811,22 +807,15 @@
                 function closeSidebar() {
 
                     sidebar.classList.remove(
-                        "translate-x-0",
-                        "visible"
+                        "translate-x-0"
                     );
 
                     sidebar.classList.add(
-                        "translate-x-full",
-                        "invisible"
+                        "translate-x-full"
                     );
 
                     document.body.classList.remove(
                         "overflow-hidden"
-                    );
-
-                    menuBtn.setAttribute(
-                        "aria-expanded",
-                        "false"
                     );
 
                 }
@@ -844,18 +833,16 @@
                 );
 
 
-                const sidebarLinks =
-                    sidebar.querySelectorAll("a");
+                sidebar
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
 
+                        link.addEventListener(
+                            "click",
+                            closeSidebar
+                        );
 
-                sidebarLinks.forEach(function (link) {
-
-                    link.addEventListener(
-                        "click",
-                        closeSidebar
-                    );
-
-                });
+                    });
 
 
                 document.addEventListener(
@@ -889,15 +876,17 @@
 
 
 
-            /* =====================================================
-               STICKY NAVBAR
-            ====================================================== */
+            /* ==========================================
+               STICKY NAVIGATION
+            ========================================== */
 
             const navbar =
                 document.getElementById("navbar");
 
             const contactBar =
-                document.querySelector("header > div");
+                document.querySelector(
+                    "header > div:first-child"
+                );
 
 
             if (navbar) {
@@ -905,72 +894,65 @@
 
                 function handleNavbarScroll() {
 
+
                     const triggerPoint =
                         contactBar
                             ? contactBar.offsetHeight
-                            : 44;
+                            : 40;
 
 
                     if (window.scrollY > triggerPoint) {
 
 
                         navbar.classList.remove(
-                            "absolute",
-                            "bg-transparent",
-                            "px-4",
-                            "py-2",
-                            "sm:px-6",
-                            "sm:py-4",
-                            "lg:px-8",
-                            "lg:py-5",
-                            "xl:px-10"
+                            "absolute"
                         );
 
 
                         navbar.classList.add(
                             "fixed",
-                            "bg-white/95",
-                            "shadow-[0_8px_24px_rgba(16,39,27,0.12)]",
-                            "backdrop-blur-md",
-                            "px-4",
-                            "py-2",
-                            "sm:px-6",
-                            "sm:py-3",
-                            "lg:px-8",
-                            "lg:py-3",
-                            "xl:px-10"
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
                         );
 
 
                         navbar
-                            .querySelectorAll("a")
+                            .querySelectorAll(
+                                "div.flex.items-center > a, div.flex.items-center > div > a"
+                            );
+
+
+                        navbar
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
                             .forEach(function (link) {
 
-                                if (
-                                    !link.closest("#menuBtn")
-                                ) {
+                                link.classList.remove(
+                                    "text-yellow-400"
+                                );
 
-                                    link.classList.remove(
-                                        "text-[#e4ab25]"
-                                    );
-
-                                    link.classList.add(
-                                        "text-[#10271b]"
-                                    );
-
-                                }
+                                link.classList.add(
+                                    "text-green-800"
+                                );
 
                             });
 
 
-                        if (menuBtn) {
-
-                            menuBtn.classList.remove(
-                                "text-[#dfa21f]"
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
                             );
 
-                            menuBtn.classList.add(
-                                "text-[#10271b]"
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-yellow-400"
+                            );
+
+                            menuButton.classList.add(
+                                "text-green-800"
                             );
 
                         }
@@ -981,48 +963,47 @@
 
                         navbar.classList.remove(
                             "fixed",
-                            "bg-white/95",
-                            "shadow-[0_8px_24px_rgba(16,39,27,0.12)]",
-                            "backdrop-blur-md",
-                            "py-3"
+                            "bg-white",
+                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
                         );
 
 
                         navbar.classList.add(
-                            "absolute",
-                            "bg-transparent"
+                            "absolute"
                         );
 
 
                         navbar
-                            .querySelectorAll("a")
+                            .querySelectorAll(
+                                "div > div > a"
+                            )
                             .forEach(function (link) {
 
-                                if (
-                                    !link.closest("#menuBtn")
-                                ) {
+                                link.classList.remove(
+                                    "text-green-800"
+                                );
 
-                                    link.classList.remove(
-                                        "text-[#10271b]"
-                                    );
-
-                                    link.classList.add(
-                                        "text-[#e4ab25]"
-                                    );
-
-                                }
+                                link.classList.add(
+                                    "text-yellow-400"
+                                );
 
                             });
 
 
-                        if (menuBtn) {
-
-                            menuBtn.classList.remove(
-                                "text-[#10271b]"
+                        const menuButton =
+                            document.getElementById(
+                                "menuBtn"
                             );
 
-                            menuBtn.classList.add(
-                                "text-[#dfa21f]"
+
+                        if (menuButton) {
+
+                            menuButton.classList.remove(
+                                "text-green-800"
+                            );
+
+                            menuButton.classList.add(
+                                "text-yellow-400"
                             );
 
                         }
@@ -1035,7 +1016,9 @@
                 window.addEventListener(
                     "scroll",
                     handleNavbarScroll,
-                    { passive: true }
+                    {
+                        passive: true
+                    }
                 );
 
 
