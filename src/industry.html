@@ -409,6 +409,10 @@
                 position: absolute;
             }
 
+            .hero-section {
+                min-height: 220px;
+            }
+
             .nav-inner {
                 width: calc(100% - 1.25rem);
                 min-height: 58px;
@@ -455,6 +459,12 @@
 
             .contact-bar a {
                 max-width: 100%;
+                white-space: normal;
+                line-height: 1.4;
+            }
+
+            .contact-bar a span {
+                display: inline;
             }
 
             /* HERO */
@@ -543,6 +553,15 @@
                 line-height: 1.65;
             }
 
+            .hero-section {
+                min-height: 200px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.45rem;
+                line-height: 1.2;
+            }
+
         }
 
         /* =========================================================
@@ -568,6 +587,11 @@
 
             #sidebar {
                 width: 82vw;
+            }
+
+            #sidebar nav a {
+                font-size: 0.98rem;
+                padding: 0.72rem 0.9rem;
             }
 
             .contact-bar > div {
@@ -783,7 +807,7 @@
     ========================================================== -->
 
     <section
-        class="relative flex min-h-[280px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[320px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
+        class="hero-section relative flex min-h-[220px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[320px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
 
 
         <!-- HERO IMAGE -->
@@ -803,12 +827,12 @@
         <!-- HERO CONTENT -->
 
         <div
-            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-4 pb-6 pt-28 text-center sm:px-8 sm:pt-28 md:px-12 md:pt-32 lg:px-16 lg:pt-36 xl:px-20 xl:pt-40 2xl:px-24">
+            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-4 pb-6 pt-16 text-center sm:px-8 sm:pt-28 md:px-12 md:pt-32 lg:px-16 lg:pt-36 xl:px-20 xl:pt-40 2xl:px-24">
 
             <div class="w-full max-w-[1100px]">
 
                 <h1
-                    class="font-['Poppins',sans-serif] text-[1.8rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                    class="font-['Poppins',sans-serif] text-[1.6rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
 
                     Industries
 
