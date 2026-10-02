@@ -268,6 +268,7 @@
             min-width: 0;
             flex-direction: column;
             overflow: hidden;
+            border: 1px solid rgba(16, 39, 27, 0.06);
             border-radius: 1rem;
             background: #ffffff;
 
@@ -348,6 +349,10 @@
                 padding: 1.5rem;
             }
 
+            .industry-card {
+                border-color: rgba(16, 39, 27, 0.08);
+            }
+
         }
 
         /* =========================================================
@@ -410,6 +415,10 @@
 
             /* INDUSTRY CARDS */
 
+            .industry-card {
+                border-radius: 0.9rem;
+            }
+
             .industry-card:hover {
                 transform: none;
             }
@@ -424,6 +433,15 @@
 
             .industry-content {
                 padding: 1.25rem;
+            }
+
+            .industry-content h2 {
+                font-size: clamp(1.15rem, 3vw, 1.7rem);
+            }
+
+            .industry-content p {
+                font-size: 0.92rem;
+                line-height: 1.7;
             }
 
         }
@@ -460,6 +478,15 @@
 
             .industry-content {
                 padding: 1.1rem;
+            }
+
+            .industry-content h2 {
+                font-size: 1.12rem;
+            }
+
+            .industry-content p {
+                font-size: 0.88rem;
+                line-height: 1.65;
             }
 
         }
