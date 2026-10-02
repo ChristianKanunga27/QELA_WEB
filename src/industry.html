@@ -10,7 +10,7 @@
     <meta name="description"
         content="QELA Technology builds digital solutions for a stronger, more connected agriculture sector.">
 
-    <title>QELA Technology | Digital solutions for agriculture</title>
+    <title>QELA Technology | Industries We Serve</title>
 
     <link rel="shortcut icon" href="./resource/favico.ico" type="image/x-icon">
 
@@ -27,6 +27,333 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
+    <style>
+
+        :root {
+            --ink: #10271b;
+            --lime: #dfa21f;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================== */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            width: 100%;
+        }
+
+
+        /* =========================================================
+           CONTACT BAR
+        ========================================================== */
+
+        .contact-bar {
+            min-height: 44px;
+            box-sizing: border-box;
+            background: #000;
+        }
+
+
+        .contact-bar i {
+            color: var(--lime);
+            font-size: 0.8rem;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================== */
+
+        .main-nav {
+            width: 100%;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+
+        #navbar {
+            padding: 0.85rem 0;
+            transition: background 180ms ease, box-shadow 180ms ease;
+        }
+
+
+        #navbar.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97) !important;
+            box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
+        }
+
+
+        .nav-inner {
+            width: min(100% - 3rem, 1280px);
+            min-height: 64px;
+            margin: 0 auto;
+        }
+
+
+        .nav-logo {
+            display: block;
+            width: auto;
+            height: 64px;
+            max-width: 150px;
+            object-fit: contain;
+        }
+
+
+        .nav-links a {
+            position: relative;
+            color: #e4ab25;
+            font-size: 1.2rem;
+            letter-spacing: 0.02em;
+            transition: color 180ms ease;
+        }
+
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -0.45rem;
+            left: 0;
+            height: 2px;
+            background: var(--lime);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 180ms ease;
+        }
+
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+
+        #navbar.is-sticky .nav-links a {
+            color: #10271b;
+        }
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================== */
+
+        #menuBtn {
+            display: flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 0.375rem;
+            color: #dfa21f;
+            font-size: 1.45rem;
+            line-height: 1;
+            transition: background 180ms ease, color 180ms ease;
+        }
+
+
+        #menuBtn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+
+        #navbar.is-sticky #menuBtn {
+            color: #10271b;
+        }
+
+
+        /* =========================================================
+           MOBILE SIDEBAR
+        ========================================================== */
+
+        #sidebar {
+            width: min(18rem, 85vw);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================== */
+
+        .hero-image {
+            object-position: center;
+        }
+
+
+        /* =========================================================
+           INDUSTRY CARDS
+        ========================================================== */
+
+        .industry-card {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition:
+                transform 300ms ease,
+                box-shadow 300ms ease;
+        }
+
+
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(7, 19, 13, 0.09);
+        }
+
+
+        .industry-image {
+            width: 100%;
+            overflow: hidden;
+            background: #e5ebe7;
+        }
+
+
+        .industry-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 700ms cubic-bezier(.2, .7, .2, 1);
+        }
+
+
+        .industry-card:hover .industry-image img {
+            transform: scale(1.045);
+        }
+
+
+        .industry-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+
+
+        @media (max-width: 767px) {
+
+            .industry-card:hover {
+                transform: none;
+            }
+
+
+            .industry-card:hover .industry-image img {
+                transform: none;
+            }
+
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================== */
+
+        @media (max-width: 767px) {
+
+            .nav-inner {
+                width: calc(100% - 2rem);
+                min-height: 58px;
+            }
+
+
+            .nav-logo {
+                height: 56px;
+                max-width: 125px;
+            }
+
+
+            #navbar {
+                padding: 0.6rem 0;
+            }
+
+
+            #menuBtn {
+                width: 42px;
+                height: 42px;
+                font-size: 1.35rem;
+            }
+
+
+            .contact-bar > div {
+                min-height: 44px;
+                justify-content: center;
+                gap: 0.75rem;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.68rem;
+                line-height: 1.2;
+                flex-wrap: wrap;
+            }
+
+        }
+
+
+        /* =========================================================
+           SMALL PHONES
+        ========================================================== */
+
+        @media (max-width: 480px) {
+
+            .nav-inner {
+                width: calc(100% - 1.25rem);
+            }
+
+
+            .nav-logo {
+                height: 52px;
+                max-width: 115px;
+            }
+
+
+            #menuBtn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -37,20 +364,20 @@
          HEADER
     ========================================================== -->
 
-    <header class="absolute left-0 right-0 top-0 z-50 w-full">
+    <header>
 
 
         <!-- =====================================================
              CONTACT BAR
         ====================================================== -->
 
-        <div class="w-full bg-black text-white">
+        <div class="contact-bar w-full bg-black text-white">
 
             <div
-                class="mx-auto flex min-h-[42px] w-full max-w-[1600px] flex-wrap items-center justify-center gap-x-3 gap-y-1 px-3 py-2 text-[10px] font-medium sm:gap-x-5 sm:px-5 sm:text-xs md:justify-end lg:px-8 lg:text-sm xl:px-10">
+                class="mx-auto flex min-h-[44px] w-full max-w-7xl items-center justify-end gap-4 px-4 py-2 text-xs font-medium sm:gap-5 sm:px-5 lg:gap-4 lg:px-6 lg:text-sm">
 
                 <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-1.5 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
+                    class="flex items-center gap-2 whitespace-nowrap transition duration-200 hover:text-[#dfa21f]">
 
                     <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
@@ -61,8 +388,8 @@
                 </a>
 
 
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-1.5 whitespace-nowrap transition duration-200 hover:text-[#dfa21f] sm:gap-2">
+                <a href="tel:+255718352944"
+                    class="flex items-center gap-2 whitespace-nowrap transition duration-200 hover:text-[#dfa21f]">
 
                     <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
@@ -82,10 +409,11 @@
         ====================================================== -->
 
         <nav id="navbar"
-            class="w-full py-2.5 transition-[background,box-shadow] duration-300 sm:py-3 md:py-3.5 lg:py-4">
+            class="main-nav w-full">
 
             <div
-                class="mx-auto flex min-h-[48px] w-[calc(100%-1.5rem)] max-w-[1600px] items-center justify-between gap-3 sm:w-[calc(100%-2.5rem)] sm:min-h-[52px] md:w-[calc(100%-4rem)] lg:w-[calc(100%-6rem)] xl:w-[calc(100%-8rem)] 2xl:w-[calc(100%-10rem)]">
+                class="nav-inner flex items-center justify-between gap-8">
+
 
                 <!-- LOGO -->
 
@@ -93,7 +421,7 @@
                     class="flex shrink-0 items-center">
 
                     <img src="./resource/image/qela_logo.png"
-                        class="h-auto w-auto max-w-[82px] sm:max-w-[105px] md:max-w-[125px] lg:max-w-[145px] xl:max-w-[155px]"
+                        class="nav-logo"
                         alt="QELA logo">
 
                 </a>
@@ -106,30 +434,25 @@
                 <div class="hidden md:block">
 
                     <div
-                        class="flex items-center gap-5 text-sm font-semibold md:gap-5 md:text-[15px] lg:gap-7 lg:text-base xl:gap-9 xl:text-lg">
+                        class="nav-links flex items-center gap-7 text-base font-semibold md:text-lg">
 
-                        <a href="index.html"
-                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                        <a href="./index.html">
                             Home
                         </a>
 
-                        <a href="about.html"
-                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                        <a href="./about.html">
                             About
                         </a>
 
-                        <a href="product.html"
-                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                        <a href="./product.html">
                             Products
                         </a>
 
-                        <a href="industry.html"
-                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                        <a href="./industry.html">
                             Industry
                         </a>
 
-                        <a href="resource.html"
-                            class="relative whitespace-nowrap text-[#e4ab25] transition-colors duration-200 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100">
+                        <a href="./resource.html">
                             Resources
                         </a>
 
@@ -143,9 +466,10 @@
                 ================================================== -->
 
                 <button id="menuBtn"
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-lg text-yellow-400 transition duration-200 hover:bg-white/10 sm:h-11 sm:w-11 sm:text-xl md:hidden"
                     type="button"
-                    aria-label="Open navigation menu">
+                    aria-label="Open navigation menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false">
 
                     <i class="fa-solid fa-bars"></i>
 
@@ -161,15 +485,15 @@
         ====================================================== -->
 
         <div id="sidebar"
-            class="fixed right-0 top-0 z-[60] h-dvh w-[min(20rem,88vw)] translate-x-full overflow-y-auto bg-gray-900 shadow-2xl transition-transform duration-300 md:hidden">
+            class="fixed right-0 top-0 z-[60] h-dvh translate-x-full overflow-y-auto bg-gray-900 shadow-2xl transition-transform duration-300 md:hidden">
 
 
             <!-- CLOSE BUTTON -->
 
-            <div class="flex justify-end px-4 py-4 sm:px-6 sm:py-5">
+            <div class="flex justify-end px-5 py-5">
 
                 <button id="closeBtn"
-                    class="flex h-10 w-10 items-center justify-center rounded-md text-2xl text-white transition hover:bg-white/10 hover:text-yellow-400"
+                    class="flex h-10 w-10 items-center justify-center rounded-md text-2xl text-white transition duration-200 hover:bg-white/10 hover:text-yellow-400"
                     type="button"
                     aria-label="Close navigation menu">
 
@@ -186,36 +510,37 @@
 
                 <img src="./resource/image/qela_logo.png"
                     alt="QELA logo"
-                    class="max-w-[120px]">
+                    class="h-auto w-auto max-w-[120px]">
 
             </div>
 
 
             <!-- MOBILE LINKS -->
 
-            <div class="flex flex-col px-6 py-7 text-base font-semibold text-yellow-400 sm:gap-1 sm:text-lg">
+            <div
+                class="flex flex-col gap-1 px-6 py-7 text-lg font-semibold text-yellow-400">
 
-                <a href="home.html"
+                <a href="./index.html"
                     class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Home
                 </a>
 
-                <a href="about.html"
+                <a href="./about.html"
                     class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     About
                 </a>
 
-                <a href="product.html"
+                <a href="./product.html"
                     class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Products
                 </a>
 
-                <a href="industry.html"
+                <a href="./industry.html"
                     class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Industry
                 </a>
 
-                <a href="resource.html"
+                <a href="./resource.html"
                     class="rounded-md px-3 py-3 transition duration-200 hover:bg-white/10 hover:text-white">
                     Resources
                 </a>
@@ -233,14 +558,14 @@
     ========================================================== -->
 
     <section
-        class="relative flex min-h-[260px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[310px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
+        class="relative flex min-h-[280px] w-full items-center overflow-hidden bg-[#183c28] text-white sm:min-h-[320px] md:min-h-[370px] lg:min-h-[420px] xl:min-h-[460px] 2xl:min-h-[500px]">
 
 
         <!-- HERO IMAGE -->
 
         <img src="./resource/image/industrial.jpg"
-            alt="Products"
-            class="absolute inset-0 h-full w-full object-cover object-center">
+            alt="Industries served by QELA Technology"
+            class="hero-image absolute inset-0 h-full w-full object-cover">
 
 
         <!-- HERO OVERLAY -->
@@ -253,12 +578,12 @@
         <!-- HERO CONTENT -->
 
         <div
-            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-5 pb-4 pt-[5.5rem] text-center sm:px-8 sm:pt-24 md:px-12 md:pt-28 lg:px-16 xl:px-20 2xl:px-24">
+            class="relative z-10 mx-auto flex w-full max-w-[1600px] items-center justify-center px-4 pb-5 pt-28 text-center sm:px-8 sm:pt-28 md:px-12 md:pt-32 lg:px-16 lg:pt-36 xl:px-20 xl:pt-40 2xl:px-24">
 
             <div class="w-full max-w-[1100px]">
 
                 <h1
-                    class="font-['Poppins',sans-serif] text-[1.6rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                    class="font-['Poppins',sans-serif] text-[1.8rem] font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
 
                     Industries
 
@@ -280,8 +605,7 @@
          INDUSTRIES
     ========================================================== -->
 
-    <section class="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
-
+    <section class="bg-white py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
 
         <div
             class="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
@@ -300,21 +624,21 @@
                 ================================================== -->
 
                 <article
-                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-7">
+                    class="industry-card lg:col-span-7">
 
                     <div
-                        class="aspect-[16/9] w-full overflow-hidden bg-[#e5ebe7] lg:aspect-[1.8/1]">
+                        class="industry-image aspect-[16/9]">
 
                         <img src="./resource/gallery/genfarm.avif"
                             alt="General Farming"
                             loading="lazy"
-                            decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+                            decoding="async">
 
                     </div>
 
 
-                    <div class="p-5 sm:p-6 md:p-7 lg:p-8">
+                    <div
+                        class="industry-content p-5 sm:p-6 md:p-7 lg:p-8">
 
                         <h2
                             class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
@@ -341,21 +665,21 @@
                 ================================================== -->
 
                 <article
-                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-5">
+                    class="industry-card lg:col-span-5">
 
                     <div
-                        class="aspect-[16/9] w-full overflow-hidden bg-[#e5ebe7] lg:aspect-[1.8/1]">
+                        class="industry-image aspect-[16/9]">
 
                         <img src="./resource/gallery/coop.jpg"
                             alt="Agricultural Cooperatives"
                             loading="lazy"
-                            decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+                            decoding="async">
 
                     </div>
 
 
-                    <div class="p-5 sm:p-6 md:p-7 lg:p-8">
+                    <div
+                        class="industry-content p-5 sm:p-6 md:p-7 lg:p-8">
 
                         <h2
                             class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
@@ -382,21 +706,21 @@
                 ================================================== -->
 
                 <article
-                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+                    class="industry-card lg:col-span-4">
 
                     <div
-                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+                        class="industry-image aspect-[16/10]">
 
                         <img src="./resource/gallery/see.jpg"
                             alt="Seed Producers"
                             loading="lazy"
-                            decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+                            decoding="async">
 
                     </div>
 
 
-                    <div class="p-5 sm:p-6 md:p-7">
+                    <div
+                        class="industry-content p-5 sm:p-6 md:p-7">
 
                         <h2
                             class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
@@ -423,21 +747,21 @@
                 ================================================== -->
 
                 <article
-                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+                    class="industry-card lg:col-span-4">
 
                     <div
-                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+                        class="industry-image aspect-[16/10]">
 
                         <img src="./resource/gallery/fertilizer.jpg"
                             alt="Fertilizer Manufacturers"
                             loading="lazy"
-                            decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+                            decoding="async">
 
                     </div>
 
 
-                    <div class="p-5 sm:p-6 md:p-7">
+                    <div
+                        class="industry-content p-5 sm:p-6 md:p-7">
 
                         <h2
                             class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
@@ -464,21 +788,21 @@
                 ================================================== -->
 
                 <article
-                    class="overflow-hidden rounded-2xl bg-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(7,19,13,0.09)] max-sm:hover:translate-y-0 sm:rounded-[18px] lg:col-span-4">
+                    class="industry-card lg:col-span-4">
 
                     <div
-                        class="aspect-[16/10] w-full overflow-hidden bg-[#e5ebe7]">
+                        class="industry-image aspect-[16/10]">
 
                         <img src="./resource/gallery/research.jpg"
                             alt="Agricultural Research"
                             loading="lazy"
-                            decoding="async"
-                            class="block h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:scale-[1.045] max-sm:hover:scale-100">
+                            decoding="async">
 
                     </div>
 
 
-                    <div class="p-5 sm:p-6 md:p-7">
+                    <div
+                        class="industry-content p-5 sm:p-6 md:p-7">
 
                         <h2
                             class="font-['Poppins',sans-serif] text-lg font-semibold leading-tight text-[#07130d] sm:text-xl md:text-2xl">
@@ -521,9 +845,7 @@
                 class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-10 xl:gap-16">
 
 
-                <!-- =================================================
-                     COMPANY
-                ================================================== -->
+                <!-- COMPANY -->
 
                 <div class="sm:col-span-2 lg:col-span-1">
 
@@ -580,9 +902,7 @@
 
 
 
-                <!-- =================================================
-                     SOLUTIONS
-                ================================================== -->
+                <!-- SOLUTIONS -->
 
                 <div>
 
@@ -633,9 +953,7 @@
 
 
 
-                <!-- =================================================
-                     QUICK LINKS
-                ================================================== -->
+                <!-- QUICK LINKS -->
 
                 <div>
 
@@ -686,9 +1004,7 @@
 
 
 
-                <!-- =================================================
-                     SUPPORT
-                ================================================== -->
+                <!-- SUPPORT -->
 
                 <div>
 
@@ -733,16 +1049,15 @@
 
 
 
-        <!-- =========================================================
-             COPYRIGHT
-        ========================================================== -->
+        <!-- COPYRIGHT -->
 
         <div class="bg-black/30">
 
             <div
                 class="mx-auto flex w-full max-w-[1600px] flex-col items-center justify-between gap-4 px-5 py-5 sm:px-7 md:px-10 lg:flex-row lg:px-12 xl:px-16 2xl:px-20">
 
-                <p class="text-center text-xs leading-5 text-gray-500 sm:text-sm lg:text-left">
+                <p
+                    class="text-center text-xs leading-5 text-gray-500 sm:text-sm lg:text-left">
 
                     © 2026 Qela Technologies (T) Limited.
                     All Rights Reserved.
@@ -774,7 +1089,7 @@
 
 
     <!-- =========================================================
-         HEADER FUNCTIONALITY
+         JAVASCRIPT
     ========================================================== -->
 
     <script>
@@ -786,11 +1101,14 @@
                MOBILE SIDEBAR
             ====================================================== */
 
-            const menuBtn = document.getElementById("menuBtn");
+            const menuBtn =
+                document.getElementById("menuBtn");
 
-            const closeBtn = document.getElementById("closeBtn");
+            const closeBtn =
+                document.getElementById("closeBtn");
 
-            const sidebar = document.getElementById("sidebar");
+            const sidebar =
+                document.getElementById("sidebar");
 
 
             if (menuBtn && closeBtn && sidebar) {
@@ -798,38 +1116,58 @@
 
                 function openSidebar() {
 
-                    sidebar.classList.remove("translate-x-full");
+                    sidebar.classList.remove(
+                        "translate-x-full"
+                    );
 
-                    sidebar.classList.add("translate-x-0");
+                    sidebar.classList.add(
+                        "translate-x-0"
+                    );
 
-                    document.body.classList.add("overflow-hidden");
+                    document.body.classList.add(
+                        "overflow-hidden"
+                    );
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
 
                 }
 
 
                 function closeSidebar() {
 
-                    sidebar.classList.remove("translate-x-0");
+                    sidebar.classList.remove(
+                        "translate-x-0"
+                    );
 
-                    sidebar.classList.add("translate-x-full");
+                    sidebar.classList.add(
+                        "translate-x-full"
+                    );
 
-                    document.body.classList.remove("overflow-hidden");
+                    document.body.classList.remove(
+                        "overflow-hidden"
+                    );
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
                 }
 
 
-                menuBtn.addEventListener("click", function () {
+                menuBtn.addEventListener(
+                    "click",
+                    openSidebar
+                );
 
-                    openSidebar();
 
-                });
-
-
-                closeBtn.addEventListener("click", function () {
-
-                    closeSidebar();
-
-                });
+                closeBtn.addEventListener(
+                    "click",
+                    closeSidebar
+                );
 
 
                 const sidebarLinks =
@@ -838,35 +1176,40 @@
 
                 sidebarLinks.forEach(function (link) {
 
-                    link.addEventListener("click", function () {
-
-                        closeSidebar();
-
-                    });
+                    link.addEventListener(
+                        "click",
+                        closeSidebar
+                    );
 
                 });
 
 
-                document.addEventListener("keydown", function (event) {
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
 
-                    if (event.key === "Escape") {
+                        if (event.key === "Escape") {
 
-                        closeSidebar();
+                            closeSidebar();
+
+                        }
 
                     }
+                );
 
-                });
 
+                window.addEventListener(
+                    "resize",
+                    function () {
 
-                window.addEventListener("resize", function () {
+                        if (window.innerWidth >= 768) {
 
-                    if (window.innerWidth >= 768) {
+                            closeSidebar();
 
-                        closeSidebar();
+                        }
 
                     }
-
-                });
+                );
 
             }
 
@@ -879,15 +1222,15 @@
             const navbar =
                 document.getElementById("navbar");
 
+
             const contactBar =
-                document.querySelector("header > div");
+                document.querySelector(".contact-bar");
 
 
             if (navbar) {
 
 
                 function handleNavbarScroll() {
-
 
                     const triggerPoint =
                         contactBar
@@ -897,70 +1240,16 @@
 
                     if (window.scrollY > triggerPoint) {
 
-
                         navbar.classList.add(
-                            "fixed",
-                            "left-0",
-                            "right-0",
-                            "top-0",
-                            "bg-white/[0.97]",
-                            "shadow-[0_8px_24px_rgba(16,39,27,0.12)]"
+                            "is-sticky"
                         );
-
-
-                        const navLinks =
-                            navbar.querySelectorAll("a");
-
-
-                        navLinks.forEach(function (link) {
-
-                            if (!link.closest("button")) {
-
-                                link.classList.remove(
-                                    "text-[#e4ab25]"
-                                );
-
-                                link.classList.add(
-                                    "text-[#10271b]"
-                                );
-
-                            }
-
-                        });
 
 
                     } else {
 
-
                         navbar.classList.remove(
-                            "fixed",
-                            "left-0",
-                            "right-0",
-                            "top-0",
-                            "bg-white/[0.97]",
-                            "shadow-[0_8px_24px_rgba(16,39,27,0.12)]"
+                            "is-sticky"
                         );
-
-
-                        const navLinks =
-                            navbar.querySelectorAll("a");
-
-
-                        navLinks.forEach(function (link) {
-
-                            if (!link.closest("button")) {
-
-                                link.classList.remove(
-                                    "text-[#10271b]"
-                                );
-
-                                link.classList.add(
-                                    "text-[#e4ab25]"
-                                );
-
-                            }
-
-                        });
 
                     }
 
@@ -969,7 +1258,8 @@
 
                 window.addEventListener(
                     "scroll",
-                    handleNavbarScroll
+                    handleNavbarScroll,
+                    { passive: true }
                 );
 
 
@@ -984,4 +1274,3 @@
 </body>
 
 </html>
-
