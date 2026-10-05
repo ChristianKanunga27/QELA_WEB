@@ -21,7 +21,6 @@
 
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
@@ -121,7 +120,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -141,9 +139,7 @@
 
             <!-- ALL -->
 
-            <button
-                onclick="filterResources('all')"
-                id="filter-all"
+            <button onclick="filterResources('all')" id="filter-all"
                 class="filter-btn px-5 py-2.5 rounded-full bg-[#07130d] text-white text-sm font-medium transition">
 
                 All
@@ -153,9 +149,7 @@
 
             <!-- NEWS -->
 
-            <button
-                onclick="filterResources('news')"
-                id="filter-news"
+            <button onclick="filterResources('news')" id="filter-news"
                 class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
                 News
@@ -165,9 +159,7 @@
 
             <!-- BLOGS -->
 
-            <button
-                onclick="filterResources('blog')"
-                id="filter-blog"
+            <button onclick="filterResources('blog')" id="filter-blog"
                 class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
                 Blogs
@@ -177,9 +169,7 @@
 
             <!-- RESEARCH -->
 
-            <button
-                onclick="filterResources('research')"
-                id="filter-research"
+            <button onclick="filterResources('research')" id="filter-research"
                 class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
                 Research
@@ -196,36 +186,25 @@
         ALL RESOURCES
     ====================================================== -->
 
-    <section
-        id="all"
-        class="max-w-7xl mx-auto px-6 lg:px-8 py-5 scroll-mt-20">
+    <section id="all" class="max-w-7xl mx-auto px-6 lg:px-8 py-5 scroll-mt-20">
 
 
-        <div
-            id="resourceGrid"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div id="resourceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
 
             <!-- =================================================
                 NEWS 1
             ================================================== -->
 
-            <article
-                id="news-1"
-                data-category="news"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="news-1" data-category="news" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/resource1.jpg"
-                    alt="Digital agriculture"
-                    class="w-full h-60 object-cover">
+                <img src="resource/gallery/resource1.jpg" alt="Digital agriculture" class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             News
 
@@ -234,16 +213,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         The growing role of digital agriculture
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Discover how digital technology is supporting
                         better agricultural operations and decision making.
@@ -251,8 +228,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('news-1')"
+                    <button onclick="openResource('news-1')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -269,22 +245,16 @@
                 NEWS 2
             ================================================== -->
 
-            <article
-                id="news-2"
-                data-category="news"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="news-2" data-category="news" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/resource2.jpg"
-                    alt="Agricultural organizations"
+                <img src="resource/gallery/resource2.jpg" alt="Agricultural organizations"
                     class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             News
 
@@ -293,16 +263,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Technology supporting agricultural organizations
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         See how connected digital systems can help
                         agricultural organizations manage information.
@@ -310,8 +278,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('news-2')"
+                    <button onclick="openResource('news-2')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -328,22 +295,16 @@
                 NEWS 3
             ================================================== -->
 
-            <article
-                id="news-3"
-                data-category="news"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="news-3" data-category="news" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/resource3.jpg"
-                    alt="Agricultural technology"
+                <img src="resource/gallery/resource3.jpg" alt="Agricultural technology"
                     class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             News
 
@@ -352,16 +313,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Digital innovation in agriculture
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Learn how digital innovation is creating new
                         opportunities across agricultural value chains.
@@ -369,8 +328,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('news-3')"
+                    <button onclick="openResource('news-3')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -387,21 +345,14 @@
                 BLOG 1
             ================================================== -->
 
-            <article
-                id="blog-1"
-                data-category="blog"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="blog-1" data-category="blog" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <div
-                    class="relative h-48 overflow-hidden sm:h-56">
+                <div class="relative h-48 overflow-hidden sm:h-56">
 
-                    <video autoplay muted loop playsinline preload="auto"
-                        aria-hidden="true"
+                    <video autoplay muted loop playsinline preload="auto" aria-hidden="true"
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
 
-                        <source
-                            src="./resource/video/bg5.mp4"
-                            type="video/mp4">
+                        <source src="./resource/video/bg5.mp4" type="video/mp4">
 
                     </video>
 
@@ -411,8 +362,7 @@
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Blog
 
@@ -421,16 +371,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         How technology is changing modern farming
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Learn how farmers can use digital tools to
                         improve productivity and farm management.
@@ -438,8 +386,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('blog-1')"
+                    <button onclick="openResource('blog-1')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -456,22 +403,15 @@
                 BLOG 2
             ================================================== -->
 
-            <article
-                id="blog-2"
-                data-category="blog"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="blog-2" data-category="blog" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/2nd about.avif"
-                    alt="Agricultural data"
-                    class="w-full h-60 object-cover">
+                <img src="resource/gallery/2nd about.avif" alt="Agricultural data" class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Blog
 
@@ -480,16 +420,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Why agricultural data matters
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Understand why reliable agricultural data is
                         important for planning and better decisions.
@@ -497,8 +435,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('blog-2')"
+                    <button onclick="openResource('blog-2')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -515,22 +452,15 @@
                 BLOG 3
             ================================================== -->
 
-            <article
-                id="blog-3"
-                data-category="blog"
-                class="resource-card bg-white rounded-2xl overflow-hidden ">
+            <article id="blog-3" data-category="blog" class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/image/agri.jpeg"
-                    alt="Smart farming"
-                    class="w-full h-60 object-cover">
+                <img src="resource/image/agri.jpeg" alt="Smart farming" class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Blog
 
@@ -539,16 +469,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Building smarter agricultural systems
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Explore practical ways technology can connect
                         agricultural processes and information.
@@ -556,8 +484,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('blog-3')"
+                    <button onclick="openResource('blog-3')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -574,22 +501,17 @@
                 RESEARCH 1
             ================================================== -->
 
-            <article
-                id="research-1"
-                data-category="research"
+            <article id="research-1" data-category="research"
                 class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/officeimg1.avif"
-                    alt="Agricultural technology research"
+                <img src="resource/gallery/officeimg1.avif" alt="Agricultural technology research"
                     class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Research
 
@@ -598,16 +520,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Digital tools for agricultural cooperatives
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Explore how digital systems can improve cooperative
                         management, records and member services.
@@ -615,8 +535,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('research-1')"
+                    <button onclick="openResource('research-1')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -633,22 +552,17 @@
                 RESEARCH 2
             ================================================== -->
 
-            <article
-                id="research-2"
-                data-category="research"
+            <article id="research-2" data-category="research"
                 class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/gallery/reso1.avif"
-                    alt="Agricultural data research"
+                <img src="resource/gallery/reso1.avif" alt="Agricultural data research"
                     class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Research
 
@@ -657,16 +571,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Agricultural data and digital decision making
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Explore the role of agricultural data in improving
                         planning and digital decision making.
@@ -674,8 +586,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('research-2')"
+                    <button onclick="openResource('research-2')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -692,22 +603,16 @@
                 RESEARCH 3
             ================================================== -->
 
-            <article
-                id="research-3"
-                data-category="research"
+            <article id="research-3" data-category="research"
                 class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                <img
-                    src="resource/image/about4.jpg"
-                    alt="Agricultural research"
-                    class="w-full h-60 object-cover">
+                <img src="resource/image/about4.jpg" alt="Agricultural research" class="w-full h-60 object-cover">
 
                 <div class="p-6">
 
                     <div class="mb-4">
 
-                        <span
-                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+                        <span class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
                             Research
 
@@ -716,16 +621,14 @@
                     </div>
 
 
-                    <h3
-                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+                    <h3 class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
                         Data-driven agriculture
 
                     </h3>
 
 
-                    <p
-                        class="text-sm text-gray-500 leading-6 mb-5">
+                    <p class="text-sm text-gray-500 leading-6 mb-5">
 
                         Understanding how agricultural data can support
                         planning, monitoring and informed decisions.
@@ -733,8 +636,7 @@
                     </p>
 
 
-                    <button
-                        onclick="openResource('research-3')"
+                    <button onclick="openResource('research-3')"
                         class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
                         Explore
@@ -756,8 +658,7 @@
         CENTER RESOURCE MODAL
     ====================================================== -->
 
-    <div
-        id="resourceModal"
+    <div id="resourceModal"
         class="resource-overlay hidden fixed inset-0 z-[100] bg-[#07130d]/75 backdrop-blur-md px-4 py-6 sm:px-6 sm:py-8 lg:py-10 flex items-center justify-center">
 
 
@@ -782,16 +683,13 @@
 
                     <!-- Small decorative line -->
 
-                    <span
-                        class="w-8 h-[3px] bg-green-700 rounded-full">
+                    <span class="w-8 h-[3px] bg-green-700 rounded-full">
                     </span>
 
 
                     <!-- TYPE -->
 
-                    <span
-                        id="modalType"
-                        class="text-xs uppercase tracking-[0.18em] font-semibold text-green-700">
+                    <span id="modalType" class="text-xs uppercase tracking-[0.18em] font-semibold text-green-700">
                     </span>
 
 
@@ -800,23 +698,14 @@
 
                 <!-- CLOSE ICON -->
 
-                <button
-                    onclick="closeResource()"
-                    aria-label="Close resource"
+                <button onclick="closeResource()" aria-label="Close resource"
                     class="w-10 h-10 rounded-full border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-[#07130d] hover:text-white hover:border-[#07130d] transition duration-300">
 
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
 
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18L18 6M6 6l12 12" />
 
                     </svg>
@@ -829,8 +718,7 @@
                 SCROLLABLE CONTENT
             ================================================== -->
 
-            <div
-                class="resource-scroll flex-1 overflow-y-auto">
+            <div class="resource-scroll flex-1 overflow-y-auto">
 
 
                 <!-- IMAGE -->
@@ -838,17 +726,12 @@
                 <div class="relative">
 
 
-                    <img
-                        id="modalImage"
-                        src=""
-                        alt=""
-                        class="w-full h-56 sm:h-72 lg:h-80 object-cover">
+                    <img id="modalImage" src="" alt="" class="w-full h-56 sm:h-72 lg:h-80 object-cover">
 
 
                     <!-- IMAGE OVERLAY -->
 
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-[#07130d]/30 to-transparent pointer-events-none">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#07130d]/30 to-transparent pointer-events-none">
                     </div>
 
 
@@ -865,8 +748,7 @@
 
                     <!-- TITLE -->
 
-                    <h2
-                        id="modalTitle"
+                    <h2 id="modalTitle"
                         class="font-['Poppins'] text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-[#07130d] mb-7">
                     </h2>
 
@@ -874,23 +756,19 @@
 
                     <!-- CONTENT -->
 
-                    <div
-                        id="modalContent"
-                        class="text-gray-600 leading-7 text-sm sm:text-base space-y-5">
+                    <div id="modalContent" class="text-gray-600 leading-7 text-sm sm:text-base space-y-5">
                     </div>
 
 
 
                     <!-- DIVIDER -->
 
-                    <div
-                        class="mt-9 pt-6 border-t border-gray-100 flex justify-end">
+                    <div class="mt-9 pt-6 border-t border-gray-100 flex justify-end">
 
 
                         <!-- CLOSE BUTTON -->
 
-                        <button
-                            onclick="closeResource()"
+                        <button onclick="closeResource()"
                             class="px-6 py-3 bg-[#07130d] text-white rounded-full text-sm font-semibold hover:bg-green-800 transition duration-300">
 
                             Close
