@@ -1,904 +1,902 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description"
-            content="Explore Qela Technologies news, agricultural research and digital agriculture resources.">
+    <meta name="description"
+        content="Explore Qela Technologies news, agricultural research and digital agriculture resources.">
 
-        <title>Qela Technologies | Resources</title>
+    <title>Qela Technologies | Resources</title>
 
-        <!-- Tailwind CSS -->
-        <link rel="stylesheet" href="output.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="output.css">
 
-        <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-            rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
 
-        <style>
+    <style>
 
-            html {
-                scroll-behavior: smooth;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+        RESOURCE CARD
+        ========================================= */
+
+        .resource-card {
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* =========================================
+        PREVENT BACKGROUND SCROLL
+        ========================================= */
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+        CENTER MODAL
+        ========================================= */
+
+        .resource-modal-box {
+            animation: modalAppear 0.3s ease;
+        }
+
+
+        @keyframes modalAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.97);
             }
 
-            body {
-                overflow-x: hidden;
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
             }
 
+        }
 
-            /* =========================================
-            RESOURCE CARD
-            ========================================= */
 
-            .resource-card {
-                transition:
-                    transform 0.3s ease,
-                    box-shadow 0.3s ease;
+        /* =========================================
+        MODAL SCROLLBAR
+        ========================================= */
+
+        .resource-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .resource-scroll::-webkit-scrollbar-track {
+            background: #f1f5f3;
+        }
+
+        .resource-scroll::-webkit-scrollbar-thumb {
+            background: #b8c7bf;
+            border-radius: 20px;
+        }
+
+        .resource-scroll::-webkit-scrollbar-thumb:hover {
+            background: #07130d;
+        }
+
+
+        /* =========================================
+        MODAL OVERLAY
+        ========================================= */
+
+        .resource-overlay {
+            animation: overlayAppear 0.25s ease;
+        }
+
+
+        @keyframes overlayAppear {
+
+            from {
+                opacity: 0;
             }
 
-            .resource-card:hover {
-                transform: translateY(-5px);
+            to {
+                opacity: 1;
             }
 
+        }
 
-            /* =========================================
-            PREVENT BACKGROUND SCROLL
-            ========================================= */
+    </style>
 
-            body.modal-open {
-                overflow: hidden;
-            }
+</head>
 
 
-            /* =========================================
-            CENTER MODAL
-            ========================================= */
+<body class="bg-[#f1f5f3] text-[#07130d] font-['DM_Sans']">
 
-            .resource-modal-box {
-                animation: modalAppear 0.3s ease;
-            }
 
+    <!-- =====================================================
+        RESOURCE NAVIGATION
+    ====================================================== -->
 
-            @keyframes modalAppear {
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-5">
 
-                from {
-                    opacity: 0;
-                    transform: translateY(25px) scale(0.97);
-                }
+        <div class="flex flex-wrap justify-center gap-3">
 
-                to {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                }
 
-            }
+            <!-- ALL -->
 
+            <button
+                onclick="filterResources('all')"
+                id="filter-all"
+                class="filter-btn px-5 py-2.5 rounded-full bg-[#07130d] text-white text-sm font-medium transition">
 
-            /* =========================================
-            MODAL SCROLLBAR
-            ========================================= */
+                All
 
-            .resource-scroll::-webkit-scrollbar {
-                width: 6px;
-            }
+            </button>
 
-            .resource-scroll::-webkit-scrollbar-track {
-                background: #f1f5f3;
-            }
 
-            .resource-scroll::-webkit-scrollbar-thumb {
-                background: #b8c7bf;
-                border-radius: 20px;
-            }
+            <!-- NEWS -->
 
-            .resource-scroll::-webkit-scrollbar-thumb:hover {
-                background: #07130d;
-            }
+            <button
+                onclick="filterResources('news')"
+                id="filter-news"
+                class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
+                News
 
-            /* =========================================
-            MODAL OVERLAY
-            ========================================= */
+            </button>
 
-            .resource-overlay {
-                animation: overlayAppear 0.25s ease;
-            }
 
+            <!-- BLOGS -->
 
-            @keyframes overlayAppear {
+            <button
+                onclick="filterResources('blog')"
+                id="filter-blog"
+                class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
-                from {
-                    opacity: 0;
-                }
+                Blogs
 
-                to {
-                    opacity: 1;
-                }
+            </button>
 
-            }
 
-        </style>
+            <!-- RESEARCH -->
 
-    </head>
+            <button
+                onclick="filterResources('research')"
+                id="filter-research"
+                class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
 
+                Research
 
-    <body class="bg-[#f1f5f3] text-[#07130d] font-['DM_Sans']">
+            </button>
 
+        </div>
 
-        <!-- =====================================================
-            RESOURCE NAVIGATION
-        ====================================================== -->
+    </section>
 
-        <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-5">
 
-            <div class="flex flex-wrap gap-3">
 
+    <!-- =====================================================
+        ALL RESOURCES
+    ====================================================== -->
 
-                <!-- ALL -->
+    <section
+        id="all"
+        class="max-w-7xl mx-auto px-6 lg:px-8 py-5 scroll-mt-20">
 
-                <button
-                    onclick="filterResources('all')"
-                    id="filter-all"
-                    class="filter-btn px-5 py-2.5 rounded-full bg-[#07130d] text-white text-sm font-medium transition">
-
-                    All
-
-                </button>
-
-
-                <!-- NEWS -->
-
-                <button
-                    onclick="filterResources('news')"
-                    id="filter-news"
-                    class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
-
-                    News
-
-                </button>
-
-
-                <!-- BLOGS -->
-
-                <button
-                    onclick="filterResources('blog')"
-                    id="filter-blog"
-                    class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
-
-                    Blogs
-
-                </button>
-
-
-                <!-- RESEARCH -->
-
-                <button
-                    onclick="filterResources('research')"
-                    id="filter-research"
-                    class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-medium hover:text-green-700 hover:border-green-600 transition">
-
-                    Research
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-            ALL RESOURCES
-        ====================================================== -->
-
-        <section
-            id="all"
-            class="max-w-7xl mx-auto px-6 lg:px-8 py-5 scroll-mt-20">
-
-
-            <div
-                id="resourceGrid"
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-
-
-                <!-- =================================================
-                    NEWS 1
-                ================================================== -->
-
-                <article
-                    id="news-1"
-                    data-category="news"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/resource1.jpg"
-                        alt="Digital agriculture"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                News
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Qela and the growing role of digital agriculture
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Discover how digital technology is supporting
-                            better agricultural operations and decision making.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('news-1')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    NEWS 2
-                ================================================== -->
-
-                <article
-                    id="news-2"
-                    data-category="news"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/resource2.jpg"
-                        alt="Agricultural organizations"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                News
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Technology supporting agricultural organizations
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            See how connected digital systems can help
-                            agricultural organizations manage information.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('news-2')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    NEWS 3
-                ================================================== -->
-
-                <article
-                    id="news-3"
-                    data-category="news"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/resource3.jpg"
-                        alt="Agricultural technology"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                News
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Digital innovation in agriculture
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Learn how digital innovation is creating new
-                            opportunities across agricultural value chains.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('news-3')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    BLOG 1
-                ================================================== -->
-
-                <article
-                    id="blog-1"
-                    data-category="blog"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                     <div
-                        class="relative h-48 overflow-hidden sm:h-56">
-
-                        <video autoplay muted loop playsinline preload="auto"
-                            aria-hidden="true"
-                            class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
-
-                            <source
-                                src="./resource/video/bg5.mp4"
-                                type="video/mp4">
-
-                        </video>
-
-                    </div>
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Blog
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            How technology is changing modern farming
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Learn how farmers can use digital tools to
-                            improve productivity and farm management.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('blog-1')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    BLOG 2
-                ================================================== -->
-
-                <article
-                    id="blog-2"
-                    data-category="blog"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/2nd about.avif"
-                        alt="Agricultural data"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Blog
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Why agricultural data matters
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Understand why reliable agricultural data is
-                            important for planning and better decisions.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('blog-2')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    BLOG 3
-                ================================================== -->
-
-                <article
-                    id="blog-3"
-                    data-category="blog"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/image/agri.jpeg"
-                        alt="Smart farming"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Blog
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Building smarter agricultural systems
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Explore practical ways technology can connect
-                            agricultural processes and information.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('blog-3')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    RESEARCH 1
-                ================================================== -->
-
-                <article
-                    id="research-1"
-                    data-category="research"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/officeimg1.avif"
-                        alt="Agricultural technology research"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Research
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Digital tools for agricultural cooperatives
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Explore how digital systems can improve cooperative
-                            management, records and member services.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('research-1')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    RESEARCH 2
-                ================================================== -->
-
-                <article
-                    id="research-2"
-                    data-category="research"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/gallery/reso1.avif"
-                        alt="Agricultural data research"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Research
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Agricultural data and digital decision making
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Explore the role of agricultural data in improving
-                            planning and digital decision making.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('research-2')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================================
-                    RESEARCH 3
-                ================================================== -->
-
-                <article
-                    id="research-3"
-                    data-category="research"
-                    class="resource-card bg-white rounded-2xl overflow-hidden ">
-
-                    <img
-                        src="resource/image/about4.jpg"
-                        alt="Agricultural research"
-                        class="w-full h-60 object-cover">
-
-                    <div class="p-6">
-
-                        <div class="mb-4">
-
-                            <span
-                                class="text-xs uppercase tracking-widest font-semibold text-green-700">
-
-                                Research
-
-                            </span>
-
-                        </div>
-
-
-                        <h3
-                            class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
-
-                            Data-driven agriculture
-
-                        </h3>
-
-
-                        <p
-                            class="text-sm text-gray-500 leading-6 mb-5">
-
-                            Understanding how agricultural data can support
-                            planning, monitoring and informed decisions.
-
-                        </p>
-
-
-                        <button
-                            onclick="openResource('research-3')"
-                            class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
-
-                            Explore
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-            CENTER RESOURCE MODAL
-        ====================================================== -->
 
         <div
-            id="resourceModal"
-            class="resource-overlay hidden fixed inset-0 z-[100] bg-[#07130d]/75 backdrop-blur-md px-4 py-6 sm:px-6 sm:py-8 lg:py-10 flex items-center justify-center">
+            id="resourceGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
 
             <!-- =================================================
-                MODAL BOX
+                NEWS 1
             ================================================== -->
 
-            <div
-                class="resource-modal-box w-full max-w-3xl max-h-[92vh] bg-white rounded-3xl overflow-hidden shadow-2xl border border-white/20 flex flex-col">
+            <article
+                id="news-1"
+                data-category="news"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
 
+                <img
+                    src="resource/gallery/resource1.jpg"
+                    alt="Digital agriculture"
+                    class="w-full h-60 object-cover">
 
-                <!-- =================================================
-                    MODAL HEADER - STICKY
-                ================================================== -->
+                <div class="p-6">
 
-                <div
-                    class="sticky top-0 z-20 bg-white border-b border-gray-100 px-5 sm:px-7 py-4 flex items-center justify-between shrink-0">
-
-
-                    <div class="flex items-center gap-3">
-
-
-                        <!-- Small decorative line -->
+                    <div class="mb-4">
 
                         <span
-                            class="w-8 h-[3px] bg-green-700 rounded-full">
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            News
+
                         </span>
-
-
-                        <!-- TYPE -->
-
-                        <span
-                            id="modalType"
-                            class="text-xs uppercase tracking-[0.18em] font-semibold text-green-700">
-                        </span>
-
 
                     </div>
 
 
-                    <!-- CLOSE ICON -->
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        The growing role of digital agriculture
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Discover how digital technology is supporting
+                        better agricultural operations and decision making.
+
+                    </p>
+
 
                     <button
-                        onclick="closeResource()"
-                        aria-label="Close resource"
-                        class="w-10 h-10 rounded-full border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-[#07130d] hover:text-white hover:border-[#07130d] transition duration-300">
+                        onclick="openResource('news-1')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-
-                        </svg>
+                        Explore
 
                     </button>
 
                 </div>
 
-                <!-- =================================================
-                    SCROLLABLE CONTENT
-                ================================================== -->
-
-                <div
-                    class="resource-scroll flex-1 overflow-y-auto">
+            </article>
 
 
-                    <!-- IMAGE -->
 
-                    <div class="relative">
+            <!-- =================================================
+                NEWS 2
+            ================================================== -->
 
+            <article
+                id="news-2"
+                data-category="news"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
 
-                        <img
-                            id="modalImage"
-                            src=""
-                            alt=""
-                            class="w-full h-56 sm:h-72 lg:h-80 object-cover">
+                <img
+                    src="resource/gallery/resource2.jpg"
+                    alt="Agricultural organizations"
+                    class="w-full h-60 object-cover">
 
+                <div class="p-6">
 
-                        <!-- IMAGE OVERLAY -->
+                    <div class="mb-4">
 
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#07130d]/30 to-transparent pointer-events-none">
-                        </div>
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
 
+                            News
+
+                        </span>
 
                     </div>
 
 
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
 
-                    <!-- =================================================
-                        ARTICLE CONTENT
-                    ================================================== -->
+                        Technology supporting agricultural organizations
 
-                    <div class="px-6 sm:px-8 lg:px-10 py-7 sm:py-9">
-
-
-                        <!-- TITLE -->
-
-                        <h2
-                            id="modalTitle"
-                            class="font-['Poppins'] text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-[#07130d] mb-7">
-                        </h2>
+                    </h3>
 
 
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
 
-                        <!-- CONTENT -->
+                        See how connected digital systems can help
+                        agricultural organizations manage information.
 
-                        <div
-                            id="modalContent"
-                            class="text-gray-600 leading-7 text-sm sm:text-base space-y-5">
-                        </div>
-
-
-
-                        <!-- DIVIDER -->
-
-                        <div
-                            class="mt-9 pt-6 border-t border-gray-100 flex justify-end">
+                    </p>
 
 
-                            <!-- CLOSE BUTTON -->
+                    <button
+                        onclick="openResource('news-2')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
 
-                            <button
-                                onclick="closeResource()"
-                                class="px-6 py-3 bg-[#07130d] text-white rounded-full text-sm font-semibold hover:bg-green-800 transition duration-300">
+                        Explore
 
-                                Close
+                    </button>
 
-                            </button>
+                </div>
+
+            </article>
 
 
-                        </div>
+
+            <!-- =================================================
+                NEWS 3
+            ================================================== -->
+
+            <article
+                id="news-3"
+                data-category="news"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/gallery/resource3.jpg"
+                    alt="Agricultural technology"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            News
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Digital innovation in agriculture
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Learn how digital innovation is creating new
+                        opportunities across agricultural value chains.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('news-3')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                BLOG 1
+            ================================================== -->
+
+            <article
+                id="blog-1"
+                data-category="blog"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <div
+                    class="relative h-48 overflow-hidden sm:h-56">
+
+                    <video autoplay muted loop playsinline preload="auto"
+                        aria-hidden="true"
+                        class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.06]">
+
+                        <source
+                            src="./resource/video/bg5.mp4"
+                            type="video/mp4">
+
+                    </video>
+
+                </div>
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Blog
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        How technology is changing modern farming
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Learn how farmers can use digital tools to
+                        improve productivity and farm management.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('blog-1')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                BLOG 2
+            ================================================== -->
+
+            <article
+                id="blog-2"
+                data-category="blog"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/gallery/2nd about.avif"
+                    alt="Agricultural data"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Blog
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Why agricultural data matters
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Understand why reliable agricultural data is
+                        important for planning and better decisions.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('blog-2')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                BLOG 3
+            ================================================== -->
+
+            <article
+                id="blog-3"
+                data-category="blog"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/image/agri.jpeg"
+                    alt="Smart farming"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Blog
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Building smarter agricultural systems
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Explore practical ways technology can connect
+                        agricultural processes and information.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('blog-3')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                RESEARCH 1
+            ================================================== -->
+
+            <article
+                id="research-1"
+                data-category="research"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/gallery/officeimg1.avif"
+                    alt="Agricultural technology research"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Research
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Digital tools for agricultural cooperatives
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Explore how digital systems can improve cooperative
+                        management, records and member services.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('research-1')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                RESEARCH 2
+            ================================================== -->
+
+            <article
+                id="research-2"
+                data-category="research"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/gallery/reso1.avif"
+                    alt="Agricultural data research"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Research
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Agricultural data and digital decision making
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Explore the role of agricultural data in improving
+                        planning and digital decision making.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('research-2')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                RESEARCH 3
+            ================================================== -->
+
+            <article
+                id="research-3"
+                data-category="research"
+                class="resource-card bg-white rounded-2xl overflow-hidden ">
+
+                <img
+                    src="resource/image/about4.jpg"
+                    alt="Agricultural research"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+
+                    <div class="mb-4">
+
+                        <span
+                            class="text-xs uppercase tracking-widest font-semibold text-green-700">
+
+                            Research
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="font-['Poppins'] text-xl font-semibold leading-snug mb-3">
+
+                        Data-driven agriculture
+
+                    </h3>
+
+
+                    <p
+                        class="text-sm text-gray-500 leading-6 mb-5">
+
+                        Understanding how agricultural data can support
+                        planning, monitoring and informed decisions.
+
+                    </p>
+
+
+                    <button
+                        onclick="openResource('research-3')"
+                        class="text-sm font-semibold text-green-700 hover:text-green-900 transition">
+
+                        Explore
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+        CENTER RESOURCE MODAL
+    ====================================================== -->
+
+    <div
+        id="resourceModal"
+        class="resource-overlay hidden fixed inset-0 z-[100] bg-[#07130d]/75 backdrop-blur-md px-4 py-6 sm:px-6 sm:py-8 lg:py-10 flex items-center justify-center">
+
+
+        <!-- =================================================
+            MODAL BOX
+        ================================================== -->
+
+        <div
+            class="resource-modal-box w-full max-w-3xl max-h-[92vh] bg-white rounded-3xl overflow-hidden shadow-2xl border border-white/20 flex flex-col">
+
+
+            <!-- =================================================
+                MODAL HEADER - STICKY
+            ================================================== -->
+
+            <div
+                class="sticky top-0 z-20 bg-white border-b border-gray-100 px-5 sm:px-7 py-4 flex items-center justify-between shrink-0">
+
+
+                <div class="flex items-center gap-3">
+
+
+                    <!-- Small decorative line -->
+
+                    <span
+                        class="w-8 h-[3px] bg-green-700 rounded-full">
+                    </span>
+
+
+                    <!-- TYPE -->
+
+                    <span
+                        id="modalType"
+                        class="text-xs uppercase tracking-[0.18em] font-semibold text-green-700">
+                    </span>
+
+
+                </div>
+
+
+                <!-- CLOSE ICON -->
+
+                <button
+                    onclick="closeResource()"
+                    aria-label="Close resource"
+                    class="w-10 h-10 rounded-full border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-[#07130d] hover:text-white hover:border-[#07130d] transition duration-300">
+
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+            <!-- =================================================
+                SCROLLABLE CONTENT
+            ================================================== -->
+
+            <div
+                class="resource-scroll flex-1 overflow-y-auto">
+
+
+                <!-- IMAGE -->
+
+                <div class="relative">
+
+
+                    <img
+                        id="modalImage"
+                        src=""
+                        alt=""
+                        class="w-full h-56 sm:h-72 lg:h-80 object-cover">
+
+
+                    <!-- IMAGE OVERLAY -->
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#07130d]/30 to-transparent pointer-events-none">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                    ARTICLE CONTENT
+                ================================================== -->
+
+                <div class="px-6 sm:px-8 lg:px-10 py-7 sm:py-9">
+
+
+                    <!-- TITLE -->
+
+                    <h2
+                        id="modalTitle"
+                        class="font-['Poppins'] text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-[#07130d] mb-7">
+                    </h2>
+
+
+
+                    <!-- CONTENT -->
+
+                    <div
+                        id="modalContent"
+                        class="text-gray-600 leading-7 text-sm sm:text-base space-y-5">
+                    </div>
+
+
+
+                    <!-- DIVIDER -->
+
+                    <div
+                        class="mt-9 pt-6 border-t border-gray-100 flex justify-end">
+
+
+                        <!-- CLOSE BUTTON -->
+
+                        <button
+                            onclick="closeResource()"
+                            class="px-6 py-3 bg-[#07130d] text-white rounded-full text-sm font-semibold hover:bg-green-800 transition duration-300">
+
+                            Close
+
+                        </button>
+
 
                     </div>
 
@@ -908,578 +906,580 @@
 
         </div>
 
+    </div>
 
 
-        <!-- =====================================================
-            JAVASCRIPT
-        ====================================================== -->
 
-        <script>
+    <!-- =====================================================
+        JAVASCRIPT
+    ====================================================== -->
 
+    <script>
 
-            /* =====================================================
-            RESOURCE CONTENT
-            ====================================================== */
 
-            const resources = {
+        /* =====================================================
+        RESOURCE CONTENT
+        ====================================================== */
 
+        const resources = {
 
-                /* ================= NEWS ================= */
 
-                "news-1": {
+            /* ================= NEWS ================= */
 
-                    type: "News",
+            "news-1": {
 
-                    image: "resource/gallery/resource1.jpg",
+                type: "News",
 
-                    title:
-                        "Qela and the growing role of digital agriculture",
+                image: "resource/gallery/resource1.jpg",
 
-                    content: `
+                title:
+                    "The growing role of digital agriculture",
 
-                        <p>
-                            Digital agriculture is changing the way agricultural
-                            organizations collect information, manage operations
-                            and support farmers.
-                        </p>
+                content: `
 
-                        <p>
-                            Qela Technologies focuses on digital solutions that
-                            connect agricultural information with practical
-                            business and farming needs.
-                        </p>
+                    <p>
+                        Digital agriculture is changing the way agricultural
+                        organizations collect information, manage operations
+                        and support farmers.
+                    </p>
 
-                        <p>
-                            Through technology, agricultural stakeholders can
-                            improve visibility, coordination and access to useful
-                            information.
-                        </p>
+                    <p>
+                        We focusing on digital solutions that
+                        connect agricultural information with practical
+                        business and farming needs.
+                    </p>
 
-                    `
+                    <p>
+                        Through technology, agricultural stakeholders can
+                        improve visibility, coordination and access to useful
+                        information.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "news-2": {
 
-                    type: "News",
+            "news-2": {
 
-                    image: "resource/gallery/resource2.jpg",
+                type: "News",
 
-                    title:
-                        "Technology supporting agricultural organizations",
+                image: "resource/gallery/resource2.jpg",
 
-                    content: `
+                title:
+                    "Technology supporting agricultural organizations",
 
-                        <p>
-                            Agricultural organizations need reliable systems
-                            to manage information and coordinate their activities.
-                        </p>
+                content: `
 
-                        <p>
-                            Digital platforms can bring different agricultural
-                            processes together and make important information
-                            easier to access.
-                        </p>
+                    <p>
+                        Agricultural organizations need reliable systems
+                        to manage information and coordinate their activities.
+                    </p>
 
-                        <p>
-                            This creates opportunities for better coordination,
-                            reporting and service delivery.
-                        </p>
+                    <p>
+                        Digital platforms can bring different agricultural
+                        processes together and make important information
+                        easier to access.
+                    </p>
 
-                    `
+                    <p>
+                        This creates opportunities for better coordination,
+                        reporting and service delivery.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "news-3": {
 
-                    type: "News",
+            "news-3": {
 
-                    image: "resource/gallery/resource3.jpg",
+                type: "News",
 
-                    title:
-                        "Digital innovation in agriculture",
+                image: "resource/gallery/resource3.jpg",
 
-                    content: `
+                title:
+                    "Digital innovation in agriculture",
 
-                        <p>
-                            Digital innovation is creating new opportunities
-                            across the agricultural value chain.
-                        </p>
+                content: `
 
-                        <p>
-                            Modern agricultural organizations can use technology
-                            to connect information, improve processes and support
-                            better services.
-                        </p>
+                    <p>
+                        Digital innovation is creating new opportunities
+                        across the agricultural value chain.
+                    </p>
 
-                        <p>
-                            These developments are contributing to a more connected
-                            agricultural environment.
-                        </p>
+                    <p>
+                        Modern agricultural organizations can use technology
+                        to connect information, improve processes and support
+                        better services.
+                    </p>
 
-                    `
+                    <p>
+                        These developments are contributing to a more connected
+                        agricultural environment.
+                    </p>
 
-                },
+                `
 
+            },
 
-                /* ================= BLOGS ================= */
 
-                "blog-1": {
+            /* ================= BLOGS ================= */
 
-                    type: "Blog",
+            "blog-1": {
 
-                    image: "resource/image/about.jpg",
+                type: "Blog",
 
-                    title:
-                        "How technology is changing modern farming",
+                image: "resource/image/about.jpg",
 
-                    content: `
+                title:
+                    "How technology is changing modern farming",
 
-                        <p>
-                            Modern farming increasingly depends on accurate
-                            information and digital tools.
-                        </p>
+                content: `
 
-                        <p>
-                            Farmers and agricultural organizations can use
-                            technology to monitor activities, manage records
-                            and make better operational decisions.
-                        </p>
+                    <p>
+                        Modern farming increasingly depends on accurate
+                        information and digital tools.
+                    </p>
 
-                        <p>
-                            The right digital tools can make agricultural
-                            processes more connected and easier to manage.
-                        </p>
+                    <p>
+                        Farmers and agricultural organizations can use
+                        technology to monitor activities, manage records
+                        and make better operational decisions.
+                    </p>
 
-                    `
+                    <p>
+                        The right digital tools can make agricultural
+                        processes more connected and easier to manage.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "blog-2": {
 
-                    type: "Blog",
+            "blog-2": {
 
-                    image: "resource/gallery/2nd about.avif",
+                type: "Blog",
 
-                    title:
-                        "Why agricultural data matters",
+                image: "resource/gallery/2nd about.avif",
 
-                    content: `
+                title:
+                    "Why agricultural data matters",
 
-                        <p>
-                            Agricultural data provides valuable information
-                            about farms, farmers, production and markets.
-                        </p>
+                content: `
 
-                        <p>
-                            When data is properly collected and organized,
-                            agricultural stakeholders can use it to understand
-                            trends and support better planning.
-                        </p>
+                    <p>
+                        Agricultural data provides valuable information
+                        about farms, farmers, production and markets.
+                    </p>
 
-                        <p>
-                            Reliable data is therefore an important part of
-                            modern digital agriculture.
-                        </p>
+                    <p>
+                        When data is properly collected and organized,
+                        agricultural stakeholders can use it to understand
+                        trends and support better planning.
+                    </p>
 
-                    `
+                    <p>
+                        Reliable data is therefore an important part of
+                        modern digital agriculture.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "blog-3": {
 
-                    type: "Blog",
+            "blog-3": {
 
-                    image: "resource/image/agri.jpeg",
+                type: "Blog",
 
-                    title:
-                        "Building smarter agricultural systems",
+                image: "resource/image/agri.jpeg",
 
-                    content: `
+                title:
+                    "Building smarter agricultural systems",
 
-                        <p>
-                            Smart agricultural systems connect different
-                            processes, people and information.
-                        </p>
+                content: `
 
-                        <p>
-                            Digital platforms can help agricultural organizations
-                            manage activities while keeping important information
-                            accessible.
-                        </p>
+                    <p>
+                        Smart agricultural systems connect different
+                        processes, people and information.
+                    </p>
 
-                        <p>
-                            Connected systems create opportunities for better
-                            coordination and agricultural service delivery.
-                        </p>
+                    <p>
+                        Digital platforms can help agricultural organizations
+                        manage activities while keeping important information
+                        accessible.
+                    </p>
 
-                    `
+                    <p>
+                        Connected systems create opportunities for better
+                        coordination and agricultural service delivery.
+                    </p>
 
-                },
+                `
 
+            },
 
-                /* ================= RESEARCH ================= */
 
-                "research-1": {
+            /* ================= RESEARCH ================= */
 
-                    type: "Research",
+            "research-1": {
 
-                    image: "resource/gallery/officeimg1.avif",
+                type: "Research",
 
-                    title:
-                        "Digital tools for agricultural cooperatives",
+                image: "resource/gallery/officeimg1.avif",
 
-                    content: `
+                title:
+                    "Digital tools for agricultural cooperatives",
 
-                        <p>
-                            Agricultural cooperatives manage large amounts of
-                            information involving members, farms, products and
-                            transactions.
-                        </p>
+                content: `
 
-                        <p>
-                            Digital systems can help cooperatives organize this
-                            information and improve access to reliable records.
-                        </p>
+                    <p>
+                        Agricultural cooperatives manage large amounts of
+                        information involving members, farms, products and
+                        transactions.
+                    </p>
 
-                        <p>
-                            Better information management can also support
-                            planning, reporting and communication with members.
-                        </p>
+                    <p>
+                        Digital systems can help cooperatives organize this
+                        information and improve access to reliable records.
+                    </p>
 
-                    `
+                    <p>
+                        Better information management can also support
+                        planning, reporting and communication with members.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "research-2": {
 
-                    type: "Research",
+            "research-2": {
 
-                    image: "resource/gallery/reso1.avif",
+                type: "Research",
 
-                    title:
-                        "Agricultural data and digital decision making",
+                image: "resource/gallery/reso1.avif",
 
-                    content: `
+                title:
+                    "Agricultural data and digital decision making",
 
-                        <p>
-                            Digital decision making depends on having accurate
-                            and accessible agricultural information.
-                        </p>
+                content: `
 
-                        <p>
-                            Agricultural data can support organizations in
-                            monitoring activities, identifying trends and
-                            planning future operations.
-                        </p>
+                    <p>
+                        Digital decision making depends on having accurate
+                        and accessible agricultural information.
+                    </p>
 
-                        <p>
-                            Combining agricultural knowledge with digital
-                            information creates opportunities for more informed
-                            decisions.
-                        </p>
+                    <p>
+                        Agricultural data can support organizations in
+                        monitoring activities, identifying trends and
+                        planning future operations.
+                    </p>
 
-                    `
+                    <p>
+                        Combining agricultural knowledge with digital
+                        information creates opportunities for more informed
+                        decisions.
+                    </p>
 
-                },
+                `
 
+            },
 
-                "research-3": {
 
-                    type: "Research",
+            "research-3": {
 
-                    image: "resource/image/about4.jpg",
+                type: "Research",
 
-                    title:
-                        "Data-driven agriculture",
+                image: "resource/image/about4.jpg",
 
-                    content: `
+                title:
+                    "Data-driven agriculture",
 
-                        <p>
-                            Data-driven agriculture uses reliable information
-                            to support planning, monitoring and decision making.
-                        </p>
+                content: `
 
-                        <p>
-                            Agricultural organizations can use data to understand
-                            activities, identify trends and improve operations.
-                        </p>
+                    <p>
+                        Data-driven agriculture uses reliable information
+                        to support planning, monitoring and decision making.
+                    </p>
 
-                        <p>
-                            Digital information systems provide an important
-                            foundation for modern agricultural management.
-                        </p>
+                    <p>
+                        Agricultural organizations can use data to understand
+                        activities, identify trends and improve operations.
+                    </p>
 
-                    `
+                    <p>
+                        Digital information systems provide an important
+                        foundation for modern agricultural management.
+                    </p>
+
+                `
+
+            }
+
+        };
+
+
+
+        /* =====================================================
+        FILTER RESOURCES
+        ====================================================== */
+
+        function filterResources(category) {
+
+            const cards =
+                document.querySelectorAll(".resource-card");
+
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+
+            /* SHOW / HIDE */
+
+            cards.forEach(card => {
+
+                const cardCategory =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    category === "all" ||
+                    cardCategory === category
+                ) {
+
+                    card.classList.remove("hidden");
+
+                } else {
+
+                    card.classList.add("hidden");
 
                 }
 
-            };
+            });
 
 
+            /* ACTIVE BUTTON */
 
-            /* =====================================================
-            FILTER RESOURCES
-            ====================================================== */
+            buttons.forEach(button => {
 
-            function filterResources(category) {
+                button.classList.remove(
+                    "bg-[#07130d]",
+                    "text-white"
+                );
 
-                const cards =
-                    document.querySelectorAll(".resource-card");
+                button.classList.add(
+                    "bg-white",
+                    "text-gray-600",
+                    "border",
+                    "border-gray-200"
+                );
 
-                const buttons =
-                    document.querySelectorAll(".filter-btn");
-
-
-                /* SHOW / HIDE */
-
-                cards.forEach(card => {
-
-                    const cardCategory =
-                        card.getAttribute("data-category");
+            });
 
 
-                    if (
-                        category === "all" ||
-                        cardCategory === category
-                    ) {
+            const activeButton =
+                document.getElementById(
+                    "filter-" + category
+                );
 
-                        card.classList.remove("hidden");
 
-                    } else {
+            if (activeButton) {
 
-                        card.classList.add("hidden");
+                activeButton.classList.remove(
+                    "bg-white",
+                    "text-gray-600",
+                    "border",
+                    "border-gray-200"
+                );
 
-                    }
+                activeButton.classList.add(
+                    "bg-[#07130d]",
+                    "text-white"
+                );
 
+            }
+
+
+            /* SCROLL TO RESOURCE AREA */
+
+            document
+                .getElementById("all")
+                .scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
 
-
-                /* ACTIVE BUTTON */
-
-                buttons.forEach(button => {
-
-                    button.classList.remove(
-                        "bg-[#07130d]",
-                        "text-white"
-                    );
-
-                    button.classList.add(
-                        "bg-white",
-                        "text-gray-600",
-                        "border",
-                        "border-gray-200"
-                    );
-
-                });
+        }
 
 
-                const activeButton =
-                    document.getElementById(
-                        "filter-" + category
-                    );
+
+        /* =====================================================
+        OPEN RESOURCE
+        ====================================================== */
+
+        function openResource(id) {
+
+            const resource =
+                resources[id];
 
 
-                if (activeButton) {
+            if (!resource) {
 
-                    activeButton.classList.remove(
-                        "bg-white",
-                        "text-gray-600",
-                        "border",
-                        "border-gray-200"
-                    );
+                console.error(
+                    "Resource not found:",
+                    id
+                );
 
-                    activeButton.classList.add(
-                        "bg-[#07130d]",
-                        "text-white"
-                    );
-
-                }
-
-
-                /* SCROLL TO RESOURCE AREA */
-
-                document
-                    .getElementById("all")
-                    .scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+                return;
 
             }
 
 
-
-            /* =====================================================
-            OPEN RESOURCE
-            ====================================================== */
-
-            function openResource(id) {
-
-                const resource =
-                    resources[id];
-
-
-                if (!resource) {
-
-                    console.error(
-                        "Resource not found:",
-                        id
-                    );
-
-                    return;
-
-                }
-
-
-                const modal =
-                    document.getElementById(
-                        "resourceModal"
-                    );
-
-                const modalImage =
-                    document.getElementById(
-                        "modalImage"
-                    );
-
-                const modalType =
-                    document.getElementById(
-                        "modalType"
-                    );
-
-                const modalTitle =
-                    document.getElementById(
-                        "modalTitle"
-                    );
-
-                const modalContent =
-                    document.getElementById(
-                        "modalContent"
-                    );
-
-
-                /* SET CONTENT */
-
-                modalImage.src =
-                    resource.image;
-
-                modalImage.alt =
-                    resource.title;
-
-                modalType.textContent =
-                    resource.type;
-
-                modalTitle.textContent =
-                    resource.title;
-
-                modalContent.innerHTML =
-                    resource.content;
-
-
-                /* SHOW MODAL */
-
-                modal.classList.remove(
-                    "hidden"
+            const modal =
+                document.getElementById(
+                    "resourceModal"
                 );
 
-                document.body.classList.add(
-                    "modal-open"
+            const modalImage =
+                document.getElementById(
+                    "modalImage"
+                );
+
+            const modalType =
+                document.getElementById(
+                    "modalType"
+                );
+
+            const modalTitle =
+                document.getElementById(
+                    "modalTitle"
+                );
+
+            const modalContent =
+                document.getElementById(
+                    "modalContent"
                 );
 
 
-                /* RESET SCROLL */
+            /* SET CONTENT */
 
-                const scrollContainer =
-                    modal.querySelector(
-                        ".resource-scroll"
-                    );
+            modalImage.src =
+                resource.image;
 
-                scrollContainer.scrollTop = 0;
+            modalImage.alt =
+                resource.title;
 
-            }
+            modalType.textContent =
+                resource.type;
 
+            modalTitle.textContent =
+                resource.title;
 
-
-            /* =====================================================
-            CLOSE RESOURCE
-            ====================================================== */
-
-            function closeResource() {
-
-                const modal =
-                    document.getElementById(
-                        "resourceModal"
-                    );
+            modalContent.innerHTML =
+                resource.content;
 
 
-                modal.classList.add(
-                    "hidden"
-                );
+            /* SHOW MODAL */
 
-                document.body.classList.remove(
-                    "modal-open"
-                );
+            modal.classList.remove(
+                "hidden"
+            );
 
-            }
-
-
-
-            /* =====================================================
-            ESCAPE KEY
-            ====================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key === "Escape"
-                    ) {
-
-                        closeResource();
-
-                    }
-
-                }
+            document.body.classList.add(
+                "modal-open"
             );
 
 
+            /* RESET SCROLL */
 
-            /* =====================================================
-            CLICK OUTSIDE MODAL BOX
-            ====================================================== */
+            const scrollContainer =
+                modal.querySelector(
+                    ".resource-scroll"
+                );
 
-            const resourceModal =
+            scrollContainer.scrollTop = 0;
+
+        }
+
+
+
+        /* =====================================================
+        CLOSE RESOURCE
+        ====================================================== */
+
+        function closeResource() {
+
+            const modal =
                 document.getElementById(
                     "resourceModal"
                 );
 
 
-            resourceModal.addEventListener(
-                "click",
-                function (event) {
+            modal.classList.add(
+                "hidden"
+            );
 
-                    if (
-                        event.target ===
-                        resourceModal
-                    ) {
+            document.body.classList.remove(
+                "modal-open"
+            );
 
-                        closeResource();
+        }
 
-                    }
+
+
+        /* =====================================================
+        ESCAPE KEY
+        ====================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeResource();
 
                 }
+
+            }
+        );
+
+
+
+        /* =====================================================
+        CLICK OUTSIDE MODAL BOX
+        ====================================================== */
+
+        const resourceModal =
+            document.getElementById(
+                "resourceModal"
             );
 
 
-        </script>
+        resourceModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    resourceModal
+                ) {
+
+                    closeResource();
+
+                }
+
+            }
+        );
 
 
-    </body>
+    </script>
 
-    </html>
+
+</body>
+
+</html>
