@@ -38,7 +38,7 @@
 
         <!-- ================= CONTACT BAR ================= -->
 
-        <div class="min-h-[40px] w-full bg-black text-white">
+        <div id="contactBar" class="fixed left-0 right-0 top-0 z-[60] min-h-[40px] w-full bg-black text-white">
 
             <div
                 class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-2 overflow-hidden px-3 text-[0.58rem] sm:gap-3 sm:px-4 sm:text-xs md:gap-5 md:px-5 md:text-sm lg:gap-7 lg:px-8 xl:px-10">
@@ -78,11 +78,7 @@
         <!-- ================= HERO ================= -->
 
         <div
-<<<<<<< HEAD
-            class="relative h-[380px] w-full overflow-hidden max-[1024px]:h-[350px] max-[767px]:h-[300px] max-[480px]:h-[260px]">
-=======
-            class="relative h-[260px] w-full overflow-hidden max-[1024px]:h-[250px] max-[767px]:h-[200px] max-[360px]:h-[160px]">
->>>>>>> b56756ec4ff11fc904094351d5a25023cd89546c
+            class="relative mt-[40px] h-[380px] w-full overflow-hidden max-[1024px]:h-[350px] max-[767px]:h-[300px] max-[480px]:h-[260px]">
 
             <!-- HERO IMAGE -->
 
@@ -154,7 +150,7 @@
             <!-- ================= NAVIGATION ================= -->
 
             <nav id="navbar"
-                class="absolute left-0 top-0 z-30 w-full px-3 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
+                class="fixed left-0 right-0 top-[40px] z-50 w-full px-3 py-2 transition-[background,box-shadow] duration-200 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
 
                 <div
                     class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4">
@@ -1236,10 +1232,6 @@
 
                     if (window.scrollY > triggerPoint) {
 
-                        navbar.classList.remove(
-                            "absolute"
-                        );
-
                         navbar.classList.add(
                             "fixed",
                             "bg-white",
@@ -1285,13 +1277,8 @@
                     } else {
 
                         navbar.classList.remove(
-                            "fixed",
                             "bg-white",
                             "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
-                        );
-
-                        navbar.classList.add(
-                            "absolute"
                         );
 
 

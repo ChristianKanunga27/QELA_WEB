@@ -69,11 +69,19 @@
        CONTACT BAR
     ========================================= */
 
-        .contact-bar {
-            min-height: 44px;
-            box-sizing: border-box;
-            background: #000;
-        }
+      .contact-bar {
+    min-height: 44px;
+    box-sizing: border-box;
+    background: #000;
+
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    z-index: 9999;
+}
 
         .contact-bar h4 {
             display: inline-flex;
@@ -93,54 +101,79 @@
     ========================================= */
 
         header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            width: 100%;
-        }
+        position: relative;
+        z-index: 50;
+        width: 100%;
+       }
 
         /* =========================================
        NAVIGATION
     ========================================= */
 
-        .main-nav {
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-        }
+         /* ================================
+   NAVIGATION
+================================ */
 
-        #navbar {
-            padding: 0.85rem 0;
-            transition: background 180ms ease, box-shadow 180ms ease;
-        }
+.main-nav {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
 
-        #navbar.is-sticky {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.97) !important;
-            box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
-        }
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.85rem 0;
+    background: transparent;
+    transition: background 180ms ease,
+                box-shadow 180ms ease,
+                top 180ms ease;
+    z-index: 9998;
+}
 
+/* When scrolling */
+#navbar.is-sticky {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
+    z-index: 9998;
+}
+
+/* Normal state */
+.nav-links a {
+    position: relative;
+    color: #e4ab25;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    transition: color 180ms ease;
+}
+
+/* Scrolled state */
+#navbar.is-sticky .nav-links a {
+    color: #10271b;
+}
         .nav-inner {
-            width: min(100% - 3rem, 1280px);
-            margin: 0 auto;
-        }
+           width: min(100% - 3rem, 1280px);
+          margin: 0 auto;
+          transform: translateY(20px);
+}
+        
 
         .nav-logo {
             width: auto;
             max-width: 150px;
-        }
-
-        .nav-links a {
-            position: relative;
-            color: #e4ab25;
-            font-size: 1.2rem;
-            letter-spacing: 0.02em;
-            transition: color 180ms ease;
+            margin-top: 20px;
         }
 
         .nav-links a::after {
@@ -574,48 +607,42 @@
 
 <body class="bg-white">
 
-    <!-- HEADER -->
+      <div class="contact-bar w-full bg-black text-white top-0">
+            
+               <div
+                   class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-5 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+                   
+                   <p class="text-center text-sm font-semibold justify-center sm:text-base">Under maintenance</p>
+                   <a href="mailto:info@qelatechnologies.co.tz"
+                       class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-    <header>
+                        <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
 
-        <!-- CONTACT BAR -->
-
-        <div class="contact-bar w-full bg-black text-white">
-
-            <div
-                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-5 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
-
-                <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
-
-                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
-
-                    <span>
+                      <span>
                         info@qelatechnologies.co.tz
-                    </span>
+                      </span>
 
-                </a>
+                  </a>
 
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                   <a href="tel:+255752686686"
+                      class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+                      <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
-                    <span>
-                        +255 718 352 944
-                    </span>
+                      <span>
+                          +255 718 352 944
+                      </span>
 
-                </a>
+                   </a>
+
+               </div>
 
             </div>
 
-        </div>
-
-        <!-- NAVIGATION -->
-
         <nav id="navbar" class="main-nav w-full">
+         
 
-            <div class="nav-inner flex items-center justify-between gap-8">
+            <div class="trex nav-inner flex items-center justify-between gap-8 ">
 
                 <a href="./index.html">
 
@@ -1280,98 +1307,165 @@
 
     <!-- HEADER FUNCTIONALITY -->
 
-    <script>
+   <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-            /* =========================================
-               MOBILE SIDEBAR
-            ========================================= */
+    /* ==========================================
+       MOBILE SIDEBAR
+    ========================================== */
 
-            const menuBtn = document.getElementById("menuBtn");
-            const closeBtn = document.getElementById("closeBtn");
-            const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const sidebar = document.getElementById("sidebar");
 
-            if (menuBtn && closeBtn && sidebar) {
+    if (menuBtn && closeBtn && sidebar) {
 
-                function openSidebar() {
-                    sidebar.classList.remove("translate-x-full");
-                    sidebar.classList.add("translate-x-0");
-                    document.body.classList.add("overflow-hidden");
-                }
+        function openSidebar() {
 
-                function closeSidebar() {
-                    sidebar.classList.remove("translate-x-0");
-                    sidebar.classList.add("translate-x-full");
-                    document.body.classList.remove("overflow-hidden");
-                }
+            sidebar.classList.remove("translate-x-full");
+            sidebar.classList.add("translate-x-0");
 
-                menuBtn.addEventListener("click", function () {
-                    openSidebar();
-                });
+            document.body.classList.add("overflow-hidden");
+        }
 
-                closeBtn.addEventListener("click", function () {
-                    closeSidebar();
-                });
+        function closeSidebar() {
 
-                const sidebarLinks = sidebar.querySelectorAll("a");
+            sidebar.classList.remove("translate-x-0");
+            sidebar.classList.add("translate-x-full");
 
-                sidebarLinks.forEach(function (link) {
-                    link.addEventListener("click", function () {
-                        closeSidebar();
-                    });
-                });
+            document.body.classList.remove("overflow-hidden");
+        }
 
-                document.addEventListener("keydown", function (event) {
-                    if (event.key === "Escape") {
-                        closeSidebar();
-                    }
-                });
+        menuBtn.addEventListener("click", openSidebar);
 
-                window.addEventListener("resize", function () {
-                    if (window.innerWidth >= 768) {
-                        closeSidebar();
-                    }
-                });
+        closeBtn.addEventListener("click", closeSidebar);
 
-            }
+        sidebar.querySelectorAll("a").forEach(function (link) {
 
-            /* =========================================
-               STICKY NAVBAR
-            ========================================= */
+            link.addEventListener("click", closeSidebar);
 
-            const navbar = document.getElementById("navbar");
-            const contactBar = document.querySelector(".contact-bar");
+        });
 
-            if (navbar) {
+        document.addEventListener("keydown", function (event) {
 
-                function handleNavbarScroll() {
-
-                    const triggerPoint =
-                        contactBar
-                            ? contactBar.offsetHeight
-                            : 44;
-
-                    if (window.scrollY > triggerPoint) {
-                        navbar.classList.add("is-sticky");
-                    } else {
-                        navbar.classList.remove("is-sticky");
-                    }
-
-                }
-
-                window.addEventListener(
-                    "scroll",
-                    handleNavbarScroll
-                );
-
-                handleNavbarScroll();
-
+            if (event.key === "Escape") {
+                closeSidebar();
             }
 
         });
 
-    </script>
+        window.addEventListener("resize", function () {
+
+            if (window.innerWidth >= 768) {
+                closeSidebar();
+            }
+
+        });
+
+    }
+
+
+    /* ==========================================
+       NAVBAR SCROLL EFFECT
+    ========================================== */
+
+    const navbar = document.getElementById("navbar");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const menuButton = document.getElementById("menuBtn");
+
+    function handleNavbarScroll() {
+
+        if (!navbar) return;
+
+        if (window.scrollY > 20) {
+
+            navbar.classList.add("is-sticky");
+
+            /* NAVBAR AFTER SCROLL */
+
+            navbar.classList.remove("bg-transparent");
+
+            navbar.classList.add(
+                "bg-white",
+                "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+            );
+
+
+            /* NAV LINKS */
+
+            navLinks.forEach(function (link) {
+
+                link.classList.remove("text-yellow-400");
+
+                link.classList.add("text-green-800");
+
+            });
+
+
+            /* MOBILE MENU */
+
+            if (menuButton) {
+
+                menuButton.classList.remove("text-yellow-400");
+
+                menuButton.classList.add("text-green-800");
+
+            }
+
+        } else {
+
+            navbar.classList.remove("is-sticky");
+
+            /* NAVBAR AT TOP */
+
+            navbar.classList.remove(
+                "bg-white",
+                "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+            );
+
+            navbar.classList.add("bg-transparent");
+
+
+            /* NAV LINKS */
+
+            navLinks.forEach(function (link) {
+
+                link.classList.remove("text-green-800");
+
+                link.classList.add("text-yellow-400");
+
+            });
+
+
+            /* MOBILE MENU */
+
+            if (menuButton) {
+
+                menuButton.classList.remove("text-green-800");
+
+                menuButton.classList.add("text-yellow-400");
+
+            }
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        handleNavbarScroll,
+        { passive: true }
+    );
+
+
+    /* Run once when page loads */
+    handleNavbarScroll();
+
+});
+
+</script>
 
 </body>
 
