@@ -205,14 +205,7 @@ $postCount = mysqli_num_rows($result);
             <p class="brand-caption">Content management</p>
             <a class="nav-link" href="logout.php">Log out</a>
         </div>
-        <nav class="sidebar-nav" aria-label="Admin navigation">
-            <a class="nav-link nav-link-active" href="dashboard.php" aria-current="page">Dashboard</a>
-            <p class="nav-group-label">Manage content</p>
-            <a class="nav-link" href="#editor"><?= $editingPost ? 'Edit post' : 'Create a post' ?></a>
-            <a class="nav-link" href="#posts">Published posts</a>
-            <p class="nav-group-label">Website</p>
-            <a class="nav-link" href="index.html">View website</a>
-        </nav>
+ 
     </aside>
     <main class="main">
         <header class="header mb-8 flex items-center justify-between"><div><h1 class="text-3xl font-bold">Welcome to QELA</h1><p class="mt-1 text-gray-600">Publish and manage website posts.</p></div><div class="rounded-xl bg-white px-5 py-3 font-semibold shadow-sm"><?= $postCount ?> posts</div></header>
