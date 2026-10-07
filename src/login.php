@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
 
         // Login failed
-        echo "Invalid email or password.";
+        header("location: ./login.html");
     }
 
 
