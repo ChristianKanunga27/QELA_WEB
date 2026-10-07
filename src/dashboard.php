@@ -198,8 +198,8 @@ $postCount = mysqli_num_rows($result);
 <body>
 <div class="layout">
     <aside class="sidebar">
-        <div class="brand mb-8"><div><strong class="text-2xl">QELA</strong><p class="text-sm text-gray-300">Admin dashboard</p></div><a class="nav-link" href="logout.php">Log out</a></div>
-        <nav class="space-y-2" aria-label="Admin navigation"><a class="nav-link" href="dashboard.php">Dashboard</a><a class="nav-link" href="#editor"><?= $editingPost ? 'Edit post' : 'Create post' ?></a><a class="nav-link" href="#posts">Manage posts</a><a class="nav-link" href="index.html">View website</a></nav>
+        <div class="brand mb-8"><div><strong class="text-2xl">QELA</strong><p class="text-sm text-gray-300">Admin dashboard</p></div><a class="nav-link bg-red-600" href="logout.php">Log out</a></div>
+        <nav class="space-y-2" aria-label="Admin navigation"><a class="nav-link bg-yello-600 " href="dashboard.php">Dashboard</a></nav>
     </aside>
     <main class="main">
         <header class="header mb-8 flex items-center justify-between"><div><h1 class="text-3xl font-bold">Welcome to QELA</h1><p class="mt-1 text-gray-600">Publish and manage website posts.</p></div><div class="rounded-xl bg-white px-5 py-3 font-semibold shadow-sm"><?= $postCount ?> posts</div></header>
