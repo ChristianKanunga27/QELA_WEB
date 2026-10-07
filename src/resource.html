@@ -27,6 +27,7 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
 
@@ -314,6 +315,11 @@
 
             </div>
 
+
+            <div id="admin-posts" class="mt-10" aria-live="polite" hidden>
+                <h3 class="mb-5 font-['Poppins'] text-2xl font-semibold">Updates from QELA</h3>
+                <div id="admin-post-grid" class="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
 
 
             <!-- NEWS GRID -->
@@ -1376,6 +1382,42 @@
         });
 
     
+
+        fetch('posts-api.php', { headers: { Accept: 'application/json' } })
+            .then(function (response) { if (!response.ok) throw new Error('Posts unavailable'); return response.json(); })
+            .then(function (posts) {
+                if (!Array.isArray(posts) || posts.length === 0) return;
+                const section = document.getElementById('admin-posts');
+                const grid = document.getElementById('admin-post-grid');
+                posts.forEach(function (post) {
+                    const article = document.createElement('article');
+                    article.className = 'overflow-hidden rounded-2xl bg-white shadow-sm';
+                    if (post.image) {
+                        const image = document.createElement('img');
+                        image.src = post.image;
+                        image.alt = post.title || 'QELA update';
+                        image.loading = 'lazy';
+                        image.className = 'h-60 w-full object-cover';
+                        article.appendChild(image);
+                    }
+                    const content = document.createElement('div');
+                    content.className = 'p-6';
+                    const type = document.createElement('span');
+                    type.className = 'text-xs font-semibold uppercase tracking-widest text-green-700';
+                    type.textContent = post.type || 'Update';
+                    const title = document.createElement('h4');
+                    title.className = 'mb-3 mt-3 font-[Poppins] text-xl font-semibold leading-snug';
+                    title.textContent = post.title || '';
+                    const description = document.createElement('p');
+                    description.className = 'text-sm leading-6 text-gray-600';
+                    description.textContent = post.description || '';
+                    content.append(type, title, description);
+                    article.appendChild(content);
+                    grid.appendChild(article);
+                });
+                section.hidden = false;
+            })
+            .catch(function () { /* Keep the static resource page available if the posts service is offline. */ });
 
     </script>
 
