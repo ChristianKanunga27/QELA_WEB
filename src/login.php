@@ -50,7 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check login credentials
     if ($admin && password_verify($password, $admin["password"])) {
 
+ session_start();
 
+    $_SESSION['admin_logged_in'] = true;
         // Redirect to dashboard
         header("Location: ./dashboard.php");
         exit;

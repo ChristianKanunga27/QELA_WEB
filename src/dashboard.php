@@ -1,11 +1,18 @@
 <?php
+session_start();
+
 error_reporting(E_ALL);
-ini_set('display_errors',1);
+ini_set('display_errors', 1);
+
+// Protect dashboard
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: index.html");
+    exit;
+}
 
 require_once __DIR__ . "/config.php";
 
 $message = "";
-
 /*
 |--------------------------------------------------------------------------
 | ADD NEW POST
@@ -198,7 +205,7 @@ $result = mysqli_query($connection, $sql);
             Manage Posts
         </a>
 
-        <a href="index.html"
+        <a href="logout.php"
            class="block rounded-lg px-4 py-3 hover:bg-red-700">
             Logout
         </a>
