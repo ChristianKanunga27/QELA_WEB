@@ -1,9 +1,9 @@
 <?php
 // Database connection
 $host = "localhost";
-$dbname = "QELA_WEB";
-$username = "root";
-$password = "";
+$dbname = "qelatech_QELA_WEB";
+$username = "qelatech_Qelatechnologies";
+$password = "Qelatechnologies@2017";
 
 $connection = mysqli_connect($host,$username,$password,$dbname);
 
