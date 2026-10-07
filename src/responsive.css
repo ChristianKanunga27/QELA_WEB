@@ -1,0 +1,17 @@
+/* Shared layout safeguards for QELA pages on narrow screens. */
+*,*::before,*::after{box-sizing:border-box}
+html{max-width:100%;overflow-x:clip;scroll-behavior:smooth}
+body{max-width:100%;overflow-x:hidden}
+img,video,iframe,svg{max-width:100%}
+input,select,textarea,button{max-width:100%}
+pre,code{overflow-wrap:anywhere}
+table{max-width:100%}
+@media(max-width:640px){
+  .grid{grid-template-columns:minmax(0,1fr)!important}
+  .flex{flex-wrap:wrap}
+  .overflow-x-auto{-webkit-overflow-scrolling:touch}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  [style*="width"]{max-width:100%!important}
+  h1{overflow-wrap:break-word}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

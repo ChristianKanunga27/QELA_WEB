@@ -16,6 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         :root {
@@ -69,79 +70,15 @@
        CONTACT BAR
     ========================================= */
 
-        .contact-bar {
-            min-height: 44px;
-            box-sizing: border-box;
-            background: #000;
-        }
-
-        .contact-bar h4 {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            margin: 0;
-            white-space: nowrap;
-        }
-
-        .contact-bar i {
-            color: var(--lime);
-            font-size: 0.8rem;
-        }
-
-        /* =========================================
-       HEADER
-    ========================================= */
-
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            width: 100%;
-        }
-
-        /* =========================================
-       NAVIGATION
-    ========================================= */
-
-        .main-nav {
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-        }
-
-        #navbar {
-            padding: 0.85rem 0;
-            transition: background 180ms ease, box-shadow 180ms ease;
-        }
-
         #navbar.is-sticky {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 28px;
             background: rgba(255, 255, 255, 0.97) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 8px 24px rgba(16, 39, 27, 0.12);
         }
 
-        .nav-inner {
-            width: min(100% - 3rem, 1280px);
-            margin: 0 auto;
-        }
-
-        .nav-logo {
-            width: auto;
-            max-width: 150px;
-        }
-
-        .nav-links a {
-            position: relative;
-            color: #e4ab25;
-            font-size: 1.2rem;
-            letter-spacing: 0.02em;
-            transition: color 180ms ease;
-        }
+        #navbar.is-sticky .nav-links a { color: #10271b; }
 
         .nav-links a::after {
             content: "";
@@ -171,7 +108,8 @@
     ========================================= */
 
         #sidebar {
-            width: min(18rem, 85vw);
+            z-index: 70;
+            width: min(280px, 85vw);
         }
 
         /* =========================================
@@ -340,22 +278,6 @@
 
         @media (max-width: 1024px) {
 
-            .nav-inner {
-                width: calc(100% - 2.5rem);
-            }
-
-            .nav-logo {
-                max-width: 135px;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-links a {
-                font-size: 1.05rem;
-            }
-
             .hero {
                 height: 300px;
             }
@@ -395,39 +317,6 @@
 
             .contact-bar i {
                 font-size: 0.7rem;
-            }
-
-            /* NAV */
-
-            #navbar {
-                padding: 0.7rem 0;
-            }
-
-            .nav-inner {
-                width: calc(100% - 1.5rem);
-                min-height: 54px;
-                gap: 1rem;
-            }
-
-            .nav-logo {
-                max-width: 108px;
-            }
-
-            #menuBtn {
-                font-size: 1.4rem;
-                padding: 0.35rem;
-                line-height: 1;
-            }
-
-            /* SIDEBAR */
-
-            #sidebar .flex.flex-col {
-                gap: 1.25rem;
-                padding: 1rem 1.5rem 2rem;
-            }
-
-            #sidebar .flex.justify-end {
-                padding: 1rem 1.25rem;
             }
 
             /* HERO */
@@ -481,23 +370,6 @@
                 gap: 0.3rem;
             }
 
-            #navbar {
-                padding: 0.6rem 0;
-            }
-
-            .nav-inner {
-                width: calc(100% - 1rem);
-                min-height: 50px;
-            }
-
-            .nav-logo {
-                max-width: 95px;
-            }
-
-            #menuBtn {
-                font-size: 1.3rem;
-            }
-
             .hero {
                 height: 260px;
             }
@@ -528,14 +400,6 @@
                 gap: 0.4rem;
             }
 
-            .nav-inner {
-                width: calc(100% - 0.75rem);
-            }
-
-            .nav-logo {
-                max-width: 88px;
-            }
-
             .hero-content {
                 padding-left: 0.75rem;
                 padding-right: 0.75rem;
@@ -554,10 +418,6 @@
 
         @media (min-width: 1440px) {
 
-            .nav-inner {
-                width: min(100% - 5rem, 1280px);
-            }
-
             .hero-content {
                 padding-left: 5rem;
                 padding-right: 5rem;
@@ -570,92 +430,152 @@
         }
     </style>
 
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
 <body class="bg-white">
+    <div class="fixed inset-x-0 top-0 z-[80] flex min-h-7 items-center justify-center bg-[#dfa21f] px-3 py-1 text-center text-2xl font-semibold text-[#10271b]">This page is under maintenance</div>
 
-    <!-- HEADER -->
+   <header class="w-full">
 
-    <header>
+    <!-- ================= CONTACT BAR ================= -->
+    <div
+        id="contactBar"
+        class="absolute left-0 right-0 top-10 z-[60] min-h-[40px] w-full bg-black text-white">
 
-        <!-- CONTACT BAR -->
+        <div
+            class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-[0.55rem] px-[0.6rem] text-[0.63rem] sm:gap-[0.85rem] sm:px-4 sm:text-xs md:gap-5 md:px-5 lg:gap-7 lg:px-8 lg:text-sm xl:px-10">
 
-        <div class="contact-bar w-full bg-black text-white">
 
-            <div
-                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-5 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+            <!-- EMAIL -->
+            <a
+                href="mailto:info@qelatechnologies.co.tz"
+                class="flex min-w-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
 
-                <a href="mailto:info@qelatechnologies.co.tz"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <i class="fa-solid fa-envelope shrink-0 text-[#dfa21f]"></i>
 
-                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+                <span class="truncate">
+                    info@qelatechnologies.co.tz
+                </span>
 
-                    <span>
-                        info@qelatechnologies.co.tz
-                    </span>
+            </a>
 
-                </a>
+            <!-- PHONE -->
+            <a
+                href="tel:+255718352944"
+                class="flex shrink-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
 
-                <a href="tel:+255752686686"
-                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
+                <i class="fa-solid fa-phone shrink-0 text-[#dfa21f]"></i>
 
-                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
+                <span>
+                    +255 718 352 944
+                </span>
 
-                    <span>
-                        +255 718 352 944
-                    </span>
-
-                </a>
-
-            </div>
+            </a>
 
         </div>
 
-        <!-- NAVIGATION -->
+    </div>
 
-        <nav id="navbar" class="main-nav w-full">
 
-            <div class="nav-inner flex items-center justify-between gap-8">
+    <!-- ================= HERO ================= -->
+    <div
+        class="relative mt-[68px] h-[380px] w-full overflow-hidden max-[1024px]:h-[350px] max-[767px]:h-[300px] max-[480px]:h-[260px]">
 
-                <a href="./index.html">
+        <!-- HERO IMAGE -->
+        <img
+            src="./resource/image/about11.png"
+            alt="Farmers working with crops"
+            loading="eager"
+            decoding="async"
+            class="absolute inset-0 h-full w-full object-cover object-center">
 
-                    <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+
+        <!-- HERO OVERLAY -->
+        <div
+            class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.30)_50%,rgba(0,0,0,0.42)_100%)]">
+        </div>
+
+
+        <!-- ================= NAVIGATION ================= -->
+        <nav
+            id="navbar"
+            class="fixed left-0 right-0 top-[68px] z-[50] w-full bg-transparent px-4 py-2 transition-all duration-300 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
+
+            <div
+                class="mx-auto flex w-full max-w-7xl items-center justify-between">
+
+                <!-- LOGO -->
+                <a
+                    href="./index.html"
+                    class="flex shrink-0 items-center">
+
+                    <img
+                        src="./resource/image/qela_logo.png"
+                        alt="QELA logo"
+                        class="h-10 w-auto max-w-[105px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
 
                 </a>
 
-                <!-- DESKTOP MENU -->
 
-                <div class="hidden md:block">
+                <!-- ================= DESKTOP NAVIGATION ================= -->
+                <div class="hidden md:flex">
 
-                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
+                    <div
+                        id="desktopLinks"
+                        class="flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
 
-                        <a href="index.html">
+                        <a
+                            href="index.html"
+                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+
                             Home
+
                         </a>
 
-                        <a href="about.html">
+                        <a
+                            href="about.html"
+                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+
                             About
+
                         </a>
 
-                        <a href="product.html">
+                        <a
+                            href="product.html"
+                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+
                             Products
+
                         </a>
 
-                        <a href="industry.html">
+                        <a
+                            href="industry.html"
+                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+
                             Industry
+
                         </a>
 
-                        <a href="resource.html">
+                        <a
+                            href="resource.html"
+                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+
                             Resources
+
                         </a>
 
                     </div>
 
                 </div>
 
-                <!-- MOBILE MENU BUTTON -->
 
-                <button id="menuBtn" class="md:hidden text-yellow-400" type="button" aria-label="Open navigation menu">
+                <!-- ================= MOBILE MENU BUTTON ================= -->
+                <button
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden">
 
                     <i class="fa-solid fa-bars"></i>
 
@@ -665,14 +585,19 @@
 
         </nav>
 
-        <!-- MOBILE SIDEBAR -->
 
-        <div id="sidebar"
-            class="fixed top-0 right-0 z-50 h-full bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
+        <!-- ================= MOBILE SIDEBAR ================= -->
+        <div
+            id="sidebar"
+            class="fixed right-0 top-0 z-[70] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
 
-            <div class="flex justify-end">
+            <div class="flex h-16 shrink-0 items-center justify-end px-5">
 
-                <button id="closeBtn" class="text-white text-2xl" type="button" aria-label="Close navigation menu">
+                <button
+                    id="closeBtn"
+                    type="button"
+                    aria-label="Close menu"
+                    class="flex h-11 w-11 items-center justify-center text-2xl text-white">
 
                     <i class="fa-solid fa-xmark"></i>
 
@@ -680,66 +605,44 @@
 
             </div>
 
-            <div class="flex flex-col text-lg font-semibold text-yellow-400">
+            <div
+                class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="product.html">
-                    Products
-                </a>
-
-                <a href="industry.html">
-                    Industry
-                </a>
-
-                <a href="resource.html">
-                    Resources
-                </a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="industry.html">Industry</a>
+                <a href="resource.html">Resources</a>
 
             </div>
 
         </div>
 
-    </header>
 
-    <!-- HERO VIDEO + TYPING5 WORDS -->
+        <!-- ================= HERO TITLE ================= -->
+        <div
+            class="relative z-10 flex h-full items-center justify-center px-5 sm:px-6">
 
-    <section class="hero w-full overflow-hidden text-white 
-    max-[1024px]:h-[250px] max-[767px]:h-[200px] max-[360px]:h-[160px] ">
+            <div class="px-4 text-center sm:px-6">
 
-        <img src="./resource/image/about11.png" alt="Products">
+                <h1
+                    class="font-['Poppins',sans-serif] text-[2rem] font-bold leading-tight text-white [text-shadow:0_3px_15px_rgba(0,0,0,0.35),0_2px_5px_rgba(0,0,0,0.25)] sm:text-4xl md:text-5xl lg:text-6xl">
 
-        <div class="hero-content relative z-[1] flex items-center justify-center text-center">
+                    Our
 
-            <div class="hero-content">
+                    <span class="text-yellow-400">
+                        Products
+                    </span>
 
-                <div class="text-center">
-
-                    <h1 class="hero-title text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-
-                        Our
-
-                        <span class="text-yellow-400">
-
-                            Products
-
-                        </span>
-
-                    </h1>
-
-                </div>
+                </h1>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</header>
 
 
     <!-- =====================================================
@@ -1080,8 +983,9 @@
 
                 <div>
 
-                    <img src="./resource/logos/qela_icon.svg" alt="Qela Technologies Logo" class="mb-5 h-12 w-auto">
-
+                   <a href="./index.html">
+                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                    </a>
                     <h1 class="text-2xl font-extrabold tracking-tight">
 
                         Qela
@@ -1280,98 +1184,165 @@
 
     <!-- HEADER FUNCTIONALITY -->
 
-    <script>
+   <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-            /* =========================================
-               MOBILE SIDEBAR
-            ========================================= */
+    /* ==========================================
+       MOBILE SIDEBAR
+    ========================================== */
 
-            const menuBtn = document.getElementById("menuBtn");
-            const closeBtn = document.getElementById("closeBtn");
-            const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const sidebar = document.getElementById("sidebar");
 
-            if (menuBtn && closeBtn && sidebar) {
+    if (menuBtn && closeBtn && sidebar) {
 
-                function openSidebar() {
-                    sidebar.classList.remove("translate-x-full");
-                    sidebar.classList.add("translate-x-0");
-                    document.body.classList.add("overflow-hidden");
-                }
+        function openSidebar() {
 
-                function closeSidebar() {
-                    sidebar.classList.remove("translate-x-0");
-                    sidebar.classList.add("translate-x-full");
-                    document.body.classList.remove("overflow-hidden");
-                }
+            sidebar.classList.remove("translate-x-full");
+            sidebar.classList.add("translate-x-0");
 
-                menuBtn.addEventListener("click", function () {
-                    openSidebar();
-                });
+            document.body.classList.add("overflow-hidden");
+        }
 
-                closeBtn.addEventListener("click", function () {
-                    closeSidebar();
-                });
+        function closeSidebar() {
 
-                const sidebarLinks = sidebar.querySelectorAll("a");
+            sidebar.classList.remove("translate-x-0");
+            sidebar.classList.add("translate-x-full");
 
-                sidebarLinks.forEach(function (link) {
-                    link.addEventListener("click", function () {
-                        closeSidebar();
-                    });
-                });
+            document.body.classList.remove("overflow-hidden");
+        }
 
-                document.addEventListener("keydown", function (event) {
-                    if (event.key === "Escape") {
-                        closeSidebar();
-                    }
-                });
+        menuBtn.addEventListener("click", openSidebar);
 
-                window.addEventListener("resize", function () {
-                    if (window.innerWidth >= 768) {
-                        closeSidebar();
-                    }
-                });
+        closeBtn.addEventListener("click", closeSidebar);
 
-            }
+        sidebar.querySelectorAll("a").forEach(function (link) {
 
-            /* =========================================
-               STICKY NAVBAR
-            ========================================= */
+            link.addEventListener("click", closeSidebar);
 
-            const navbar = document.getElementById("navbar");
-            const contactBar = document.querySelector(".contact-bar");
+        });
 
-            if (navbar) {
+        document.addEventListener("keydown", function (event) {
 
-                function handleNavbarScroll() {
-
-                    const triggerPoint =
-                        contactBar
-                            ? contactBar.offsetHeight
-                            : 44;
-
-                    if (window.scrollY > triggerPoint) {
-                        navbar.classList.add("is-sticky");
-                    } else {
-                        navbar.classList.remove("is-sticky");
-                    }
-
-                }
-
-                window.addEventListener(
-                    "scroll",
-                    handleNavbarScroll
-                );
-
-                handleNavbarScroll();
-
+            if (event.key === "Escape") {
+                closeSidebar();
             }
 
         });
 
-    </script>
+        window.addEventListener("resize", function () {
+
+            if (window.innerWidth >= 768) {
+                closeSidebar();
+            }
+
+        });
+
+    }
+
+
+    /* ==========================================
+       NAVBAR SCROLL EFFECT
+    ========================================== */
+
+    const navbar = document.getElementById("navbar");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const menuButton = document.getElementById("menuBtn");
+
+    function handleNavbarScroll() {
+
+        if (!navbar) return;
+
+        if (window.scrollY > 20) {
+
+            navbar.classList.add("is-sticky");
+
+            /* NAVBAR AFTER SCROLL */
+
+            navbar.classList.remove("bg-transparent");
+
+            navbar.classList.add(
+                "bg-white",
+                "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+            );
+
+
+            /* NAV LINKS */
+
+            navLinks.forEach(function (link) {
+
+                link.classList.remove("text-yellow-400");
+
+                link.classList.add("text-green-800");
+
+            });
+
+
+            /* MOBILE MENU */
+
+            if (menuButton) {
+
+                menuButton.classList.remove("text-yellow-400");
+
+                menuButton.classList.add("text-green-800");
+
+            }
+
+        } else {
+
+            navbar.classList.remove("is-sticky");
+
+            /* NAVBAR AT TOP */
+
+            navbar.classList.remove(
+                "bg-white",
+                "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+            );
+
+            navbar.classList.add("bg-transparent");
+
+
+            /* NAV LINKS */
+
+            navLinks.forEach(function (link) {
+
+                link.classList.remove("text-green-800");
+
+                link.classList.add("text-yellow-400");
+
+            });
+
+
+            /* MOBILE MENU */
+
+            if (menuButton) {
+
+                menuButton.classList.remove("text-green-800");
+
+                menuButton.classList.add("text-yellow-400");
+
+            }
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        handleNavbarScroll,
+        { passive: true }
+    );
+
+
+    /* Run once when page loads */
+    handleNavbarScroll();
+
+});
+
+</script>
 
 </body>
 

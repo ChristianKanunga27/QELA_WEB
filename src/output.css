@@ -626,6 +626,10 @@ video {
   top: 0px;
 }
 
+.top-\[40px\] {
+  top: 40px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -656,6 +660,14 @@ video {
 
 .z-\[60\] {
   z-index: 60;
+}
+
+.z-\[50\] {
+  z-index: 50;
+}
+
+.z-\[70\] {
+  z-index: 70;
 }
 
 .m-0 {
@@ -779,6 +791,13 @@ video {
   margin-top: 2.25rem;
 }
 
+<<<<<<< HEAD
+=======
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
+>>>>>>> 9b9352f57f2e3e95bff95ca8d180b1109d33cb7f
 .box-border {
   box-sizing: border-box;
 }
@@ -911,6 +930,17 @@ video {
   height: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.h-\[\] {
+  height: ;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
+>>>>>>> 9b9352f57f2e3e95bff95ca8d180b1109d33cb7f
 .max-h-\[92vh\] {
   max-height: 92vh;
 }
@@ -1494,6 +1524,10 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-\[linear-gradient\(90deg\2c rgba\(0\2c 0\2c 0\2c 0\.58\)_0\%\2c rgba\(0\2c 0\2c 0\2c 0\.30\)_50\%\2c rgba\(0\2c 0\2c 0\2c 0\.42\)_100\%\)\] {
   background-image: linear-gradient(90deg,rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.30) 50%,rgba(0,0,0,0.42) 100%);
 }
@@ -1584,6 +1618,10 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .\!px-12 {
@@ -1769,6 +1807,14 @@ video {
 
 .pt-\[5\.5rem\] {
   padding-top: 5.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-28 {
+  padding-left: 7rem;
 }
 
 .text-left {
@@ -2500,12 +2546,26 @@ video {
   .max-\[1024px\]\:h-\[250px\] {
     height: 250px;
   }
+<<<<<<< HEAD
+=======
+
+  .max-\[1024px\]\:h-\[350px\] {
+    height: 350px;
+  }
+>>>>>>> 9b9352f57f2e3e95bff95ca8d180b1109d33cb7f
 }
 
 @media (max-width: 767px) {
   .max-\[767px\]\:h-\[200px\] {
     height: 200px;
   }
+<<<<<<< HEAD
+=======
+
+  .max-\[767px\]\:h-\[300px\] {
+    height: 300px;
+  }
+>>>>>>> 9b9352f57f2e3e95bff95ca8d180b1109d33cb7f
 }
 
 @media not all and (min-width: 640px) {
@@ -2521,6 +2581,15 @@ video {
   }
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 480px) {
+  .max-\[480px\]\:h-\[260px\] {
+    height: 260px;
+  }
+}
+
+>>>>>>> 9b9352f57f2e3e95bff95ca8d180b1109d33cb7f
 @media (max-width: 360px) {
   .max-\[360px\]\:h-\[160px\] {
     height: 160px;
