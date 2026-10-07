@@ -205,7 +205,7 @@ $postCount = mysqli_num_rows($result);
         <header class="header mb-8 flex items-center justify-between"><div><h1 class="text-3xl font-bold">Welcome to QELA</h1><p class="mt-1 text-gray-600">Publish and manage website posts.</p></div><div class="rounded-xl bg-white px-5 py-3 font-semibold shadow-sm"><?= $postCount ?> posts</div></header>
         <?php if ($message !== ''): ?><div class="alert <?= $messageType === 'error' ? 'alert-error' : 'alert-success' ?>" role="status"><?= dashboard_escape($message) ?></div><?php endif; ?>
         <section id="editor" class="card mb-8">
-            <div class="mb-5"><h2 class="text-2xl font-bold"><?= $editingPost ? 'Edit post' : 'Create a post' ?></h2><p class="text-gray-600">Images are stored in <code>src/uploads/</code>. JPG, PNG, WEBP, or AVIF, up to 5 MB.</p></div>
+            <div class="mb-5"><h2 class="text-2xl font-bold"><?= $editingPost ? 'Edit post' : 'Create a post' ?></h2><p class="text-gray-600">Uploaded image  must be JPG, PNG, WEBP, or AVIF, up to 5 MB.</p></div>
             <form method="post" enctype="multipart/form-data" class="space-y-5">
                 <input type="hidden" name="csrf" value="<?= dashboard_escape($_SESSION['dashboard_csrf']) ?>"><input type="hidden" name="action" value="save">
                 <?php if ($editingPost): ?><input type="hidden" name="id" value="<?= (int)$editingPost['id'] ?>"><?php endif; ?>
