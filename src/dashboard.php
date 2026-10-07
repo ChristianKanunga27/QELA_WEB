@@ -190,16 +190,29 @@ $postCount = mysqli_num_rows($result);
     <title>QELA Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f6f7f3;color:#10271b;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a,button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}.layout{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:250px;padding:28px 20px;background:#10271b;color:#fff}.main{margin-left:250px;padding:clamp(20px,4vw,48px);max-width:1600px}.nav-link{display:block;padding:12px 14px;border-radius:10px;color:#f2f5f1;text-decoration:none}.nav-link:hover,.nav-link:focus-visible{background:#243a2d}.card{background:white;border-radius:16px;padding:clamp(18px,3vw,30px);box-shadow:0 8px 28px #10271b0b}.field{width:100%;border:1px solid #cbd3cc;border-radius:9px;padding:12px 14px;background:#fff;color:#10271b}.field:focus{outline:3px solid #dfa21f55;border-color:#b88512}.table-wrap{overflow-x:auto}.post-table{width:100%;min-width:760px;border-collapse:collapse}.post-table th,.post-table td{padding:14px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e7ebe6}.post-table th{background:#10271b;color:white}.post-table tbody tr:hover{background:#f8faf7}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:0;border-radius:9px;font-weight:700;text-decoration:none;cursor:pointer}.btn-primary{background:#dfa21f;color:#10271b}.btn-danger{background:#b42318;color:white}.alert{padding:14px 16px;border-radius:10px;margin-bottom:20px}.alert-error{background:#fee4e2;color:#8f1d14}.alert-success{background:#e3f5e9;color:#176236}.mobile-nav{display:none}
-        @media(max-width:800px){.sidebar{position:static;width:auto;padding:14px 18px}.brand{display:flex;align-items:center;justify-content:space-between;margin:0!important}.sidebar nav{display:flex;gap:6px;overflow-x:auto;margin-top:12px!important}.nav-link{white-space:nowrap;padding:9px 12px}.main{margin:0;padding:20px 14px 40px}.header{align-items:flex-start!important;gap:12px}.post-table{min-width:680px}}
+        :root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f6f7f3;color:#10271b;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a,button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}.layout{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:250px;padding:26px 18px;background:#10271b;color:#fff}.brand{display:grid;gap:14px}.logo-card{display:grid;place-items:center;padding:8px;background:#fff;border-radius:12px}.logo-card img{display:block;width:100%;max-width:205px;height:auto;object-fit:contain}.brand-caption{margin:0;color:#d0d8d1;font-size:.875rem}.sidebar-nav{display:grid;gap:7px;margin-top:28px}.nav-link{display:block;padding:11px 13px;border-radius:10px;color:#f2f5f1;text-decoration:none}.nav-link:hover,.nav-link:focus-visible{background:#243a2d}.nav-link-active{background:#dfa21f;color:#10271b;font-weight:700}.nav-group-label{margin:23px 12px 7px;color:#aebbb1;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.main{margin-left:250px;padding:clamp(20px,4vw,48px);max-width:1600px}.card{background:white;border-radius:16px;padding:clamp(18px,3vw,30px);box-shadow:0 8px 28px #10271b0b}.field{width:100%;border:1px solid #cbd3cc;border-radius:9px;padding:12px 14px;background:#fff;color:#10271b}.field:focus{outline:3px solid #dfa21f55;border-color:#b88512}.table-wrap{overflow-x:auto}.post-table{width:100%;min-width:760px;border-collapse:collapse}.post-table th,.post-table td{padding:14px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e7ebe6}.post-table th{background:#10271b;color:white}.post-table tbody tr:hover{background:#f8faf7}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:0;border-radius:9px;font-weight:700;text-decoration:none;cursor:pointer}.btn-primary{background:#dfa21f;color:#10271b}.btn-danger{background:#b42318;color:white}.alert{padding:14px 16px;border-radius:10px;margin-bottom:20px}.alert-error{background:#fee4e2;color:#8f1d14}.alert-success{background:#e3f5e9;color:#176236}
+        @media(max-width:800px){.sidebar{position:static;width:auto;padding:14px 18px}.brand{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.logo-card{width:min(38vw,155px);padding:5px}.brand-caption{display:none}.sidebar-nav{display:flex;gap:6px;overflow-x:auto;margin-top:12px}.nav-link{white-space:nowrap;padding:9px 12px}.nav-group-label{display:none}.main{margin:0;padding:20px 14px 40px}.header{align-items:flex-start!important;gap:12px}.post-table{min-width:680px}}
         @media(max-width:480px){.header{flex-direction:column}.header h2{font-size:1.6rem}.card{border-radius:12px}.post-table{min-width:600px}.post-table th,.post-table td{padding:10px 8px}}
     </style>
 </head>
 <body>
 <div class="layout">
     <aside class="sidebar">
-        <div class="brand mb-8"><div><strong class="text-2xl">QELA</strong><p class="text-sm text-gray-300">Admin dashboard</p></div><a class="nav-link bg-red-600" href="logout.php">Log out</a></div>
-        <nav class="space-y-2" aria-label="Admin navigation"><a class="nav-link bg-yello-600 " href="dashboard.php">Dashboard</a></nav>
+        <div class="brand">
+            <a class="logo-card" href="index.html" aria-label="QELA Technologies home">
+                <img src="resource/image/qela_logo.png" alt="QELA Technologies Limited">
+            </a>
+            <p class="brand-caption">Content management</p>
+            <a class="nav-link" href="logout.php">Log out</a>
+        </div>
+        <nav class="sidebar-nav" aria-label="Admin navigation">
+            <a class="nav-link nav-link-active" href="dashboard.php" aria-current="page">Dashboard</a>
+            <p class="nav-group-label">Manage content</p>
+            <a class="nav-link" href="#editor"><?= $editingPost ? 'Edit post' : 'Create a post' ?></a>
+            <a class="nav-link" href="#posts">Published posts</a>
+            <p class="nav-group-label">Website</p>
+            <a class="nav-link" href="index.html">View website</a>
+        </nav>
     </aside>
     <main class="main">
         <header class="header mb-8 flex items-center justify-between"><div><h1 class="text-3xl font-bold">Welcome to QELA</h1><p class="mt-1 text-gray-600">Publish and manage website posts.</p></div><div class="rounded-xl bg-white px-5 py-3 font-semibold shadow-sm"><?= $postCount ?> posts</div></header>
