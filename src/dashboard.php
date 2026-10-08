@@ -181,6 +181,8 @@ if (!$result) {
 }
 $postCount = mysqli_num_rows($result);
 ?>
+
+<!-- html codes start -->
 <!doctype html>
 <html lang="en">
 <head>
