@@ -8,10 +8,44 @@ pre,code{overflow-wrap:anywhere}
 table{max-width:100%}
 @media(max-width:640px){
   .grid{grid-template-columns:minmax(0,1fr)!important}
-  .flex{flex-wrap:wrap}
   .overflow-x-auto{-webkit-overflow-scrolling:touch}
   table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
   [style*="width"]{max-width:100%!important}
   h1{overflow-wrap:break-word}
 }
+
+/* Keep the shared site header compact and predictable on phones. */
+@media(max-width:767px){
+  body>div.fixed.inset-x-0.top-0{font-size:clamp(.75rem,3.5vw,1rem)!important;line-height:1.25;padding-block:.35rem!important}
+  header #sidebar{width:min(20rem,88vw)!important;max-width:88vw;height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom);box-shadow:-12px 0 32px rgb(0 0 0/.32)}
+  header #sidebar a{display:flex;min-height:2.75rem;align-items:center;border-bottom:1px solid rgb(255 255 255/.1);padding-block:.45rem}
+  header #menuBtn,header #closeBtn{min-width:2.75rem;min-height:2.75rem;border-radius:.65rem}
+  header #navbar{padding-top:.5rem!important;padding-bottom:.5rem!important}
+  header #navbar img{max-height:3.25rem}
+  header #contactBar>div{justify-content:center;gap:.55rem;padding-inline:.5rem;font-size:.68rem}
+  header #contactBar{top:28px!important}
+  header #contactBar a{min-width:0;gap:.35rem}
+  header #contactBar a:first-child span{max-width:42vw;overflow:hidden;text-overflow:ellipsis}
+  header #contactBar a:last-child span{white-space:nowrap}
+  header .contact-bar>div{justify-content:center;gap:.55rem;padding-inline:.5rem;font-size:.68rem}
+  header .contact-bar a{min-width:0;gap:.35rem}
+  header .contact-bar a:first-child span{max-width:42vw;overflow:hidden;text-overflow:ellipsis}
+}
+
+/* Keep the full navigation available in the slide-out menu on narrow tablets. */
+@media(min-width:768px) and (max-width:900px){
+  header #desktopLinks,header #navbar .nav-links{display:none!important}
+  header #menuBtn{display:flex!important}
+  header #sidebar{display:flex!important}
+}
+
+/* Industry is the reference banner: keep all page banners full width and
+   begin them below the maintenance/contact strips at the same 68px offset. */
+@media(min-width:768px){
+  header>div:nth-child(2).relative{margin-top:68px!important}
+}
+@media(max-width:767px){
+  header>div:nth-child(2).relative{margin-top:68px!important}
+}
+header>div:nth-child(2).relative>div.relative{height:100%!important}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
