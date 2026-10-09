@@ -724,152 +724,60 @@
 </head>
 
 <body class="bg-white">
-    <div class="fixed inset-x-0 top-0 z-[80] flex min-h-7 items-center justify-center bg-[#dfa21f] px-3 py-1 
-    text-center text-2xl font-semibold text-[#10271b]">This website is under maintenance</div>
+    <div class="fixed inset-x-0 top-0 z-[10000] flex min-h-7 items-center justify-center bg-[#dfa21f] px-3 py-1 text-center text-2xl font-semibold text-[#10271b]">This page is under maintenance</div>
 
-    <!-- ================= HEADER ================= -->
+    <header>
 
-       <header class="w-full">
-
-    <!-- ================= CONTACT BAR ================= -->
-    <div
-        id="contactBar"
-        class="absolute left-0 right-0 top-10 z-[60] min-h-[40px] w-full bg-black text-white">
-
-        <div
-            class="mx-auto flex min-h-[40px] w-full max-w-7xl items-center justify-end gap-[0.55rem] px-[0.6rem] text-[0.63rem] sm:gap-[0.85rem] sm:px-4 sm:text-xs md:gap-5 md:px-5 lg:gap-7 lg:px-8 lg:text-sm xl:px-10">
-
-
-            <!-- EMAIL -->
-            <a
-                href="mailto:info@qelatechnologies.co.tz"
-                class="flex min-w-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
-
-                <i class="fa-solid fa-envelope shrink-0 text-[#dfa21f]"></i>
-
-                <span class="truncate">
-                    info@qelatechnologies.co.tz
-                </span>
-
-            </a>
-
-            <!-- PHONE -->
-            <a
-                href="tel:+255718352944"
-                class="flex shrink-0 items-center gap-2 whitespace-nowrap font-medium transition-colors duration-200 hover:text-[#dfa21f]">
-
-                <i class="fa-solid fa-phone shrink-0 text-[#dfa21f]"></i>
-
-                <span>
-                    +255 718 352 944
-                </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= HERO ================= -->
-    <div
-        class="relative mt-[68px] min-h-[calc(100svh-68px)] w-full overflow-hidden">
-
-        <!-- HERO VIDEO -->
-        <video autoplay muted loop playsinline preload="auto" aria-hidden="true"
-            class="absolute inset-0 h-full w-full object-cover">
-
-
-            <source src="./resource/video/bg5.mp4" type="video/mp4">
-
-        </video>
-
-
-        <!-- HERO OVERLAY -->
-        <div
-            class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.30)_50%,rgba(0,0,0,0.42)_100%)]">
-        </div>
-
-
-        <!-- ================= NAVIGATION ================= -->
-        <nav
-            id="navbar"
-            class="fixed left-0 right-0 top-[68px] z-[50] w-full bg-transparent px-4 py-2 transition-all duration-300 sm:px-6 sm:py-4 lg:px-8 lg:py-5 xl:px-10">
+        <div class="contact-bar w-full bg-black text-white top-10">
 
             <div
-                class="mx-auto flex w-full max-w-7xl items-center justify-between">
+                class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
 
-                <!-- LOGO -->
-                <a
-                    href="./index.html"
-                    class="flex shrink-0 items-center">
+                <a href="mailto:info@qelatechnologies.co.tz"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                    <img
-                        src="./resource/image/qela_logo.png"
-                        alt="QELA logo"
-                        class="h-10 w-auto max-w-[105px] object-contain sm:h-14 sm:max-w-[150px] lg:h-16">
+                    <i class="fa-solid fa-envelope text-[#dfa21f]"></i>
+
+                    <span>info@qelatechnologies.co.tz</span>
 
                 </a>
 
+                <a href="tel:+255752686686"
+                    class="flex items-center gap-2 whitespace-nowrap transition hover:text-[#dfa21f]">
 
-                <!-- ================= DESKTOP NAVIGATION ================= -->
-                <div class="hidden md:flex">
+                    <i class="fa-solid fa-phone text-[#dfa21f]"></i>
 
-                    <div
-                        id="desktopLinks"
-                        class="flex items-center gap-5 text-base font-semibold text-yellow-400 lg:gap-7 lg:text-lg xl:gap-8">
+                    <span>+255 718 352 944</span>
 
-                        <a
-                            href="index.html"
-                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+                </a>
 
-                            Home
+            </div>
 
-                        </a>
+        </div>
 
-                        <a
-                            href="about.html"
-                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+        <nav id="navbar" class="w-full p-4">
 
-                            About
+            <div class="nav-inner flex items-center justify-between gap-8">
 
-                        </a>
+                <a href="./index.html">
+                    <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
+                </a>
 
-                        <a
-                            href="product.html"
-                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
+                <div class="hidden md:block">
 
-                            Products
+                    <div class="nav-links flex items-center gap-7 text-base font-semibold text-yellow-400 md:text-lg">
 
-                        </a>
-
-                        <a
-                            href="industry.html"
-                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
-
-                            Industry
-
-                        </a>
-
-                        <a
-                            href="resource.html"
-                            class="nav-link relative transition-colors duration-[180ms] after:absolute after:bottom-[-0.45rem] after:left-0 after:right-0 after:h-[2px] after:origin-right after:scale-x-0 after:bg-[#dfa21f] after:transition-transform after:duration-[180ms] hover:after:origin-left hover:after:scale-x-100">
-
-                            Resources
-
-                        </a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="product.html">Products</a>
+                        <a href="industry.html">Industry</a>
+                        <a href="resource.html">Resources</a>
 
                     </div>
 
                 </div>
 
-
-                <!-- ================= MOBILE MENU BUTTON ================= -->
-                <button
-                    id="menuBtn"
-                    type="button"
-                    aria-label="Open navigation menu"
-                    class="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-yellow-400 md:hidden">
+                <button id="menuBtn" class="md:hidden text-yellow-400 text-2xl">
 
                     <i class="fa-solid fa-bars"></i>
 
@@ -879,19 +787,12 @@
 
         </nav>
 
+        <div id="sidebar"
+            class="fixed top-0 right-0 z-50 h-full w-72 bg-gray-900 translate-x-full transition-transform duration-300 md:hidden">
 
-        <!-- ================= MOBILE SIDEBAR ================= -->
-        <div
-            id="sidebar"
-            class="fixed right-0 top-0 z-[70] flex h-full w-[280px] max-w-[85vw] translate-x-full flex-col bg-gray-900 shadow-[-5px_0_25px_rgba(0,0,0,0.25)] transition-transform duration-300 md:hidden">
+            <div class="flex justify-end p-5">
 
-            <div class="flex h-16 shrink-0 items-center justify-end px-5">
-
-                <button
-                    id="closeBtn"
-                    type="button"
-                    aria-label="Close menu"
-                    class="flex h-11 w-11 items-center justify-center text-2xl text-white">
+                <button id="closeBtn" class="text-white text-2xl">
 
                     <i class="fa-solid fa-xmark"></i>
 
@@ -899,8 +800,7 @@
 
             </div>
 
-            <div
-                class="flex flex-col gap-5 px-7 pb-5 pt-1 text-lg font-semibold text-yellow-400 sm:px-8">
+            <div class="flex flex-col gap-6 px-8 py-5 text-lg font-semibold text-yellow-400">
 
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -912,10 +812,17 @@
 
         </div>
 
+    </header>
 
-        <!-- ================= HERO CONTENT ================= -->
-        <div
-            class="relative z-10 flex h-full items-center justify-center px-5 sm:px-6">
+    <section class="hero w-full overflow-hidden text-white">
+
+        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+
+            <source src="./resource/video/bg5.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-content relative z-[1] flex min-h-[100svh] items-center justify-center text-center">
 
             <div>
 
@@ -943,9 +850,14 @@
 
         </div>
 
-    </div>
+    </section>
+    <div class="contact-bar w-full bg-white ">
 
-</header>
+        <div
+            class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+        </div>
+
+    </div>
     <!-- STATISTICS SECTION -->
 
     <section class="relative isolate min-h-[420px] overflow-hidden sm:min-h-[450px] !text-lg"
@@ -1147,6 +1059,14 @@
         </div>
 
     </section>
+    <div class="contact-bar w-full bg-white ">
+
+        <div
+            class="mx-auto flex w-full max-w-7xl items-center justify-end gap-4 px-4 py-0.5 text-xs font-medium sm:gap-4 sm:px-1 lg:gap-4 lg:px-6 lg:text-sm sm:justify-end pt-3">
+        </div>
+
+    </div>
+
     <section class="client-section text-white">
 
         <div class="section-heading text-center">
@@ -1433,167 +1353,188 @@
 
     </section>
 
-    <footer class="relative overflow-hidden bg-gradient-to-b from-[#060f0b] via-[#050f0a] to-[#040c08] text-white">
-        <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+    <footer class="bg-[#07130d] text-white">
 
-            <!-- ================= MAIN ================= -->
-            <div class="grid grid-cols-1 gap-14 pb-10 pt-20 lg:grid-cols-12 lg:gap-10">
+        <div class="max-w-7xl mx-auto px-6 py-14">
 
-                <!-- COMPANY -->
-                <div class="lg:col-span-5 lg:pr-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                    <a href="./index.html" class="inline-block">
-                        <img src="./resource/image/qela_logo.png" class="h-16 w-auto object-contain" alt="QELA logo">
+                <div>
+
+                    <a href="./index.html">
+                        <img src="./resource/image/qela_logo.png" class="nav-logo h-16" alt="QELA logo">
                     </a>
+                    <h1 class="text-2xl font-extrabold tracking-tight">
 
-                    <h1
-                        class="mt-6 font-['Poppins',sans-serif] text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
                         Qela
+
                         <span class="text-green-500">Technologies</span>
+
                     </h1>
 
-                    <p class="mt-2 text-xs font-medium tracking-[0.3em] text-gray-400">
+                    <p class="text-xs text-gray-500 mt-1">
+
                         (T) LIMITED
+
                     </p>
 
-                    <p class="mt-6 max-w-md text-[15px] leading-7 text-gray-300">
-                        Empowering businesses through innovative
-                        technology, digital transformation and
+                    <p class="text-gray-400 text-sm leading-6 mt-5 max-w-xs">
+
+                        Empowering businesses through innovative technology,
+                        digital transformation and
                         smart agritech solutions.
+
                     </p>
 
-                    <!-- SOCIAL MEDIA -->
-                    <div class="mt-8 flex items-center gap-3">
+                    <div class="flex items-center gap-3 mt-6">
 
                         <a href="https://www.facebook.com/profile.php?id=100063736423326" aria-label="Facebook"
-                            class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.05] text-sm text-gray-200 transition-colors duration-200 hover:border-green-500 hover:bg-green-500 hover:text-[#07130d]">
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
                             <i class="fa-brands fa-facebook-f"></i>
+
                         </a>
 
                         <a href="https://www.instagram.com/qelatech/" aria-label="Instagram"
-                            class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.05] text-sm text-gray-200 transition-colors duration-200 hover:border-green-500 hover:bg-green-500 hover:text-[#07130d]">
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+
                             <i class="fa-brands fa-instagram"></i>
+
                         </a>
 
                     </div>
+
                 </div>
 
+                <div>
 
-                <!-- LINK COLUMNS -->
-                <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 lg:col-span-7 lg:gap-8">
+                    <h3 class="text-lg font-semibold mb-5">
 
-                    <!-- SOLUTIONS -->
-                    <div class="border-t border-white/10 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+                        Solutions
 
-                        <h3
-                            class="mb-6 flex items-center gap-2 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-widest text-white">
-                            <span class="h-1.5 w-1.5 bg-amber-400"></span>
-                            Solutions
-                        </h3>
+                    </h3>
 
-                        <ul class="space-y-4 text-sm">
-                            <li><a href="#"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Digital
-                                    Transformation</a></li>
-                            <li><a href="#"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Business
-                                    Management</a></li>
-                            <li><a href="#"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Data
-                                    Management</a></li>
-                            <li><a href="#"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Cloud
-                                    Solutions</a></li>
-                            <li><a href="#"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Custom
-                                    Software</a></li>
-                        </ul>
-                    </div>
+                    <ul class="space-y-3 text-sm text-gray-400">
 
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Digital
+                                Transformation</a>
+                        </li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Business
+                                Management</a>
+                        </li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Data
+                                Management</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Cloud
+                                Solutions</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Custom
+                                Software</a></li>
 
-                    <!-- QUICK LINKS -->
-                    <div class="border-t border-white/10 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+                    </ul>
 
-                        <h3
-                            class="mb-6 flex items-center gap-2 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-widest text-white">
-                            <span class="h-1.5 w-1.5 bg-amber-400"></span>
-                            Quick Links
-                        </h3>
+                </div>
 
-                        <ul class="space-y-4 text-sm">
-                            <li><a href="./index.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Home</a>
-                            </li>
-                            <li><a href="./about.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">About</a>
-                            </li>
-                            <li><a href="./product.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Products</a>
-                            </li>
-                            <li><a href="./industry.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Industry</a>
-                            </li>
-                            <li><a href="./resource.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">Resources</a>
-                            </li>
-                            <li><a href="./login.html"
-                                    class="text-gray-300 transition-colors duration-200 hover:text-green-400">admin</a>
-                            </li>
+                <div>
 
-                        </ul>
-                    </div>
+                    <h3 class="text-lg font-semibold mb-5">
+
+                        Quick Links
+
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-400">
+
+                        <li><a href="./index.html" class="hover:text-green-500 transition duration-300">Home
+                            </a></li>
+                        <li><a href="./about.html" class="hover:text-green-500 transition duration-300">About
+                            </a></li>
+                        <li><a href="./product.html" class="hover:text-green-500 transition duration-300">
+                                Products</a></li>
+                        <li><a href="./industry.html" class="hover:text-green-500 transition duration-300">Industry</a>
+                        </li>
+                        <li><a href="./resource.html" class="hover:text-green-500 transition duration-300">Resources</a>
+                        </li>
+                        <li><a href="./login.html" class="hover:text-green-500 transition duration-300">admin</a>
+                        </li>
 
 
-                    <!-- SUPPORT -->
-                    <div class="border-t border-white/10 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
 
-                        <h3
-                            class="mb-6 flex items-center gap-2 font-['Poppins',sans-serif] text-sm font-semibold uppercase tracking-widest text-white">
-                            <span class="h-1.5 w-1.5 bg-amber-400"></span>
-                            Support
-                        </h3>
+                    </ul>
 
-                        <div class="space-y-6 text-sm">
+                </div>
 
-                            <div class="space-y-3">
-                                <a href="tel:+255718352944"
-                                    class="block text-base font-medium text-white transition-colors duration-200 hover:text-green-400">
-                                    +255 718 352 944
-                                </a>
-                                <a href="tel:+255742073002"
-                                    class="block text-base font-medium text-white transition-colors duration-200 hover:text-green-400">
-                                    +255 742 073 002
-                                </a>
-                            </div>
+                <div>
 
-                            <div>
-                                <a href="mailto:info@qelatechnologies.co.tz"
-                                    class="break-all text-gray-300 transition-colors duration-200 hover:text-green-400">
-                                    info@qelatechnologies.co.tz
-                                </a>
-                            </div>
+                    <h3 class="text-lg font-semibold mb-5">
+
+                        Support
+
+                    </h3>
+
+                    <div class="space-y-5 text-sm text-gray-400">
+
+                        <div>
+
+                            <a href="tel:+255718352944" class="hover:text-green-500 transition duration-300">
+
+                                +255 718 352 944
+
+                            </a>
+
+                            <br>
+
+                            <a href="tel:+255742073002" class="hover:text-green-500 transition duration-300">
+
+                                +255 742 073 002
+
+                            </a>
 
                         </div>
+
+                        <div>
+
+                            <a href="mailto:info@qelatechnologies.co.tz"
+                                class="hover:text-green-500 transition duration-300">
+
+                                info@qelatechnologies.co.tz
+
+                            </a>
+
+                        </div>
+
                     </div>
 
                 </div>
+
             </div>
+
         </div>
 
-        <!-- ================= COPYRIGHT ================= -->
-        <div class="relative z-10 bg-[#04100a]">
+        <div class="bg-black/30">
 
-            <div
-                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 border-t border-white/10 px-6 py-6 sm:px-8 lg:flex-row lg:px-10">
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
 
-                <p class="text-center text-sm text-gray-400 lg:text-left">
+                <p class="text-sm text-gray-500 text-center md:text-left">
+
                     © 2026 Qela Technologies (T) Limited.
+
                     All Rights Reserved.
+
                 </p>
 
-                <div class="flex gap-6 text-sm text-gray-400">
-                    <a href="#" class="transition-colors duration-200 hover:text-white">Privacy Policy</a>
-                    <a href="#" class="transition-colors duration-200 hover:text-white">Terms &amp; Conditions</a>
+                <div class="flex gap-5 text-sm text-gray-500">
+
+                    <a href="#" class="hover:text-green-500 transition duration-300">
+
+                        Privacy Policy
+
+                    </a>
+
+                    <a href="#" class="hover:text-green-500 transition duration-300">
+
+                        Terms & Conditions
+
+                    </a>
+
                 </div>
 
             </div>
@@ -1709,120 +1650,37 @@
                 document.getElementById("navbar");
 
             const contactBar =
-                document.getElementById("contactBar");
-
+                document.querySelector(".contact-bar");
 
             if (navbar) {
 
                 function handleNavbarScroll() {
 
-                    const triggerPoint = 20;
-
+                    const triggerPoint =
+                        contactBar
+                            ? contactBar.offsetHeight
+                            : 44;
 
                     if (window.scrollY > triggerPoint) {
 
-                        navbar.style.top = "28px";
-
                         navbar.classList.add(
-                            "fixed",
-                            "bg-white",
-                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                            "is-sticky"
                         );
-
-
-                        navbar
-                            .querySelectorAll(
-                                "div > div > a"
-                            )
-                            .forEach(function (link) {
-
-                                link.classList.remove(
-                                    "text-yellow-400"
-                                );
-
-                                link.classList.add(
-                                    "text-green-800"
-                                );
-
-                            });
-
-
-                        const menuButton =
-                            document.getElementById(
-                                "menuBtn"
-                            );
-
-
-                        if (menuButton) {
-
-                            menuButton.classList.remove(
-                                "text-yellow-400"
-                            );
-
-                            menuButton.classList.add(
-                                "text-green-800"
-                            );
-
-                        }
 
                     } else {
 
-                        navbar.style.top = "68px";
-
                         navbar.classList.remove(
-                            "bg-white",
-                            "shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+                            "is-sticky"
                         );
-
-
-                        navbar
-                            .querySelectorAll(
-                                "div > div > a"
-                            )
-                            .forEach(function (link) {
-
-                                link.classList.remove(
-                                    "text-green-800"
-                                );
-
-                                link.classList.add(
-                                    "text-yellow-400"
-                                );
-
-                            });
-
-
-                        const menuButton =
-                            document.getElementById(
-                                "menuBtn"
-                            );
-
-
-                        if (menuButton) {
-
-                            menuButton.classList.remove(
-                                "text-green-800"
-                            );
-
-                            menuButton.classList.add(
-                                "text-yellow-400"
-                            );
-
-                        }
 
                     }
 
                 }
 
-
                 window.addEventListener(
                     "scroll",
-                    handleNavbarScroll,
-                    {
-                        passive: true
-                    }
+                    handleNavbarScroll
                 );
-
 
                 handleNavbarScroll();
 
